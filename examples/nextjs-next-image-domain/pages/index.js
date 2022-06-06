@@ -18,6 +18,9 @@ export default function Home() {
           <h1 className={styles.title}>
             Next.js Image Component &amp; Cloudinary
           </h1>
+          <h2 className={styles.subtitle}>
+            Using Cloudinary URLs
+          </h2>
         </div>
 
         <div className={styles.container}>

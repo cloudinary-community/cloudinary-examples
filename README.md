@@ -6,7 +6,8 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ### Next.js
 
-* [Next.js Image Component Using Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
+* [Next.js Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
+* [Next.js Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
 
 ## Not seeing an example?
 

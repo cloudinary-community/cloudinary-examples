@@ -1,0 +1,66 @@
+[
+  {
+    "id": "beach",
+    "title": "Beach",
+    "link": "https://unsplash.com/photos/8qH4GSYBiSA",
+    "image": "/examples/beach_udmhbt.jpg",
+    "width": 2376,
+    "height": 1574
+  },
+  {
+    "id": "city",
+    "title": "City",
+    "link": "https://unsplash.com/photos/4u2U8EO9OzY",
+    "image": "/examples/city_julte6.jpg",
+    "width": 1364,
+    "height": 1705
+  },
+  {
+    "id": "earth",
+    "title": "Earth",
+    "link": "https://unsplash.com/photos/yZygONrUBe8",
+    "image": "/examples/earth_xzlgge.jpg",
+    "width": 2344,
+    "height": 1560
+  },
+  {
+    "id": "galaxy",
+    "title": "Galaxy",
+    "link": "https://unsplash.com/photos/0o_GEzyargo",
+    "image": "/examples/galaxy_qtrsjt.jpg",
+    "width": 2340,
+    "height": 1560
+  },
+  {
+    "id": "iceberg",
+    "title": "Iceberg",
+    "link": "https://unsplash.com/photos/VSGEH7tKiUg",
+    "image": "/examples/iceberg_t78lqn.jpg",
+    "width": 2148,
+    "height": 1611
+  },
+  {
+    "id": "jungle",
+    "title": "Jungle",
+    "link": "https://unsplash.com/photos/PFPebiEehDE",
+    "image": "/examples/jungle_atgaaf.jpg",
+    "width": 1364,
+    "height": 1705
+  },
+  {
+    "id": "mountain",
+    "title": "Mountain",
+    "link": "https://unsplash.com/photos/phIFdC6lA4E",
+    "image": "/examples/mountain_xr6uv2.jpg",
+    "width": 2340,
+    "height": 1561
+  },
+  {
+    "id": "waterfall",
+    "title": "Waterfall",
+    "link": "https://unsplash.com/photos/wZLsZ9DRLSI",
+    "image": "/examples/waterfall_d0bsl5.jpg",
+    "width": 2340,
+    "height": 1560
+  }
+]
