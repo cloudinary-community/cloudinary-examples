@@ -1,1 +1,1 @@
-# cloudinary-examples
+# Cloudinary Examples
