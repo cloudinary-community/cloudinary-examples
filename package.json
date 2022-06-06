@@ -1,0 +1,10 @@
+{
+  "name": "cloudinary-examples",
+  "repository": "git@github.com:colbyfayock/cloudinary-examples.git",
+  "author": "colbyfayock <fayock@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "examples/*"
+  ]
+}
