@@ -2,7 +2,9 @@
 
 You can configure Next.js to use Cloudinary when loading images and transforming them for your application.
 
-## Using the Cloudinary Loader
+View Demo: <https://cloudinary-nextjs-next-image-loader.netlify.app>
+
+## 🧰 Using the Cloudinary Loader with the Next.js Image Component
 
 To use Cloudinary with the Image component, simply update your `next.config.js` file with the following configuration:
 
@@ -34,7 +36,7 @@ To learn what values you can use for `quality` head over to the [Cloudinary docs
 
 <https://cloudinary.com/documentation/transformation_reference#q_quality>
 
-## Try This Project
+## 🚀 Get Started with This Example
 
 * Install the project dependencies with:
 
