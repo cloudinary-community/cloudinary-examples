@@ -28,6 +28,12 @@ For instance, if you have an image available at `myimages/image.jpg`, you can us
 <Image width="..." height="..." src="/myimages/image.jpg" alt="..." />
 ```
 
+As of now, you can configure the `width`, `src`, and `quality` props.
+
+To learn what values you can use for `quality` head over to the [Cloudinary docs](https://cloudinary.com/documentation/transformation_reference#q_quality):
+
+<https://cloudinary.com/documentation/transformation_reference#q_quality>
+
 ## Try This Project
 
 * Install the project dependencies with:
