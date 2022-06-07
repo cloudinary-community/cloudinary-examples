@@ -1,0 +1,48 @@
+{
+  "info": {
+    "name": "Cloudinary",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "POST - Custom Function",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "User-Agent",
+            "value": "Typhoeus - https://github.com/typhoeus/typhoeus",
+            "type": "text"
+          },
+          {
+            "key": "X-Cld-Signature",
+            "value": "CLDSIGNATURE{{$randomUUID}}",
+            "type": "text"
+          },
+          {
+            "key": "X-Cld-Timestamp",
+            "value": "{{$timestamp}}",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "files",
+              "type": "file",
+              "src": "image.png"
+            },
+            {
+              "key": "metadata",
+              "value": "{\"current_page\":1,\"coordinates\":{},\"variables\":{}}",
+              "type": "text"
+            }
+          ]
+        },
+        "url": "http://localhost:8888/.netlify/functions/blurhash"
+      },
+      "response": []
+    }
+  ]
+}
