@@ -4,6 +4,10 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ## Examples
 
+### Netlify
+
+* [Netlify Function - Cloudinary Custom Remote Function](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/netlify-custom-function-remote)
+
 ### Next.js
 
 * [Next.js Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
