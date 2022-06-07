@@ -15,10 +15,10 @@ The [response structure](https://cloudinary.com/documentation/custom_functions#r
   "statusCode": 200,
   "headers": {
     "Content-Type": "image/jpeg",
-    "Content-Length": "result.length"
+    "Content-Length": imageData.length
   },
   "isBase64Encoded": true,
-  "body": "result.toString('base64')"
+  "body": imageData.toString('base64')
 }
 ```
 
