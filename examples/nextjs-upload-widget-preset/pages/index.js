@@ -1,12 +1,9 @@
 import { useState } from 'react';
 import Head from 'next/head';
-import Image from 'next/image';
 
 import UploadWidget from '../components/UploadWidget';
 
 import styles from '../styles/Home.module.css';
-
-import images from '../images.json';
 
 export default function Home() {
   const [url, updateUrl] = useState();

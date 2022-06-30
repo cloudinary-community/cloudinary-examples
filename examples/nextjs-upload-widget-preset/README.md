@@ -1,25 +1,8 @@
-# Next.js Image Component Using Cloudinary URLs
+# Next.js Using the Cloudinary Upload Widget
 
-You can use Cloudinary URLs right inside of your Next.js project with the Next.js Image component just like any other remote source.
+Use the drop-in Cloudinary widget in a Next.js project.
 
-View Demo: <https://cloudinary-nextjs-next-image-domain.netlify.app/>
-
-## 🧰 Using Cloudinary URLs with the Next.js Image Component
-
-To allow Cloudinary URLs to load with the Image component, simply update your `next.config.js` file with the following configuration:
-
-```
-const nextConfig = {
-  ...
-  images: {
-    domains: ['res.cloudinary.com']
-  }
-}
-```
-
-See the file in action at [next.config.js](next.config.js).
-
-> Note: If using a custom domain with Cloudinary, be sure add the appropriate host in the domains array.
+View Demo: <https://nextjs-upload-widget-preset.netlify.app/>
 
 ## 🚀 Get Started with This Example
 
@@ -29,6 +12,13 @@ See the file in action at [next.config.js](next.config.js).
 yarn install
 # or
 npm install
+```
+
+* Add your envitonment variables to `.env.local`:
+
+```
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET="<Your Upload Preset>"
 ```
 
 * Start the development server with:
