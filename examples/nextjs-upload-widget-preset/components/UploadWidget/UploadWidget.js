@@ -1,5 +1,4 @@
 import { useRef } from 'react';
-import Head from "next/head";
 import Script from "next/script";
 
 const UploadWidget = ({ children, onUpload }) => {
@@ -23,7 +22,7 @@ const UploadWidget = ({ children, onUpload }) => {
     }
 
     return cloudinary.current?.createUploadWidget(options,
-      (error, result) => {
+      function (error, result) {
         // The callback is a bit more chatty than failed or success so
         // only trigger when one of those are the case. You can additionally
         // create a separate handler such as onEvent and trigger it on
@@ -40,7 +39,7 @@ const UploadWidget = ({ children, onUpload }) => {
    * @description When triggered, uses the current widget instance to open the upload modal
    */
 
-  function open(e) {
+  function open() {
     if ( !widget?.current ) {
       widget.current = createWidget();
     }
