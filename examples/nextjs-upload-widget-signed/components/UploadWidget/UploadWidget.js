@@ -6,19 +6,37 @@ const UploadWidget = ({ children, onUpload }) => {
   const widget = useRef();
 
   /**
+   * generateSignature
+   * @description Makes a request to an endpoint to sign Cloudinary parameters as part of widget creation
+   */
+
+  function generateSignature( callback, paramsToSign ) {
+    fetch(`/api/sign-cloudinary-params`, {
+      method: 'POST',
+      body: JSON.stringify({
+        paramsToSign
+      })
+    }).then(r => r.json())
+      .then(({ signature }) => {
+        callback(signature)
+      });
+  }
+
+  /**
    * createWidget
    * @description Creates a new instance of the Cloudinary widget and stores in a ref
    */
 
   function createWidget() {
-    // Providing only a Cloud Name along with an Upload Preset allows you to use the
-    // widget without requiring an API Key or Secret. This however allows for
-    // "unsigned" uploads which may allow for more usage than intended. Read more
-    // about unsigned uploads at: https://cloudinary.com/documentation/upload_images#unsigned_upload
+    // When creating a signed upload, you need to provide both your Cloudinary API Key
+    // as well as a signature generator function that will sign any paramters
+    // either on page load or during the upload process. Read more about signed uploads at:
+    // https://cloudinary.com/documentation/upload_widget#signed_uploads
 
     const options = {
       cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME, // Ex: mycloudname
-      uploadPreset: process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET, // Ex: myuploadpreset
+      apiKey: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY, // Ex: 1234567890
+      uploadSignature: generateSignature,
     }
 
     return cloudinary.current?.createUploadWidget(options,

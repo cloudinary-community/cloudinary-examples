@@ -54,7 +54,7 @@ export default function Home() {
             }}
           </UploadWidget>
 
-          {error && <p>{ error }</p>}
+          {error?.statusText && <p><strong>Error:</strong> { error.statusText }</p>}
 
           {url && (
             <>
