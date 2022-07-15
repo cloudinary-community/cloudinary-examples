@@ -108,7 +108,7 @@ yarn install
 npm install
 ```
 
-* Add your envitonment variables to `.env.local`:
+* Add your environment variables to `.env.local`:
 
 ```
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
