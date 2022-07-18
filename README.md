@@ -12,8 +12,8 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 * [Cloudinary Upload Widget with Signed Uploads](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-signed)
 * [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-preset)
-* [Next.js Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
-* [Next.js Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
+* [Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
+* [Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
 * [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-social-media-card)
 
 ## Not seeing an example?
