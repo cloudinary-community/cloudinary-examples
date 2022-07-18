@@ -48,6 +48,7 @@ export async function getStaticProps() {
   const ogImage = cloudinary.url('social-card-mountain', {
     width: 1012,
     height: 506,
+    secure: true,
     transformation: [
       {
         fetch_format: 'auto',
