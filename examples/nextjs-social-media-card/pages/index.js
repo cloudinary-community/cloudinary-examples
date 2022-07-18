@@ -40,7 +40,7 @@ export default function Home({ ogImage }) {
 
 export async function getStaticProps() {
   cloudinary.config({
-    cloud_name: 'colbycloud-examples'
+    cloud_name: process.env.CLOUDINARY_CLOUD_NAME
   });
 
   const ogImage = cloudinary.url('social-card-mountain', {
