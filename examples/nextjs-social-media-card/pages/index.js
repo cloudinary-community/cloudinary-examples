@@ -35,7 +35,12 @@ export default function Home({ ogImage }) {
 
         <div className={styles.container}>
           <h2>Card Preview</h2>
-          <img src={ogImage} />
+          <p>
+            <img src={ogImage} />
+          </p>
+          <p>
+            Preview the working card at <a href="https://www.opengraph.xyz/url/https%3A%2F%2Fcloudinary-nextjs-social-media-card.netlify.app%2F" target="_blank" rel="noreferrer">opengraph.xyz</a>
+          </p>
         </div>
       </main>
     </>
@@ -68,7 +73,8 @@ export async function getStaticProps() {
           font_family: 'Source Sans Pro',
           font_size: 60,
           font_weight: 'bold',
-          text: 'My Social Card'
+          text: 'My Social Card',
+          text_align: 'center'
         },
       },
 
@@ -86,7 +92,8 @@ export async function getStaticProps() {
             font_family: 'Source Sans Pro',
             font_size: 40,
             font_weight: 'semibold',
-            text: 'This is an example of how to generate a social media card on the fly with Cloudinary.'
+            text: 'This is an example of how to generate a social media card on the fly with Cloudinary.',
+            text_align: 'center'
           },
         },
 
@@ -94,7 +101,7 @@ export async function getStaticProps() {
 
         {
           flags: 'layer_apply',
-          gravity: 'north_west',
+          gravity: 'north',
           y: 'h + 30'
         },
 
@@ -102,9 +109,8 @@ export async function getStaticProps() {
 
       {
         flags: 'layer_apply',
-        gravity: 'north_west',
-        x: 60,
-        y: 60
+        gravity: 'north',
+        y: 100
       }
     ]
   });
