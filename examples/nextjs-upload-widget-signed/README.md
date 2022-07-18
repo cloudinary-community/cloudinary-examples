@@ -2,7 +2,7 @@
 
 Use the drop-in Cloudinary widget in a Next.js project.
 
-View Demo: <https://nextjs-upload-widget-signed.netlify.app/>
+View Demo: <https://cloudinary-nextjs-upload-widget-signed.netlify.app/>
 
 ## 🧰 Using the Cloudinary Upload Widget in Next.js for Signed Uploads
 
