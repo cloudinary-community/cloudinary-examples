@@ -13,10 +13,12 @@ export default function Home({ ogImage }) {
         <title>Next.js Image Component &amp; Cloudinary</title>
         <meta name="description" content="Find more Cloudinary examples at github.com/colbyfayock/cloudinary-examples" />
         <link rel="icon" href="/favicon.ico" />
+        <meta property="og:title" content="Next.js Image Component & Cloudinary" />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:secure_url" content={ogImage} />
         <meta property="og:image:width" content="2024" />
         <meta property="og:image:height" content="1012" />
+        <meta property="twitter:title" content="Next.js Image Component & Cloudinary" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:image" content={ogImage} />
       </Head>
