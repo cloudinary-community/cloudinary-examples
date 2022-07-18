@@ -14,6 +14,9 @@ export default function Home({ ogImage }) {
         <meta name="description" content="Find more Cloudinary examples at github.com/colbyfayock/cloudinary-examples" />
         <link rel="icon" href="/favicon.ico" />
         <meta property="og:title" content="Next.js Image Component & Cloudinary" />
+        <meta property="og:url" content="https://cloudinary-nextjs-social-media-card.netlify.app/" />
+        <meta property="og:type" content="website" />
+        <meta property="og:description" content="Find more Cloudinary examples at github.com/colbyfayock/cloudinary-examples" />
         <meta property="og:image" content={ogImage} />
         <meta property="og:image:secure_url" content={ogImage} />
         <meta property="og:image:width" content="2024" />
