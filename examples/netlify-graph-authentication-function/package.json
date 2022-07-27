@@ -1,0 +1,14 @@
+{
+  "name": "netlify-graph-function",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@netlify/functions": "^1.0.0",
+    "cloudinary": "^1.30.0",
+    "node-fetch": "2"
+  }
+}

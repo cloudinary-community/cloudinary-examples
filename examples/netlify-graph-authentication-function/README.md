@@ -1,0 +1,1 @@
+# Netlify Graph Authentication for Cloudinary in a Function
