@@ -3,8 +3,6 @@ const cloudinary = require('cloudinary').v2;
 const fetch = require('node-fetch');
 
 exports.handler = async (event, context) => {
-  const { image } = JSON.parse(event.body);
-
   const secrets = await getSecrets(event);
 
   if ( !secrets.cloudinary?.bearerToken ) {
@@ -28,7 +26,10 @@ exports.handler = async (event, context) => {
       oauth_token: secrets.cloudinary.bearerToken
     });
 
-    const results = await cloudinary.uploader.upload(image);
+    const results = await cloudinary.api.resources({
+      type: 'upload',
+      prefix: 'examples'
+    });
 
     return {
       statusCode: 200,
