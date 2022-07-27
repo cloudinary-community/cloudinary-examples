@@ -26,10 +26,7 @@ exports.handler = async (event, context) => {
       oauth_token: secrets.cloudinary.bearerToken
     });
 
-    const results = await cloudinary.api.resources({
-      type: 'upload',
-      prefix: 'examples'
-    });
+    const results = await cloudinary.search.expression('folder:examples').execute();
 
     return {
       statusCode: 200,
