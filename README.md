@@ -7,6 +7,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Netlify
 
 * [Netlify Function - Cloudinary Custom Remote Function](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/netlify-custom-function-remote)
+* [Netlify Graph Authentication - Cloudinary Auth in Netlify Function](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/netlify-graph-authentication-function)
 
 ### Next.js
 
