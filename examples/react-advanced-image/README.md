@@ -6,7 +6,7 @@ View Demo: <https://cloudinary-react-advanced-image.netlify.app/>
 
 ## 🧰 Using AdvancedImage in a React project
 
-To use AdvanedImage in a React app, first import the component from the React SDK.
+To use AdvancedImage in a React app, first import the component from the React SDK.
 
 ```
 import { AdvancedImage } from '@cloudinary/react';
