@@ -29,7 +29,7 @@ export default function Home() {
               return (
                 <li key={image.id}>
                   <a href={image.link} rel="noreferrer">
-                    <div className={styles.imageImage}>
+                    <div>
                       <Image width={image.width} height={image.height} src={image.image} alt={image.title} />
                     </div>
                     <h3 className={styles.imageTitle}>
