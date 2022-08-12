@@ -1,41 +1,66 @@
-# React Cloudinary AdvancedImage Component
+# React Cloudinary AdvancedVideo Component
 
-The AdvancedImage component from the Cloudinary React SDK extends the default image-loading capabilities and allows developers to use advanced plugins to help build performance apps.
+The AdvancedVideo component from the Cloudinary React SDK extends the default video-loading capabilities and allows developers to use advanced plugins to help build performance apps.
 
-View Demo: <https://cloudinary-react-advanced-image.netlify.app/>
+View Demo: <https://cloudinary-react-advanced-video.netlify.app/>
 
-## 🧰 Using AdvancedImage in a React project
+## 🧰 Using AdvancedVideo in a React project
 
-To use AdvancedImage in a React app, first import the component from the React SDK.
-
-```
-import { AdvancedImage } from '@cloudinary/react';
-```
-
-You can use the component similar to the HTML img tag except instead of passing a `src` prop, you can pass the `cldImg` prop with a URL Gen `cld.image` instance:
+To use AdvancedVideo in a React app, first import the component from the React SDK.
 
 ```
-<AdvancedImage cldImg={cld.image(image.image)} />
+import { AdvancedVideo } from '@cloudinary/react';
 ```
+
+You can use the component similar to the HTML img tag except instead of passing a `src` prop, you can pass the `cldVid` prop with a URL Gen `cld.video` instance:
+
+```
+<AdvancedVideo cldVid={cld.video('<Public ID>')} />
+```
+
+### Transformations & Effects
 
 In order to take advantage of Cloudinary transformations and effects, use the URL Gen SDK to chain additional configurations:
 
 ```
-<AdvancedImage cldImg={cld.image(image.image).delivery('q_auto').format('auto')} />
+<AdvancedVideo cldVid={cld.video('<Public ID>').delivery('q_auto').format('auto')} />
 ```
 
-In order to use AdvancedImage plugins, first import the plugin of your choice:
+### Plugins
+
+In order to use AdvancedVideo plugins, first import the plugin of your choice:
 
 ```
-import { AdvancedImage, lazyload } from '@cloudinary/react';
+import { AdvancedVideo, lazyload } from '@cloudinary/react';
 ```
 
 Then append the plugin to the `plugins` prop array:
 
 ```
-<AdvancedImage
-  cldImg={cld.image(image.image).delivery('q_auto').format('auto')}
+<AdvancedVideo
+  cldVid={cld.video('<Public ID>').delivery('q_auto').format('auto')}
   plugins={[ lazyload() ]}
+/>
+```
+
+### Cloudinary-Generated Poster
+
+You can automatically generate a thumbnail from your video to use with the `poster` prop using the same URL Gen SDK you use to create your `cld.video` instance:
+
+```
+<AdvancedVideo
+  cldVid={cld.video(video.video).delivery('q_auto').format('auto')}
+  poster={cld.image(video.video).setAssetType('video').delivery('q_auto').format('auto:image').toURL()}
+/>
+```
+
+### Cloudinary-Generated Preview Clip
+
+You can automatically generate a short clip to serve as a preview for your video:
+
+```
+<AdvancedVideo
+  cldVid={cld.video(video.video).effect('e_preview:duration_4')}
 />
 ```
 
