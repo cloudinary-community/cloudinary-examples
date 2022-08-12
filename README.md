@@ -20,6 +20,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### React
 
 * [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-image)
+* [Cloudinary AdvancedVideo Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-video)
 
 ## Not seeing an example?
 
