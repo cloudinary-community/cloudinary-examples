@@ -15,14 +15,18 @@ import { AdvancedImage } from '@cloudinary/react';
 You can use the component similar to the HTML img tag except instead of passing a `src` prop, you can pass the `cldImg` prop with a URL Gen `cld.image` instance:
 
 ```
-<AdvancedImage cldImg={cld.image(image.image)} />
+<AdvancedImage cldImg={cld.image('<Public ID>')} />
 ```
+
+### Transformations & Effects
 
 In order to take advantage of Cloudinary transformations and effects, use the URL Gen SDK to chain additional configurations:
 
 ```
-<AdvancedImage cldImg={cld.image(image.image).delivery('q_auto').format('auto')} />
+<AdvancedImage cldImg={cld.image('<Public ID>').delivery('q_auto').format('auto')} />
 ```
+
+### Plugins
 
 In order to use AdvancedImage plugins, first import the plugin of your choice:
 
@@ -34,7 +38,7 @@ Then append the plugin to the `plugins` prop array:
 
 ```
 <AdvancedImage
-  cldImg={cld.image(image.image).delivery('q_auto').format('auto')}
+  cldImg={cld.image('<Public ID>').delivery('q_auto').format('auto')}
   plugins={[ lazyload() ]}
 />
 ```
