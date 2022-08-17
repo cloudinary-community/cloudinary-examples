@@ -24,20 +24,15 @@ function App() {
         <h2>Default</h2>
         <p>No additional configuration or settings.</p>
         <ul className="images">
-          {images.slice(0,4).map(image => {
+          {images.map(image => {
             return (
               <li key={image.id}>
-                <a href={image.link} rel="noreferrer">
-                  <AdvancedImage
-                    width={image.width}
-                    height={image.height}
-                    cldImg={cld.image(image.image)}
-                    alt={image.title}
-                  />
-                  <h3 className="imageTitle">
-                    { image.title }
-                  </h3>
-                </a>
+                <AdvancedImage
+                  width={image.width}
+                  height={image.height}
+                  cldImg={cld.image(image.image)}
+                  alt={image.title}
+                />
               </li>
             )
           })}
@@ -48,20 +43,15 @@ function App() {
         <h2>Optimized</h2>
         <p>Format of auto (<code>f_auto</code>) and quality of auto (<code>q_auto</code>).</p>
         <ul className="images">
-          {images.slice(0,4).map(image => {
+          {images.map(image => {
             return (
               <li key={image.id}>
-                <a href={image.link} rel="noreferrer">
-                  <AdvancedImage
-                    width={image.width}
-                    height={image.height}
-                    cldImg={cld.image(image.image).delivery('q_auto').format('auto')}
-                    alt={image.title}
-                  />
-                  <h3 className="imageTitle">
-                    { image.title }
-                  </h3>
-                </a>
+                <AdvancedImage
+                  width={image.width}
+                  height={image.height}
+                  cldImg={cld.image(image.image).delivery('q_auto').format('auto')}
+                  alt={image.title}
+                />
               </li>
             )
           })}
@@ -72,21 +62,29 @@ function App() {
         <h2>Plugins</h2>
         <p>Lazy loading and low quality placeholders.</p>
         <ul className="images">
-          {images.slice(0,4).map(image => {
+          {images.map(image => {
             return (
               <li key={image.id}>
-                <a href={image.link} rel="noreferrer">
-                  <AdvancedImage
-                    width={image.width}
-                    height={image.height}
-                    cldImg={cld.image(image.image).delivery('q_auto').format('auto')}
-                    alt={image.title}
-                    plugins={[ lazyload(), placeholder() ]}
-                  />
-                  <h3 className="imageTitle">
-                    { image.title }
-                  </h3>
-                </a>
+                <AdvancedImage
+                  width={image.width}
+                  height={image.height}
+                  cldImg={cld.image(image.image).delivery('q_auto').format('auto')}
+                  alt={image.title}
+                  plugins={[ lazyload(), placeholder() ]}
+                />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div className="container">
+        <h2>Resources</h2>
+        <ul>
+          {images.map(image => {
+            return (
+              <li key={image.id}>
+                { image.title }: <a href={image.link} rel="noreferrer">{image.link}</a>
               </li>
             )
           })}

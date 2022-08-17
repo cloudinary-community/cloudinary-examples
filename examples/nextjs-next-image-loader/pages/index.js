@@ -28,17 +28,10 @@ export default function Home() {
           <p>Automatically determine best quality. Default option.</p>
           <p><code>q_auto</code></p>
           <ul className={styles.images}>
-            {images.slice(0,4).map(image => {
+            {images.map(image => {
               return (
                 <li key={image.id}>
-                  <a href={image.link} rel="noreferrer">
-                    <div>
-                      <Image width={image.width} height={image.height} src={image.image} alt={image.title} />
-                    </div>
-                    <h3 className={styles.imageTitle}>
-                      { image.title }
-                    </h3>
-                  </a>
+                  <Image width={image.width} height={image.height} src={image.image} alt={image.title} />
                 </li>
               )
             })}
@@ -50,17 +43,10 @@ export default function Home() {
           <p>Use auto with preferred setting.</p>
           <p><code>q_auto:best</code></p>
           <ul className={styles.images}>
-            {images.slice(0,4).map(image => {
+            {images.map(image => {
               return (
                 <li key={image.id}>
-                  <a href={image.link} rel="noreferrer">
-                    <div>
-                      <Image width={image.width} height={image.height} src={image.image} alt={image.title} quality="auto:best" />
-                    </div>
-                    <h3 className={styles.imageTitle}>
-                      { image.title }
-                    </h3>
-                  </a>
+                  <Image width={image.width} height={image.height} src={image.image} alt={image.title} quality="auto:best" />
                 </li>
               )
             })}
@@ -72,17 +58,10 @@ export default function Home() {
           <p>Specify your own quality level.</p>
           <p><code>q_10</code></p>
           <ul className={styles.images}>
-            {images.slice(0,4).map(image => {
+            {images.map(image => {
               return (
                 <li key={image.id}>
-                  <a href={image.link} rel="noreferrer">
-                    <div>
-                      <Image width={image.width} height={image.height} src={image.image} alt={image.title} quality="10" />
-                    </div>
-                    <h3 className={styles.imageTitle}>
-                      { image.title }
-                    </h3>
-                  </a>
+                  <Image width={image.width} height={image.height} src={image.image} alt={image.title} quality="10" />
                 </li>
               )
             })}
@@ -99,6 +78,18 @@ export default function Home() {
           </p>
         </div>
 
+        <div className={styles.container}>
+          <h2>Resources</h2>
+          <ul>
+            {images.map(image => {
+              return (
+                <li key={image.id}>
+                  { image.title }: <a href={image.link} rel="noreferrer">{image.link}</a>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
       </main>
     </>
   )

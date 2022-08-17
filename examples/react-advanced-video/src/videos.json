@@ -18,21 +18,9 @@
     "link": "https://www.pexels.com/video/a-person-on-hang-glider-6935059/"
   },
   {
-    "id": "mountain-stars",
-    "title": "Mountain Stars",
-    "video": "videos/mountain-stars",
-    "link": "https://www.pexels.com/video/beautiful-timelapse-of-the-night-sky-with-reflections-in-a-lake-857251/"
-  },
-  {
     "id": "cooking-stirfry",
     "title": "Cooking Stirfry",
     "video": "videos/cooking-stirfry",
     "link": "https://www.pexels.com/video/a-cook-using-a-wok-2620043/"
-  },
-  {
-    "id": "waterfall",
-    "title": "Waterfall",
-    "video": "videos/waterfall",
-    "link": "https://www.pexels.com/video/top-view-footage-of-a-green-water-falls-3173313/"
   }
 ]
