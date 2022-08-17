@@ -65,13 +65,12 @@ function App() {
             )
           })}
         </ul>
-        <p>With pixelated background.</p>
+        <p>With an image underlay as the background.</p>
         <ul className="images">
           {images.map(image => {
             const imgSrc = cld.image(image.image)
                               .effect(`e_background_removal`)
                               .effect(`u_${PUBLIC_ID_BACKGROUND.replaceAll('/', ':')},c_fill,w_${image.width},h_${image.height}`)
-                              .addFlag('no_overflow')
                               .delivery('q_auto')
                               .format('auto')
                               .toURL();
