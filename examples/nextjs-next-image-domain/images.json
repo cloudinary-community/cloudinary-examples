@@ -30,37 +30,5 @@
     "image": "https://res.cloudinary.com/colbycloud-examples/image/upload/v1654534626/examples/galaxy_qtrsjt.jpg",
     "width": 2340,
     "height": 1560
-  },
-  {
-    "id": "iceberg",
-    "title": "Iceberg",
-    "link": "https://unsplash.com/photos/VSGEH7tKiUg",
-    "image": "https://res.cloudinary.com/colbycloud-examples/image/upload/v1654534626/examples/iceberg_t78lqn.jpg",
-    "width": 2148,
-    "height": 1611
-  },
-  {
-    "id": "jungle",
-    "title": "Jungle",
-    "link": "https://unsplash.com/photos/PFPebiEehDE",
-    "image": "https://res.cloudinary.com/colbycloud-examples/image/upload/v1654534626/examples/jungle_atgaaf.jpg",
-    "width": 1364,
-    "height": 1705
-  },
-  {
-    "id": "mountain",
-    "title": "Mountain",
-    "link": "https://unsplash.com/photos/phIFdC6lA4E",
-    "image": "https://res.cloudinary.com/colbycloud-examples/image/upload/v1654534627/examples/mountain_xr6uv2.jpg",
-    "width": 2340,
-    "height": 1561
-  },
-  {
-    "id": "waterfall",
-    "title": "Waterfall",
-    "link": "https://unsplash.com/photos/wZLsZ9DRLSI",
-    "image": "https://res.cloudinary.com/colbycloud-examples/image/upload/v1654534626/examples/waterfall_d0bsl5.jpg",
-    "width": 2340,
-    "height": 1560
   }
 ]
