@@ -26,10 +26,14 @@ function App() {
         <p>Format of auto (<code>f_auto</code>) and quality of auto (<code>q_auto</code>).</p>
         <ul className="images">
           {images.map(image => {
-            const imgSrc = cld.image(image.image).delivery('q_auto').format('auto').toURL();
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .delivery('q_auto')
+                              .format('auto')
+                              .toURL();
             return (
               <li key={image.id}>
-                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} />
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
               </li>
             )
           })}
@@ -41,10 +45,15 @@ function App() {
         <p>On-the-fly background removal (<code>e_background_removal</code>).</p>
         <ul className="images">
           {images.map(image => {
-            const imgSrc = cld.image(image.image).effect('e_background_removal').delivery('q_auto').format('auto').toURL();
+            const imgSrc = cld.image(image.image)
+                              .effect('e_background_removal')
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .delivery('q_auto')
+                              .format('auto')
+                              .toURL();
             return (
               <li key={image.id}>
-                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} />
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
               </li>
             )
           })}
@@ -54,13 +63,14 @@ function App() {
           {images.map(image => {
             const imgSrc = cld.image(image.image)
                               .effect('e_background_removal')
+                              .resize(`w_${image.width},h_${image.height}`)
                               .backgroundColor('#692ba8')
                               .delivery('q_auto')
                               .format('auto')
                               .toURL();
             return (
               <li key={image.id}>
-                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} />
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
               </li>
             )
           })}
@@ -70,13 +80,84 @@ function App() {
           {images.map(image => {
             const imgSrc = cld.image(image.image)
                               .effect(`e_background_removal`)
+                              .resize(`w_${image.width},h_${image.height}`)
                               .effect(`u_${PUBLIC_ID_BACKGROUND.replaceAll('/', ':')},c_fill,w_${image.width},h_${image.height}`)
                               .delivery('q_auto')
                               .format('auto')
                               .toURL();
             return (
               <li key={image.id}>
-                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} />
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div className="container">
+        <h2>Pan &amp; Zoom</h2>
+        <p>Zoom into the center of an image (<code>e_panzoom</code>).</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['raccoon'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .effect('e_zoompan')
+                              .delivery('q_auto')
+                              .format('gif')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+        <p>With looping (<code>e_panzoom/e_loop</code>).</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['raccoon'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .delivery('q_auto')
+                              .effect('e_zoompan')
+                              .effect('e_loop')
+                              .format('gif')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+        {/* <p>With zooming automatically to the subject (<code>e_panzoom:to(g_auto)</code>)</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['raccoon'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .effect('e_zoompan:to(g_auto)')
+                              .delivery('q_auto')
+                              .format('gif')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul> */}
+        <p>With lower FPS (<code>e_panzoom,fps_2</code>)</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['raccoon'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .effect('e_zoompan:fps_2')
+                              .effect('e_loop')
+                              .delivery('q_auto')
+                              .format('gif')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
               </li>
             )
           })}
