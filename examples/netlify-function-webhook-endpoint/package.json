@@ -1,0 +1,14 @@
+{
+  "name": "netlify-function-webhook-endpoint",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "netlify dev"
+  },
+  "dependencies": {
+    "cloudinary": "^1.30.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.1"
+  }
+}
