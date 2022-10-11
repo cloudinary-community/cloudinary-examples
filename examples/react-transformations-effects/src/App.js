@@ -25,7 +25,7 @@ function App() {
         <h2>Optimization</h2>
         <p>Format of auto (<code>f_auto</code>) and quality of auto (<code>q_auto</code>).</p>
         <ul className="images">
-          {images.map(image => {
+          {images.slice(0, 4).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_${image.width},h_${image.height}`)
                               .delivery('q_auto')
@@ -44,7 +44,7 @@ function App() {
         <h2>Background Removal</h2>
         <p>On-the-fly background removal (<code>e_background_removal</code>).</p>
         <ul className="images">
-          {images.map(image => {
+          {images.slice(0, 4).map(image => {
             const imgSrc = cld.image(image.image)
                               .effect('e_background_removal')
                               .resize(`w_${image.width},h_${image.height}`)
@@ -60,7 +60,7 @@ function App() {
         </ul>
         <p>With solid color background.</p>
         <ul className="images">
-          {images.map(image => {
+          {images.slice(0, 4).map(image => {
             const imgSrc = cld.image(image.image)
                               .effect('e_background_removal')
                               .resize(`w_${image.width},h_${image.height}`)
@@ -77,7 +77,7 @@ function App() {
         </ul>
         <p>With an image underlay as the background.</p>
         <ul className="images">
-          {images.map(image => {
+          {images.slice(0, 4).map(image => {
             const imgSrc = cld.image(image.image)
                               .effect(`e_background_removal`)
                               .resize(`w_${image.width},h_${image.height}`)
@@ -98,7 +98,7 @@ function App() {
         <h2>Pan &amp; Zoom</h2>
         <p>Zoom into the center of an image (<code>e_panzoom</code>).</p>
         <ul className="images">
-          {images.filter(({ id }) => ['raccoon'].includes(id)).map(image => {
+          {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_${image.width},h_${image.height}`)
                               .effect('e_zoompan')
@@ -114,7 +114,7 @@ function App() {
         </ul>
         <p>With looping (<code>e_panzoom/e_loop</code>).</p>
         <ul className="images">
-          {images.filter(({ id }) => ['raccoon'].includes(id)).map(image => {
+          {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_${image.width},h_${image.height}`)
                               .delivery('q_auto')
@@ -131,7 +131,7 @@ function App() {
         </ul>
         {/* <p>With zooming automatically to the subject (<code>e_panzoom:to(g_auto)</code>)</p>
         <ul className="images">
-          {images.filter(({ id }) => ['raccoon'].includes(id)).map(image => {
+          {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_${image.width},h_${image.height}`)
                               .effect('e_zoompan:to(g_auto)')
@@ -147,7 +147,7 @@ function App() {
         </ul> */}
         <p>With lower FPS (<code>e_panzoom,fps_2</code>)</p>
         <ul className="images">
-          {images.filter(({ id }) => ['raccoon'].includes(id)).map(image => {
+          {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_${image.width},h_${image.height}`)
                               .effect('e_zoompan:fps_2')
@@ -165,9 +165,43 @@ function App() {
       </div>
 
       <div className="container">
+        <h2>Gravity</h2>
+        <p>Using <code>g_auto</code> to automatically center to the subject.</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_1000,h_1000,c_thumb,g_auto`)
+                              .delivery('q_auto')
+                              .format('auto')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width="500" height="500" src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+        <p>Using <code>g_faces</code> (or <code>g_face</code>) to target the subject&apos;s face.</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_1000,h_1000,c_thumb,g_face`)
+                              .delivery('q_auto')
+                              .format('auto')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width="500" height="500" src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div className="container">
         <h2>Resources</h2>
         <ul>
-          {images.map(image => {
+          {images.slice(0, 4).map(image => {
             return (
               <li key={image.id}>
                 { image.title }: <a href={image.link} rel="noreferrer">{image.link}</a>
