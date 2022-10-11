@@ -9,6 +9,9 @@ cloudinary.config({
 exports.handler = async (event, context) => {
   const { public_id, secure_url, tags } = JSON.parse(event.body);
 
+  console.log('event.body', event.body);
+  console.log('event.headers', event.headers);
+
   if ( Array.isArray(tags) && tags.includes('remove-background') ) {
     await cloudinary.uploader.upload(secure_url, {
       background_removal: 'cloudinary_ai',
