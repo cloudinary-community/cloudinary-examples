@@ -7,28 +7,26 @@ cloudinary.config({
 });
 
 exports.handler = async (event, context) => {
-  const { public_id, secure_url, tags } = JSON.parse(event.body);
+  const { notification_type, public_id, secure_url, tags } = JSON.parse(event.body);
 
-  console.log('event.body', event.body);
-  console.log('event.headers', event.headers);
+  if ( notification_type === 'upload' && tags.includes('remove-background') ) {
+    console.log(`Removing background from ${public_id}`);
 
-  if ( Array.isArray(tags) && tags.includes('remove-background') ) {
     await cloudinary.uploader.upload(secure_url, {
       background_removal: 'cloudinary_ai',
       folder: 'examples/background-removed'
     });
+
     return {
       statusCode: 200,
-      body: JSON.stringify({
-        message: `Removing background from ${public_id}`
-      })
+      body: JSON.stringify({ message: `Removing background from ${public_id}` })
     }
   }
 
+  console.log('Ok');
+
   return {
     statusCode: 202,
-    body: JSON.stringify({
-      status: 'Ok'
-    })
+    body: JSON.stringify({ message: 'Ok' })
   }
 };
