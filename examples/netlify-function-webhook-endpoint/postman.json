@@ -1,48 +1,86 @@
 {
-  "info": {
-    "name": "Cloudinary",
-    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-  },
-  "item": [
-    {
-      "name": "POST - Custom Function",
-      "request": {
-        "method": "POST",
-        "header": [
-          {
-            "key": "User-Agent",
-            "value": "Typhoeus - https://github.com/typhoeus/typhoeus",
-            "type": "text"
-          },
-          {
-            "key": "X-Cld-Signature",
-            "value": "CLDSIGNATURE{{$randomUUID}}",
-            "type": "text"
-          },
-          {
-            "key": "X-Cld-Timestamp",
-            "value": "{{$timestamp}}",
-            "type": "text"
-          }
-        ],
-        "body": {
-          "mode": "formdata",
-          "formdata": [
-            {
-              "key": "files",
-              "type": "file",
-              "src": "image.png"
-            },
-            {
-              "key": "metadata",
-              "value": "{\"current_page\":1,\"coordinates\":{},\"variables\":{}}",
-              "type": "text"
-            }
-          ]
-        },
-        "url": "http://localhost:8888/.netlify/functions/blurhash"
-      },
-      "response": []
-    }
-  ]
+	"info": {
+		"_postman_id": "e198f932-d6d2-4fcd-8767-046d983ef1e9",
+		"name": "Cloudinary - Webhook Endpoint",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10609445"
+	},
+	"item": [
+		{
+			"name": "Remove Background",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Cloudinary",
+						"type": "text"
+					},
+					{
+						"key": "X-Cld-Signature",
+						"value": "CLDSIGNATURE{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Cld-Timestamp",
+						"value": "{{$timestamp}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"notification_type\": \"upload\",\n  \"timestamp\": \"2020-12-16T12:09:39+00:00\",\n  \"request_id\": \"71763d4cacf19521f5691a02c8b143b1\",\n  \"asset_id\": \"ede59e6d3befdc65a8adc2f381c0f96f\",\n  \"public_id\": \"sample\",\n  \"version\": 1608120578,\n  \"version_id\": \"3144395a27aa6c02df1ca8aaf9aa6e7a\",\n  \"width\": 1279,\n  \"height\": 853,\n  \"format\": \"jpg\",\n  \"resource_type\": \"image\",\n  \"created_at\": \"2020-12-16T12:09:38Z\",\n  \"tags\": [\"remove-background\"],\n  \"bytes\": 380250,\n  \"type\": \"upload\",\n  \"etag\": \"0b40494da087cba7092d29c58aede2e2\",\n  \"placeholder\": false,\n  \"url\": \"http://res.cloudinary.com/demo/image/upload/v1608120578/sample.jpg\",\n  \"secure_url\": \"https://res.cloudinary.com/demo/image/upload/v1608120578/sample.jpg\",\n  \"original_filename\": \"jeans-1421398-1279x852\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/.netlify/functions/background-removal",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						".netlify",
+						"functions",
+						"background-removal"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"url\": \"https://res.cloudinary.com/demo/image/upload/docs/rmv_bgd/dog_couch_orig.jpg\",\n    \"folder\": \"examples\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8888/.netlify/functions/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8888",
+					"path": [
+						".netlify",
+						"functions",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		}
+	]
 }
