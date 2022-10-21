@@ -6,5 +6,8 @@
   "private": true,
   "workspaces": [
     "examples/*"
-  ]
+  ],
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
 }
