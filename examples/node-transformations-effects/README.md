@@ -1,10 +1,8 @@
 # Transformations & Effects in Node.js with Cloudinary Node.js SDK
 
+## 🧰 Using the SDK in a Node project
 
-
-## 🧰 Using the URL Gen SDK in a React project
-
-To use the URL Gen SDK in a React app, first import library:
+To use the SDK in a Node project, first import library:
 
 ```
 const cloudinary = require('cloudinary').v2;
