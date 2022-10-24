@@ -7,6 +7,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Netlify
 
 * [Netlify Function - Cloudinary Custom Remote Function](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/netlify-custom-function-remote)
+* [Netlify Function - Cloudinary Webhook Endpoint](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/netlify-function-webhook-endpoint)
 * [Netlify Graph Authentication - Cloudinary Auth in Netlify Function](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/netlify-graph-authentication-function)
 
 ### Next.js
@@ -17,10 +18,16 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 * [Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
 * [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-social-media-card)
 
+### Node.js
+
+* [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-transformations-effects)
+
 ### React
 
 * [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-image)
 * [Cloudinary AdvancedVideo Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-video)
+* [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-transformations-effects)
+* [Cloudinary Upload Widget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-upload-widget-preset)
 
 ## Not seeing an example?
 
