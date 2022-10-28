@@ -18,10 +18,65 @@ cloudinary.config({
 });
 ```
 
-Where you can generate a Cloudinary URL by using the `cld.image` method such as:
+To create an image, we can first supply Cloudinary with our base image's public ID to generate a starting point:
+```
+const ogImage = cloudinary.url('social-card-mountain', {
+  width: 1012,
+  height: 506,
+  secure: true,
+  transformation: [
+    {
+      fetch_format: 'auto',
+      quality: 'auto'
+    }
+  ]
+});
+```
+
+To apply a layer of text, we can add a text overlay to our transformation array:
 
 ```
-cloudinary.url('<Your Public ID>')
+const ogImage = cloudinary.url('social-card-mountain', {
+  width: 1012,
+  height: 506,
+  secure: true,
+  transformation: [
+    {
+      fetch_format: 'auto',
+      quality: 'auto'
+    },
+    {
+      color: '#2E2F38',
+      crop: 'fit',
+      width: 892,
+      overlay: {
+        font_family: 'Source Sans Pro',
+        font_size: 60,
+        font_weight: 'bold',
+        text: 'My Social Card',
+        text_align: 'center'
+      },
+    },
+    {
+      flags: 'layer_apply',
+      gravity: 'north',
+      y: 100
+    }
+  ]
+});
+```
+
+> Tip: You can embed multiple text overlays including nesting the text overlays to take advantage of the natural flow of the text. See the code in this example to see how!
+
+Once we generate our image, we can pass it as data to our project's page and use it to supply metadata tags with our relevant image URL.
+
+```
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:secure_url" content={ogImage} />
+<meta property="og:image:width" content="2024" />
+<meta property="og:image:height" content="1012" />
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content={ogImage} />
 ```
 
 ## 🚀 Get Started with This Example
