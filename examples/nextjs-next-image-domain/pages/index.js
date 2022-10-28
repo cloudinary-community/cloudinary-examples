@@ -4,20 +4,20 @@ import styles from '../styles/Home.module.css';
 
 import images from '../images.json';
 
+const TITLE = 'Next.js Image Component & Cloudinary';
+
 export default function Home() {
   return (
     <>
       <Head>
-        <title>Next.js Image Component &amp; Cloudinary</title>
+        <title>{ TITLE }</title>
         <meta name="description" content="Find more Cloudinary examples at github.com/colbyfayock/cloudinary-examples" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <div className={styles.container}>
-          <h1 className={styles.title}>
-            Next.js Image Component &amp; Cloudinary
-          </h1>
+          <h1 className={styles.title}>{ TITLE }</h1>
           <h2 className={styles.subtitle}>
             Using Cloudinary URLs
           </h2>

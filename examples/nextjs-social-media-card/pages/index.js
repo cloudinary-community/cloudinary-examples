@@ -46,7 +46,7 @@ export default function Home() {
 
         <div className={styles.container}>
           <h2>Card Preview</h2>
-          <p>
+          <p style={{ maxWidth: 600 }}>
             {/* Values cut in half for smaller image file size */}
             <CldImage
               width="1200"
@@ -59,8 +59,8 @@ export default function Home() {
                     y: -110
                   },
                   text: {
-                    color: 'blueviolet',
-                    fontFamily: 'Source Sans Pro',
+                    color: 'black',
+                    fontFamily: 'Arial',
                     fontSize: 90,
                     fontWeight: 'bold',
                     text: 'My Social Card'
@@ -68,6 +68,9 @@ export default function Home() {
                 }
               ]}
             />
+          </p>
+          <p>
+            <a href="https://github.com/colbyfayock/cloudinary-examples/blob/main/examples/nextjs-social-media-card/pages/index.js#L23">See the code on github.com.</a>
           </p>
           <p>
             Preview the working card at <a href="https://www.opengraph.xyz/url/https%3A%2F%2Fcloudinary-nextjs-social-media-card.netlify.app%2F" target="_blank" rel="noreferrer">opengraph.xyz</a>

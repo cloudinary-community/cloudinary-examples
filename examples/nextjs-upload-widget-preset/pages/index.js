@@ -5,6 +5,8 @@ import UploadWidget from '../components/UploadWidget';
 
 import styles from '../styles/Home.module.css';
 
+const TITLE = 'Next.js & Cloudinary Upload Widget'
+
 export default function Home() {
   const [url, updateUrl] = useState();
   const [error, updateError] = useState();
@@ -27,16 +29,21 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Next.js &amp; Cloudinary Upload Widget</title>
+        <title>{ TITLE }</title>
         <meta name="description" content="Find more Cloudinary examples at github.com/colbyfayock/cloudinary-examples" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <div className={styles.container}>
-          <h1 className={styles.title}>
-            Next.js &amp; Cloudinary Upload Widget
-          </h1>
+          <h1 className={styles.title}>{ TITLE }</h1>
+        </div>
+
+        <div className={styles.container}>
+          <blockquote className={styles.warning}>
+            Note: See <a href="https://next-cloudinary.spacejelly.dev/">Next Cloudinary</a> for
+            first-class Next.js support of the Cloudinary Upload Widget.
+          </blockquote>
         </div>
 
         <div className={styles.container}>

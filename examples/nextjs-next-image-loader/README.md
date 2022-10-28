@@ -6,19 +6,24 @@ View Demo: <https://cloudinary-nextjs-next-image-loader.netlify.app>
 
 ## 🧰 Using the Cloudinary Loader with the Next.js Image Component
 
-To use Cloudinary with the Image component, simply update your `next.config.js` file with the following configuration:
+> ⚠️ Note: This is not the  recommended approach. Use the CldImage component with [Next Cloudinary](https://next-cloudinary.spacejelly.dev) for first-class support of Cloudinary with the Next.js Image component.
+
+To use Cloudinary as a Loader with the Image component, you must specify a `loader` prop for each instance of an Image.
 
 ```
-const nextConfig = {
-  ...
-  images: {
-    loader: 'cloudinary',
-    path: 'https://res.cloudinary.com/<Your Cloud Name>'
-  }
+const normalizeSrc = (src) => src[0] === '/' ? src.slice(1) : src
+
+export function cloudinaryLoader({ src, width, quality }) {
+  const params = ['f_auto', 'c_limit', 'w_' + width, 'q_' + (quality || 'auto')];
+  return `https://res.cloudinary.com/${process.env.CLOUDINARY_CLOUD_NAME}/image/upload/${params.join(',')}/${normalizeSrc(src)}`;
 }
+
+<Image ... loader={cloudinaryLoader} />
 ```
 
-See the file in action at [next.config.js](next.config.js).
+> Tip: As of Next.js 13.0.0, you can not globally specify a Loader.
+
+See the file in action at [pages/index.js](pages/index.js).
 
 > Note: If using a custom domain with Cloudinary, be sure add the appropriate host in the domains array.
 

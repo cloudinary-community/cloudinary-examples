@@ -40,6 +40,13 @@ export default function Home() {
         </div>
 
         <div className={styles.container}>
+          <blockquote className={styles.warning}>
+            Note: See <a href="https://next-cloudinary.spacejelly.dev/">Next Cloudinary</a> for
+            first-class Next.js support of the Cloudinary Upload Widget.
+          </blockquote>
+        </div>
+
+        <div className={styles.container}>
           <UploadWidget onUpload={handleOnUpload}>
             {({ open }) => {
               function handleOnClick(e) {

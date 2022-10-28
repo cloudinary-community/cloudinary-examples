@@ -6,6 +6,8 @@ View Demo: <https://cloudinary-nextjs-upload-widget-signed.netlify.app/>
 
 ## 🧰 Using the Cloudinary Upload Widget in Next.js for Signed Uploads
 
+> ⚠️ Note: This is not the  recommended approach. Use the CldUploadWidget component with [Next Cloudinary](https://next-cloudinary.spacejelly.dev) for first-class Next.js support of the Cloudinary Upload Widget.
+
 To use the Cloudinary Upload Widget with Next.js, we can optionally (but recommended) create a new component that includes any and all logic to handle loading the widget script along with the events that occur during the script loading and uploading process.
 
 Start off by creating a new component, in this example `UploadWidget.js`, that includes the following code:

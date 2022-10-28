@@ -23,3 +23,10 @@
   font-size: 1.4em;
   margin: .4em 0 0;
 }
+
+.warning {
+  background-color: lightgoldenrodyellow;
+  padding: 1em 1.5em;
+  margin-left: 0;
+  margin-right: 0;
+}
