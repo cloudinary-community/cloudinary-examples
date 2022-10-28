@@ -13,6 +13,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Next.js
 
 * [CldImage Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage)
+* [CldOgImage Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldogimage)
 * [Cloudinary Upload Widget with Signed Uploads](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-signed)
 * [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-preset)
 * [Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
