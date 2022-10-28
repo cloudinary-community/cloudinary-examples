@@ -1,4 +1,4 @@
-# Transformations & Effects in Node.js with Cloudinary Node.js SDK
+# Social Media Card in Node.js with Cloudinary Node.js SDK
 
 ## 🧰 Using the SDK in a Node project
 
@@ -43,10 +43,10 @@ npm install
 node <filename>
 ```
 
-For example, inside the `examples/node-transformations-effects` directory:
+For example, inside the `examples/node-social-media-card` directory:
 
 ```
-node image-overlay.js
+node social-media-card.js
 ```
 
 The script will run in your terminal and you'll see the URL results logged.
