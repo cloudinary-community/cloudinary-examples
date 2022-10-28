@@ -114,6 +114,9 @@ export default function Home() {
 
         <div className={styles.container}>
           <h3>Resources</h3>
+          <p>
+            <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader">See the code on github.com.</a>
+          </p>
           <ul>
             {images.map(image => {
               return (

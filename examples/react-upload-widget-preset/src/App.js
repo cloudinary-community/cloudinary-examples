@@ -56,6 +56,13 @@ function App() {
           </>
         )}
       </div>
+
+      <div className="container">
+        <h2>Resources</h2>
+        <p>
+          <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-upload-widget-preset">See the code on github.com.</a>
+        </p>
+      </div>
     </main>
   );
 }

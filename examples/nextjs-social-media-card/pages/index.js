@@ -69,11 +69,15 @@ export default function Home() {
               ]}
             />
           </p>
+        </div>
+
+        <div className={styles.container}>
+          <h2>Resources</h2>
           <p>
-            <a href="https://github.com/colbyfayock/cloudinary-examples/blob/main/examples/nextjs-social-media-card/pages/index.js#L23">See the code on github.com.</a>
+            <a href="https://github.com/colbyfayock/cloudinary-examples/blob/main/examples/nextjs-social-media-card">See the code on github.com.</a>
           </p>
           <p>
-            Preview the working card at <a href="https://www.opengraph.xyz/url/https%3A%2F%2Fcloudinary-nextjs-social-media-card.netlify.app%2F" target="_blank" rel="noreferrer">opengraph.xyz</a>
+          Preview the working card at <a href="https://www.opengraph.xyz/url/https%3A%2F%2Fcloudinary-nextjs-social-media-card.netlify.app%2F" target="_blank" rel="noreferrer">opengraph.xyz</a>
           </p>
         </div>
       </main>

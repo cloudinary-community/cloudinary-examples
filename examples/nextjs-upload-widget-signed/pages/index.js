@@ -71,6 +71,13 @@ export default function Home() {
           )}
         </div>
 
+        <div className={styles.container}>
+          <h2>Resources</h2>
+          <p>
+            <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-signed">See the code on github.com.</a>
+          </p>
+        </div>
+
       </main>
     </>
   )

@@ -111,6 +111,9 @@ function App() {
 
       <div className="container">
         <h2>Resources</h2>
+        <p>
+          <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-video">See the code on github.com.</a>
+        </p>
         <ul>
           {videos.map(video => {
             return (

@@ -92,6 +92,9 @@ export default function Home() {
 
         <div className={styles.container}>
           <h2>Resources</h2>
+          <p>
+            <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage">See the code on github.com.</a>
+          </p>
           <ul>
             <li>Next Cloudinary: <a href="https://next-cloudinary.spacejelly.dev/">https://next-cloudinary.spacejelly.dev/</a></li>
             {images.map(image => {
