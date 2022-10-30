@@ -22,7 +22,7 @@ We can analyze those details, such as verify the event is an upload and we have 
 
 
 This repository includes two functions:
-- [upload.js](functions/upload.js]: a helper to trigger a new file upload
+- [upload.js](functions/upload.js): a helper to trigger a new file upload
 - [background-removal.js](functions/background-removal.js): notification endpoint to trigger a upload with background removal
 
 You can run these endpoints locally to simulate actions, but the notification URL must be deployed to configure it with Cloudinary, as Cloudinary can not hit a local endpoint.
