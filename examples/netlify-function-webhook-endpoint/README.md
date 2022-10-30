@@ -1,83 +1,33 @@
-# Netlify Functions as Cloudinary Custom Remote Function
+# Netlify Functions as Webhook Notification Endpoints
 
-Cloudinary allows you to use a remote function to add custom processing to your media requests. We can use Netlify Functions to do things like generate BlurHash representations of images.
+Using Webhook Notifications, Cloudinary can hit an endpoint URL any time an event occurs. We can use Netlify Functions to process that request and trigger process, such as removing a background based on tags.
 
-Once the remote function is invoked, the result is cached on Cloudinary's CDN.
+## 🧰 Using Netlify Functions as Cloudinary Webhooks
 
-## 🧰 Using Netlify Functions as Remote Functions in Cloudinary
-
-The most important part when creating a remote custom function is ensuring that the response is as Cloudinary expects.
-
-The [response structure](https://cloudinary.com/documentation/custom_functions#response_structure) should be the following:
+After defining the Netlify Function or API endpoint as a notification URL whether globally or as part of an action, Cloudinary will send a payload with the notification type and resource information.
 
 ```
 {
-  "statusCode": 200,
-  "headers": {
-    "Content-Type": "image/jpeg",
-    "Content-Length": imageData.length
-  },
-  "isBase64Encoded": true,
-  "body": imageData.toString('base64')
+  "notification_type": "upload",
+  "tags": ["remove-background"],
+  ...
 }
 ```
 
-Read more: <https://cloudinary.com/documentation/custom_functions#response_structure>
+> See the full payload on the Cloudinary Docs: <https://cloudinary.com/documentation/notifications#notification_payload>
 
-When making the request, Cloudinary will send image data as multi-part form data.
-
-[The request](https://cloudinary.com/documentation/custom_functions#request_structure) will be in the following structure:
-
-- `files`: image data
-- `metadata`: JSON data representing any configured metadata
-
-Read more: https://cloudinary.com/documentation/custom_functions#request_structure
-
-Finally, most use cases will require you to [sign the image](https://cloudinary.com/blog/on_the_fly_image_manipulations_secured_with_signed_urls) when generating image URLs with a custom remote function.
-
-Read more: <https://cloudinary.com/blog/on_the_fly_image_manipulations_secured_with_signed_urls>
+We can analyze those details, such as verify the event is an upload and we have our background removal tag, and once verified, trigger a new action such as a new upload using [Cloudinary AI Background Removal](https://cloudinary.com/documentation/cloudinary_ai_background_removal_addon).
 
 ### Testing the Remote Function
 
-To simulate making a request to the function as if Cloudinary was using it, you can create a request with the following:
 
-Send a body as Form Data with:
+This repository includes two functions:
+- [upload.js](functions/upload.js]: a helper to trigger a new file upload
+- [background-removal.js](functions/background-removal.js): notification endpoint to trigger a upload with background removal
 
-- files: the actual image file data
-- metadata: JSON in the form of a string with required metadata
-
-Send the headers as:
-
-- User-Agent: Typhoeus - https://github.com/typhoeus/typhoeus
-- X-Cld-Signature: Cloudinary generated signature
-- X-Cld-Timestamp: Time the request was made
-
-When making the request, the response will be the new image data.
+You can run these endpoints locally to simulate actions, but the notification URL must be deployed to configure it with Cloudinary, as Cloudinary can not hit a local endpoint.
 
 See [postman.json](postman.json) to import this request into [Postman](https://www.postman.com/).
-
-### Generating an Image with a Remote Function
-
-To generate an image using the Node SDK, you can specify the remote function like:
-
-```
-const cloudinary = require('cloudinary').v2;
-
-cloudinary.config({
-  cloud_name: '<Your Cloudinary Cloud Name>',
-  api_key: '<Your Cloudinary API Key>',
-  api_secret: '<Your Cloudinary API Secret>'
-});
-
-const image = cloudinary.url('<Your Public ID>', {
-  sign_url: true,
-  secure: true,
-  custom_function:{
-    function_type: 'remote',
-    source: '<Your Netlify Endpoint>'
-  }
-});
-```
 
 ## 🚀 Get Started with This Example
 
@@ -95,6 +45,6 @@ npm install
 netlify dev
 ```
 
-* The local server should now be available at <http://localhost:888> where you can make a POST request to this endpoint at <http://localhost:8888/.netlify/functions/blurhash>
+* The local server should now be available at <http://localhost:888> where you can make a POST request to this endpoint at `http://localhost:8888/.netlify/functions/upload` and `http://localhost:8888/.netlify/functions/background-removal`.
 
 See [postman.json](postman.json) to import this request into [Postman](https://www.postman.com/).
