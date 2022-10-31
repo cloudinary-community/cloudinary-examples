@@ -41,7 +41,7 @@ export default function Home() {
         </div>
 
         <div className={styles.container}>
-          <CldUploadWidget uploadPreset="nextjs-upload-widget-preset" onUpload={handleOnUpload}>
+          <CldUploadWidget uploadPreset="nextjs-clduploadwidget-unsigned" onUpload={handleOnUpload}>
             {({ open }) => {
               function handleOnClick(e) {
                 e.preventDefault();

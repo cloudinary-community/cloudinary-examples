@@ -41,7 +41,7 @@ export default function Home() {
         </div>
 
         <div className={styles.container}>
-          <CldUploadButton uploadPreset="nextjs-upload-widget-preset" onUpload={handleOnUpload} />
+          <CldUploadButton uploadPreset="nextjs-clduploadbutton-unsigned" onUpload={handleOnUpload} />
 
           {error && <p>{ error.status }</p>}
 
