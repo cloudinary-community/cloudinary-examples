@@ -16,6 +16,8 @@ import { CldOgImage } from 'next-cloudinary';
 
 See the component in action at [pages/index.js](pages/index.js).
 
+Or [learn more on the docs](https://next-cloudinary.spacejelly.dev/components/cldogimage/basic-usage).
+
 ## 🚀 Get Started with This Example
 
 * Install the project dependencies with:
