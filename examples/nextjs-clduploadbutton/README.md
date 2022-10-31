@@ -34,6 +34,8 @@ npm install
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
 ```
 
+> Note: the upload preset must be updated to one available in your account
+
 * Start the development server with:
 
 ```
