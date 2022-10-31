@@ -11,7 +11,7 @@ To add an upload widget instance, use the following:
 ```
 import { CldUploadWidget } from 'next-cloudinary';
 
-<CldUploadWidget uploadPreset="next-cloudinary-unsigned">
+<CldUploadWidget uploadPreset="<Your Upload Preset>">
   {({ open }) => {
     function handleOnClick(e) {
       e.preventDefault();
