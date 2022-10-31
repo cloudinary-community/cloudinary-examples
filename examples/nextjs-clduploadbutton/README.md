@@ -11,7 +11,7 @@ To add an upload widget instance, use the following:
 ```
 import { CldUploadButton } from 'next-cloudinary';
 
-<CldUploadButton uploadPreset="next-cloudinary-unsigned" />
+<CldUploadButton uploadPreset="<Your Upload Preset>" />
 ```
 
 See the component in action at [pages/index.js](pages/index.js).
