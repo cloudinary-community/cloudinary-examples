@@ -28,6 +28,13 @@ yarn install
 npm install
 ```
 
+* Add your cloud name as an environment variable inside `.env.local`:
+
+```
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+```
+
+
 * Start the development server with:
 
 ```
