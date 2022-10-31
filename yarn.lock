@@ -6688,6 +6688,13 @@ next-cloudinary@^0.4.1:
   dependencies:
     "@cloudinary/url-gen" "^1.8.6"
 
+next-cloudinary@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/next-cloudinary/-/next-cloudinary-0.6.0.tgz#cca19faf6cd10eb0d8acd8f2813c3052cd73d77f"
+  integrity sha512-FaSRIb4BRRRribm3H068I5JUJGgIiYbh3giQj1KX1Mfm6GNIl9yheumpDW5J3MLKBbF25ShlIbiZA3vR7MqSDg==
+  dependencies:
+    "@cloudinary/url-gen" "^1.8.6"
+
 next@^13.0.0:
   version "13.0.0"
   resolved "https://registry.yarnpkg.com/next/-/next-13.0.0.tgz#6f07064a4f374562cf58677bef4dd06326ca648b"
