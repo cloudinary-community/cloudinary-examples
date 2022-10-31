@@ -1,25 +1,34 @@
-# Next.js Image Component Using Cloudinary URLs
+# CldUploadWidget for Media & File Uploads in Next.js with Cloudinary
 
-You can use Cloudinary URLs right inside of your Next.js project with the Next.js Image component just like any other remote source.
+Add media and file uploading to Cloudinary in Next.js.
 
-View Demo: <https://cloudinary-nextjs-cldimage.netlify.app/>
+View Demo: <https://cloudinary-nextjs-clduploadwidget.netlify.app/>
 
-## 🧰 Using Cloudinary URLs with the Next.js Image Component
+## 🧰 Using CldUploadWidget in Next.js
 
-To allow Cloudinary URLs to load with the Image component, simply update your `next.config.js` file with the following configuration:
+To add an upload widget instance, use the following:
 
 ```
-const nextConfig = {
-  ...
-  images: {
-    domains: ['res.cloudinary.com']
-  }
-}
+import { CldUploadWidget } from 'next-cloudinary';
+
+<CldUploadWidget uploadPreset="next-cloudinary-unsigned">
+  {({ open }) => {
+    function handleOnClick(e) {
+      e.preventDefault();
+      open();
+    }
+    return (
+      <button onClick={handleOnClick}>
+        Upload an Image
+      </button>
+    );
+  }}
+</CldUploadWidget>
 ```
 
-See the file in action at [next.config.js](next.config.js).
+See the component in action at [pages/index.js](pages/index.js).
 
-> Note: If using a custom domain with Cloudinary, be sure add the appropriate host in the domains array.
+Or [learn more on the docs](https://next-cloudinary.spacejelly.dev/components/clduploadwidget/basic-usage).
 
 ## 🚀 Get Started with This Example
 
@@ -30,6 +39,14 @@ yarn install
 # or
 npm install
 ```
+
+* Add your cloud name as an environment variable inside `.env.local`:
+
+```
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+```
+
+> Note: the upload preset must be updated to one available in your account
 
 * Start the development server with:
 
