@@ -1,25 +1,22 @@
-# Next.js Image Component Using Cloudinary URLs
+# CldImage for Cloudinary Images in Next.js
 
-You can use Cloudinary URLs right inside of your Next.js project with the Next.js Image component just like any other remote source.
+Use the CldImage component for automatically optimized images with the power of Cloudinary.
 
 View Demo: <https://cloudinary-nextjs-cldimage.netlify.app/>
 
-## 🧰 Using Cloudinary URLs with the Next.js Image Component
+## 🧰 Using CldImage in Next.js
 
-To allow Cloudinary URLs to load with the Image component, simply update your `next.config.js` file with the following configuration:
+Add an image from Cloudinary using the following:
 
 ```
-const nextConfig = {
-  ...
-  images: {
-    domains: ['res.cloudinary.com']
-  }
-}
+import { CldImage } from 'next-cloudinary';
+
+<CldImage width="100" height="100" src="<Your Public ID>" alt="My Image" />
 ```
 
-See the file in action at [next.config.js](next.config.js).
+See the component in action at [pages/index.js](pages/index.js).
 
-> Note: If using a custom domain with Cloudinary, be sure add the appropriate host in the domains array.
+Or [learn more on the docs](https://next-cloudinary.spacejelly.dev/components/cldimage/basic-usage).
 
 ## 🚀 Get Started with This Example
 
