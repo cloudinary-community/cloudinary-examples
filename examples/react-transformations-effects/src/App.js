@@ -129,12 +129,13 @@ function App() {
             )
           })}
         </ul>
-        {/* <p>With zooming automatically to the subject (<code>e_panzoom:to(g_auto)</code>)</p>
+        <p>With zooming automatically to the subject (<code>e_zoompan:to_(g_auto)</code>)</p>
         <ul className="images">
           {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_${image.width},h_${image.height}`)
-                              .effect('e_zoompan:to(g_auto)')
+                              .effect('e_zoompan:to_(g_auto)')
+                              .effect('e_loop')
                               .delivery('q_auto')
                               .format('gif')
                               .toURL();
@@ -144,7 +145,7 @@ function App() {
               </li>
             )
           })}
-        </ul> */}
+        </ul>
         <p>With lower FPS (<code>e_panzoom,fps_2</code>)</p>
         <ul className="images">
           {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
