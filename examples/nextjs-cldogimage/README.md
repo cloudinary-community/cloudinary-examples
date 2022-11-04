@@ -1,25 +1,22 @@
-# Next.js Image Component Using Cloudinary URLs
+# CldOgImage for Open Graph Social Media Cards in Next.js with Cloudinary
 
-You can use Cloudinary URLs right inside of your Next.js project with the Next.js Image component just like any other remote source.
+Generate social media cards for your site in Next.js with the CldOgImage component.
 
 View Demo: <https://cloudinary-nextjs-cldogimage.netlify.app/>
 
-## 🧰 Using Cloudinary URLs with the Next.js Image Component
+## 🧰 Using CldOgImage in Next.js
 
-To allow Cloudinary URLs to load with the Image component, simply update your `next.config.js` file with the following configuration:
+To create a new social media card, add the following outside of the Head component, in any page:
 
 ```
-const nextConfig = {
-  ...
-  images: {
-    domains: ['res.cloudinary.com']
-  }
-}
+import { CldOgImage } from 'next-cloudinary';
+
+<CldOgImage src="<Your Public ID>" />
 ```
 
-See the file in action at [next.config.js](next.config.js).
+See the component in action at [pages/index.js](pages/index.js).
 
-> Note: If using a custom domain with Cloudinary, be sure add the appropriate host in the domains array.
+Or [learn more on the docs](https://next-cloudinary.spacejelly.dev/components/cldogimage/basic-usage).
 
 ## 🚀 Get Started with This Example
 
@@ -30,6 +27,13 @@ yarn install
 # or
 npm install
 ```
+
+* Add your cloud name as an environment variable inside `.env.local`:
+
+```
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+```
+
 
 * Start the development server with:
 
