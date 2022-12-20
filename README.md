@@ -33,6 +33,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 * [Cloudinary AdvancedVideo Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-video)
 * [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-transformations-effects)
 * [Cloudinary Upload Widget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-upload-widget-preset)
+* [Cloudinary Video Player](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-video-player)
 
 ## Not seeing an example?
 
