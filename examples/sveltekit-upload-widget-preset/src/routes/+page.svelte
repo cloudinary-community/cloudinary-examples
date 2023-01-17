@@ -38,7 +38,7 @@
 		<h2>Unsigned with Upload Preset</h2>
 		<UploadWidget {onUpload} />
 		{#if error}
-			<p>{error}</p>
+			<p>Error: {error?.statusText}</p>
 		{/if}
 
 		{#if url}
