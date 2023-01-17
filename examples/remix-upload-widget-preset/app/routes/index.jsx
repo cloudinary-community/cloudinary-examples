@@ -42,11 +42,7 @@ export default function Index() {
   return (
     <main className="main">
       <div className="container">
-        <h1 className="title">Remix & Cloudinary Uppload Widget</h1>
-      </div>
-
-      <div className="container">
-        <blockquote className="warning"></blockquote>
+        <h1 className="title">Remix & Cloudinary Upload Widget</h1>
       </div>
 
       <div className="container">
