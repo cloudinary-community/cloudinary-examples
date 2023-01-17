@@ -1,9 +1,14 @@
-import adapter from '@sveltejs/adapter-auto';
+import adapter from '@sveltejs/adapter-netlify';
+
 
 /** @type {import('@sveltejs/kit').Config} */
 const config = {
 	kit: {
-		adapter: adapter()
+		adapter: adapter({
+			// https://github.com/sveltejs/kit/tree/master/packages/adapter-netlify
+      edge: false,
+      split: false
+    })
 	}
 };
 
