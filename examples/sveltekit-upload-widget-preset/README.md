@@ -4,7 +4,7 @@ Demo: <https://cloudinary-sveltekit-upload-widget-pr.netlify.app>
 
 ## 🚀 Get Started with This Example
 
-* Create an environment variable file `.env.` and inside add:
+* Create an environment variable file `.env` in the root of the project and inside add:
 ```
 PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
 PUBLIC_CLOUDINARY_UPLOAD_PRESET="<Your Upload Preset>"
