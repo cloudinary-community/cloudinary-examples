@@ -8,15 +8,21 @@ const cld = new Cloudinary({
   },
 });
 
-console.log('import.meta.env.VITE_CLOUDINARY_CLOUD_NAME', import.meta.env.VITE_CLOUDINARY_CLOUD_NAME)
-
 const props = defineProps({
+  alt: String,
+  height: String,
   imageName: String,
+  width: String,
 });
 
-const myImg = cld.image(props.imageName);
+const myImg = cld.image(props.imageName).delivery('q_auto').format('auto');
 </script>
 
 <template>
-  <AdvancedImage :cldImg="myImg" />
+  <AdvancedImage
+    :width="props.width"
+    :height="props.height"
+    :cldImg="myImg"
+    :alt="props.alt"
+  />
 </template>
