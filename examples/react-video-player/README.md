@@ -1,5 +1,7 @@
 # React Video Player
 
+Demo: <https://cloudinary-react-video-player.netlify.app>
+
 ## 🚀 Get Started with This Example
 
 * Create an environment variable file `.env.` and inside add:
