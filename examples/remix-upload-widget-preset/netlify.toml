@@ -1,6 +1,10 @@
 [build]
-  command = "yarn build"
+  command = "remix build"
   publish = "public"
+  
+[dev]
+  command = "remix watch"
+  port = 3000
 
 [[redirects]]
   from = "/*"
