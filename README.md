@@ -39,6 +39,12 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 * [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-upload-widget-preset)
 
+### Svelte
+
+#### SvelteKit
+
+* [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset)
+
 ### Vue
 
 * [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
