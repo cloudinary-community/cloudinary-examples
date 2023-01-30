@@ -35,6 +35,14 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 * [Cloudinary Upload Widget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-upload-widget-preset)
 * [Cloudinary Video Player](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-video-player)
 
+### Remix
+
+* [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-upload-widget-preset)
+
+### Vue
+
+* [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
+
 ## Not seeing an example?
 
 [Create an issue](https://github.com/colbyfayock/cloudinary-examples/issues/new) detailing the project and how Cloudinary would integrate.
