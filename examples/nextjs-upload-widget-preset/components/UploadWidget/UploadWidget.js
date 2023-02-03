@@ -1,12 +1,19 @@
-import { useEffect } from 'react';
 import Script from 'next/script';
 
 let cloudinary;
 let widget;
 
 const UploadWidget = ({ children, onUpload }) => {
+  /**
+   * handleOnLoad
+   * @description Stores the Cloudinary window instance to a ref when the widget script loads
+   */
 
-  useEffect(() => {
+  function handleOnLoad() {
+    if ( !cloudinary ) {
+      cloudinary = window.cloudinary;
+    }
+
     // To help improve load time of the widget on first instance, use requestIdleCallback
     // to trigger widget creation. Optional.
 
@@ -15,9 +22,7 @@ const UploadWidget = ({ children, onUpload }) => {
         widget = createWidget();
       }
     });
-
-    // eslint-disable-next-line
-  }, []);
+  }
 
   /**
    * createWidget
@@ -59,15 +64,6 @@ const UploadWidget = ({ children, onUpload }) => {
     }
 
     widget && widget.open();
-  }
-
-  /**
-   * handleOnLoad
-   * @description Stores the Cloudinary window instance to a ref when the widget script loads
-   */
-
-  function handleOnLoad() {
-    cloudinary = window.cloudinary;
   }
 
   return (
