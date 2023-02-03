@@ -1,22 +1,26 @@
-import { useEffect, useRef } from 'react';
+import { useEffect } from 'react';
+
+let cloudinary;
+let widget;
 
 const UploadWidget = ({ children, onUpload }) => {
-  const cloudinary = useRef();
-  const widget = useRef();
-
-  // Store the Cloudinary window instance to a ref when the page renders
 
   useEffect(() => {
-    cloudinary.current = window.cloudinary;
+    // Store the Cloudinary window instance to a ref when the page renders
+
+    if ( !cloudinary ) {
+      cloudinary = window.cloudinary;
+    }
 
     // To help improve load time of the widget on first instance, use requestIdleCallback
     // to trigger widget creation. Optional.
 
     requestIdleCallback(() => {
-      if ( !widget?.current ) {
-        widget.current = createWidget();
+      if ( !widget ) {
+        widget = createWidget();
       }
     });
+
     // eslint-disable-next-line
   }, []);
 
@@ -36,14 +40,14 @@ const UploadWidget = ({ children, onUpload }) => {
       uploadPreset: process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET, // Ex: myuploadpreset
     }
 
-    return cloudinary.current?.createUploadWidget(options,
+    return cloudinary?.createUploadWidget(options,
       function (error, result) {
         // The callback is a bit more chatty than failed or success so
         // only trigger when one of those are the case. You can additionally
         // create a separate handler such as onEvent and trigger it on
         // ever occurance
         if ( error || result.event === 'success' ) {
-          onUpload(error, result, widget?.current);
+          onUpload(error, result, widget);
         }
       }
     );
@@ -55,15 +59,15 @@ const UploadWidget = ({ children, onUpload }) => {
    */
 
   function open() {
-    if ( !widget?.current ) {
-      widget.current = createWidget();
+    if ( !widget ) {
+      widget = createWidget();
     }
-    widget?.current && widget.current.open();
+    widget && widget.open();
   }
 
   return (
     <>
-      {children({ cloudinary: cloudinary.current, widget: widget.current, open })}
+      {children({ cloudinary, widget, open })}
     </>
   )
 }
