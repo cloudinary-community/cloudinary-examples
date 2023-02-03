@@ -16,7 +16,8 @@ const UploadWidget = ({ children, onUpload }) => {
       if ( !widget?.current ) {
         widget.current = createWidget();
       }
-    })
+    });
+    // eslint-disable-next-line
   }, []);
 
   /**
