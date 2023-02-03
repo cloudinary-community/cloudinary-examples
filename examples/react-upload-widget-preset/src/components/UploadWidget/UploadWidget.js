@@ -8,6 +8,15 @@ const UploadWidget = ({ children, onUpload }) => {
 
   useEffect(() => {
     cloudinary.current = window.cloudinary;
+
+    // To help improve load time of the widget on first instance, use requestIdleCallback
+    // to trigger widget creation. Optional.
+
+    requestIdleCallback(() => {
+      if ( !widget?.current ) {
+        widget.current = createWidget();
+      }
+    })
   }, []);
 
   /**
