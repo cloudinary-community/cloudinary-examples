@@ -1,9 +1,23 @@
-import { useRef } from 'react';
-import Script from "next/script";
+import { useEffect } from 'react';
+import Script from 'next/script';
+
+let cloudinary;
+let widget;
 
 const UploadWidget = ({ children, onUpload }) => {
-  const cloudinary = useRef();
-  const widget = useRef();
+
+  useEffect(() => {
+    // To help improve load time of the widget on first instance, use requestIdleCallback
+    // to trigger widget creation. Optional.
+
+    requestIdleCallback(() => {
+      if ( !widget ) {
+        widget = createWidget();
+      }
+    });
+
+    // eslint-disable-next-line
+  }, []);
 
   /**
    * createWidget
@@ -21,14 +35,14 @@ const UploadWidget = ({ children, onUpload }) => {
       uploadPreset: process.env.NEXT_PUBLIC_CLOUDINARY_UPLOAD_PRESET, // Ex: myuploadpreset
     }
 
-    return cloudinary.current?.createUploadWidget(options,
+    return cloudinary?.createUploadWidget(options,
       function (error, result) {
         // The callback is a bit more chatty than failed or success so
         // only trigger when one of those are the case. You can additionally
         // create a separate handler such as onEvent and trigger it on
         // ever occurance
         if ( error || result.event === 'success' ) {
-          onUpload(error, result, widget?.current);
+          onUpload(error, result, widget);
         }
       }
     );
@@ -40,11 +54,11 @@ const UploadWidget = ({ children, onUpload }) => {
    */
 
   function open() {
-    if ( !widget?.current ) {
-      widget.current = createWidget();
+    if ( !widget ) {
+      widget = createWidget();
     }
 
-    widget?.current && widget.current.open();
+    widget && widget.open();
   }
 
   /**
@@ -53,12 +67,12 @@ const UploadWidget = ({ children, onUpload }) => {
    */
 
   function handleOnLoad() {
-    cloudinary.current = window.cloudinary;
+    cloudinary = window.cloudinary;
   }
 
   return (
     <>
-      {children({ cloudinary: cloudinary.current, widget: widget.current, open })}
+      {children({ cloudinary, widget, open })}
       <Script id="cloudinary" src="https://widget.cloudinary.com/v2.0/global/all.js" onLoad={handleOnLoad} />
     </>
   )

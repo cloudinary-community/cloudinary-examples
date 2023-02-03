@@ -1,12 +1,25 @@
 import { ClientOnly } from "remix-utils";
+import { useEffect } from "react";
 
-import { useRef } from "react";
 import { useEnv } from "../../lib/use-env";
 
+let widget;
 
 function UploadWidget({ children, onUpload }) {
-    const widget = useRef();
     const ENV = useEnv()
+
+    useEffect(() => {
+        // To help improve load time of the widget on first instance, use requestIdleCallback
+        // to trigger widget creation. Optional.
+
+        requestIdleCallback(() => {
+            if ( !widget ) {
+                widget = createWidget();
+            }
+        });
+
+        // eslint-disable-next-line
+    }, []);
 
     /**
      * createWidget
@@ -30,7 +43,7 @@ function UploadWidget({ children, onUpload }) {
                 // create a separate handler such as onEvent and trigger it on
                 // ever occurance
                 if (error || result.event === "success") {
-                    onUpload(error, result, widget?.current);
+                    onUpload(error, result, widget);
                 }
             }
         );
@@ -41,11 +54,11 @@ function UploadWidget({ children, onUpload }) {
      * @description When triggered, uses the current widget instance to open the upload modal
      */
     function open() {
-        if (!widget?.current) {
-            widget.current = createWidget();
+        if (!widget) {
+            widget = createWidget();
         }
 
-        widget?.current && widget.current.open();
+        widget && widget.open();
     }
 
     /**
@@ -55,7 +68,7 @@ function UploadWidget({ children, onUpload }) {
         <ClientOnly fallback={<div />}>
             {() => children({
                 cloudinary: window.cloudinary,
-                widget: widget.current,
+                widget,
                 open,
             })}
         </ClientOnly>
