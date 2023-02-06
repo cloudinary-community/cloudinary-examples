@@ -13,13 +13,16 @@ const UploadWidget = ({ children, onUpload }) => {
     }
 
     // To help improve load time of the widget on first instance, use requestIdleCallback
-    // to trigger widget creation. Optional.
+    // to trigger widget creation. If requestIdleCallback isn't supported, fall back to
+    // setTimeout: https://caniuse.com/requestidlecallback
 
-    requestIdleCallback(() => {
+    function onIdle() {
       if ( !widget ) {
         widget = createWidget();
       }
-    });
+    }
+
+    'requestIdleCallback' in window ? requestIdleCallback(onIdle) : setTimeout(onIdle, 1);
 
     // eslint-disable-next-line
   }, []);

@@ -1,22 +1,31 @@
-import { ClientOnly } from "remix-utils";
 import { useEffect } from "react";
 
 import { useEnv } from "../../lib/use-env";
 
 let widget;
+let cloudinary;
 
 function UploadWidget({ children, onUpload }) {
     const ENV = useEnv()
 
     useEffect(() => {
-        // To help improve load time of the widget on first instance, use requestIdleCallback
-        // to trigger widget creation. Optional.
+        // Store the Cloudinary window instance to a ref when the page renders
 
-        requestIdleCallback(() => {
+        if ( !cloudinary ) {
+            cloudinary = window.cloudinary;
+        }
+
+        function onIdle() {
             if ( !widget ) {
                 widget = createWidget();
             }
-        });
+        }
+
+        // To help improve load time of the widget on first instance, use requestIdleCallback
+        // to trigger widget creation. If requestIdleCallback isn't supported, fall back to
+        // setTimeout: https://caniuse.com/requestidlecallback
+
+        'requestIdleCallback' in window ? requestIdleCallback(onIdle) : setTimeout(onIdle, 1);
 
         // eslint-disable-next-line
     }, []);
@@ -35,7 +44,7 @@ function UploadWidget({ children, onUpload }) {
             uploadPreset: ENV.CLOUDINARY_UPLOAD_PRESET, // Ex: myuploadpreset
         };
 
-        return window.cloudinary.createUploadWidget(
+        return cloudinary.createUploadWidget(
             options,
             function(error, result) {
                 // The callback is a bit more chatty than failed or success so
@@ -64,15 +73,11 @@ function UploadWidget({ children, onUpload }) {
     /**
      * Do not render the component if the clodinary script is not loaded
      */
-    return (
-        <ClientOnly fallback={<div />}>
-            {() => children({
-                cloudinary: window.cloudinary,
-                widget,
-                open,
-            })}
-        </ClientOnly>
-    );
+    return children({
+        cloudinary,
+        widget,
+        open,
+    })
 }
 
 export default UploadWidget;

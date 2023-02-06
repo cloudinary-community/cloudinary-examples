@@ -46,13 +46,17 @@
 	}
 
 	onMount(() => {
-		if ('cloudinary' in window) {
-			requestIdleCallback(() => {
+		// To help improve load time of the widget on first instance, use requestIdleCallback
+		// to trigger widget creation. If requestIdleCallback isn't supported, fall back to
+		// setTimeout: https://caniuse.com/requestidlecallback
+
+		function onIdle() {
 				if ( !widget ) {
-					widget = window.cloudinary.createUploadWidget(cldOptions, cldCallback);
+						widget = window.cloudinary.createUploadWidget(cldOptions, cldCallback);
 				}
-			})
 		}
+
+		'requestIdleCallback' in window ? requestIdleCallback(onIdle) : setTimeout(onIdle, 1);
 	});
 
 	function handleClick() {
