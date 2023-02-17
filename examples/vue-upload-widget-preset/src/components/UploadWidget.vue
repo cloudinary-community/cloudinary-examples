@@ -9,7 +9,7 @@ export default {
   props: {
     onUpload: Function,
   },
-  created() {
+  mounted() {
     // Store the Cloudinary window instance to a ref when the page renders
 
     if ( !cloudinary.value ) {
