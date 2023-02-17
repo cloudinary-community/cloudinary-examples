@@ -48,7 +48,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Vue
 
 * [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
-* [Cloudinary Upload Widget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-upload-widget-preset)
+* [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-upload-widget-preset)
 
 ## Not seeing an example?
 
