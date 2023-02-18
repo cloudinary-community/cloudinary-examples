@@ -31,7 +31,7 @@ cld.image('<Public ID>').toURL()
 Using Cloudinary media optimization by setting the format and quality both to auto:
 
 ```
-cld.image('<Public ID>').delivery('q_auto').format('auto').toURL()
+cld.image('<Public ID>').quality('auto').format('auto').toURL()
 ```
 
 ### Background Removal
