@@ -28,7 +28,7 @@ function App() {
           {images.slice(0, 4).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_${image.width},h_${image.height}`)
-                              .delivery('q_auto')
+                              .quality('auto')
                               .format('auto')
                               .toURL();
             return (
@@ -48,7 +48,7 @@ function App() {
             const imgSrc = cld.image(image.image)
                               .effect('e_background_removal')
                               .resize(`w_${image.width},h_${image.height}`)
-                              .delivery('q_auto')
+                              .quality('auto')
                               .format('auto')
                               .toURL();
             return (
@@ -65,7 +65,7 @@ function App() {
                               .effect('e_background_removal')
                               .resize(`w_${image.width},h_${image.height}`)
                               .backgroundColor('#692ba8')
-                              .delivery('q_auto')
+                              .quality('auto')
                               .format('auto')
                               .toURL();
             return (
@@ -82,7 +82,7 @@ function App() {
                               .effect(`e_background_removal`)
                               .resize(`w_${image.width},h_${image.height}`)
                               .effect(`u_${PUBLIC_ID_BACKGROUND.replaceAll('/', ':')},c_fill,w_${image.width},h_${image.height}`)
-                              .delivery('q_auto')
+                              .quality('auto')
                               .format('auto')
                               .toURL();
             return (
@@ -102,7 +102,7 @@ function App() {
             const imgSrc = cld.image(image.image)
                               .resize(`w_${image.width},h_${image.height}`)
                               .effect('e_zoompan')
-                              .delivery('q_auto')
+                              .quality('auto')
                               .format('gif')
                               .toURL();
             return (
@@ -117,7 +117,7 @@ function App() {
           {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_${image.width},h_${image.height}`)
-                              .delivery('q_auto')
+                              .quality('auto')
                               .effect('e_zoompan')
                               .effect('e_loop')
                               .format('gif')
@@ -136,7 +136,7 @@ function App() {
                               .resize(`w_${image.width},h_${image.height}`)
                               .effect('e_zoompan:to_(g_auto)')
                               .effect('e_loop')
-                              .delivery('q_auto')
+                              .quality('auto')
                               .format('gif')
                               .toURL();
             return (
@@ -153,7 +153,7 @@ function App() {
                               .resize(`w_${image.width},h_${image.height}`)
                               .effect('e_zoompan:fps_2')
                               .effect('e_loop')
-                              .delivery('q_auto')
+                              .quality('auto')
                               .format('gif')
                               .toURL();
             return (
@@ -172,7 +172,7 @@ function App() {
           {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_1000,h_1000,c_thumb,g_auto`)
-                              .delivery('q_auto')
+                              .quality('auto')
                               .format('auto')
                               .toURL();
             return (
@@ -187,7 +187,7 @@ function App() {
           {images.filter(({ id }) => ['girl', 'parrot', 'guitar-player', 'model'].includes(id)).map(image => {
             const imgSrc = cld.image(image.image)
                               .resize(`w_1000,h_1000,c_thumb,g_face`)
-                              .delivery('q_auto')
+                              .quality('auto')
                               .format('auto')
                               .toURL();
             return (
