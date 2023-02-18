@@ -42,6 +42,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### SolidJS
 
 * [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/solid-transformations-effects)
+* [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/solid-upload-widget-preset)
 
 ### Svelte
 
