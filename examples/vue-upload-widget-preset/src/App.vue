@@ -1,22 +1,13 @@
-<script>
-import UploadWidget from './components/UploadWidget.vue';
+<script setup>
+import { ref } from "vue";
+import UploadWidget from "./components/UploadWidget.vue";
 
-export default {
-  components: {
-    UploadWidget
-  },
-  data() {
-    return {
-      url: undefined,
-      error: undefined,
-    }
-  },
-  methods: {
-    onUpload({ error, result }) {
-      this.url = result?.info.secure_url;
-      this.error = error;
-    }
-  }
+const url = ref("");
+const errorMessage = ref(false);
+
+function onUpload({ error, result }) {
+  url.value = result?.info.secure_url;
+  errorMessage.value = error ? error : false;
 }
 </script>
 
@@ -33,7 +24,9 @@ export default {
 
       <p v-if="error">{{ error.message }}</p>
 
-      <p v-if="url"><img :src="url" alt="Uploaded resource" /></p>
+      <p v-if="url">
+        <img :src="url" alt="Uploaded resource" />
+      </p>
       <p v-if="url">{{ url }}</p>
     </div>
 
