@@ -51,7 +51,7 @@ function App() {
 
         {url && (
           <>
-            <p><img src={ url } alt="Uploaded image" /></p>
+            <p><img src={ url } alt="Uploaded resource" /></p>
             <p>{ url }</p>
           </>
         )}

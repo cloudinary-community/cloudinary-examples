@@ -35,6 +35,24 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 * [Cloudinary Upload Widget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-upload-widget-preset)
 * [Cloudinary Video Player](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-video-player)
 
+### Remix
+
+* [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-upload-widget-preset)
+
+### SolidJS
+
+* [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/solid-transformations-effects)
+* [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/solid-upload-widget-preset)
+
+### Svelte
+
+* [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset)
+
+### Vue
+
+* [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
+* [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-upload-widget-preset)
+
 ## Not seeing an example?
 
 [Create an issue](https://github.com/colbyfayock/cloudinary-examples/issues/new) detailing the project and how Cloudinary would integrate.

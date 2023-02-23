@@ -7,7 +7,9 @@
 	 * @typedef {{close: () => void, open: () => void}} Widget
 	 * @type {Widget} widget
 	 */
+
 	let widget;
+
 	/**
 	 * prop that allow the parent component to perform some action when upload process is done
 	 * The default value is a simple loggin function
@@ -15,6 +17,7 @@
 	 * @param {Object} result
 	 * @param {Widget} widget
 	 */
+
 	export let onUpload = (error, result, widget) => {
 		console.log('upload done', error, result, widget);
 	};
@@ -23,6 +26,7 @@
 	// widget without requiring an API Key or Secret. This however allows for
 	// "unsigned" uploads which may allow for more usage than intended. Read more
 	// about unsigned uploads at: https://cloudinary.com/documentation/upload_images#unsigned_upload
+
 	const cldOptions = {
 		cloudName: env.PUBLIC_CLOUDINARY_CLOUD_NAME,
 		uploadPreset: env.PUBLIC_CLOUDINARY_UPLOAD_PRESET
@@ -40,10 +44,19 @@
 			onUpload && onUpload(error, result, widget);
 		}
 	}
+
 	onMount(() => {
-		if ('cloudinary' in window) {
-			widget = window.cloudinary.createUploadWidget(cldOptions, cldCallback);
+		// To help improve load time of the widget on first instance, use requestIdleCallback
+		// to trigger widget creation. If requestIdleCallback isn't supported, fall back to
+		// setTimeout: https://caniuse.com/requestidlecallback
+
+		function onIdle() {
+				if ( !widget ) {
+						widget = window.cloudinary.createUploadWidget(cldOptions, cldCallback);
+				}
 		}
+
+		'requestIdleCallback' in window ? requestIdleCallback(onIdle) : setTimeout(onIdle, 1);
 	});
 
 	function handleClick() {

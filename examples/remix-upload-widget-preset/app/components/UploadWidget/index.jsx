@@ -1,12 +1,34 @@
-import { ClientOnly } from "remix-utils";
+import { useEffect } from "react";
 
-import { useRef } from "react";
 import { useEnv } from "../../lib/use-env";
 
+let widget;
+let cloudinary;
 
 function UploadWidget({ children, onUpload }) {
-    const widget = useRef();
     const ENV = useEnv()
+
+    useEffect(() => {
+        // Store the Cloudinary window instance to a ref when the page renders
+
+        if ( !cloudinary ) {
+            cloudinary = window.cloudinary;
+        }
+
+        function onIdle() {
+            if ( !widget ) {
+                widget = createWidget();
+            }
+        }
+
+        // To help improve load time of the widget on first instance, use requestIdleCallback
+        // to trigger widget creation. If requestIdleCallback isn't supported, fall back to
+        // setTimeout: https://caniuse.com/requestidlecallback
+
+        'requestIdleCallback' in window ? requestIdleCallback(onIdle) : setTimeout(onIdle, 1);
+
+        // eslint-disable-next-line
+    }, []);
 
     /**
      * createWidget
@@ -22,7 +44,7 @@ function UploadWidget({ children, onUpload }) {
             uploadPreset: ENV.CLOUDINARY_UPLOAD_PRESET, // Ex: myuploadpreset
         };
 
-        return window.cloudinary.createUploadWidget(
+        return cloudinary.createUploadWidget(
             options,
             function(error, result) {
                 // The callback is a bit more chatty than failed or success so
@@ -30,7 +52,7 @@ function UploadWidget({ children, onUpload }) {
                 // create a separate handler such as onEvent and trigger it on
                 // ever occurance
                 if (error || result.event === "success") {
-                    onUpload(error, result, widget?.current);
+                    onUpload(error, result, widget);
                 }
             }
         );
@@ -41,25 +63,21 @@ function UploadWidget({ children, onUpload }) {
      * @description When triggered, uses the current widget instance to open the upload modal
      */
     function open() {
-        if (!widget?.current) {
-            widget.current = createWidget();
+        if (!widget) {
+            widget = createWidget();
         }
 
-        widget?.current && widget.current.open();
+        widget && widget.open();
     }
 
     /**
      * Do not render the component if the clodinary script is not loaded
      */
-    return (
-        <ClientOnly fallback={<div />}>
-            {() => children({
-                cloudinary: window.cloudinary,
-                widget: widget.current,
-                open,
-            })}
-        </ClientOnly>
-    );
+    return children({
+        cloudinary,
+        widget,
+        open,
+    })
 }
 
 export default UploadWidget;

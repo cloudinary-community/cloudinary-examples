@@ -11,20 +11,6 @@ export const links = () => {
   ];
 };
 
-// create the scripts function with the correct type
-// note: loader type is optional
-let scripts = () => {
-  return [
-    {
-      src: "https://widget.cloudinary.com/v2.0/global/all.js",
-    },
-  ];
-};
-
-// and export it through the handle, you could also create it inline here
-// if you don't care about the type
-export let handle = { scripts };
-
 export default function Index() {
   const [url, updateUrl] = useState();
   const [error, updateError] = useState();

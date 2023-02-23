@@ -1,5 +1,4 @@
 import { json} from "@remix-run/node";
-import { ExternalScripts } from "remix-utils";
 import {
   Links,
   LiveReload,
@@ -37,11 +36,11 @@ export default function App() {
         <Links />
       </head>
       <body>
+        <script src="https://widget.cloudinary.com/v2.0/global/all.js" type="text/javascript" />
         <Outlet />
         <ScrollRestoration />
         <Scripts />
         <LiveReload />
-        <ExternalScripts />
       </body>
     </html>
   );
