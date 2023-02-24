@@ -49,9 +49,19 @@ import images from './images.json';
 
     <div class="container">
       <h2>Resources</h2>
-      <p>
-        <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image">See the code on github.com.</a>
-      </p>
+      <ul>
+        <li>
+          <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nuxt-nuxt-image-provider">
+            View Code on GitHub.com
+          </a>
+        </li>
+        <li>
+          <a href="https://image.nuxtjs.org/providers/cloudinary">
+            Nuxt Image Cloudinary Provider
+          </a>
+        </li>
+      </ul>
+      <h2>Images</h2>
       <ul>
         <li v-for="image in images" :key="image.id">
           {{ image.title }}: <a :href="image.link" rel="noreferrer">{{ image.link }}</a>
