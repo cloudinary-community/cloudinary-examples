@@ -1,42 +1,48 @@
-# Nuxt 3 Minimal Starter
+# Nuxt Image Component with the Cloudinary Provider
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Load Cloudinary images in a Nuxt app with the Nuxt Image component.
 
-## Setup
+View Demo: <https://cloudinary-nuxt-nuxt-image-provider.netlify.app/>
 
-Make sure to install the dependencies:
+## 🧰 Using Cloudinary with the Nuxt Image Component
 
-```bash
-# yarn
-yarn install
+To allow Cloudinary to load with the Image component, simply update your `nuxt.config.ts` file with the following configuration:
 
-# npm
-npm install
-
-# pnpm
-pnpm install
+```
+export default defineNuxtConfig({
+  modules: ["@nuxt/image-edge"],
+  image: {
+    cloudinary: {
+      baseURL: `https://res.cloudinary.com/<Your Cloud Name>/image/upload/`,
+    },
+  },
+});
 ```
 
-## Development Server
+Then set the `provider` prop on the Image component to `cloudinary`:
+```
+<nuxt-img
+  provider="cloudinary"
+  ...
+/>
+```
 
-Start the development server on http://localhost:3000
+## 🚀 Get Started with This Example
 
-```bash
+* Install the project dependencies with:
+
+```
+yarn install
+# or
+npm install
+```
+
+* Start the development server with:
+
+```
+yarn dev
+# or
 npm run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-npm run build
-```
-
-Locally preview production build:
-
-```bash
-npm run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+* Visit the project at <http://localhost:3000>!
