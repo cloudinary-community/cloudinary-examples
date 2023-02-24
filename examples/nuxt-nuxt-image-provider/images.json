@@ -1,0 +1,34 @@
+[
+  {
+    "id": "beach",
+    "title": "Beach",
+    "link": "https://unsplash.com/photos/8qH4GSYBiSA",
+    "image": "/examples/beach_udmhbt.jpg",
+    "width": 2376,
+    "height": 1574
+  },
+  {
+    "id": "city",
+    "title": "City",
+    "link": "https://unsplash.com/photos/4u2U8EO9OzY",
+    "image": "/examples/city_julte6.jpg",
+    "width": 1364,
+    "height": 1705
+  },
+  {
+    "id": "earth",
+    "title": "Earth",
+    "link": "https://unsplash.com/photos/yZygONrUBe8",
+    "image": "/examples/earth_xzlgge.jpg",
+    "width": 2344,
+    "height": 1560
+  },
+  {
+    "id": "galaxy",
+    "title": "Galaxy",
+    "link": "https://unsplash.com/photos/0o_GEzyargo",
+    "image": "/examples/galaxy_qtrsjt.jpg",
+    "width": 2340,
+    "height": 1560
+  }
+]

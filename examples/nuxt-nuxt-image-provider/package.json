@@ -1,4 +1,6 @@
 {
+  "name": "nuxt-nuxt-image-provider",
+  "version": "0.0.1",
   "private": true,
   "scripts": {
     "build": "nuxt build",

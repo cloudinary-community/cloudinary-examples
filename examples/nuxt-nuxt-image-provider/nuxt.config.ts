@@ -3,7 +3,7 @@ export default defineNuxtConfig({
   modules: ["@nuxt/image-edge"],
   image: {
     cloudinary: {
-      baseURL: "https://res.cloudinary.com/kc-cloud/image/upload/",
+      baseURL: `https://res.cloudinary.com/${process.env.VITE_CLOUDINARY_CLOUD_NAME}/image/upload/`,
     },
   },
 });
