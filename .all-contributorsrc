@@ -1,0 +1,25 @@
+{
+  "files": [
+    "README.md"
+  ],
+  "imageSize": 100,
+  "commit": false,
+  "commitConvention": "angular",
+  "contributors": [
+    {
+      "login": "matiasfha",
+      "name": "Matías Hernández Arellano",
+      "avatar_url": "https://avatars.githubusercontent.com/u/282006?v=4",
+      "profile": "https://matiashernandez.dev",
+      "contributions": [
+        "code"
+      ]
+    }
+  ],
+  "contributorsPerLine": 7,
+  "skipCi": true,
+  "repoType": "github",
+  "repoHost": "https://github.com",
+  "projectName": "cloudinary-examples",
+  "projectOwner": "colbyfayock"
+}
