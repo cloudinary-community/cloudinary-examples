@@ -1,4 +1,7 @@
 # Cloudinary Examples
+<!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+[![All Contributors](https://img.shields.io/badge/all_contributors-1-orange.svg?style=flat-square)](#contributors-)
+<!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
 
@@ -58,3 +61,25 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 [Create an issue](https://github.com/colbyfayock/cloudinary-examples/issues/new) detailing the project and how Cloudinary would integrate.
 
 If the use case seems like it would be broadly helpful for others as well, I'll try to work it into this repository!
+
+## Contributors ✨
+
+Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
+
+<!-- ALL-CONTRIBUTORS-LIST:START - Do not remove or modify this section -->
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
+<table>
+  <tbody>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://matiashernandez.dev"><img src="https://avatars.githubusercontent.com/u/282006?v=4?s=100" width="100px;" alt="Matías Hernández Arellano"/><br /><sub><b>Matías Hernández Arellano</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=matiasfha" title="Code">💻</a></td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- markdownlint-restore -->
+<!-- prettier-ignore-end -->
+
+<!-- ALL-CONTRIBUTORS-LIST:END -->
+
+This project follows the [all-contributors](https://github.com/all-contributors/all-contributors) specification. Contributions of any kind welcome!
