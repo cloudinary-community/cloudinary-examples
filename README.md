@@ -5,7 +5,7 @@
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
 
-## Examples
+## 🧰 Examples
 
 ### Netlify
 
@@ -56,13 +56,13 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 * [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
 * [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-upload-widget-preset)
 
-## Not seeing an example?
+## 🧐 Not seeing an example?
 
 [Create an issue](https://github.com/colbyfayock/cloudinary-examples/issues/new) detailing the project and how Cloudinary would integrate.
 
 If the use case seems like it would be broadly helpful for others as well, I'll try to work it into this repository!
 
-## Contributors ✨
+## ✨ Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
 
