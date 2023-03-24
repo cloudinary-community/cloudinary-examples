@@ -10,7 +10,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ### Flutter
 
-- [Flutter - Setting up the SDK](./examples/flutter-setup-sdk)
+- [Flutter - Setting up the SDK](./examples/flutter-cldimagewidget)
 
 ### Netlify
 
