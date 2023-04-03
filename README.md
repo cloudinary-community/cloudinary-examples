@@ -33,6 +33,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Node.js
 
 - [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-transformations-effects)
+- [Image Upload](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-image-upload)
 - [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-social-media-card)
 
 ### React
