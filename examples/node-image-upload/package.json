@@ -1,0 +1,15 @@
+{
+  "name": "node-image-upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^1.32.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3"
+  }
+}
