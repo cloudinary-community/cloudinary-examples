@@ -1,0 +1,14 @@
+{
+  "name": "vercel-custom-function-remote",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "blurhash": "^2.0.5",
+    "cloudinary": "^1.35.0",
+    "openai": "^3.2.1"
+  },
+  "devDependencies": {
+    "cloudinary": "^1.35.0",
+    "dotenv": "^16.0.3"
+  }
+}

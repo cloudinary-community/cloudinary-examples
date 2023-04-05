@@ -1,0 +1,62 @@
+{
+	"info": {
+		"_postman_id": "9532980a-d65f-47b7-a20b-793a426ce17c",
+		"name": "Cloudinary",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "10609445"
+	},
+	"item": [
+		{
+			"name": "POST - Custom Function - Vercel Edge",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "User-Agent",
+						"value": "Typhoeus - https://github.com/typhoeus/typhoeus",
+						"type": "text"
+					},
+					{
+						"key": "X-Cld-Signature",
+						"value": "CLDSIGNATURE{{$randomUUID}}",
+						"type": "text"
+					},
+					{
+						"key": "X-Cld-Timestamp",
+						"value": "{{$timestamp}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": "/Users/colbyfayock/Documents/colby-hug.jpg",
+							"disabled": true
+						},
+						{
+							"key": "metadata",
+							"value": "{\"current_page\":1,\"coordinates\":{},\"variables\":{ \"prompt\": \"a jellyfish in space\" }}",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/edge",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"edge"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
