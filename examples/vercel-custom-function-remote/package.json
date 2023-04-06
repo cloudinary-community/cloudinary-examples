@@ -2,13 +2,22 @@
   "name": "vercel-custom-function-remote",
   "version": "0.1.0",
   "private": true,
-  "dependencies": {
-    "blurhash": "^2.0.5",
-    "cloudinary": "^1.35.0",
-    "openai": "^3.2.1"
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
-  "devDependencies": {
+  "dependencies": {
+    "@types/node": "18.15.11",
+    "@types/react": "18.0.33",
+    "@types/react-dom": "18.0.11",
     "cloudinary": "^1.35.0",
-    "dotenv": "^16.0.3"
+    "eslint": "8.37.0",
+    "eslint-config-next": "13.2.4",
+    "next": "13.2.4",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "typescript": "5.0.3"
   }
 }

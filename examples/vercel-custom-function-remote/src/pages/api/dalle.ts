@@ -1,3 +1,5 @@
+import { Buffer } from 'buffer';
+
 export const config = {
   runtime: 'edge',
 }
@@ -24,19 +26,12 @@ export default async function handler(req) {
     const data = await response.json();
     
     const imageResponse = await fetch(data.data[0].url);
-    const imageBlob = await imageResponse.arrayBuffer();
 
-    return new Response(
-      imageBlob,
-      {
-        status: 200,
-        headers: {
-          'Content-Type': 'image/jpeg',
-          'Content-Length': imageBlob.byteLength.toString()
-        },
-        
+    return new Response(imageResponse.body, {
+      headers: {
+        "content-type": imageResponse.headers.get('content-type')
       }
-    )
+    });
   } catch (e) {
     console.log(`Failed to generate image: ${e}`)
     return new Response(
