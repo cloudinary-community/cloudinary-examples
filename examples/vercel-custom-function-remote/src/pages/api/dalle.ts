@@ -1,14 +1,14 @@
-import { Buffer } from 'buffer';
+import { NextRequest } from 'next/server';
 
 export const config = {
   runtime: 'edge',
 }
 
-export default async function handler(req) {
+export default async function handler(req: NextRequest) {
   const formData = await req.formData();
 
   try {
-    const metadata = JSON.parse(formData.get('metadata'));
+    const metadata = JSON.parse(formData.get('metadata') as string);
 
     const response = await fetch('https://api.openai.com/v1/images/generations', {
       method: 'POST',
@@ -27,11 +27,7 @@ export default async function handler(req) {
     
     const imageResponse = await fetch(data.data[0].url);
 
-    return new Response(imageResponse.body, {
-      headers: {
-        "content-type": imageResponse.headers.get('content-type')
-      }
-    });
+    return imageResponse
   } catch (e) {
     console.log(`Failed to generate image: ${e}`)
     return new Response(
