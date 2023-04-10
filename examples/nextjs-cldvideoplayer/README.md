@@ -2,6 +2,8 @@
 
 Embed videos in your Next.js app with CldVideoPlayer component and Cloudinary.
 
+View Demo: https://cloudinary-nextjs-cldvideoplayer.netlify.app/
+
 ## 🧰 Using CldVideoPlayer in Next.js
 
 To embed a video using the `CldVideoPlayer` component, use the following:
