@@ -1,6 +1,6 @@
-# CldVideoPlayer for embedding videos in Next.js with Cloudinary
+# CldVideoPlayer for Embedding Cloudinary Videos in Next.js
 
-Embed videos in your Next.js app with `CldVideoPlayer` component and Cloudinary.
+Embed videos in your Next.js app with CldVideoPlayer component and Cloudinary.
 
 ## 🧰 Using CldVideoPlayer in Next.js
 
@@ -10,10 +10,10 @@ To embed a video using the `CldVideoPlayer` component, use the following:
 import { CldVideoPlayer } from 'next-cloudinary';
 
 <CldVideoPlayer
-  id='[ELEMENT_ID]'
-  width='[WIDTH]'
-  height='[HEIGHT]'
-  src='[CLOURINARY_VIDEO_SRC]'
+  id="<Player ID>"
+  width="1920"
+  height="1080"
+  src="<Your Public ID>"
 />
 ```
 
@@ -31,7 +31,7 @@ yarn install
 npm install
 ```
 
-- Add your cloud name as an environment variable inside `.env`:
+- Add your cloud name as an environment variable inside `.env.local`:
 
 ```
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
