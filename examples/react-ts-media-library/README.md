@@ -1,4 +1,4 @@
-# React Cloudinary Media Library
+# Cloudinary Media Library in React with Typescript
 
 
 ## 🚀 Get Started with This Example
