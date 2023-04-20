@@ -10,7 +10,7 @@ const MediaLibrary = ({ children, onClose, onInsert, onOpen, options = {} }: Med
   const widgetContainerRef: any = useRef();
 
   const {
-    asset: asset,
+    asset,
     buttonCaption,
     buttonClass,
     collection,
@@ -20,7 +20,7 @@ const MediaLibrary = ({ children, onClose, onInsert, onOpen, options = {} }: Med
     insertCaption,
     maxFiles,
     multiple,
-    removeHeader,
+    removeHeader = false,
     search,
     transformation,
     username,
@@ -80,7 +80,7 @@ const MediaLibrary = ({ children, onClose, onInsert, onOpen, options = {} }: Med
       username: username,
       z_index: zIndex,
     };
-    
+
     widget.current = cloudinary.current.createMediaLibrary(mediaLibraryOptions,
       {
         showHandler: () => {
