@@ -17,7 +17,7 @@ function App() {
     <main className="main">
       <div className="container">
         <h1 className="title">
-          Cloudinary Media Library
+          React &amp; Cloudinary Media Library
         </h1>
       </div>
 
