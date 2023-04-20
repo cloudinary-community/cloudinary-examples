@@ -17,7 +17,9 @@ function App() {
     <div className="App">
       <h1>Cloudinary Media Library</h1>
       <div className="card">
-        <MediaLibrary onInsert={handleOnInsert}>
+        <MediaLibrary onInsert={handleOnInsert} options={{
+          insertCaption: 'Add Assets'
+        }}>
           {({ open }) => {
             function handleOnOpen() {
               if ( typeof open == 'function' ) {

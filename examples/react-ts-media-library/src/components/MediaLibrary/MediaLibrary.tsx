@@ -10,8 +10,21 @@ const MediaLibrary = ({ children, onClose, onInsert, onOpen, options = {} }: Med
   const widgetContainerRef: any = useRef();
 
   const {
-    insertCaption = 'Add',
-    removeHeader = false,
+    asset: asset,
+    buttonCaption,
+    buttonClass,
+    collection,
+    defaultTransformations,
+    folder,
+    inlineContainer,
+    insertCaption,
+    maxFiles,
+    multiple,
+    removeHeader,
+    search,
+    transformation,
+    username,
+    zIndex,
   } = options as MediaLibraryPropsOptions;
 
   const callbackOptions = {
@@ -48,16 +61,28 @@ const MediaLibrary = ({ children, onClose, onInsert, onOpen, options = {} }: Med
    */
 
   function createWidget() {
-
     const mediaLibraryOptions: MediaLibraryOptions = {
       cloud_name: CLOUDINARY_CLOUD_NAME,
       api_key: CLOUDINARY_API_KEY,
-      remove_header: removeHeader,
+      asset: asset,
+      button_caption: buttonCaption,
+      button_class: buttonClass,
+      collection: collection,
+      default_transformations: defaultTransformations,
+      folder: folder,
+      inline_container: inlineContainer,
       insert_caption: insertCaption,
-      ...options
-    }
-
-    widget.current = cloudinary.current.createMediaLibrary(mediaLibraryOptions, {
+      max_files: maxFiles,
+      multiple: multiple,
+      remove_header: removeHeader,
+      search: search,
+      transformation: transformation,
+      username: username,
+      z_index: zIndex,
+    };
+    
+    widget.current = cloudinary.current.createMediaLibrary(mediaLibraryOptions,
+      {
         showHandler: () => {
           if ( typeof onOpen === 'function' ) {
             onOpen(callbackOptions);
