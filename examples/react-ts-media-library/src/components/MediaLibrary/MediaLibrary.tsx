@@ -1,34 +1,24 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
+import type { MediaLibraryOptions, MediaLibraryProps, MediaLibraryPropsOptions, MediaLibraryInsertResults } from './MediaLibrary.types';
 
-interface MediaLibraryProps {
-  children?: (options: MediaLibraryCallbackOptions) => JSX.Element;
-  onClose?: Function;
-  onError?: Function;
-  onOpen?: Function;
-  options?: object;
-}
+const CLOUDINARY_CLOUD_NAME = import.meta.env.VITE_CLOUDINARY_CLOUD_NAME;
+const CLOUDINARY_API_KEY = import.meta.env.VITE_CLOUDINARY_API_KEY;
 
-interface MediaLibraryCallbackOptions {
-  cloudinary?: any;
-  widget?: any;
-  close?: Function;
-  open?: Function;
-  error?: string;
-}
-
-const MediaLibrary = ({ children, onClose, onError, onOpen, options }: MediaLibraryProps) => {
+const MediaLibrary = ({ children, onClose, onInsert, onOpen, options = {} }: MediaLibraryProps) => {
   const cloudinary: any = useRef();
   const widget: any = useRef();
   const widgetContainerRef: any = useRef();
 
-  const [error, setError] = useState();
+  const {
+    insertCaption = 'Add',
+    removeHeader = false,
+  } = options as MediaLibraryPropsOptions;
 
   const callbackOptions = {
     cloudinary: cloudinary.current,
     widget: widget.current,
     close,
     open,
-    error,
   }
 
   useEffect(() => {
@@ -58,33 +48,32 @@ const MediaLibrary = ({ children, onClose, onError, onOpen, options }: MediaLibr
    */
 
   function createWidget() {
-    widget.current = cloudinary.current.createMediaLibrary(
-      {
-        cloud_name: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
-        api_key: import.meta.env.VITE_CLOUDINARY_API_KEY,
-        remove_header: false,
-        max_files: "1",
-        insert_caption: "Insert",
-        ...options
-      },
-      {
-        showHandler: (one: any, two: any) => {
+
+    const mediaLibraryOptions: MediaLibraryOptions = {
+      cloud_name: CLOUDINARY_CLOUD_NAME,
+      api_key: CLOUDINARY_API_KEY,
+      remove_header: removeHeader,
+      insert_caption: insertCaption,
+      ...options
+    }
+
+    widget.current = cloudinary.current.createMediaLibrary(mediaLibraryOptions, {
+        showHandler: () => {
           if ( typeof onOpen === 'function' ) {
             onOpen(callbackOptions);
           }
         },
-        hideHandler: (one: any, two: any) => {
+        hideHandler: () => {
           if ( typeof onClose === 'function' ) {
             onClose(callbackOptions);
           }
         },
-        // insertHandler: function (data) {
-        //   data.assets.forEach((asset) => {
-        //     console.log("Inserted asset:", JSON.stringify(asset, null, 2));
-        //   });
-        // }
-      },
-      document.getElementById("open-btn")
+        insertHandler: (data: MediaLibraryInsertResults) => {
+          if ( typeof onInsert === 'function' ) {
+            onInsert(data, callbackOptions)
+          }
+        }
+      }
     );
   }
 
