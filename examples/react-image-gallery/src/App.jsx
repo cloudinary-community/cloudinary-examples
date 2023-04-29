@@ -1,11 +1,13 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 function App() {
+  const galleryRef = useRef();
+
   useEffect(() => {
-    if (window) {
+    if (window && galleryRef.current) {
       window.cloudinary
         .galleryWidget({
-          container: "#gallery",
+          container: galleryRef.current,
           cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
           aspectRatio: "16:9",
           mediaAssets: [
@@ -21,7 +23,7 @@ function App() {
 
   return (
     <div
-      id="gallery"
+      ref={galleryRef}
       style={{
         width: "1200px",
         margin: "auto",
