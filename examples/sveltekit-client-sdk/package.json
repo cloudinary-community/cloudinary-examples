@@ -1,5 +1,5 @@
 {
-	"name": "sveltekit-upload-widget-preset",
+	"name": "sveltekit-client-sdk",
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {

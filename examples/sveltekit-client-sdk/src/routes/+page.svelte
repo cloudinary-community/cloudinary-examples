@@ -11,7 +11,6 @@
 	// Perform transformations
 	myImage.format('auto').quality('auto');
 
-	const scaled = cld.image('cld-sample-3').format('auto').quality('auto').resize(scale(80));
 </script>
 
 <main class="main">
@@ -24,17 +23,13 @@
 			<h2>Auto format, Auto Quality</h2>
 			<img src={myImage.toURL()} alt="cloudinary image" width={300} />
 		</div>
-		<div>
-			<h2>Scaled</h2>
-			<img src={scaled.toURL()} alt="cloudinary scaled image" />
-		</div>
 	</div>
 
 	<div class="container">
 		<h2>Resources</h2>
 		<p>
 			<a
-				href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset"
+				href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-client-sdk"
 				>See the code on github.com.</a
 			>
 		</p>
@@ -47,8 +42,8 @@
 		max-width: 1024px;
 		padding: 0 1em;
 		margin: 0 auto;
-		display: grid;
-		grid-template-columns: 1fr 1fr;
+		display: flex;
+		alig-items: center;
 	}
 
 	.title {
