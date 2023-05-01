@@ -6,6 +6,7 @@ Demo: <>
 
 * Create an environment variable file `.env` in the root of the project and inside add:
 ```
+PUBLIC_CLOUDINARY_CLOUD_NAME=
 CLOUDINARY_API_KEY=
 CLOUDINARY_API_SECRET=
 ```
