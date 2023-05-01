@@ -61,7 +61,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Svelte
 
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset)
-
+- [Cloudinary Image Upload (server side)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-image-upload)
 ### Vue
 
 - [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
