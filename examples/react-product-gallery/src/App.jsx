@@ -13,11 +13,11 @@ function App() {
           cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME,
           aspectRatio: "16:9",
           mediaAssets: [
-            { tag: "react-image-gallery-images" },
-            { tag: "react-image-gallery-videos", mediaType: "video" },
+            { tag: "react-image-gallery-images", transformation: { crop: "fill" } },
+            { tag: "react-image-gallery-videos", mediaType: "video", transformation: { crop: "fill" }  },
           ],
-          carouselStyle: "indicators",
-          carouselLocation: "bottom",
+          // carouselStyle: "indicators",
+          // carouselLocation: "bottom",
         })
         .render();
     }
