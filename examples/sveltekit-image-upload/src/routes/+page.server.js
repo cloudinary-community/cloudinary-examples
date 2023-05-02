@@ -18,9 +18,9 @@ export const actions = {
 			 */
 			const formData = await request.formData();
 			/**
-			 * @type {File}
+			 * @type {FormDataEntryValue | null}
 			 */
-			const fileData = await formData.get('file');
+			const fileData = /** @type {File} */ (formData.get('file'));
 			const arrayBuffer = await fileData.arrayBuffer();
 			const buffer = new Uint8Array(arrayBuffer);
 			const uploadStream = await new Promise((resolve, reject) => {
