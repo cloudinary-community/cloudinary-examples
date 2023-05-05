@@ -1,6 +1,4 @@
-# SvelteKit Cloudinary Client SDK 
-
-Demo: <https://cloudinary-client-sdk-pr.netlify.app>
+# Transformations & Effects in Svelte with Cloudinary URL Gen SDK
 
 ## 🚀 Get Started with This Example
 
