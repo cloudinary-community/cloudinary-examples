@@ -40,6 +40,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 - [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-image)
 - [Cloudinary AdvancedVideo Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-video)
+- [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-product-gallery)
 - [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-transformations-effects)
 - [Cloudinary Upload Widget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-upload-widget-preset)
 - [Cloudinary Video Player](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-video-player)
@@ -59,7 +60,10 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ### Svelte
 
+- [Cloudinary Image Upload (Server)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-image-upload)
+- [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-transformations-effects)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset)
+
 
 ### Vue
 
