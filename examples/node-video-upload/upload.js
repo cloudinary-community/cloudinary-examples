@@ -9,7 +9,7 @@ cloudinary.config({
 
 async function run() {
   try {
-    const file = process.argv[2]
+    const file = './donut.mp4';
     const result = await cloudinary.uploader.upload(file, { resource_type: 'video'});
     console.log(`Successfully uploaded video: ${file}`);
     console.log(`> Result: ${result.secure_url}`);
