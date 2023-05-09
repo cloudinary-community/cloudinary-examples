@@ -9,8 +9,8 @@ To install the Flutter SDK, open your `pubspec.yaml` file and add the following 
 ```yaml
 dependencies:
   # ...
-  cloudinary_flutter: ^0.0.4
-  cloudinary_dart: ^0.0.10
+  cloudinary_flutter: ^0.9.0
+  cloudinary_url_gen: ^0.9.0
   # ...
 ```
 
