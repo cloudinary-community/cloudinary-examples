@@ -1,8 +1,7 @@
 {
-  "name": "node-video-trim-splice",
+  "name": "node-video-trim-stitch",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
     "trim": "node trim.js --start-offset=6 --duration=5",
     "stitch": "node stitch.js",
