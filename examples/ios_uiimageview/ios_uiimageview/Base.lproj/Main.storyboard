@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ios_uiimageview" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nAB-cM-NiU" customClass="CLDUIImageView" customModule="Cloudinary">
+                                <rect key="frame" x="76.666666666666686" y="292" width="240" height="293"/>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nAB-cM-NiU" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Htz-pT-hgq"/>
+                            <constraint firstItem="nAB-cM-NiU" firstAttribute="width" secondItem="6Tk-OE-BBY" secondAttribute="width" multiplier="0.610687" id="Nnu-vw-jhA"/>
+                            <constraint firstItem="nAB-cM-NiU" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="RBv-fE-ehQ"/>
+                            <constraint firstItem="nAB-cM-NiU" firstAttribute="height" secondItem="6Tk-OE-BBY" secondAttribute="height" multiplier="0.386034" id="blQ-w6-4y0"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cldImageView" destination="nAB-cM-NiU" id="RWG-yF-NZ9"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="20.610687022900763" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
