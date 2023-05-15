@@ -14,9 +14,9 @@ const videoUrl = cloudinary.url('samples/elephants.mp4', {
   resource_type: 'video',
   transformation: [
     {
-      start_offset: start_offset,
-      end_offset: end_offset,
-      // duration: duration,
+      start_offset,
+      end_offset,
+      // duration,
     },
   ],
 });
