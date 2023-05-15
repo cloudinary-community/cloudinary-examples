@@ -1,4 +1,4 @@
-# Setting up the Flutter SDK
+# Flutter Cloudinary CldImageWidget
 
 With the Cloudinary Flutter SDK, we can conveniently optimize, transform, and manage assets directly within our Flutter application.
 
