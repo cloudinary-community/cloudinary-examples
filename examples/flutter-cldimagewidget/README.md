@@ -2,7 +2,9 @@
 
 With the Cloudinary Flutter SDK, we can conveniently optimize, transform, and manage assets directly within our Flutter application.
 
-## 🧰 Installing the SDK
+## 🧰 Using CldImageWidget in a Flutter project
+
+### Installing the Flutter SDK
 
 To install the Flutter SDK, open your `pubspec.yaml` file and add the following dependencies in the `dependencies` section:
 
@@ -16,7 +18,7 @@ dependencies:
 
 Save the file and VS Code should automatically start to install the new packages.
 
-## 🧰 Initializing the SDK
+### Initializing the SDK
 
 To initialize the SDK, open your `main.dart` file and:
 
