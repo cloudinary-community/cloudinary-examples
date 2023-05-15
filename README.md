@@ -10,7 +10,11 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ### Flutter
 
-- [Flutter - Setting up the SDK](./examples/flutter-cldimagewidget)
+- [CldImageWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/flutter-cldimagewidget)
+
+### iOS
+
+- [CLDUIImageView](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/ios-uiimageview)
 
 ### Netlify
 
