@@ -24,15 +24,16 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ### Next.js
 
-- [CldImage Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage)
-- [CldOgImage Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldogimage)
-- [CldUploadButton Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadbutton)
-- [CldUploadWidget Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadwidget)
 - [Cloudinary Upload Widget with Signed Uploads](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-signed)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-preset)
-- [Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
-- [Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
+- [Next Cloudinary - CldImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage)
+- [Next Cloudinary - CldOgImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldogimage)
+- [Next Cloudinary - CldUploadButton Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadbutton)
+- [Next Cloudinary - CldUploadWidget Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadwidget)
+- [Next.js Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
+- [Next.js Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
 - [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-social-media-card)
+
 
 ### Node.js
 
