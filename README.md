@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-5-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-6-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -10,7 +10,11 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ### Flutter
 
-- [Flutter - Setting up the SDK](./examples/flutter-cldimagewidget)
+- [CldImageWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/flutter-cldimagewidget)
+
+### iOS
+
+- [CLDUIImageView](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/ios-uiimageview)
 
 ### Netlify
 
@@ -20,15 +24,16 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ### Next.js
 
-- [CldImage Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage)
-- [CldOgImage Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldogimage)
-- [CldUploadButton Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadbutton)
-- [CldUploadWidget Component - Next Cloudinary](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadwidget)
 - [Cloudinary Upload Widget with Signed Uploads](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-signed)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-preset)
-- [Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
-- [Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
+- [Next Cloudinary - CldImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage)
+- [Next Cloudinary - CldOgImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldogimage)
+- [Next Cloudinary - CldUploadButton Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadbutton)
+- [Next Cloudinary - CldUploadWidget Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadwidget)
+- [Next.js Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
+- [Next.js Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
 - [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-social-media-card)
+
 
 ### Node.js
 
@@ -91,6 +96,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://www.kevincunningham.co.uk"><img src="https://avatars.githubusercontent.com/u/8320213?v=4?s=100" width="100px;" alt="Kevin Cunningham"/><br /><sub><b>Kevin Cunningham</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=doingandlearning" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://www.timbenniks.dev"><img src="https://avatars.githubusercontent.com/u/121096?v=4?s=100" width="100px;" alt="Tim Benniks"/><br /><sub><b>Tim Benniks</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=timbenniks" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://nikolovlazar.com"><img src="https://avatars.githubusercontent.com/u/5396211?v=4?s=100" width="100px;" alt="Lazar Nikolov"/><br /><sub><b>Lazar Nikolov</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=nikolovlazar" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/adimiz1"><img src="https://avatars.githubusercontent.com/u/95848801?v=4?s=100" width="100px;" alt="adimiz1"/><br /><sub><b>adimiz1</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=adimiz1" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
