@@ -8,7 +8,7 @@ cloudinary.config({
 });
 
 async function run() {
-  const file = './large.mp4';
+  const file = './<Your Large File>';
   try {
     const result = await new Promise((resolve, reject) => {
       cloudinary.uploader.upload_large(
