@@ -1,5 +1,5 @@
-require("dotenv").config();
-const cloudinary = require("cloudinary").v2;
+require('dotenv').config();
+const cloudinary = require('cloudinary').v2;
 
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
@@ -8,13 +8,13 @@ cloudinary.config({
 });
 
 async function run() {
-  const file = "./large.mp4";
+  const file = './large.mp4';
   try {
     const result = await new Promise((resolve, reject) => {
       cloudinary.uploader.upload_large(
         file,
         {
-          resource_type: "video",
+          resource_type: 'video',
         },
         (error, result) => {
           if (error) {
