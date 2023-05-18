@@ -8,6 +8,10 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ## 🧰 Examples
 
+### Android
+
+- [ImageView](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/android-imageview)
+
 ### Flutter
 
 - [CldImageWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/flutter-cldimagewidget)
