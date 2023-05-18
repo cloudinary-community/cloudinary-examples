@@ -6,6 +6,18 @@
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
 
+- [Android](#android)
+- [Flutter](#flutter)
+- [iOS](#ios)
+- [Netlify](#netlify)
+- [Next.js](#nextjs)
+- [Node.js](#nodejs)
+- [React](#react)
+- [Remix](#remix)
+- [SolidJS](#solidjs)
+- [Svelte](#svelte)
+- [Vue](#vue)
+
 ## 🧰 Examples
 
 ### Android
