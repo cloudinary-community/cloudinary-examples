@@ -1,0 +1,15 @@
+{
+  "name": "nextjs-backend-file-upload-sdk",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "cloudinary": "^1.37.0",
+    "formidable": "^2.1.1"
+  }
+}
