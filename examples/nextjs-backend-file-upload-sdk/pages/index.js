@@ -11,11 +11,11 @@ export default function Home() {
   };
 
   const handleSubmit = async e => {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('file', file);
-
     try {
+      e.preventDefault();
+      const formData = new FormData();
+      formData.append('file', file);
+
       const res = await fetch('/api/upload', {
         method: 'POST',
         body: formData,
@@ -30,7 +30,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>File Upload with Next.js and Cloudinary Backend SDK</title>
+        <title>Upload Files with Next.js and Cloudinary Backend SDK</title>
         <meta
           name='description'
           content='Uploading files with Next.js and Cloudinary Backend SDK'
