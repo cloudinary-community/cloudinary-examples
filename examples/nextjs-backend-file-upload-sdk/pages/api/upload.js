@@ -2,7 +2,6 @@ import formidable from 'formidable';
 import { v2 as cloudinary } from 'cloudinary';
 
 // Store environment variables in your .env.local file
-
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   secure: true,
@@ -30,7 +29,7 @@ export default async function handler(req, res) {
 
     const data = await cloudinary.uploader.unsigned_upload(
       file.filepath,
-      'your-preset-name'
+      process.env.CLOUDINARY_UPLOAD_PRESET
     );
 
     res.status(200).json({ fileUrl: data.secure_url });
