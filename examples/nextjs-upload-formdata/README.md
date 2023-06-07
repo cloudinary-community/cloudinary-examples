@@ -1,81 +1,59 @@
-# Next.js Uploading Files Using the Cloudinary Backend SDK
+# Next.js Uploading Files from FormData Using the Cloudinary Node.js SDK
 
 <!-- View Demo: demo-link-needed -->
 
-## 🧰 Using the Cloudinary Backend SDK in Next.js for Unsigned File Uploads with an Upload Preset
+## 🧰 Using the Cloudinary Node.js SDK in Next.js with FormData
 
-Start off by getting your file from the form input. An example of doing so with state is in following example:
+Start off by getting your file from the form input.
+
+For example, given a form with a submit and change handler:
 
 ```
-import Head from 'next/head';
-import { useState } from 'react';
-import styles from '@/styles/Home.module.css';
-
-export default function Home() {
-  const [file, setFile] = useState(null);
-  const [fileUrl, setFileUrl] = useState(null);
-
-  const handleFileChange = e => {
-    setFile(e.target.files[0]);
-  };
-
-  const handleSubmit = async e => {
-    try {
-      e.preventDefault();
-      const formData = new FormData();
-      formData.append('file', file);
-
-      const res = await fetch('/api/upload', {
-        method: 'POST',
-        body: formData,
-      });
-      const { fileUrl } = await res.json();
-      setFileUrl(fileUrl);
-    } catch (error) {
-      console.error(error);
-    }
-  };
-
-  return (
-    <>
-      <Head>
-        <title>Upload Files with Next.js and Cloudinary Backend SDK</title>
-        <meta
-          name='description'
-          content='Uploading files with Next.js and Cloudinary Backend SDK'
-        />
-        <meta name='viewport' content='width=device-width, initial-scale=1' />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-      <main className={styles.main}>
-        <h1>Using the Cloudinary Backend SDK for File Uploads</h1>
-        <form onSubmit={handleSubmit}>
-          <input type='file' name='file' onChange={handleFileChange} />
-          <button type='submit'>Submit</button>
-        </form>
-        {fileUrl ? (
-          <a href={fileUrl} target='_blank'>
-            Click to see your file
-          </a>
-        ) : null}
-      </main>
-    </>
-  );
-}
+<form onSubmit={handleSubmit}>
+  <input type='file' name='file' onChange={handleFileChange} />
+  <button type='submit'>Submit</button>
+</form>
 ```
 
-There are a couple of things we're doing here:
+And the associated form handling logic:
+
+```
+const [file, setFile] = useState(null);
+const [fileUrl, setFileUrl] = useState(null);
+
+const handleFileChange = e => {
+  setFile(e.target.files[0]);
+};
+
+const handleSubmit = async e => {
+  try {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('file', file);
+
+    const res = await fetch('/api/upload', {
+      method: 'POST',
+      body: formData,
+    });
+    const { fileUrl } = await res.json();
+    setFileUrl(fileUrl);
+  } catch (error) {
+    console.error(error);
+  }
+};
+```
+
+Where here, we're doing a couple of things:
 
 1. We set our file state every time we change the file we input.
 2. We use the FormData API to pass the file over to our API route where we'll handle the file upload and return the secure url from Cloudinary.
 
-Here's how you can leverage Formidable to access the file on the back end of your application:
+To handle the upload, we can create a new API endpoint at `pages/api/upload.js` with the following:
 
 ```
 import formidable from 'formidable';
 import { v2 as cloudinary } from 'cloudinary';
 
-<!-- Store environment variables in your .env.local file -->
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   secure: true,
@@ -83,7 +61,6 @@ cloudinary.config({
   api_secret: process.env.CLOUDINARY_API_SECRET,
 });
 
-<!-- Be sure to export this config so Formidable can do the parsing -->
 export const config = {
   api: {
     bodyParser: false,
@@ -118,10 +95,14 @@ export default async function handler(req, res) {
 
 Here's what is happening above:
 
-1. We configure the Cloudinary backend SDK with our environment variables. We do this to keep our values secure.
+1. We configure the Cloudinary Node.js SDK with our environment variables. We do this to keep our values secure.
 2. We define and export the new config so we can allow the request to be parsed by Formidable.
 3. With access to the file via Formidable, we upload it to Cloudinary using the file path and the name of our preset.
 4. Cloudinary returns data, containing our secure file url, which we pass back within JSON to the frontend for further usage.
+
+Finally, to allow the above to make "unsigned uploads", be sure to create a new Upload Preset that allows unsigned uploads and configure the name with the environment variable `CLOUDINARY_UPLOAD_PRESET`.
+
+> Alternatively, you can use the Node.js SDK to sign your uploads!
 
 ## 🚀 Get Started with This Example
 
