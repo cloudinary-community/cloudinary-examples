@@ -56,7 +56,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Next.js Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
 - [Next.js Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
 - [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-social-media-card)
-- [Next.js Uploading Files Using the Cloudinary Backend SDK](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-backend-file-upload-sdk)
+- [Upload Files from FormData in API Routes](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-formdata)
 
 ### Node.js
 
