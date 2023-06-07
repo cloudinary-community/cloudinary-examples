@@ -60,6 +60,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "internetdrew",
+      "name": "Andrew Rowley",
+      "avatar_url": "https://avatars.githubusercontent.com/u/95974309?v=4",
+      "profile": "http://internetdrew.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -67,5 +76,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "cloudinary-examples",
-  "projectOwner": "colbyfayock"
+  "projectOwner": "colbyfayock",
+  "commitType": "docs"
 }
