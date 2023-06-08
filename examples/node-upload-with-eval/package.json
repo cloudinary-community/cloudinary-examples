@@ -1,0 +1,17 @@
+{
+  "name": "upload-with-eval",
+  "version": "1.0.0",
+  "description": "Evaluate and add metadata to an image while uploading to Cloudinary",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Tim Benniks",
+  "license": "MIT",
+  "dependencies": {
+    "cloudinary": "^1.37.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.1.4"
+  }
+}
