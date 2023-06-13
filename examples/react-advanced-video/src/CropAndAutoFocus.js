@@ -9,7 +9,7 @@ import "./App.css";
 
 const cld = new Cloudinary({
   cloud: {
-    cloudName: "tutorials",
+    cloudName: process.env.REACT_APP_CLOUDINARY_CLOUD_NAME,
   },
 });
 
