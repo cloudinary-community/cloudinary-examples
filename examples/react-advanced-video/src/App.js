@@ -1,5 +1,9 @@
 import { Cloudinary } from "@cloudinary/url-gen";
 import { AdvancedVideo, lazyload } from "@cloudinary/react";
+import { scale, fill } from "@cloudinary/url-gen/actions/resize";
+import { Gravity } from '@cloudinary/url-gen/qualifiers'
+import { AutoFocus } from '@cloudinary/url-gen/qualifiers/autoFocus'
+import { FocusOn } from '@cloudinary/url-gen/qualifiers/focusOn'
 
 import "./App.css";
 
@@ -52,6 +56,96 @@ function App() {
               </li>
             );
           })}
+        </ul>
+      </div>
+
+      <div className="container">
+        <h2>Dynamic Cropping</h2>
+        <p>
+          Uses AI to identify the dominant object in the video and tracks them
+        </p>
+        <ul className="videos">
+          <li>
+            <h3>Original Video </h3>
+            <p>no additional configuration or settings.</p>
+            <AdvancedVideo
+              controls
+              cldVid={
+                cld.video("videos/apartment-tour")
+                  .resize(scale().width(400))
+                  .delivery("q_auto")
+                  .format("auto")
+              }
+              autoPlay
+              loop
+            />
+          </li>
+
+          <li>
+            <h3>Youtube like settings</h3>
+            <p>Aspect Ratio 16:9, auto gravity and auto focus on faces</p>
+            <AdvancedVideo
+              controls
+              cldVid={
+                cld.video("videos/apartment-tour")
+                  .resize(fill().width(400)
+                    .aspectRatio("16:9")
+                    .gravity(
+                      Gravity.autoGravity()
+                      .autoFocus(AutoFocus.focusOn(FocusOn.face()))
+                    )
+                  )
+                  .delivery("q_auto")
+                  .format("auto")
+              }
+              autoPlay
+              loop
+            />
+          </li>
+
+          <li>
+            <h3>Mobile Video</h3>
+            <p>Aspect Ratio 9:16, auto gravity and auto focus on faces</p>
+            <AdvancedVideo
+              controls
+              cldVid={
+                cld.video("videos/apartment-tour")
+                  .resize(fill().width(400)
+                    .aspectRatio("9:16")
+                    .gravity(
+                      Gravity.autoGravity()
+                      .autoFocus(AutoFocus.focusOn(FocusOn.face()))
+                    )
+                  )
+                  .delivery("q_auto")
+                  .format("auto")
+              }
+              autoPlay
+              loop
+            />
+          </li>
+
+          <li>
+            <h3>Square Video </h3>
+            <p>Aspect Ratio 1:1 , auto gravity and auto focus on faces</p>
+            <AdvancedVideo 
+              controls
+              cldVid={
+                cld.video("videos/apartment-tour")
+                  .resize(fill().width(400)
+                    .aspectRatio("1:1")
+                    .gravity(
+                      Gravity.autoGravity()
+                      .autoFocus(AutoFocus.focusOn(FocusOn.face()))
+                    )
+                  )
+                  .delivery("q_auto")
+                  .format("auto")
+              }
+              autoPlay
+              loop
+            />
+          </li>
         </ul>
       </div>
 
