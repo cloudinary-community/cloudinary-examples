@@ -35,30 +35,6 @@ function App() {
           })}
         </ul>
       </div>
-
-      <div className="container">
-        <h2>Optimized</h2>
-        <p>
-          Format of auto (<code>f_auto</code>) and quality of auto (
-          <code>q_auto</code>).
-        </p>
-        <ul className="videos">
-          {videos.map((video) => {
-            return (
-              <li key={video.id}>
-                <AdvancedVideo
-                  controls
-                  cldVid={cld
-                    .video(video.video)
-                    .delivery("q_auto")
-                    .format("auto")}
-                />
-              </li>
-            );
-          })}
-        </ul>
-      </div>
-
       <div className="container">
         <h2>Dynamic Cropping</h2>
         <p>
