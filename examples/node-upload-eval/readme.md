@@ -1,4 +1,6 @@
-# Evaluating and adding metadata to uploaded Images with the Cloudinary Node SDK
+# Evaluating Images on Upload with the Cloudinary Node SDK
+
+Use the `eval` property to evalate an image on upload and dynamically add tags and metadata based on the results.
 
 ## 🧰 Uploading with the SDK in a Node project
 
