@@ -21,7 +21,7 @@ npm install
 - Run the node script with:
 
 ```
-node upload.mjs
+node upload.js
 ```
 
 The script will run in your terminal and you'll see the URL results logged.
