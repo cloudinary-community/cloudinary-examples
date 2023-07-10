@@ -1,8 +1,7 @@
 <script lang="ts">
 	import { CldImage } from 'svelte-cloudinary';
-	import images from '$lib/images';
-	import { onMount } from 'svelte';
-    const TITLE = "Svelte Cloudinary CldImage Component";
+	import images from '../images.json';
+  const TITLE = "Svelte Cloudinary CldImage Component";
 </script>
 
 <svelte:head>
@@ -20,7 +19,7 @@
 	</div>
 
 	<div class="container">
-		<h2 class="subtitle">Using Cloudinary Public IDs</h2>
+		<h2 class="subtitle">Default</h2>
 		<ul class="images">
 			{#each images as image}
 				<li>
@@ -55,12 +54,13 @@
 						tint="equalize:80:blue:blueviolet"
 						overlays={[
 							{
+								crop: 'fit',
+								width: 500,
 								text: {
 									color: 'white',
 									fontFamily: 'Source Sans Pro',
 									fontSize: 100,
 									fontWeight: 'bold',
-									letterSpacing: 14,
 									text: image.title
 								}
 							}
