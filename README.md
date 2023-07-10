@@ -93,6 +93,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Cloudinary Image Upload (Server)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-image-upload)
 - [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-transformations-effects)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset)
+- [Svelte Cloudinary - CldImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-cldimage)
 
 ### Vue
 
