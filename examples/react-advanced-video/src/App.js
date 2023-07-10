@@ -1,13 +1,13 @@
-import { Cloudinary } from "@cloudinary/url-gen";
-import { AdvancedVideo, lazyload } from "@cloudinary/react";
-import { scale, fill } from "@cloudinary/url-gen/actions/resize";
-import { Gravity } from '@cloudinary/url-gen/qualifiers'
-import { AutoFocus } from '@cloudinary/url-gen/qualifiers/autoFocus'
-import { FocusOn } from '@cloudinary/url-gen/qualifiers/focusOn'
+import { Cloudinary } from '@cloudinary/url-gen';
+import { AdvancedVideo, lazyload } from '@cloudinary/react';
+import { scale, fill } from '@cloudinary/url-gen/actions/resize';
+import { AutoFocus } from '@cloudinary/url-gen/qualifiers/autoFocus';
+import { FocusOn } from '@cloudinary/url-gen/qualifiers/focusOn';
+import { autoGravity } from '@cloudinary/url-gen/qualifiers/gravity';
 
-import "./App.css";
+import './App.css';
 
-import videos from "./videos.json";
+import videos from './videos.json';
 
 const cld = new Cloudinary({
   cloud: {
@@ -91,8 +91,8 @@ function App() {
                   .resize(fill().width(400)
                     .aspectRatio("16:9")
                     .gravity(
-                      Gravity.autoGravity()
-                      .autoFocus(AutoFocus.focusOn(FocusOn.face()))
+                      autoGravity()
+                        .autoFocus(AutoFocus.focusOn(FocusOn.face()))
                     )
                   )
                   .delivery("q_auto")
@@ -113,8 +113,8 @@ function App() {
                   .resize(fill().width(400)
                     .aspectRatio("9:16")
                     .gravity(
-                      Gravity.autoGravity()
-                      .autoFocus(AutoFocus.focusOn(FocusOn.face()))
+                      autoGravity()
+                        .autoFocus(AutoFocus.focusOn(FocusOn.face()))
                     )
                   )
                   .delivery("q_auto")
@@ -135,8 +135,8 @@ function App() {
                   .resize(fill().width(400)
                     .aspectRatio("1:1")
                     .gravity(
-                      Gravity.autoGravity()
-                      .autoFocus(AutoFocus.focusOn(FocusOn.face()))
+                      autoGravity()
+                        .autoFocus(AutoFocus.focusOn(FocusOn.face()))
                     )
                   )
                   .delivery("q_auto")
