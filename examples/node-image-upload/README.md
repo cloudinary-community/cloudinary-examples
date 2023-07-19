@@ -1,4 +1,4 @@
-# Uploadinag Images to Cloudinary with the Node SDK
+# Uploading Images to Cloudinary with the Node SDK
 
 ## 🧰 Uploading with the SDK in a Node project
 

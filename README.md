@@ -61,8 +61,10 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Node.js
 
 - [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-transformations-effects)
-- [Image Upload](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-image-upload)
+- [Eval on Upload](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-upload-eval)
 - [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-social-media-card)
+- [Upload Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-image-upload)
+- [Upload Videos](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-video-upload)
 
 ### React
 
@@ -91,6 +93,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Cloudinary Image Upload (Server)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-image-upload)
 - [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-transformations-effects)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset)
+- [Svelte Cloudinary - CldImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-cldimage)
 
 ### Vue
 

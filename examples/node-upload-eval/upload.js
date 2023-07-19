@@ -1,5 +1,5 @@
-import dotenv from "dotenv";
-import { v2 as cloudinary } from "cloudinary";
+const dotenv = require("dotenv");
+const cloudinary = require('cloudinary').v2;
 
 dotenv.config();
 
@@ -14,7 +14,7 @@ cloudinary.config({
 // "./images/blurry-cade-roberts-EpIUbeFrqwQ-unsplash.jpg";
 
 (async function run() {
-  const image = "./images/cade-roberts-EpIUbeFrqwQ-unsplash.jpg";
+  const image = "./images/agnieszka-kowalczyk-c0VRNWVEjOA-unsplash.jpg";
 
   const result = await cloudinary.uploader
     .upload(image, {

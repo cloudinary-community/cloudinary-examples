@@ -2,7 +2,7 @@
   "name": "upload-with-eval",
   "version": "1.0.0",
   "description": "Evaluate and add metadata to an image while uploading to Cloudinary",
-  "main": "index.mjs",
+  "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
