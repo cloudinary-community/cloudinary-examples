@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<head>
+  <title>Browser Client Hints</title>
+  <meta http-equiv="accept-ch" content="Dpr, Viewport-Width, Width">
+  <meta http-equiv="delegate-ch" content="sec-ch-width https://res.cloudinary.com; sec-ch-dpr https://res.cloudinary.com; sec-ch-viewport-width https://res.cloudinary.com;">
+
+  <style>
+    body { font-family: Arial, Helvetica, sans-serif; }
+    img { max-width: 100%; display: block; margin: 0 0 1rem 0; }
+    p {
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+
+<div style="max-width: 600px;margin: 0 auto;">
+  <p style="margin-bottom: 2em;"><strong>Note: Browsers will only attach client hints to requests for URLs that use the HTTPS protocol.</strong></p>
+  <p style="margin-bottom: 1em;">Responsive Image</p>
+  <img
+    srcset="https://res.cloudinary.com/colbycloud-examples/image/upload/f_auto,q_auto/c_scale,w_256/examples/earth_czmm03 256w,
+            https://res.cloudinary.com/colbycloud-examples/image/upload/f_auto,q_auto/c_scale,w_512/examples/earth_czmm03 512w,
+            https://res.cloudinary.com/colbycloud-examples/image/upload/f_auto,q_auto/c_scale,w_768/examples/earth_czmm03 768w,
+            https://res.cloudinary.com/colbycloud-examples/image/upload/f_auto,q_auto/c_scale,w_1024/examples/earth_czmm03 1024w,
+            https://res.cloudinary.com/colbycloud-examples/image/upload/f_auto,q_auto/c_scale,w_1280/examples/earth_czmm03 1280w"
+    src="https://res.cloudinary.com/colbycloud-examples/image/upload/f_auto,q_auto/c_scale,w_512/examples/earth_czmm03"
+    sizes="100vw"
+    alt="Responsive house" />
+
+  <p style="margin-bottom: 1em;">Client Hints Image</p>
+  <img
+    sizes="100vw"  
+    src="https://res.cloudinary.com/colbycloud-examples/image/upload/f_auto,q_auto/c_limit,w_auto/examples/earth_czmm03"
+    alt="Client Hints House" 
+  />
+
+  <p style="margin-bottom: 1em;">Client Hints Image with breakpoints and fallback</p>
+  <img
+    sizes="100vw"  
+    src="https://res.cloudinary.com/colbycloud-examples/image/upload/f_auto,q_auto/c_limit,w_auto:breakpoints:500/examples/earth_czmm03"
+    alt="Client Hints House" 
+  />
+</div>
+
+</body>
+</html>
