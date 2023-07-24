@@ -10,6 +10,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 - [Android](#android)
 - [Flutter](#flutter)
+- [HTML & Browser](#html--browser)
 - [iOS](#ios)
 - [Kotlin](#kotlin)
 - [Netlify](#netlify)
@@ -30,6 +31,10 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Flutter
 
 - [CldImageWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/flutter-cldimagewidget)
+
+### HTML & Browser
+
+- [Client Hints](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/html-client-hints)
 
 ### iOS
 
