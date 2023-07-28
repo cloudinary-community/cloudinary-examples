@@ -29,7 +29,9 @@ export default async function handler(req, res) {
 
     const data = await cloudinary.uploader.unsigned_upload(
       file.filepath,
-      process.env.CLOUDINARY_UPLOAD_PRESET
+      {
+      upload_preset: process.env.CLOUDINARY_UPLOAD_PRESET,
+      }
     );
 
     res.status(200).json({ fileUrl: data.secure_url });
