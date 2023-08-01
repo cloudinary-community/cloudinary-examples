@@ -1,5 +1,7 @@
 {
   "private": true,
+  "name": "nuxt-cldimage",
+  "version": "0.1.0",
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
@@ -11,6 +13,6 @@
     "nuxt": "^3.6.2"
   },
   "dependencies": {
-    "@nuxtjs/cloudinary": "^2.1.5"
+    "@nuxtjs/cloudinary": "^2.3.1"
   }
 }
