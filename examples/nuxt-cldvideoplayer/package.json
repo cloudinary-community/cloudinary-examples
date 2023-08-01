@@ -1,6 +1,6 @@
 {
   "private": true,
-  "name": "nuxt-cldogimage",
+  "name": "nuxt-cldvideoplayer",
   "version": "0.1.0",
   "scripts": {
     "build": "nuxt build",
