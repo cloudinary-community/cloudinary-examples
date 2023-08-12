@@ -1,0 +1,23 @@
+{
+    "cars": [
+        "docs/cars/car1",
+       "docs/cars/car2",
+       "docs/cars/car3",
+       "docs/cars/car4",
+       "docs/cars/car5"
+    ],
+    "furniture": [
+        "docs/bl_1",
+        "docs/bl_2",
+        "docs/bl_3",
+        "docs/bl_4",
+        "docs/bl_5"
+    ],
+    "chairs": [
+        "docs/furniture/chair1",
+       "docs/furniture/chair2",
+       "docs/furniture/chair6",
+       "docs/furniture/chair4",
+       "docs/furniture/chair5"
+    ]
+}
