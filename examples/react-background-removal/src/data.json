@@ -1,23 +1,23 @@
 {
     "cars": [
-        "docs/cars/car1",
-       "docs/cars/car2",
-       "docs/cars/car3",
-       "docs/cars/car4",
-       "docs/cars/car5"
+        "demos/car1",
+        "demos/car2",
+        "demos/car3",
+        "demos/car4",
+        "demos/car5"
     ],
     "furniture": [
-        "docs/bl_1",
-        "docs/bl_2",
-        "docs/bl_3",
-        "docs/bl_4",
-        "docs/bl_5"
+        "demos/bl_1",
+        "demos/bl_2",
+        "demos/bl_3",
+        "demos/bl_4",
+        "demos/bl_5"
     ],
     "chairs": [
-        "docs/furniture/chair1",
-       "docs/furniture/chair2",
-       "docs/furniture/chair6",
-       "docs/furniture/chair4",
-       "docs/furniture/chair5"
+        "demos//chair1",
+        "demos//chair2",
+        "demos//chair6",
+        "demos//chair4",
+        "demos//chair5"
     ]
 }

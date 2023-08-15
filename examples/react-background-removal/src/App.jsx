@@ -1,34 +1,19 @@
 import images from './data.json'
 import * as React from 'react'
-
-
-import { backgroundRemoval, dropShadow } from "@cloudinary/url-gen/actions/effect";
-import { scale, fill} from "@cloudinary/url-gen/actions/resize";
+import { backgroundRemoval, dropShadow } from "@cloudinary/url-gen/actions/effect"
+import { scale } from "@cloudinary/url-gen/actions/resize";
 import { Cloudinary } from "@cloudinary/url-gen";
 
 // Create a Cloudinary instance and set your cloud name.
 const cld = new Cloudinary({
   cloud: {
-    cloudName: "demo"
+    cloudName: import.meta.env.VITE_PUBLIC_CLOUD_NAME
   }
 });
-
-
 
 function App() {
   const { cars, furniture, chairs } = images
   const [collection, setCollection] = React.useState({ title: 'cars', images: cars })
-
-
-  function getUrl(publicId) {
-    return cld.image(publicId)
-      .effect(backgroundRemoval()) // remove background
-      .effect(dropShadow()) // add drop shadow
-      .resize(scale().width(450).height(300))
-      .format('auto')
-      .quality('auto')
-      .toURL()
-  }
 
   return (
     <div className="max-w-3xl mx-auto py-20">
@@ -45,7 +30,26 @@ function App() {
         </label>
       </div>
       <div className="grid grid-cols-3 gap-4 mt-10">
-        {collection.images.map(image => <img src={getUrl(image)} key={image} />)}
+        {collection.images.map(publicId =>
+          <img
+            width="450"
+            height="300"
+            key={publicId}
+            src={
+              cld.image(publicId)
+                .effect(backgroundRemoval())
+                .effect(dropShadow()
+                  .azimuth(150)
+                  .elevation(50)
+                  .spread(70)
+                )
+                .resize(scale().width(450).height(300))
+                .format("auto")
+                .quality("auto")
+                .toURL()
+            }
+          />
+        )}
       </div>
     </div>
   )
