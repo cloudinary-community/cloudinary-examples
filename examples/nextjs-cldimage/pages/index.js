@@ -26,7 +26,7 @@ export default function Home() {
             Using Cloudinary Public IDs
           </h2>
           <ul className={styles.images}>
-            {images.map(image => {
+            {images.slice(0,4).map(image => {
               return (
                 <li key={image.id}>
                   <CldImage width={image.width} height={image.height} src={image.image} alt={image.title} />
@@ -38,10 +38,32 @@ export default function Home() {
 
         <div className={styles.container}>
           <h2 className={styles.subtitle}>
+            AI Generative Fill
+          </h2>
+          <ul className={styles.images}>
+            {[images[4], images[6], images[8], images[10]].map(image => {
+              return (
+                <li key={image.id}>
+                  <CldImage
+                    width={image.height}
+                    height={image.width}
+                    crop="pad"
+                    src={image.image}
+                    alt={image.title}
+                    fillBackground
+                  />
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+
+        <div className={styles.container}>
+          <h2 className={styles.subtitle}>
             Uniform Cropping
           </h2>
           <ul className={styles.images}>
-            {images.map(image => {
+            {images.slice(0,4).map(image => {
               return (
                 <li key={image.id}>
                   <CldImage
@@ -62,7 +84,7 @@ export default function Home() {
             With Effects
           </h2>
           <ul className={styles.images}>
-            {images.map(image => {
+            {images.slice(0,4).map(image => {
               return (
                 <li key={image.id}>
                   <CldImage

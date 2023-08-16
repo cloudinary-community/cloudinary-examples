@@ -1586,7 +1586,7 @@
   resolved "https://registry.yarnpkg.com/@cloudinary-util/util/-/util-2.0.1.tgz#0797d2dd96f91971184b2f94da768c15922ea33d"
   integrity sha512-d2imgUjYTLjv8ZhZPMAts/uPbMvIE71X4I/5hwdY/7vM4BuFQoJMSyq+h2pW1z1MyGG9BOWBm70vp082lSrbEQ==
 
-"@cloudinary-util/util@2.2.1":
+"@cloudinary-util/util@2.2.1", "@cloudinary-util/util@^2.2.1":
   version "2.2.1"
   resolved "https://registry.yarnpkg.com/@cloudinary-util/util/-/util-2.2.1.tgz#c482d9321d37d921b347858a121c161b68782bd3"
   integrity sha512-MEIqn5WtPP3mxSMTNNfpqlGS1UquAXcjmVdY/t/edD/ZWVjI85viBiOMIuF0W6n6UF5gTstLymfQNYx0YO/GZg==
@@ -12501,6 +12501,14 @@ next-cloudinary@^0.6.0:
   integrity sha512-Sr06nWWbIMdVfxEpGECId9Pmm43fe8/q8E7hVh0w1yjkk9+m/Crww9wvNx0XHCmzdXZPB2C8+xuZc9Y6FJs4hg==
   dependencies:
     "@cloudinary/url-gen" "^1.8.6"
+
+next-cloudinary@^4.18.0:
+  version "4.18.0"
+  resolved "https://registry.yarnpkg.com/next-cloudinary/-/next-cloudinary-4.18.0.tgz#6ee87882f87d7a42784b5cd648bf469b2d8a6d35"
+  integrity sha512-CSEaDBjuEa+eTYns4i5ieK4sm72woNwBk8820V5i93/OduRBcT521SvDDnICX+h40LW2xsOQQF9aRIQcGteOlw==
+  dependencies:
+    "@cloudinary-util/url-loader" "^3.10.0"
+    "@cloudinary-util/util" "^2.2.1"
 
 next-cloudinary@^4.3.0:
   version "4.10.0"
