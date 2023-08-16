@@ -12,38 +12,47 @@ const cld = new Cloudinary({
 });
 
 function App() {
-  const { cars, furniture, chairs } = images
+  const { cars, furniture } = images
   const [collection, setCollection] = React.useState({ title: 'cars', images: cars })
 
   return (
     <div className="max-w-3xl mx-auto py-20">
-      <h2 className="text-3xl mx-auto">Product Selection</h2>
-      <div className="grid grid-cols-3 mt-5" >
-        <label className="text-2xl">Cars
-          <input type="radio" name="collection" value="cars" onChange={e => setCollection({ title: 'cars', images: cars })} checked={collection.title === "cars"} />
-        </label>
-        <label className="text-2xl">Furniture
-          <input type="radio" name="collection" value="furniture" onChange={e => setCollection({ title: 'furniture', images: furniture })} checked={collection.title === "furniture"} />
-        </label>
-        <label className="text-2xl">Chairs
-          <input type="radio" name="collection" value="chairs" onChange={e => setCollection({ title: 'chairs', images: chairs })} checked={collection.title === "chairs"} />
-        </label>
+      <h2 className="text-3xl mx-auto mb-6">Product Selection</h2>
+
+      <div class="text-sm font-medium text-center text-gray-500 border-b border-gray-200 dark:text-gray-400 dark:border-gray-700">
+
+        <ul className="flex flex-wrap">
+            <li className="mr-2">
+              <input id="cars" className="sr-only peer" type="radio" name="collection" value="cars" onChange={e => setCollection({ title: 'cars', images: cars })} checked={collection.title === "cars"} />
+              <label className="inline-block p-4 border-b-2 border-transparent peer-checked:border-blue-600 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 cursor-pointer" htmlFor="cars">
+                Cars
+              </label>
+            </li>
+            <li className="mr-2">
+              <input id="furniture" className="sr-only peer" type="radio" name="collection" value="furniture" onChange={e => setCollection({ title: 'furniture', images: furniture })} checked={collection.title === "furniture"} />
+              <label className="inline-block p-4 border-b-2 border-transparent peer-checked:border-blue-600 rounded-t-lg hover:text-gray-600 hover:border-gray-300 dark:hover:text-gray-300 cursor-pointer" htmlFor="furniture">
+                Furniture
+              </label>
+            </li>
+        </ul>
       </div>
+
       <div className="grid grid-cols-3 gap-4 mt-10">
-        {collection.images.map(publicId =>
+        {collection.images.map(({ publicId, width, height }) =>
           <img
-            width="450"
-            height="300"
+            width={width}
+            height={height}
             key={publicId}
             src={
               cld.image(publicId)
                 .effect(backgroundRemoval())
-                .effect(dropShadow()
-                  .azimuth(150)
-                  .elevation(50)
-                  .spread(70)
-                )
-                .resize(scale().width(450).height(300))
+                .effect(
+                  dropShadow()
+                    .azimuth(150)
+                    .elevation(50)
+                    .spread(70)
+                  )
+                .resize(scale().width(width).height(height))
                 .format("auto")
                 .quality("auto")
                 .toURL()
