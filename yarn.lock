@@ -1666,6 +1666,13 @@
   dependencies:
     "@cloudinary/transformation-builder-sdk" "^1.4.0"
 
+"@cloudinary/url-gen@^1.11.2":
+  version "1.11.2"
+  resolved "https://registry.yarnpkg.com/@cloudinary/url-gen/-/url-gen-1.11.2.tgz#a454dc77f9efb58c6f2c2f61b84d0d3e2dce9405"
+  integrity sha512-9yL3BlThh3PfyRg/zS8cQVic3FdFaIOp361YrDrQ4fqYbYE47SGWF4ji9KoFxYF4ejfDEptayeG9jF2C465KRQ==
+  dependencies:
+    "@cloudinary/transformation-builder-sdk" "^1.5.1"
+
 "@cloudinary/url-gen@^1.9.0":
   version "1.9.0"
   resolved "https://registry.npmjs.org/@cloudinary/url-gen/-/url-gen-1.9.0.tgz"
