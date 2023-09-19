@@ -1,5 +1,12 @@
-import { Cloudinary } from '@cloudinary/url-gen';
+import { Cloudinary, Transformation } from '@cloudinary/url-gen';
 import { AdvancedImage, lazyload, placeholder } from '@cloudinary/react';
+import { fill, scale } from "@cloudinary/url-gen/actions/resize";
+import { source } from "@cloudinary/url-gen/actions/overlay";
+import { image, text } from "@cloudinary/url-gen/qualifiers/source";
+import { Position } from "@cloudinary/url-gen/qualifiers/position";
+import { compass } from "@cloudinary/url-gen/qualifiers/gravity";
+import { TextStyle } from "@cloudinary/url-gen/qualifiers/textStyle";
+import { opacity } from "@cloudinary/url-gen/actions/adjust";
 
 import './App.css';
 
@@ -12,6 +19,37 @@ const cld = new Cloudinary({
 });
 
 function App() {
+
+  const myImage = cld.image('cld-sample-5');
+
+  myImage
+    .resize(fill(300, 300))
+    .format('auto')
+    .overlay(
+      source(
+        image('samples/cloudinary-icon')
+          .transformation(new Transformation()
+            .resize(scale().height(55))
+          )
+      )
+        .position(new Position().gravity(compass('south_east')))
+    )
+
+
+  const mySecondImage = cld.image('cld-sample')
+
+  mySecondImage
+    .resize(fill(300, 300))
+    .format('auto')
+    .overlay(
+      source(
+        text('PREVIEW', new TextStyle('arial', 60)
+          .fontWeight('bold'))
+          .textColor('gray')
+          .transformation(new Transformation().adjust(opacity(70)))
+      )
+    )
+
   return (
     <main className="main">
       <div className="container">
@@ -70,12 +108,19 @@ function App() {
                   height={image.height}
                   cldImg={cld.image(image.image).delivery('q_auto').format('auto')}
                   alt={image.title}
-                  plugins={[ lazyload(), placeholder() ]}
+                  plugins={[lazyload(), placeholder()]}
                 />
               </li>
             )
           })}
         </ul>
+      </div>
+
+      <div className="container">
+        <h2>Watermarks</h2>
+        <p>Add watermarks to your images.</p>
+        <img src={myImage} />
+        <img src={mySecondImage} />
       </div>
 
       <div className="container">
@@ -87,7 +132,7 @@ function App() {
           {images.map(image => {
             return (
               <li key={image.id}>
-                { image.title }: <a href={image.link} rel="noreferrer">{image.link}</a>
+                {image.title}: <a href={image.link} rel="noreferrer">{image.link}</a>
               </li>
             )
           })}
