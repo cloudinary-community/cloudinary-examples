@@ -7,10 +7,10 @@ import { Cloudinary } from '@cloudinary/url-gen';
 // Create a Cloudinary instance and set your cloud name.
 const cld = new Cloudinary({
   cloud: {
-    cloudName: 'colbycloud',
+    cloudName: import.meta.env.VITE_CLOUD_NAME
   },
 });
-const publicId = 'raycast-uploads/jdje9fojksdc7e1laidw';
+const publicId = import.meta.env.VITE_PUBLIC_ID;
 const baseImage = cld.image(publicId);
 
 function useThemeToggle() {

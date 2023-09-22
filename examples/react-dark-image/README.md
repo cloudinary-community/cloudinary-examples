@@ -1,8 +1,12 @@
-# React + Vite
+# React Dark Theme Image
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This example shows how to use the url-gen JS SDK to apply an effect on an image to be able to show the image when dark theme is used
 
-Currently, two official plugins are available:
+Working example https://stackblitz.com/edit/vitejs-vite-cpcpdb?file=src%2Findex.css
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+To run this example add the following to your `.env` file
+
+```
+VITE_CLOUD_NAME=<YOUR_CLOUD_NAME>
+VITE_PUBLIC_ID=<THE_IMAGE_ID_ON_YOUR_MEDIA_LIBRARY>
+```
