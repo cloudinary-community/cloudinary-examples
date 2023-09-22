@@ -1,81 +1,49 @@
-import * as React from 'react';
 import './App.css';
-
-// Import the Cloudinary class.
+import { useEffect } from 'react';
 import { Cloudinary } from '@cloudinary/url-gen';
+import { replaceColor } from '@cloudinary/url-gen/actions/adjust';
 
-// Create a Cloudinary instance and set your cloud name.
+import { useThemeToggle } from './use-theme-toggle';
+
 const cld = new Cloudinary({
   cloud: {
-    cloudName: import.meta.env.VITE_CLOUD_NAME
+    cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME
   },
 });
-const publicId = import.meta.env.VITE_PUBLIC_ID;
-const baseImage = cld.image(publicId);
-
-function useThemeToggle() {
-  const [theme, setTheme] = React.useState('light');
-  function toggleTheme() {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
-      setTheme('light');
-    }
-  }
-
-  React.useEffect(() => {
-    if (
-      window.matchMedia &&
-      window.matchMedia('(prefers-color-scheme: dark)').matches
-    ) {
-      setTheme('dark');
-    }
-  }, []);
-
-  return { theme, toggleTheme };
-}
 
 function App() {
   const { theme, toggleTheme } = useThemeToggle();
-  const lightImage = cld.image(publicId);
-  const darkImage = cld
-    .image(publicId)
-    .addTransformation('e_replace_color:white');
 
-  React.useEffect(() => {
-    const root = document.getElementById('root');
+  const lightImage = cld.image('examples/cloudinary-logo-blue_ulaqws')
+    .format('auto')
+    .quality('auto')
+    .toURL();
+
+  const darkImage = cld.image('examples/cloudinary-logo-blue_ulaqws')
+    .adjust(replaceColor('white'))
+    .format('auto')
+    .quality('auto')
+    .toURL();
+
+  useEffect(() => {
     if (theme === 'dark') {
-      root.classList.add('dark-theme');
+      document.body.classList.add('dark-theme');
     } else {
-      root.classList.remove('dark-theme');
+      document.body.classList.remove('dark-theme');
     }
   }, [theme]);
 
   return (
     <>
-      <button onClick={toggleTheme}>Toggle Dark Mode</button>
-      <div>
-        <h1>Original Image</h1>
-        <img src={baseImage.toURL()} className="logo" alt="Cloudinary logo" />
-      </div>
-
-      <div>
-        <h1>Picture tag using media prefers-color-scheme</h1>
+      <div className="section">
+        <h2>Picture tag using media prefers-color-scheme</h2>
         <picture>
-          <source
-            srcset={lightImage.toURL()}
-            media="(prefers-color-scheme: light)"
-          />
-          <source
-            srcset={darkImage.toURL()}
-            media="(prefers-color-scheme: dark)"
-          />
-          <img src={baseImage.toURL()} className="logo" alt="Cloudinary logo" />
+          <source srcSet={darkImage} media="(prefers-color-scheme: dark)" />
+          <img src={lightImage} className="logo" alt="Cloudinary logo" />
         </picture>
-        <br />
         <p>
           The prefered scheme is set at the OS level, the picture tag will only
-          display one of the images.{' '}
+          display one of the images.
         </p>
         <p>
           If the prefered scheme is "dark" then the white image will be shown
@@ -84,14 +52,18 @@ function App() {
         </p>
       </div>
 
-      <div>
-        <h1>With Cloudinary</h1>
-
-        <img
-          src={theme === 'dark' ? darkImage.toURL() : lightImage.toURL()}
-          className="logo"
-          alt="Cloudinary logo"
-        />
+      <div className="section">
+        <h2>Preview Using JavaScript-based Theme</h2>
+        <p>
+          <img src={theme === 'dark' ? darkImage : lightImage} className="logo" alt="Cloudinary logo" />
+        </p>
+        <p>
+          <button onClick={toggleTheme}>Toggle Dark Mode</button>
+        </p>
+        <p>
+          Note: this does not change the OS level preferred scheme, this uses JavaScript and CSS to
+          change the appearance of the page to preview dark mode using the same images.
+        </p>
       </div>
     </>
   );
