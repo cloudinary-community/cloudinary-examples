@@ -1,4 +1,6 @@
 import { Cloudinary } from '@cloudinary/url-gen';
+import { pad } from '@cloudinary/url-gen/actions/resize';
+import { generativeFill } from '@cloudinary/url-gen/qualifiers/background';
 
 import './App.css';
 
@@ -27,13 +29,50 @@ function App() {
         <ul className="images">
           {images.slice(0, 4).map(image => {
             const imgSrc = cld.image(image.image)
-                              .resize(`w_${image.width},h_${image.height}`)
                               .quality('auto')
                               .format('auto')
                               .toURL();
             return (
               <li key={image.id}>
                 <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div className="container">
+        <h2>AI Generative Fill</h2>
+        <p>Original</p>
+        <ul className="images">
+          {[images[0], images[2], images[4], images[8]].map(image => {
+            const imgSrc = cld.image(image.image)
+                              .quality('auto')
+                              .format('auto')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+        <p>With Generative Fill</p>
+        <ul className="images">
+          {[images[0], images[2], images[4], images[8]].map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(
+                                pad()
+                                  .width(1200)
+                                  .height(1800)
+                                  .background(generativeFill())
+                              )
+                              .quality('auto')
+                              .format('auto')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={1200} height={1200} src={imgSrc} alt={image.title} loading="lazy" />
               </li>
             )
           })}

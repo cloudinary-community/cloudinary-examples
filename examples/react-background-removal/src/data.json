@@ -1,0 +1,56 @@
+{
+    "cars": [
+        {
+            "publicId": "demos/car1",
+            "width": 480,
+            "height": 320
+        },
+        {
+            "publicId": "demos/car2",
+            "width": 450,
+            "height": 300
+        },
+        {
+            "publicId": "demos/car3",
+            "width": 450,
+            "height": 300
+        },
+        {
+            "publicId": "demos/car4",
+            "width": 450,
+            "height": 300
+        },
+        {
+            "publicId": "demos/car5",
+            "width": 450,
+            "height": 300
+        }
+    ],
+    "furniture": [
+        {
+            "publicId": "demos/bl_1",
+            "width": 480,
+            "height": 350
+        },
+        {
+            "publicId": "demos/bl_2",
+            "width": 480,
+            "height": 350
+        },
+        {
+            "publicId": "demos/bl_3",
+            "width": 480,
+            "height": 350
+        },
+        {
+            "publicId": "demos/bl_4",
+            "width": 480,
+            "height": 350
+        },
+        {
+            "publicId": "demos/bl_5",
+            "width": 480,
+            "height": 350
+        }
+    ]
+}
