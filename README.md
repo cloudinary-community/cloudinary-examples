@@ -111,6 +111,16 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 If the use case seems like it would be broadly helpful for others as well, I'll try to work it into this repository!
 
+## 🛠️ Contributing
+
+Each project is independently maintained, though uses yarn workspaces for dependency management. 
+
+To create a new example, first check if an existing example is avaiable for the given framework. If so, it's recommended to copy the directory for your new example to maintain consistency between the examples.
+
+If no existing example exists, you can create a new directory that includes the basic example.
+
+All examples should be minimal with as little dependencies as needed (ideally no additional dependencies).
+
 ## ✨ Contributors
 
 Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/docs/en/emoji-key)):
