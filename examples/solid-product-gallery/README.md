@@ -1,28 +1,46 @@
-## Usage
+# Solid Cloudinary Product Gallery Widget
 
-```bash
-$ npm install # or pnpm install or yarn install
+You can use the Product Gallery widget to display an image gallery in your
+application.
+
+View Demo: [COLBY DEPLOY THIS ON NETLIFY PLS]
+
+## 🧰 Using ProductGallery in a Solid project
+
+To use the ProductGallery widget in a Svelte app, first load its script:
+
+```
+<script src="https://product-gallery.cloudinary.com/all.js" type="text/javascript">
+</script>
 ```
 
-### Learn more on the [Solid Website](https://solidjs.com) and come chat with us on our [Discord](https://discord.com/invite/solidjs)
+This will add a `cloudinary` property to the `window` object which will contain
+a `productWidget` method that you can use to initialize the widget.
 
-## Available Scripts
+## 🚀 Get Started with This Example
 
-In the project directory, you can run:
+- Create an environment variable file `.env` or copy/rename `sample.env` and inside add:
 
-### `npm run dev`
+```
+VITE_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+```
 
-Runs the app in the development mode.<br>
-Open [http://localhost:5173](http://localhost:5173) to view it in the browser.
+(Also ensure you have unticked "Resource List" from Restricted media types in [Settings > Security](https://console.cloudinary.com/settings/security))
 
-### `npm run build`
+- Install the project dependencies with:
 
-Builds the app for production to the `dist` folder.<br>
-It correctly bundles Solid in production mode and optimizes the build for the best performance.
+```
+yarn install
+# or
+npm install
+```
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- Start the development server with:
 
-## Deployment
+```
+yarn dev
+# or
+npm run dev
+```
 
-Learn more about deploying your application with the [documentations](https://vitejs.dev/guide/static-deploy.html)
+- Visit the project at <http://127.0.0.1:5173/>!
