@@ -1,0 +1,90 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --color-cloudinary-blue: #0d9aff;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  font-weight: 500;
+  color: var(--color-cloudinary-blue);
+  text-decoration: none;
+}
+
+a:hover {
+  color: color-mix(in srgb, var(--color-cloudinary-blue) 80%, white);
+  text-decoration: underline;
+}
+
+a:active,
+a:focus {
+  color: color-mix(in srgb, var(--color-cloudinary-blue) 80%, black);
+  text-decoration: underline;
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+video {
+  max-width: 100%;
+  height: auto;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+button {
+  color: white;
+  font-size: 1em;
+  font-weight: bold;
+  font-family: inherit;
+  background-color: var(--color-cloudinary-blue);
+  border-radius: 8px;
+  border: none;
+  padding: 0.6em 1.2em;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: color-mix(in srgb, var(--color-cloudinary-blue) 80%, white);
+}
+
+button:active,
+button:focus {
+  background-color: color-mix(in srgb, var(--color-cloudinary-blue) 80%, black);
+}
+
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+}
