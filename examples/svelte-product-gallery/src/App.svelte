@@ -12,7 +12,12 @@
           aspectRatio: "16:9",
           mediaAssets: [
             {
-              tag: "gallery",
+              tag: "gallery-images",
+              transformation: { crop: "fill" },
+            },
+            {
+              tag: "gallery-videos",
+              mediaType: "video",
               transformation: { crop: "fill" },
             },
           ],
