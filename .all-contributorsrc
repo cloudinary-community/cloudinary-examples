@@ -69,6 +69,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "geekysrm",
+      "name": "Soumya Ranjan Mohanty",
+      "avatar_url": "https://avatars.githubusercontent.com/u/10224804?v=4",
+      "profile": "http://soumya.dev",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
@@ -76,6 +85,6 @@
   "repoType": "github",
   "repoHost": "https://github.com",
   "projectName": "cloudinary-examples",
-  "projectOwner": "colbyfayock",
+  "projectOwner": "cloudinary-community",
   "commitType": "docs"
 }
