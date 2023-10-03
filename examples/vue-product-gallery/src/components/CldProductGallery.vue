@@ -6,7 +6,6 @@ import { ref, onMounted } from 'vue'
 const galleryRef = ref(null)
 
 onMounted(() => {
-  console.log('galleryRef => ', galleryRef)
   if (window && galleryRef) {
     window.cloudinary
       .galleryWidget({
@@ -18,6 +17,11 @@ onMounted(() => {
             // this can be any tag value that you have in your cloudinary account
             tag: 'vue-product-gallery',
             transformation: { crop: 'fill' }
+          }, 
+          {
+            tag: "vue-product-gallery-vids",
+            mediaType: "video",
+            transformation: { crop: "fill" },
           }
         ]
       })
