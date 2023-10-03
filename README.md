@@ -1,9 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
-
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -131,13 +129,16 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <table>
   <tbody>
     <tr>
-      <td align="center" valign="top" width="14.28%"><a href="https://colbyfayock.com/newsletter"><img src="https://avatars.githubusercontent.com/u/1045274?v=4?s=100" width="100px;" alt="Colby Fayock"/><br /><sub><b>Colby Fayock</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=colbyfayock" title="Code">💻</a> <a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=colbyfayock" title="Documentation">📖</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://matiashernandez.dev"><img src="https://avatars.githubusercontent.com/u/282006?v=4?s=100" width="100px;" alt="Matías Hernández Arellano"/><br /><sub><b>Matías Hernández Arellano</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=matiasfha" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.kevincunningham.co.uk"><img src="https://avatars.githubusercontent.com/u/8320213?v=4?s=100" width="100px;" alt="Kevin Cunningham"/><br /><sub><b>Kevin Cunningham</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=doingandlearning" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://www.timbenniks.dev"><img src="https://avatars.githubusercontent.com/u/121096?v=4?s=100" width="100px;" alt="Tim Benniks"/><br /><sub><b>Tim Benniks</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=timbenniks" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://nikolovlazar.com"><img src="https://avatars.githubusercontent.com/u/5396211?v=4?s=100" width="100px;" alt="Lazar Nikolov"/><br /><sub><b>Lazar Nikolov</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=nikolovlazar" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/adimiz1"><img src="https://avatars.githubusercontent.com/u/95848801?v=4?s=100" width="100px;" alt="adimiz1"/><br /><sub><b>adimiz1</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=adimiz1" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="http://internetdrew.com"><img src="https://avatars.githubusercontent.com/u/95974309?v=4?s=100" width="100px;" alt="Andrew Rowley"/><br /><sub><b>Andrew Rowley</b></sub></a><br /><a href="https://github.com/colbyfayock/cloudinary-examples/commits?author=internetdrew" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://colbyfayock.com/newsletter"><img src="https://avatars.githubusercontent.com/u/1045274?v=4?s=100" width="100px;" alt="Colby Fayock"/><br /><sub><b>Colby Fayock</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=colbyfayock" title="Code">💻</a> <a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=colbyfayock" title="Documentation">📖</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://matiashernandez.dev"><img src="https://avatars.githubusercontent.com/u/282006?v=4?s=100" width="100px;" alt="Matías Hernández Arellano"/><br /><sub><b>Matías Hernández Arellano</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=matiasfha" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.kevincunningham.co.uk"><img src="https://avatars.githubusercontent.com/u/8320213?v=4?s=100" width="100px;" alt="Kevin Cunningham"/><br /><sub><b>Kevin Cunningham</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=doingandlearning" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://www.timbenniks.dev"><img src="https://avatars.githubusercontent.com/u/121096?v=4?s=100" width="100px;" alt="Tim Benniks"/><br /><sub><b>Tim Benniks</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=timbenniks" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://nikolovlazar.com"><img src="https://avatars.githubusercontent.com/u/5396211?v=4?s=100" width="100px;" alt="Lazar Nikolov"/><br /><sub><b>Lazar Nikolov</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=nikolovlazar" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/adimiz1"><img src="https://avatars.githubusercontent.com/u/95848801?v=4?s=100" width="100px;" alt="adimiz1"/><br /><sub><b>adimiz1</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=adimiz1" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://internetdrew.com"><img src="https://avatars.githubusercontent.com/u/95974309?v=4?s=100" width="100px;" alt="Andrew Rowley"/><br /><sub><b>Andrew Rowley</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=internetdrew" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="http://soumya.dev"><img src="https://avatars.githubusercontent.com/u/10224804?v=4?s=100" width="100px;" alt="Soumya Ranjan Mohanty"/><br /><sub><b>Soumya Ranjan Mohanty</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=geekysrm" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
