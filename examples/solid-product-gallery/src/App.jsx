@@ -4,7 +4,7 @@ import "./App.css";
 
 function App() {
   let galleryRef;
-  
+
   onMount(() => {
     if (window && galleryRef) {
       window.cloudinary
@@ -15,6 +15,11 @@ function App() {
           mediaAssets: [
             {
               tag: "solid-product-gallery",
+              transformation: { crop: "fill" },
+            },
+            {
+              tag: "solid-product-gallery-vids",
+              mediaType: "video",
               transformation: { crop: "fill" },
             },
           ],
