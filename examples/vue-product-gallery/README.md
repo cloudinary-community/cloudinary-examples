@@ -7,15 +7,21 @@ View Demo: [COLBY DEPLOY THIS ON NETLIFY PLS]
 
 ## 🧰 Using ProductGallery in a Vue project
 
-To use the ProductGallery widget in a Vue app, first load its script( in `index.html` preferrably):
+1. To use the ProductGallery widget in a Vue app, first load its script( in `index.html` preferrably):
 
-```
-<script src="https://product-gallery.cloudinary.com/all.js" type="text/javascript">
-</script>
+```html
+<script src="https://product-gallery.cloudinary.com/all.js" type="text/javascript"></script>
 ```
 
 This will add a `cloudinary` property to the `window` object which will contain
 a `productWidget` method that you can use to initialize the widget.
+
+2. In `CldProductGallery.vue`, we are finding images containing the tags "vue-product-gallery" and videos containing the tags "vue-product-gallery-vids". 
+Make sure to add these tags to your images and videos in the cloudinary console.
+
+<img src="./cloudinary-manage-tags.png"  height="350px" alt="manage tags in cloudinary" />
+
+Alternatively, you can change the tag names in `CldProductGallery.vue` to match what the images and videos are tagged in your cloudinary console. Maybe have a dropdown to show the list of tags and show the dynamic gallery based on selection. Or, you can add params for tags and load multiple libraries of your choice!
 
 ## 🚀 Get Started with This Example
 
