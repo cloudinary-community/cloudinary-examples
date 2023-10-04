@@ -87,6 +87,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "lsminter",
+      "name": "Lucas Minter",
+      "avatar_url": "https://avatars.githubusercontent.com/u/26470581?v=4",
+      "profile": "http://lucasminter.dev",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
