@@ -14,14 +14,13 @@ public class App
 {
     public static void main( String[] args ) throws IOException, URISyntaxException
     {
-        Dotenv dotenv = Dotenv.load();
-        Cloudinary cloudinary = new Cloudinary(dotenv.get("CLOUDINARY_URL"));
+        Cloudinary cloudinary = new Cloudinary("cloudinary://253746265977626:Q3znctheXSWefJaMgMsESUZVnRA@dl1dqiopl");
         cloudinary.config.secure = true;
         URL imageDirectoryURL = App.class.getResource("/images");
         File imageDirectoryPath = new File(imageDirectoryURL.toURI());
         File[] images = imageDirectoryPath.listFiles();
         for(int i=0; i<images.length; i++) {
-            File image = images[0];
+            File image = images[i];
             Map result = cloudinary.uploader().upload(image, ObjectUtils.emptyMap());
             System.out.println("Response:\n"+result+"\n");
             System.out.println(image.getName()+" successfully uploaded\n");
