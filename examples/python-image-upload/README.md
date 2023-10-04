@@ -37,23 +37,22 @@ result = cloudinary.uploader.upload(image)
 CLOUDINARY_URL=cloudinary://<api_key>:<api_secret>@<cloud_name>
 ```
 
-* Install the project dependencies:
+* Install all project dependencies:
 
 ```
-pip3 install cloudinary
-pip3 install python-dotenv
+pip install -r requirements.txt
 ```
 
 * Run the python script with:
 
 ```
-python <filename>
+python3 <filename>
 ```
 
 For example, inside the `examples/python-image-upload` directory:
 
 ```
-python upload.py
+python3 upload.py
 ```
 
 The script will run in your terminal and you'll see the results logged.
