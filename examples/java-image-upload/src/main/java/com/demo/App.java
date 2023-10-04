@@ -14,7 +14,8 @@ public class App
 {
     public static void main( String[] args ) throws IOException, URISyntaxException
     {
-        Cloudinary cloudinary = new Cloudinary("cloudinary://253746265977626:Q3znctheXSWefJaMgMsESUZVnRA@dl1dqiopl");
+        Dotenv dotenv = Dotenv.load();
+        Cloudinary cloudinary = new Cloudinary(dotenv.get("CLOUDINARY_URL"));
         cloudinary.config.secure = true;
         URL imageDirectoryURL = App.class.getResource("/images");
         File imageDirectoryPath = new File(imageDirectoryURL.toURI());
