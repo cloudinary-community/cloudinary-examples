@@ -19,37 +19,6 @@ const cld = new Cloudinary({
 });
 
 function App() {
-
-  const myImage = cld.image('cld-sample-5');
-
-  myImage
-    .resize(fill(300, 300))
-    .format('auto')
-    .overlay(
-      source(
-        image('samples/cloudinary-icon')
-          .transformation(new Transformation()
-            .resize(scale().height(55))
-          )
-      )
-        .position(new Position().gravity(compass('south_east')))
-    )
-
-
-  const mySecondImage = cld.image('cld-sample')
-
-  mySecondImage
-    .resize(fill(300, 300))
-    .format('auto')
-    .overlay(
-      source(
-        text('PREVIEW', new TextStyle('arial', 60)
-          .fontWeight('bold'))
-          .textColor('gray')
-          .transformation(new Transformation().adjust(opacity(70)))
-      )
-    )
-
   return (
     <main className="main">
       <div className="container">
@@ -119,8 +88,61 @@ function App() {
       <div className="container">
         <h2>Watermarks</h2>
         <p>Add watermarks to your images.</p>
-        <img src={myImage} />
-        <img src={mySecondImage} />
+        <ul className="images">
+          {images.map(watermarkImage => {
+            return (
+              <li key={watermarkImage.id}>
+                <AdvancedImage
+                  width={watermarkImage.width}
+                  height={watermarkImage.height}
+                  cldImg={
+                    cld.image(watermarkImage.image)
+                      .resize(fill(300, 300))
+                      .overlay(
+                        source(
+                          image('examples/cloudinary-logo-blue_ulaqws')
+                            .transformation(new Transformation()
+                              .resize(scale().width(200))
+                            )
+                        )
+                          .position(new Position().gravity(compass('south_east')))
+                      )
+                      .delivery('q_auto').format('auto')
+                  }
+                  alt={watermarkImage.title}
+                  plugins={[lazyload(), placeholder()]}
+                />
+              </li>
+            )
+          })}
+        </ul>
+        <ul className="images">
+          {images.map(watermarkImage => {
+            return (
+              <li key={watermarkImage.id}>
+                <AdvancedImage
+                  width={watermarkImage.width}
+                  height={watermarkImage.height}
+                  cldImg={
+                    cld.image(watermarkImage.image)
+                      .resize(fill(300, 300))
+                      .overlay(
+                        source(
+                          text('PREVIEW', new TextStyle('arial', 60)
+                            .fontWeight('bold'))
+                            .textColor('gray')
+                            .transformation(new Transformation().adjust(opacity(70)))
+                        )
+                      )
+                      .delivery('q_auto').format('auto')
+                  }
+                  alt={watermarkImage.title}
+                  plugins={[lazyload(), placeholder()]}
+                />
+              </li>
+            )
+          })}
+        </ul>
       </div>
 
       <div className="container">
