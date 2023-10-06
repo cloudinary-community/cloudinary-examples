@@ -19,6 +19,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [SolidJS](#solidjs)
 - [Svelte](#svelte)
 - [Vue](#vue)
+- [.NET](#net)
 
 ## 🧰 Examples
 
@@ -102,6 +103,11 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 - [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-upload-widget-preset)
+
+### .NET
+
+- [Upload Images](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-image-upload)
+- [Upload Videos](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-video-upload)
 
 ## 🧐 Not seeing an example?
 
