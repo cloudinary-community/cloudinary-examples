@@ -25,7 +25,7 @@ config = cloudinary.config(secure=True) # when using env variables
 Finally, run the imageOverlay method, passing in your image name(the image first should be uploaded in cloudinary and here image name is nothing but Public ID ):
 
 ```
-image = CloudinaryImage("(public_id_of_image).jpg").image(transformation=[transformation_config])
+image = CloudinaryImage("(public_id_of_image).jpg").build_url(secure=True,transformation=[transformation_config])
 ```
 
 ## 🚀 Get Started with This Example

@@ -8,7 +8,7 @@ config = cloudinary.config(secure=True)
 
 def imageOverlay():
 
-  image = CloudinaryImage("samples/smile.jpg").image(transformation=[
+  image = CloudinaryImage("samples/smile.jpg").build_url(secure=True,transformation=[
   {
     'width': 700, 
     'height': 850, 
