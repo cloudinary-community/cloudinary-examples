@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-11-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -19,6 +19,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [SolidJS](#solidjs)
 - [Svelte](#svelte)
 - [Vue](#vue)
+- [.NET](#net)
 
 ## 🧰 Examples
 
@@ -103,6 +104,11 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-upload-widget-preset)
 
+### .NET
+
+- [Upload Images](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-image-upload)
+- [Upload Videos](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-video-upload)
+
 ## 🧐 Not seeing an example?
 
 [Create an issue](https://github.com/colbyfayock/cloudinary-examples/issues/new) detailing the project and how Cloudinary would integrate.
@@ -142,6 +148,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/hirenchauhan2"><img src="https://avatars.githubusercontent.com/u/8999668?v=4?s=100" width="100px;" alt="Hiren Chauhan"/><br /><sub><b>Hiren Chauhan</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=hirenchauhan2" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://lucasminter.dev"><img src="https://avatars.githubusercontent.com/u/26470581?v=4?s=100" width="100px;" alt="Lucas Minter"/><br /><sub><b>Lucas Minter</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=lsminter" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/Insidiae"><img src="https://avatars.githubusercontent.com/u/28495550?v=4?s=100" width="100px;" alt="Kobe Ruado"/><br /><sub><b>Kobe Ruado</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=Insidiae" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://oberai.dev"><img src="https://avatars.githubusercontent.com/u/31401437?v=4?s=100" width="100px;" alt="Aditya Oberai"/><br /><sub><b>Aditya Oberai</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=adityaoberai" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
