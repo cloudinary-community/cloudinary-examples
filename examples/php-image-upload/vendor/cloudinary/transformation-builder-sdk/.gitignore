@@ -1,0 +1,13 @@
+vendor/
+composer.lock
+tests/coverage
+output/
+.idea
+composer.phar
+docs/sami.phar
+docs/cache/
+docs/build/
+tools/dev/sanity/node_modules
+tools/dev/sanity/package-lock.json
+tools/dev/sanity/results.json
+tools/dev/sanity/TransformationSanityTest.php
