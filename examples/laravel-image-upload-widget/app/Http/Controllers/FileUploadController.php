@@ -35,7 +35,7 @@ class FileUploadController extends Controller
         //$result = $request->file('image')->storeOnCloudinary();
 
         // Store the uploaded file on Cloudinary
-        $result = $request->file('image')->store('alarmanda', 'cloudinary');
+        //$result = $request->file('image')->store('alarmanda', 'cloudinary');
 
         //$res = cloudinary()->getImageTag('mc8rrqhubdfvdvmqcu0f')->serialize();
 
