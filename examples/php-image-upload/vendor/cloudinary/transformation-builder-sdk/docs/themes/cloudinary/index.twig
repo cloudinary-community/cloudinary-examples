@@ -1,0 +1,27 @@
+{% from "macros.twig" import render_classes %}
+
+{% set extension = 'namespace.twig' %}
+{% set namespace = 'Cloudinary\\Transformation' %}
+{% set subnamespaces = [] %}
+{% set exceptions = [] %}
+
+{% extends extension %}
+
+{% block page_content %}
+
+    <div class="page-header">
+        <h1> {{ project.config('title') }}</h1>
+    </div>
+    <div class="description">
+        <p>This reference provides details on all PHP SDK transformation namespaces and classes.</p>
+        <p>For details on the PHP SDK management namespaces and classes,
+            see the <a href="/documentation/sdks/php/">PHP SDK Management Reference.</a></p>
+    </div>
+    {% if classes %}
+        <h2>Classes</h2>
+        {{ render_classes(classes) }}
+    {% endif %}
+
+{% endblock %}
+
+{% block body_class 'index' %}
