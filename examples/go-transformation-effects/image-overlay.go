@@ -14,7 +14,7 @@ func imageOverlay(cld *cloudinary.Cloudinary) {
 	}
 
 	// Add the transformation
-	image.Transformation = "c_fill,h_600,w_600,g_auto,l_examples/sale-tag,w_100,h_100,fl_layer_apply,g_north_east,x_10,y_10"
+	image.Transformation = "c_fill,g_auto,h_600,w_600/h_100,l_examples:sale-tag,w_100/fl_layer_apply,g_north_east,x_10,y_10"
 
 	// Generate and print the delivery URL
 	url, err := image.String()
