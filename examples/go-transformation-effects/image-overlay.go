@@ -7,7 +7,7 @@ import (
 )
 
 func imageOverlay(cld *cloudinary.Cloudinary) {
-	// Instantiate an object for the asset with public ID "image"
+	// Instantiate an object for the asset with public ID "examples/shoes_kto0zb"
 	image, err := cld.Image("examples/shoes_kto0zb")
 	if err != nil {
 		fmt.Println("could not find image", err)
