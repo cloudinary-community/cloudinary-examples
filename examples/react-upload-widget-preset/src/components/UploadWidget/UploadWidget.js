@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react';
 
 let cloudinary;
 
-
 const UploadWidget = ({ children, onUpload }) => {
 
   const widget = useRef();
@@ -47,7 +46,8 @@ const UploadWidget = ({ children, onUpload }) => {
     const uploadPreset = process.env.REACT_APP_CLOUDINARY_UPLOAD_PRESET;
 
     if (!cloudName || !uploadPreset) {
-      console.warn(`Kindly ensure you have the cloudName and UploadPreset setup in your .env file at the root of your project.`)
+      console.warn(`Kindly ensure you have the cloudName and UploadPreset 
+      setup in your .env file at the root of your project.`)
     }
     const options = {
       cloudName, // Ex: mycloudname
