@@ -92,8 +92,7 @@ CLOUDINARY_URL=cloudinary://<api_key>:<api_secret>@<cloud_name>
 * Install all project dependencies:
 
 ```
-gem install cloudinary 
-gem install dotenv
+bundle install
 ```
 Add sudo before the command if permission is denied.
 
@@ -109,11 +108,7 @@ For example, inside the `examples/ruby-image-overlay` directory:
 ruby ImageOverlay.rb
 ```
 
-The result will be outputted in your terminal in the form of a url.
-
-After, clicking on the url, the image should look like this :
-
-![Image](https://res.cloudinary.com/dqps1qwko/image/upload/c_fill,h_850,w_700/h_200,l_samples:breakfast,w_200/fl_layer_apply,g_north_east,x_400,y_400/v1/samples/smile.jpg)
+The result will be outputted in your terminal in the form of a url. 
 
 And there you have it - a simple example of using the Cloudinary Ruby SDK to overlay the image! 
 
