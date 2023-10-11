@@ -10,6 +10,3 @@ export async function GET() {
   const { resources } = await cloudinary.api.resources_by_tag('nextjs-route-handlers-upload-sneakers', { context: true });
   return Response.json({ results: resources });
 }
-
-
-

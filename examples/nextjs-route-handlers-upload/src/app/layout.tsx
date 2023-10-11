@@ -7,8 +7,8 @@ import Nav from '@/components/Nav';
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'Cloudinary & Next.js Server Actions',
-  description: 'Learn how to upload files from a form to Cloudinary using Next.js Server Actions',
+  title: 'Cloudinary & Next.js Route Handlers',
+  description: 'Learn how to upload files from a form to Cloudinary using Next.js Route Handlers',
 }
 
 export default function RootLayout({
