@@ -108,3 +108,6 @@ dist
 
 # vendor dependency
 vendor
+
+# .sln
+.sln
