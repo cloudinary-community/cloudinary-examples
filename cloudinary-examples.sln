@@ -4,7 +4,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "examples", "examples", "{3B839D87-B245-4F2C-AD0A-F87154E0349D}"
-EndProject
+EndProject 
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-image-upload", "examples\dotnet-image-upload\dotnet-image-upload.csproj", "{51E7FEB4-CE2C-4A83-9AF5-4ED513217D25}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "dotnet-video-upload", "examples\dotnet-video-upload\dotnet-video-upload.csproj", "{F36865F9-2E99-4903-AAB7-E0B43E9E6350}"
