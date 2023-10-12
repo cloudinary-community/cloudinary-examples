@@ -110,4 +110,4 @@ dist
 vendor
 
 # .sln
-.sln*
+*.sln
