@@ -20,6 +20,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Svelte](#svelte)
 - [Vue](#vue)
 - [.NET](#net)
+- [Dart](#dart)
 
 ## 🧰 Examples
 
@@ -108,6 +109,10 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 - [Upload Images](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-image-upload)
 - [Upload Videos](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-video-upload)
+
+### Dart
+
+- [Upload Images](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dart-image-upload)
 
 ## 🧐 Not seeing an example?
 
