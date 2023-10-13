@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -158,6 +158,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://soumyadipmoni.netlify.app"><img src="https://avatars.githubusercontent.com/u/116944847?v=4?s=100" width="100px;" alt="Soumyadip Moni"/><br /><sub><b>Soumyadip Moni</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=AvaterClasher" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://syedtalaljilani.netlify.app/"><img src="https://avatars.githubusercontent.com/u/72516408?v=4?s=100" width="100px;" alt="Syed Talal Jilani"/><br /><sub><b>Syed Talal Jilani</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=syedtalaljilani" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sccalabr"><img src="https://avatars.githubusercontent.com/u/4111230?v=4?s=100" width="100px;" alt="sccalabr"/><br /><sub><b>sccalabr</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=sccalabr" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/error9098x"><img src="https://avatars.githubusercontent.com/u/43810146?v=4?s=100" width="100px;" alt="ProCodec"/><br /><sub><b>ProCodec</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=error9098x" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
