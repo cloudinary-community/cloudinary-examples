@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-16-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-17-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -155,6 +155,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://saisumith.netlify.app"><img src="https://avatars.githubusercontent.com/u/67259068?v=4?s=100" width="100px;" alt="saisumith"/><br /><sub><b>saisumith</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=saisumith770" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://www.linkedin.com/in/azm-0w0/"><img src="https://avatars.githubusercontent.com/u/59562284?v=4?s=100" width="100px;" alt="Aazam Thakur"/><br /><sub><b>Aazam Thakur</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=aazam-gh" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://soumyadipmoni.netlify.app"><img src="https://avatars.githubusercontent.com/u/116944847?v=4?s=100" width="100px;" alt="Soumyadip Moni"/><br /><sub><b>Soumyadip Moni</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=AvaterClasher" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
