@@ -19,7 +19,8 @@ $imagePath = 'demo.jpg';
 // Upload the image to Cloudinary
 $uploadResult = $cloudinary->uploadApi()->upload($imagePath);
 
-if(isset($uploadResult)){
+if ( isset($uploadResult) ) {
     echo 'Image uploaded';
+    echo json_encode($uploadResult, JSON_PRETTY_PRINT);
 }
 ?>
