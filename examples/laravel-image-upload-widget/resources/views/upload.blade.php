@@ -68,8 +68,8 @@
     <body>
         <div class="flex-center position-ref full-height">
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel File Upload
+                <div class="m-b-md">
+                    <h1>Upload File</h1>
                 </div>
 
                 @if ($message = Session::get('success'))
@@ -98,9 +98,11 @@
                     </form>
                 </div>
 
-                <x-cld-upload-button>
-                    Upload Files
-                </x-cld-upload-button>
+                <div>
+                    <x-cld-upload-button>
+                        Upload Files
+                    </x-cld-upload-button>
+                </div>
 
 
             </div>

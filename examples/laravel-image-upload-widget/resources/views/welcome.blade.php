@@ -80,25 +80,18 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel Again
+                <div class="m-b-md">
+                    <h1>Uploading to Cloudinary in Laravel</h1>
                 </div>
 
+                <!-- <x-cld-video public-id="anitaashiru__Morayo_NotCarey_s7cjpw"></x-cld-video> -->
 
-                <x-cld-video public-id="anitaashiru__Morayo_NotCarey_s7cjpw"></x-cld-video>
-
-                <x-cld-image public-id="mc8rrqhubdfvdvmqcu0f" width="300" height="300"></x-cld-image>
-
+                <!-- <x-cld-image public-id="mc8rrqhubdfvdvmqcu0f" width="300" height="300"></x-cld-image> -->
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Docs</a>
-                    <a href="https://laracasts.com">Laracasts</a>
-                    <a href="https://laravel-news.com">News</a>
-                    <a href="https://blog.laravel.com">Blog</a>
-                    <a href="https://nova.laravel.com">Nova</a>
-                    <a href="https://forge.laravel.com">Forge</a>
-                    <a href="https://vapor.laravel.com">Vapor</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ url('/upload') }}">
+                        Upload
+                    </a>
                 </div>
             </div>
         </div>

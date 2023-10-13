@@ -21,7 +21,7 @@ class FileUploadController extends Controller
         // $path = $request->file('file')->getPath();
         // $realpath = $request->file('file')->getRealPath();
 
-        // $result = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
+        $result = cloudinary()->upload($request->file('image')->getRealPath())->getSecurePath();
 
         // dd($result);
 
