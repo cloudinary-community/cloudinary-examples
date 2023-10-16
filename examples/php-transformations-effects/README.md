@@ -46,6 +46,7 @@ For example, inside the `examples/php-transformations-effects` directory:
 
 ```
 php image-overlay.php
+php image-effects.php
 ```
 
 The script will run in your terminal and you'll see the URL results logged.

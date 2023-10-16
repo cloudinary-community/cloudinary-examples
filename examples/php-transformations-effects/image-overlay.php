@@ -3,9 +3,10 @@
 require_once('vendor/autoload.php');
 
 use Cloudinary\Cloudinary;
-use Cloudinary\Transformation\Resize;
-use Cloudinary\Transformation\Effect;
-use Cloudinary\Transformation\Rotate;
+use Cloudinary\Configuration\Configuration;
+use Cloudinary\Tag\ImageTag;
+use Cloudinary\Transformation\Overlay;
+use Cloudinary\Transformation\Source;
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__);
 $dotenv->load();
@@ -17,8 +18,6 @@ $cld = new Cloudinary([
 ]);
 
 echo $cld->image('samples/smile.jpg')
-  ->resize(Resize::fill()->width(600)->height(600))
-  ->rotate(Rotate::byAngle(180))
-  ->effect(Effect::sepia())
-  ->effect(Effect::cartoonify());
+	->overlay(Overlay::source(
+		Source::fetch("https://res.cloudinary.com/demo/image/upload/logos/cloudinary_full_logo_white_small.png")));
 ?>
