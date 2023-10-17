@@ -2,8 +2,6 @@
 
 Use the CldImage component for automatically optimized images with the power of Cloudinary.
 
-View Demo: <https://cloudinary-sveltekit-cldimage.netlify.app/>
-
 ## 🧰 Using CldImage in Svelte/SvelteKit
 
 Add an image from Cloudinary using the following:
