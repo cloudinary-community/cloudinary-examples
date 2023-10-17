@@ -59,8 +59,8 @@ const UploadWidget = ({ children, onUpload }) => {
         // The callback is a bit more chatty than failed or success so
         // only trigger when one of those are the case. You can additionally
         // create a separate handler such as onEvent and trigger it on
-        // ever occurance
-        if ( error || result.event === 'success' ) {
+        // ever occurrence
+        if ((error || result.event === 'success') && typeof onUpload === 'function' ) {
           onUpload(error, result, widget);
         }
       }
