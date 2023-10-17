@@ -9,6 +9,7 @@ environment:
 dependencies:
   cloudinary_api: ^1.0.2
   cloudinary_url_gen: ^1.1.0
+  dotenv: ^4.1.0
   # path: ^1.8.0
 
 dev_dependencies:

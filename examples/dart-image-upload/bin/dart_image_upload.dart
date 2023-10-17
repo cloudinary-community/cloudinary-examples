@@ -1,12 +1,15 @@
 import 'dart:io';
 import 'package:cloudinary_url_gen/cloudinary.dart';
 import 'package:cloudinary_api/uploader/cloudinary_uploader.dart';
+import 'package:dotenv/dotenv.dart';
 
-var cloudName = Platform.environment['CLOUDINARY_CLOUD_NAME'];
-var apiKey = Platform.environment['CLOUDINARY_API_KEY'];
-var apiSecret = Platform.environment['CLOUDINARY_API_SECRET'];
+final env = DotEnv()..load(['.env']);
 
-var cloudinary = Cloudinary.fromStringUrl('cloudinary://${apiKey}:${apiSecret}@${cloudName}');
+final cloudName = env['CLOUDINARY_CLOUD_NAME'];
+final apiKey = env['CLOUDINARY_API_KEY'];
+final apiSecret = env['CLOUDINARY_API_SECRET'];
+
+final cloudinary = Cloudinary.fromStringUrl('cloudinary://${apiKey}:${apiSecret}@${cloudName}');
 
 Future<void> main() async {
   cloudinary.config.urlConfig.secure = true;
