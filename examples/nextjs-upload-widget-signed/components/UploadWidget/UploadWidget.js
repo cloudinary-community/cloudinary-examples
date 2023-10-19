@@ -7,7 +7,6 @@ const UploadWidget = ({ children, onUpload }) => {
   const widget = useRef();
 
   useEffect(() => {
-    handleOnLoad();
 
     return () => {
       widget.current?.destroy();

@@ -44,7 +44,7 @@ function UploadWidget({ children, onUpload }) {
         // "unsigned" uploads which may allow for more usage than intended. Read more
         // about unsigned uploads at: https://cloudinary.com/documentation/upload_images#unsigned_upload
 
-        const cloudName = ENV.CLOUD_NAME;
+        const cloudName = ENV.CLOUDINARY_CLOUD_NAME;
         const uploadPreset = ENV.CLOUDINARY_UPLOAD_PRESET;
         if (!cloudName || !uploadPreset) {
             console.warn(`Kindly ensure you have the cloudName and UploadPreset 
@@ -83,7 +83,7 @@ function UploadWidget({ children, onUpload }) {
     }
 
     /**
-     * Do not render the component if the clodinary script is not loaded
+     * Do not render the component if the cloudinary script is not loaded
      */
     return children({
         cloudinary,
