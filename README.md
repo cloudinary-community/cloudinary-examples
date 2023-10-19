@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-21-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -165,6 +165,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/sccalabr"><img src="https://avatars.githubusercontent.com/u/4111230?v=4?s=100" width="100px;" alt="sccalabr"/><br /><sub><b>sccalabr</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=sccalabr" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/error9098x"><img src="https://avatars.githubusercontent.com/u/43810146?v=4?s=100" width="100px;" alt="ProCodec"/><br /><sub><b>ProCodec</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=error9098x" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/JoshuaRotimi"><img src="https://avatars.githubusercontent.com/u/62189959?v=4?s=100" width="100px;" alt="Joshua Olorunnipa"/><br /><sub><b>Joshua Olorunnipa</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=JoshuaRotimi" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://jamesperkins.dev/"><img src="https://avatars.githubusercontent.com/u/45409975?v=4?s=100" width="100px;" alt="James P"/><br /><sub><b>James P</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=perkinsjr" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
