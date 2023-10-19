@@ -4,10 +4,6 @@ import {useEffect, useRef} from "react";
 let cloudinary;
 
 const UploadWidget = ({ children, onUpload }) => {
-  /**
-   * handleOnLoad
-   * @description Stores the Cloudinary window instance to a ref when the widget script loads
-   */
   const widget = useRef();
 
   useEffect(() => {
@@ -18,6 +14,11 @@ const UploadWidget = ({ children, onUpload }) => {
       widget.current = undefined;
     }
   }, [])
+
+  /**
+   * handleOnLoad
+   * @description Stores the Cloudinary window instance to a ref when the widget script loads
+   */
 
   function handleOnLoad() {
     if ( !cloudinary ) {
