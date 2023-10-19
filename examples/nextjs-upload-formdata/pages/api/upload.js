@@ -1,7 +1,7 @@
 import formidable from 'formidable';
 import { v2 as cloudinary } from 'cloudinary';
 
-// Store environment variables in your .env.local file
+// Store environment variables in your .env file
 cloudinary.config({
   cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
   secure: true,

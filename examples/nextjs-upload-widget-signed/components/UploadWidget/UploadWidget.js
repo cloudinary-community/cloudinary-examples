@@ -1,9 +1,19 @@
 import Script from 'next/script';
+import {useEffect, useRef} from "react";
 
 let cloudinary;
-let widget;
 
 const UploadWidget = ({ children, onUpload }) => {
+  const widget = useRef();
+
+  useEffect(() => {
+
+    return () => {
+      widget.current?.destroy();
+      widget.current = undefined;
+    }
+  }, [])
+
   /**
    * handleOnLoad
    * @description Stores the Cloudinary window instance to a ref when the widget script loads
@@ -19,8 +29,8 @@ const UploadWidget = ({ children, onUpload }) => {
     // setTimeout: https://caniuse.com/requestidlecallback
 
     function onIdle() {
-      if ( !widget ) {
-        widget = createWidget();
+      if ( !widget.current ) {
+        widget.current = createWidget();
       }
     }
 
@@ -55,9 +65,17 @@ const UploadWidget = ({ children, onUpload }) => {
     // either on page load or during the upload process. Read more about signed uploads at:
     // https://cloudinary.com/documentation/upload_widget#signed_uploads
 
+    const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
+    const apiKey = process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY;
+
+    if (!cloudName || !apiKey) {
+      console.warn(`Kindly ensure you have the cloudName and apiKey 
+      setup in your .env file at the root of your project.`)
+    }
+
     const options = {
-      cloudName: process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME, // Ex: mycloudname
-      apiKey: process.env.NEXT_PUBLIC_CLOUDINARY_API_KEY, // Ex: 1234567890
+      cloudName, // Ex: mycloudname
+      apiKey, // Ex: 1234567890
       uploadSignature: generateSignature,
     }
 
@@ -67,7 +85,7 @@ const UploadWidget = ({ children, onUpload }) => {
         // only trigger when one of those are the case. You can additionally
         // create a separate handler such as onEvent and trigger it on
         // ever occurance
-        if ( error || result.event === 'success' ) {
+        if ((error || result.event === 'success') && typeof onUpload === 'function') {
           onUpload(error, result, widget);
         }
       }
@@ -80,11 +98,11 @@ const UploadWidget = ({ children, onUpload }) => {
    */
 
   function open() {
-    if ( !widget ) {
-      widget = createWidget();
+    if ( !widget.current ) {
+      widget.current = createWidget();
     }
 
-    widget && widget.open();
+    widget.current && widget.current.open();
   }
 
   return (
