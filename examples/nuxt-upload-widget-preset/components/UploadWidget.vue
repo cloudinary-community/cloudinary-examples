@@ -3,8 +3,6 @@ import { ref, onMounted, defineEmits } from "vue";
 
 const emit = defineEmits(["on-upload"]);
 
-const config = useRuntimeConfig()
-
 const cloudinary = ref(undefined);
 const widget = ref(undefined);
 
@@ -41,7 +39,6 @@ function createWidget() {
     cloudName: import.meta.env.VITE_CLOUDINARY_CLOUD_NAME, // Ex: mycloudname
     uploadPreset: import.meta.env.VITE_CLOUDINARY_UPLOAD_PRESET||"nr6emxpo", // Ex: myuploadpreset
   };
-  console.log({options})
 
   return cloudinary.value.createUploadWidget(options, (error, result) => {
     // The callback is a bit more chatty than failed or success so
