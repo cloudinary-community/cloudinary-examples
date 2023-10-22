@@ -33,7 +33,7 @@ const cloudinary = window && window.cloudinary;
   const myWidget = cloudinary.createUploadWidget(
     {
       cloudName: import.meta.env.PUBLIC_CLOUDINARY_CLOUD_NAME,
-      uploadPreset: import.meta.env.PUBLIC_CLOUDINARY_PRESET,
+      uploadPreset: import.meta.env.PUBLIC_CLOUDINARY_UPLOAD_PRESET,
       // cropping: true, //add a cropping step
       // showAdvancedOptions: true,  //add advanced options (public_id and tag)
       // sources: [ "local", "url"], // restrict the upload sources to URL and local files
@@ -81,8 +81,8 @@ pnpm install
 2. Add your environment variables to `.env` or `.env.local`:
 
 ```
-CLOUDINARY_CLOUD_NAME=your_cloud_name
-CLOUDINARY_PRESET=your_preset_name
+PUBLIC_CLOUDINARY_CLOUD_NAME=your_cloud_name
+PUBLIC_CLOUDINARY_UPLOAD_PRESET=your_preset_name
 ```
 
 3. Start the development server with:

@@ -60,7 +60,7 @@ import Layout from "../layouts/Layout.astro";
   const myWidget = cloudinary.createUploadWidget(
     {
       cloudName: import.meta.env.PUBLIC_CLOUDINARY_CLOUD_NAME,
-      uploadPreset: import.meta.env.PUBLIC_CLOUDINARY_PRESET,
+      uploadPreset: import.meta.env.PUBLIC_CLOUDINARY_UPLOAD_PRESET,
       // cropping: true, //add a cropping step
       // showAdvancedOptions: true,  //add advanced options (public_id and tag)
       // sources: [ "local", "url"], // restrict the upload sources to URL and local files
