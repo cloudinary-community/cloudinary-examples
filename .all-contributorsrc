@@ -204,6 +204,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "asrvd",
+      "name": "ashish",
+      "avatar_url": "https://avatars.githubusercontent.com/u/68690233?v=4",
+      "profile": "http://asrvd.me",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

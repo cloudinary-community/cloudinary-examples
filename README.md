@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-22-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-23-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -168,6 +168,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     </tr>
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://jamesperkins.dev/"><img src="https://avatars.githubusercontent.com/u/45409975?v=4?s=100" width="100px;" alt="James P"/><br /><sub><b>James P</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=perkinsjr" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://asrvd.me"><img src="https://avatars.githubusercontent.com/u/68690233?v=4?s=100" width="100px;" alt="ashish"/><br /><sub><b>ashish</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=asrvd" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
