@@ -7,7 +7,7 @@ Demo:
 ## 🧰 Using Upload Widget in an Astro project (Unsigned Uploads)
 
 > **Note**
-> This example uses unsigned uploads. This is not recommended for production use. See the [Cloudinary documentation](https://cloudinary.com/documentation/upload_widget#unsigned_uploads) for more information.
+> This example uses unsigned uploads for simplicity. This is not recommended though. See the [Cloudinary documentation](https://cloudinary.com/documentation/upload_widget#unsigned_uploads) for more information.
 
 1. Add the Cloudinary Upload Widget script to your Astro file.
 
