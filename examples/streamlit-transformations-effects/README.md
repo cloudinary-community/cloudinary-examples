@@ -20,6 +20,11 @@ Then let's configure a new instance of Cloudinary, You will need to create `.str
 
 Not sure where is my cloudinary api-key, it will be available on your dashboard: [Cloudinary](https://cloudinary.com/)
 
+If you are unsure about how `.streamlit/secrets.toml` looks:
+
+![image](https://github.com/codingis4noobs2/cloudinary-examples/assets/87560178/594f6042-e74f-4849-bbef-d9e296006842)
+
+
 If you want to learn more about secrets, visit here: [Streamlit Secrets](https://docs.streamlit.io/streamlit-community-cloud/deploy-your-app/secrets-management)
 
 ```
