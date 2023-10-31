@@ -1,75 +1,27 @@
-# Nuxt 3 Minimal Starter
+# React Cloudinary Upload Widget
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+## 🚀 Get Started with This Example
 
-## Setup
+* Create an environment variable file `.env` in the root of the project and inside add:
+```
+VITE_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+VITE_CLOUDINARY_UPLOAD_PRESET="<Your Upload Preset>"
+```
 
-Make sure to install the dependencies:
+* Install the project dependencies with:
 
-```bash
-# npm
-npm install
-
-# pnpm
-pnpm install
-
-# yarn
+```
 yarn install
-
-# bun
-bun install
+# or
+npm install
 ```
 
-## Development Server
+* Start the development server with:
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm run dev
-
-# yarn
+```
 yarn dev
-
-# bun
-bun run dev
+# or
+npm run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm run build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm run preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+* Visit the project at <http://localhost:3000>!
