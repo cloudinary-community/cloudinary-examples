@@ -1,4 +1,4 @@
-# React Cloudinary Upload Widget
+# Nuxt Cloudinary Upload Widget
 
 ## 🚀 Get Started with This Example
 
