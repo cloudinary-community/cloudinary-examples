@@ -37,3 +37,8 @@ streamlit run main.py
 ```
 
 Awesome job mate 😎, your application awaits you at `http://localhost:8501/`
+
+Screenshots:
+![image](https://github.com/codingis4noobs2/cloudinary-examples/assets/87560178/a5bfd5e6-8026-4eac-8517-00b28fd5475d)
+![image](https://github.com/codingis4noobs2/cloudinary-examples/assets/87560178/7ae29038-853f-4bab-9521-90b5bb995d64)
+
