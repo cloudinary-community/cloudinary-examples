@@ -222,6 +222,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "akmittal",
+      "name": "Amit Mittal",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1594654?v=4",
+      "profile": "https://www.akmittal.dev",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
