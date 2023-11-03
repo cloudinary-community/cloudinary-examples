@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-27-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-28-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -174,6 +174,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://www.akmittal.dev"><img src="https://avatars.githubusercontent.com/u/1594654?v=4?s=100" width="100px;" alt="Amit Mittal"/><br /><sub><b>Amit Mittal</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=akmittal" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/codingis4noobs2"><img src="https://avatars.githubusercontent.com/u/87560178?v=4?s=100" width="100px;" alt="Parth Shah"/><br /><sub><b>Parth Shah</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=codingis4noobs2" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/aashish-g03"><img src="https://avatars.githubusercontent.com/u/75474146?v=4?s=100" width="100px;" alt="aashish-g03"/><br /><sub><b>aashish-g03</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=aashish-g03" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://raae.codes"><img src="https://avatars.githubusercontent.com/u/478531?v=4?s=100" width="100px;" alt="Benedicte Raae"/><br /><sub><b>Benedicte Raae</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=raae" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
