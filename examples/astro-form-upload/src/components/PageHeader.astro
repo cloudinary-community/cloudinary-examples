@@ -1,0 +1,13 @@
+---
+import { SITE_TITLE } from "../consts";
+
+interface Props {
+  title?: string;
+}
+
+const { title } = Astro.props;
+---
+
+<header>
+  <h1><a href="/">{SITE_TITLE}</a></h1>{title && <h2>{title}</h2>}
+</header>

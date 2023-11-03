@@ -1,0 +1,55 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { v2 as cloudinary } from "cloudinary";
+import { Image } from "@unpic/astro";
+
+cloudinary.config({
+  cloud_name: import.meta.env.CLOUDINARY_CLOUD_NAME,
+  api_key: import.meta.env.CLOUDINARY_API_KEY,
+  api_secret: import.meta.env.CLOUDINARY_API_SECRET,
+});
+
+let images = [];
+
+try {
+  const result = await cloudinary.search
+    .expression("folder:astro")
+    .sort_by("uploaded_at", "desc")
+    .max_results(30)
+    .execute();
+
+  images = result.resources;
+} catch (error) {
+  if (error instanceof Error) {
+    console.error(error.message);
+  } else {
+    console.error(error);
+  }
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead />
+  </head>
+  <body>
+    <main>
+      <PageHeader />
+      <p><a href="/upload">Submit your photo</a></p>
+      <section>
+        {
+          images.map((image: { secure_url: string; filename: string }) => (
+            <Image
+              src={image.secure_url}
+              layout="constrained"
+              width={200}
+              height={200}
+            />
+          ))
+        }
+      </section>
+    </main>
+  </body>
+</html>
