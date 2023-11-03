@@ -1,0 +1,75 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import PageHeader from "../components/PageHeader.astro";
+import { v2 as cloudinary } from "cloudinary";
+import { Image } from "@unpic/astro";
+
+cloudinary.config({
+  cloud_name: import.meta.env.CLOUDINARY_CLOUD_NAME,
+  api_key: import.meta.env.CLOUDINARY_API_KEY,
+  api_secret: import.meta.env.CLOUDINARY_API_SECRET,
+});
+
+const uploadStream = async (buffer: Uint8Array, options: any) => {
+  return new Promise((resolve, reject) => {
+    cloudinary.uploader
+      .upload_stream(options, (error, result) => {
+        if (error) return reject(error);
+        resolve(result);
+      })
+      .end(buffer);
+  });
+};
+
+let uploadedFile: any | undefined;
+
+if (Astro.request.method === "POST") {
+  const data = await Astro.request.formData();
+
+  const file = data.get("file") as File;
+
+  const arrayBuffer = await file.arrayBuffer();
+  const uit8Array = new Uint8Array(arrayBuffer);
+
+  const response = await uploadStream(uit8Array, {
+    folder: "astro",
+  });
+
+  uploadedFile = response;
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead />
+  </head>
+  <body>
+    <main>
+      <PageHeader />
+
+      {
+        uploadedFile ? (
+          <section>
+            <h2>Thank you 🎉</h2>
+            <Image
+              src={uploadedFile.secure_url}
+              layout="constrained"
+              width={300}
+              height={300}
+            />
+            <a href="/">&#8592; Back to all photos</a>
+          </section>
+        ) : (
+          <section>
+            <form method="post" action="/upload" enctype="multipart/form-data">
+              <label for="file">Upload your photo:</label>
+              <input type="file" name="file" id="file" required />
+              <button>Submit</button>
+            </form>
+          </section>
+        )
+      }
+    </main>
+  </body>
+</html>

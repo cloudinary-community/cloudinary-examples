@@ -1,0 +1,54 @@
+body {
+  @apply bg-orange-50 border-t-4 border-orange-600 overflow-y-scroll;
+}
+
+main {
+  @apply p-6 pt-12 text-stone-800 max-w-6xl mx-auto text-center text-base;
+}
+
+main section {
+  @apply max-w-2xl mx-auto;
+}
+
+main h1 {
+  @apply text-5xl font-bold tracking-tight;
+}
+
+main p {
+  @apply my-8;
+}
+
+main p a,
+main form button {
+  @apply inline-block bg-orange-600 text-white px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-orange-700 focus:outline-none focus:ring-2 focus:ring-orange-600 focus:ring-offset-2;
+}
+
+main img {
+  @apply rounded-md bg-orange-100 hover:opacity-75 mb-4 mx-2 inline-block transition-opacity;
+}
+
+main section a {
+  @apply block;
+}
+
+main form {
+  @apply max-w-xl mx-auto flex flex-wrap justify-center;
+}
+
+main h2,
+main form label {
+  @apply text-lg font-bold tracking-tight mt-8 mb-4;
+}
+
+main form label,
+main form p {
+  @apply w-full shrink-0;
+}
+
+main form p {
+  @apply text-red-700;
+}
+
+main form input {
+  @apply bg-orange-100 p-2;
+}
