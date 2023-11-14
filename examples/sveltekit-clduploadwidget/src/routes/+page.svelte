@@ -48,7 +48,7 @@
 		<h2>Resources</h2>
 		<p>
 			<a
-				href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadwidget"
+				href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/svelte-clduploadwidget"
 				>See the code on github.com.</a
 			>
 		</p>
