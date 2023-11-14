@@ -2,13 +2,25 @@
 	import { CldUploadWidget } from 'svelte-cloudinary';
 
 	let info;
+	let infoSecure;
 	let error;
+	let errorSecure
 
 	function onUpload(result, widget) {
 		if (result.event === 'success') {
 			info = result.info;
 		} else if (result.event === 'error') {
 			error = result.error;
+		}
+
+		widget.close();
+	}
+
+	function onUploadSecure(result, widget) {
+		if (result.event === 'success') {
+			infoSecure = result.info;
+		} else if (result.event === 'error') {
+			errorSecure = result.error;
 		}
 
 		widget.close();
@@ -29,6 +41,7 @@
 	</div>
 
 	<div class="container">
+		<h1 class="title">Unsigned Upload</h1>
 		<CldUploadWidget uploadPreset="svelte-cloudinary-unsigned" let:open let:isLoading {onUpload}>
 			<button on:click={open} disabled={isLoading}> Upload an Asset </button>
 		</CldUploadWidget>
@@ -41,6 +54,23 @@
 				<img width={info.width} height={info.height} src={info.secure_url} alt="Uploaded image" />
 			</p>
 			<p>{info?.secure_url}</p>
+		{/if}
+	</div>
+
+	<div class="container">
+		<h1 class="title">Signed Upload</h1>
+		<CldUploadWidget uploadPreset="svelte-cloudinary-signed" let:open let:isLoading onUpload={onUploadSecure} signatureEndpoint="/api/">
+			<button on:click={open} disabled={isLoading}> Secure Upload an Asset </button>
+		</CldUploadWidget>
+		{#if errorSecure}
+			<p>{errorSecure.status}</p>
+		{/if}
+
+		{#if infoSecure}
+			<p>
+				<img width={infoSecure.width} height={infoSecure.height} src={infoSecure.secure_url} alt="Uploaded image" />
+			</p>
+			<p>{infoSecure?.secure_url}</p>
 		{/if}
 	</div>
 
