@@ -1,38 +1,52 @@
-# create-svelte
+# CldUploadWidget for Cloudinary Images in Svelte/SvelteKit
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+Use the CldUploadWidget component to streamline the upload process to get your assets into the Cloudinary Platform
 
-## Creating a project
+## 🧰 Using CldUploadWidget in Svelte/SvelteKit
 
-If you're seeing this, you've probably already done this step. Congrats!
+Add an upload widget instance using the following:
 
-```bash
-# create a new project in the current directory
-npm create svelte@latest
+```html
+<script>
+import { CldUploadWidget } from 'next-cloudinary';
+</script>
 
-# create a new project in my-app
-npm create svelte@latest my-app
+<CldUploadWidget uploadPresety="<Your Upload Preset>">
+    <button on:click={open}>Upload an Image</button>
+</CldUploadWidget>
 ```
 
-## Developing
+See the component in action at [src/routes/+page.svelte](routes/+page.svelte).
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+Or [learn more on the docs](https://svelte.cloudinary.dev/clduploadwidget/usage).
 
-```bash
+## 🚀 Get Started with This Example
+
+* Install the project dependencies with:
+
+```
+pnpm install
+# or
+yarn install
+# or
+npm install
+```
+
+* Add your cloud name as an environment variable inside `.env.local`:
+
+```
+VITE_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+```
+
+* Start the development server with:
+
+```
+pnpm install
+# or
+yarn dev
+# or
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+* Visit the project at <http://localhost:5173>!
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
