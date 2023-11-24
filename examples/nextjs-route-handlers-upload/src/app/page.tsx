@@ -23,8 +23,8 @@ function Home() {
 
   useEffect(() => {
     (async function run() {
-      const repsonse = await fetch('/api/resources');
-      const { results } = await repsonse.json();
+      const response = await fetch('/api/resources');
+      const { results } = await response.json();
       setSneakers(results);
     })()
   }, [])
@@ -42,12 +42,12 @@ function Home() {
     
     formData.append('file', file);
     
-    const repsonse = await fetch('/api/upload', {
+    const response = await fetch('/api/upload', {
       method: 'POST',
       body: formData
     });
     
-    const { results } = await repsonse.json();
+    const { results } = await response.json();
 
     setSneakers(prev => {
       if ( !prev ) return [results];
