@@ -3,14 +3,5 @@
   "repository": "git@github.com:colbyfayock/cloudinary-examples.git",
   "author": "colbyfayock <fayock@gmail.com>",
   "license": "MIT",
-  "private": true,
-  "workspaces": [
-    "examples/*"
-  ],
-  "devDependencies": {
-    "nodemon": "^2.0.20"
-  },
-  "dependencies": {
-    "cloudinary": "^1.35.0"
-  }
+  "private": true
 }
