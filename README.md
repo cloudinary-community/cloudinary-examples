@@ -123,7 +123,7 @@ If the use case seems like it would be broadly helpful for others as well, I'll 
 
 ## 🛠️ Contributing
 
-Each project is independently maintained, though uses yarn workspaces for dependency management. 
+Each project is independently maintained, though uses pnpm workspaces for dependency management. 
 
 To create a new example, first check if an existing example is avaiable for the given framework. If so, it's recommended to copy the directory for your new example to maintain consistency between the examples.
 
