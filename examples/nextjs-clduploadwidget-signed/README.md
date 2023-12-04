@@ -1,9 +1,3 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
-First, run the development server:
-
 ```bash
 npm run dev
 # or
@@ -14,23 +8,72 @@ pnpm dev
 bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+# CldUploadWidget (signed) for Cloudinary Images in Next.js
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+Use the CldUploadWidget component to create a new instance of the [Cloudinary Upload Widget](https://cloudinary.com/documentation/upload_widget) giving you an easy way to add upload capabilities to your Next.js app.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## 🧰 Using CldUploadWidget in Next.js
 
-## Learn More
+Add a basic (unsigned) upload widget using the following:
 
-To learn more about Next.js, take a look at the following resources:
+```jsx
+import { CldUploadWidget } from 'next-cloudinary';
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+<CldUploadWidget uploadPreset="<Your Upload Preset>">
+  {({ open }) => <button onClick={() => open()}>Upload an Image</button>}
+</CldUploadWidget>;
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+To set up a signed upload, you'll need to install the Cloudinary Node SDK, then set up a route parameter in Next.js to create a signature for the upload widget.
 
-## Deploy on Vercel
+You can look at the code for the route param in this project under [app/api/sign-image/route.ts](app/api/sign-image/route.ts)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+Then all you have to do is add the signatureEndpoint prop to the CldUploadWidget component with the route parameter:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+```jsx
+import { CldUploadWidget } from 'next-cloudinary';
+
+<CldUploadWidget uploadPreset="<Your Upload Preset>" signatureEndpoint="/api/sign-image">
+  {({ open }) => <button onClick={() => open()}>Upload an Image</button>}
+</CldUploadWidget>;
+```
+
+See the component in action at [app/page.tsx](app/page.tsx).
+
+Or [learn more on the docs](https://next.cloudinary.dev/clduploadwidget/basic-usage).
+
+## 🚀 Get Started with This Example
+
+- Install the project dependencies with:
+
+```bash
+npm install
+# or
+yarn install
+# or
+pnpm install
+# or
+bun install
+```
+
+- Add your cloud name as an environment variable inside `.env.local`:
+
+```
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+NEXT_PUBLIC_CLOUDINARY_API_KEY="<Your API Key>"
+CLOUDINARY_API_SECRET="<Your API Secret>"
+```
+
+- Start the development server with:
+
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm run dev
+# or
+bun dev
+```
+
+- Visit the project at <http://localhost:3000>!
