@@ -1,13 +1,3 @@
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
 # CldUploadWidget (signed) for Cloudinary Images in Next.js
 
 Use the CldUploadWidget component to create a new instance of the [Cloudinary Upload Widget](https://cloudinary.com/documentation/upload_widget) giving you an easy way to add upload capabilities to your Next.js app.
