@@ -38,8 +38,8 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ### .NET
 
-- [Upload Images](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-image-upload)
-- [Upload Videos](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-video-upload)
+- [Uploading Images](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-image-upload)
+- [Uploading Videos](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-video-upload)
 
 ### Android
 
@@ -119,8 +119,8 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Eval on Upload](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-upload-eval)
 - [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-social-media-card)
 - [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-transformations-effects)
-- [Upload Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-image-upload)
-- [Upload Videos](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-video-upload)
+- [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-image-upload)
+- [Uploading Videos](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-video-upload)
 
 ### Nuxt
 
