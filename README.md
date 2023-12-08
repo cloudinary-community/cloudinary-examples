@@ -6,32 +6,69 @@
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
 
+- [.NET](#net)
 - [Android](#android)
+- [Angular](#angular)
+- [Astro](#astro)
+- [Dart](#dart)
 - [Flutter](#flutter)
+- [Go](#go)
 - [HTML & Browser](#html--browser)
 - [iOS](#ios)
+- [Java](#java)
 - [Kotlin](#kotlin)
+- [Laravel](#laravel)
 - [Netlify](#netlify)
 - [Next.js](#nextjs)
 - [Node.js](#nodejs)
+- [Nuxt](#nuxt)
+- [PHP](#php)
+- [Python](#python)
 - [React](#react)
 - [Remix](#remix)
+- [Ruby](#ruby)
 - [SolidJS](#solidjs)
 - [Svelte](#svelte)
+- [SvelteKit](#sveltekit)
+- [Streamlit](#streamlit)
+- [Tina](#tina)
 - [Vue](#vue)
-- [.NET](#net)
-- [Dart](#dart)
 
 ## 🧰 Examples
+
+### .NET
+
+- [Upload Images](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-image-upload)
+- [Upload Videos](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-video-upload)
 
 ### Android
 
 - [ImageView](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/android-imageview)
 
+### Angular
+
+- [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/angular-upload-widget)
+
+### Astro
+
+- [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/astro-product-gallery)
+- [Uploading with Forms](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/astro-form-upload)
+- [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/astro-upload-widget-preset)
+
+### Dart
+
+- [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/dart-transformation-effects)
+- [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/dart-image-upload)
+
 ### Flutter
 
 - [CldImageWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/flutter-cldimagewidget)
 - [CldImageWidget Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/flutter-transformation-effects)
+
+### Go
+
+- [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/go-transformation-effects)
+- [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/go-image-upload)
 
 ### HTML & Browser
 
@@ -41,9 +78,17 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 - [CLDUIImageView](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/ios-uiimageview)
 
+### Java
+
+- [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/java-image-upload)
+
 ### Kotlin
 
 - [ImageView](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/kotlin-imageview)
+
+### Laravel
+
+- [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/laravel-image-upload)
 
 ### Netlify
 
@@ -55,65 +100,101 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 - [Cloudinary Upload Widget with Signed Uploads](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-signed)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-widget-preset)
-- [Next Cloudinary - CldImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage)
-- [Next Cloudinary - CldOgImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldogimage)
-- [Next Cloudinary - CldUploadButton Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadbutton)
-- [Next Cloudinary - CldUploadWidget Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadwidget)
-- [Next.js Image Component - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
-- [Next.js Image Component - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
-- [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-social-media-card)
-- [Upload Files from FormData in API Routes](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-formdata)
+- [Next Cloudinary - CldImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage)
+- [Next Cloudinary - CldOgImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldogimage)
+- [Next Cloudinary - CldUploadButton](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadbutton)
+- [Next Cloudinary - CldUploadWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadwidget)
+- [Next Cloudinary - CldUploadWidget - Signed Uploads](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-clduploadwidget-signed)
+- [Next Cloudinary - CldVideoPlayer](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldvideoplayer)
+- [Next Cloudinary - CldVideoPlayer - Streaming & ABR](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldvideoplayer-abr)
+- [Next Image - Cloudinary Loader](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-loader)
+- [Next Image - Cloudinary URLs](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-next-image-domain)
+- [Social Media Cards](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-social-media-card)
+- [Upload Files with FormData in API Routes](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-upload-formdata)
+- [Upload Files with Route Handlers](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-route-handlers-upload)
+- [Upload Files with Server Actions](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-server-actions-upload)
 
 ### Node.js
 
-- [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-transformations-effects)
 - [Eval on Upload](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-upload-eval)
 - [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-social-media-card)
+- [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-transformations-effects)
 - [Upload Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-image-upload)
 - [Upload Videos](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-video-upload)
 
+### Nuxt
+
+- [Nuxt Cloudinary - CldImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nuxt-cldimage)
+- [Nuxt Cloudinary - CldOgImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nuxt-cldogimage)
+- [Nuxt Cloudinary - CldUploadButton](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nuxt-clduploadbutton)
+- [Nuxt Cloudinary - CldUploadWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nuxt-clduploadwidget)
+- [Nuxt Cloudinary - CldVideoPlayer](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nuxt-cldvideoplayer)
+- [Nuxt Image - Cloudinary Image Provider](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nuxt-nuxt-image-provider)
+- [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nuxt-upload-widget-preset)
+
+### PHP
+
+- [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/php-transformations-effects)
+- [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/php-image-upload)
+
+### Python
+
+- [Image Overlays](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/python-image-overlay)
+- [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/python-image-upload)
+
 ### React
 
-- [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-image)
-- [Cloudinary AdvancedVideo Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-video)
-- [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-product-gallery)
-- [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-transformations-effects)
-- [Cloudinary Upload Widget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-upload-widget-preset)
-- [Cloudinary Video Player](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-video-player)
-
-#### with Typescript
-
+- [Cloudinary AdvancedImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-image)
+- [Cloudinary AdvancedVideo](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-advanced-video)
 - [Cloudinary Media Library](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-ts-media-library)
+- [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-product-gallery)
+- [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-upload-widget-preset)
+- [Cloudinary Video Player](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-video-player)
+- [Dark Mode & Light Mode Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-dark-mode)
+- [Removing Backgrounds](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-background-removal)
+- [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-transformations-effects)
 
 ### Remix
 
+- [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-product-gallery)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-upload-widget-preset)
+
+### Ruby
+
+- [Image Overlays](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/ruby-image-overlay)
+- [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/ruby-image-upload)
 
 ### SolidJS
 
-- [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/solid-transformations-effects)
+- [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/solid-product-gallery)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/solid-upload-widget-preset)
+- [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/solid-transformations-effects)
 
 ### Svelte
 
-- [Cloudinary Image Upload (Server)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-image-upload)
-- [Cloudinary Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-transformations-effects)
+- [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/svelte-product-gallery)
+
+### SvelteKit
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset)
-- [Svelte Cloudinary - CldImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-cldimage)
+- [Svelte Cloudinary - CldImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-cldimage)
+- [Svelte Cloudinary - CldUploadWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-cldimage)
+- [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-transformations-effects)
+- [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-image-upload)
+
+### Streamlit
+
+- [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/streamlit-transformations-effects)
+
+### Tina
+
+- [Cloudinary Media Manager Integration](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/tina-with-cloudinary)
 
 ### Vue
 
-- [Cloudinary AdvancedImage Component](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
+- [Cloudinary AdvancedImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-advanced-image)
+- [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-product-gallery)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-upload-widget-preset)
 
-### .NET
-
-- [Upload Images](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-image-upload)
-- [Upload Videos](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dotnet-video-upload)
-
-### Dart
-
-- [Upload Images](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/dart-image-upload)
 
 ## 🧐 Not seeing an example?
 
