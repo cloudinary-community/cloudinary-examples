@@ -113,3 +113,6 @@ vendor
 # .sln
 *.sln
 
+# misc
+.DS_Store
+*.pem
