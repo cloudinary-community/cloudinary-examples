@@ -63,7 +63,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Flutter
 
 - [CldImageWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/flutter-cldimagewidget)
-- [CldImageWidget Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/flutter-transformation-effects)
+- [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/flutter-transformation-effects)
 
 ### Go
 
