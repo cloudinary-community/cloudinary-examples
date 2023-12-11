@@ -276,6 +276,15 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "dillionmegida",
+      "name": "Dillion Megida",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42855542?v=4",
+      "profile": "http://dillionmegida.com",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
