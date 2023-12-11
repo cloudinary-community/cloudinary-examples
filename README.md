@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-30-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-31-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -260,6 +260,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <tr>
       <td align="center" valign="top" width="14.28%"><a href="https://geovaneborba.github.io/"><img src="https://avatars.githubusercontent.com/u/33469722?v=4?s=100" width="100px;" alt="Geovane Borba"/><br /><sub><b>Geovane Borba</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=geovaneborba" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://robray.dev/"><img src="https://avatars.githubusercontent.com/u/1377253?v=4?s=100" width="100px;" alt="Richard Oliver Bray"/><br /><sub><b>Richard Oliver Bray</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=RichardBray" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="http://dillionmegida.com"><img src="https://avatars.githubusercontent.com/u/42855542?v=4?s=100" width="100px;" alt="Dillion Megida"/><br /><sub><b>Dillion Megida</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=dillionmegida" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
