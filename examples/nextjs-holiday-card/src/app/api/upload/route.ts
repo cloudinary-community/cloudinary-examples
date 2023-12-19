@@ -23,6 +23,7 @@ export async function POST(request: Request) {
       results = await new Promise((resolve, reject) => {
         cloudinary.uploader.upload_stream({
           folder: `${process.env.CLOUDINARY_FOLDER}/uploads`,
+          upload_preset: process.env.CLOUDINARY_UPLOAD_PRESET,
           ...options
         }, function (error, result) {
           if (error) {
