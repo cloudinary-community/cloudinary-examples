@@ -114,10 +114,11 @@ export default function Home() {
 
   return (
     <>
-      {!results && (
+      {/* {!results && ( */}
         <Container className="max-w-4xl my-12">
-          <h2 className="text-2xl font-bold mb-6">Upload an Image</h2>
-          <div className={`grid gap-12 ${preview ? 'grid-cols-2' : ''}`}>
+          {/* <h2 className="text-2xl font-bold mb-6">Upload an Image</h2>
+          <p className="mb-6">Create a custom holiday card by uploading your image and selecting a new background.</p>
+          <div className={`grid gap-12 ${preview ? 'grid-cols-2' : ''} mb-6`}>
             <div>
               <form className="bg-white border border-slate-200 dark:border-slate-500 rounded p-6 mb-6" onSubmit={handleOnSubmit}>
                 <p className="mb-6">
@@ -145,9 +146,218 @@ export default function Home() {
               <p><img src={preview as string} alt="Upload preview" /></p>
             )}
           </div>
+          
+          <h2 className="text-2xl font-bold mb-6">Other Examples</h2> */}
+          
+          <div className="grid gap-6 grid-cols-1 md:grid-cols-2">
+            <CldImage
+              src="nextjs-holiday-card/colby_ut0z6p"
+              width={720}
+              height={480}
+              crop="fill"
+              alt="Holiday Card"
+              underlay="nextjs-holiday-card/almos-bechtold-x_sDxxccTtw-unsplash_hwpzhx"
+              overlays={[
+                {
+                  text: {
+                    text: 'Happy New Year!'.toUpperCase(),
+                    color: 'black',
+                    fontFamily: 'Oswald',
+                    fontSize: 80,
+                    fontWeight: 'bold'
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 45
+                  }
+                },
+                {
+                  text: {
+                    text: 'Happy New Year!'.toUpperCase(),
+                    color: 'white',
+                    fontFamily: 'Oswald',
+                    fontSize: 80,
+                    fontWeight: 'bold'
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 50
+                  }
+                },
+              ]}
+            />
+
+            <CldImage 
+              src="nextjs-holiday-card/snow_wbbpgq"
+              width={720}
+              height={480}
+              crop="fill"
+              alt="Holiday Card"
+              overlays={[
+                {
+                  publicId: 'nextjs-holiday-card/Photo_on_12-18-23_at_2.24_PM_sk4rjx',
+                  width: '1.0',
+                  flags: ['relative'],
+                  appliedEffects: [{
+                    multiply: true
+                  }]
+                },
+                {
+                  publicId: 'nextjs-holiday-card/colby_ut0z6p',
+                  width: '1.0',
+                  flags: ['relative']
+                },
+                {
+                  text: {
+                    text: 'Happy Holidays!',
+                    color: 'rgb:1e611d',
+                    fontFamily: 'Berkshire Swash',
+                    fontSize: 80
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 145
+                  }
+                },
+                {
+                  text: {
+                    text: 'Happy Holidays!',
+                    color: 'white',
+                    fontFamily: 'Berkshire Swash',
+                    fontSize: 80
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 150
+                  }
+                },
+
+                {
+                  text: {
+                    text: 'Steve & Janice',
+                    color: 'rgb:1e611d',
+                    fontFamily: 'Oswald',
+                    fontSize: 80
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 45
+                  }
+                },
+                {
+                  text: {
+                    text: 'Steve & Janice',
+                    color: 'white',
+                    fontFamily: 'Oswald',
+                    fontSize: 80
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 50
+                  }
+                },
+                {
+                  width: '0.27',
+                  publicId: 'nextjs-holiday-card/santa-hat_pua72w',
+                  position: {
+                    y: -170,
+                    x: 5
+                  },
+                  flags: ['relative']
+                },
+              ]}
+            />
+
+            <CldImage
+              src="nextjs-holiday-card/roberto-nickson-5PQn41LFsQk-unsplash_lv9qtc"
+              width={720}
+              height={480}
+              crop="fill"
+              gravity="north"
+              alt="Holiday Card"
+              overlays={[
+                {
+                  publicId: 'nextjs-holiday-card/colby_ut0z6p',
+                  width: '1.0',
+                  flags: ['relative']
+                },
+                {
+                  text: {
+                    text: 'Happy Holidays!',
+                    color: 'rgb:1e611d',
+                    fontFamily: 'Berkshire Swash',
+                    fontSize: 80
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 45
+                  }
+                },
+                {
+                  text: {
+                    text: 'Happy Holidays!',
+                    color: 'white',
+                    fontFamily: 'Berkshire Swash',
+                    fontSize: 80
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 50
+                  }
+                },
+
+                {
+                  width: '0.27',
+                  publicId: 'nextjs-holiday-card/santa-hat_pua72w',
+                  position: {
+                    y: -170,
+                    x: 5
+                  },
+                  flags: ['relative']
+                },
+              ]}
+            />
+            
+            <CldImage
+              src="nextjs-holiday-card/colby_ut0z6p"
+              width={720}
+              height={480}
+              crop="fill"
+              alt="Holiday Card"
+              underlay="nextjs-holiday-card/jason-leung-Xaanw0s0pMk-unsplash_ftbb7i"
+              overlays={[
+                {
+                  text: {
+                    text: 'Happy Birthday!'.toUpperCase(),
+                    color: 'black',
+                    fontFamily: 'Oswald',
+                    fontSize: 80,
+                    fontWeight: 'bold'
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 45
+                  }
+                },
+                {
+                  text: {
+                    text: 'Happy Birthday!'.toUpperCase(),
+                    color: 'white',
+                    fontFamily: 'Oswald',
+                    fontSize: 80,
+                    fontWeight: 'bold'
+                  },
+                  position: {
+                    gravity: 'south',
+                    y: 50
+                  }
+                },
+              ]}
+            />
+          </div>
         </Container>
-      )}
-      {results && (
+      {/* )} */}
+      {/* {results && (
         <Container className="max-w-4xl my-12">
           <div className="flex justify-between pb-4 border-b-2 border-slate-100 mb-6">
             <h2 className="text-2xl font-bold">Design Your Card</h2>
@@ -244,7 +454,7 @@ export default function Home() {
             </div>
           )}
         </Container>
-      )}
+      )} */}
     </>
   )
 }
