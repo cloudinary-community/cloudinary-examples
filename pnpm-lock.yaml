@@ -282,6 +282,52 @@ importers:
         specifier: ^13.0.0
         version: 13.4.19(eslint@8.49.0)(typescript@5.2.2)
 
+  examples/nextjs-clduploadwidget-captions:
+    dependencies:
+      cloudinary:
+        specifier: ^1.41.1
+        version: 1.41.1
+      next:
+        specifier: 14.0.4
+        version: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+      next-cloudinary:
+        specifier: ^5.16.0
+        version: 5.18.0(next@14.0.4)(react@18.2.0)
+      react:
+        specifier: ^18
+        version: 18.2.0
+      react-dom:
+        specifier: ^18
+        version: 18.2.0(react@18.2.0)
+    devDependencies:
+      '@types/node':
+        specifier: ^20
+        version: 20.6.2
+      '@types/react':
+        specifier: ^18
+        version: 18.2.22
+      '@types/react-dom':
+        specifier: ^18
+        version: 18.2.7
+      autoprefixer:
+        specifier: ^10.0.1
+        version: 10.4.15(postcss@8.4.29)
+      eslint:
+        specifier: ^8
+        version: 8.49.0
+      eslint-config-next:
+        specifier: 14.0.4
+        version: 14.0.4(eslint@8.49.0)(typescript@5.2.2)
+      postcss:
+        specifier: ^8
+        version: 8.4.29
+      tailwindcss:
+        specifier: ^3.3.0
+        version: 3.3.3
+      typescript:
+        specifier: ^5
+        version: 5.2.2
+
   examples/nextjs-clduploadwidget-signed:
     dependencies:
       cloudinary:
@@ -2046,7 +2092,7 @@ packages:
       '@babel/core': 7.23.3
       '@babel/generator': 7.23.4
       '@babel/parser': 7.23.4
-      '@babel/runtime': 7.23.4
+      '@babel/runtime': 7.23.6
       '@babel/traverse': 7.23.4
       '@babel/types': 7.23.4
       babel-preset-fbjs: 3.4.0(@babel/core@7.23.3)
@@ -4548,7 +4594,6 @@ packages:
     engines: {node: '>=6.9.0'}
     dependencies:
       regenerator-runtime: 0.14.0
-    dev: false
 
   /@babel/standalone@7.23.4:
     resolution: {integrity: sha512-cXT2Xi9YVJEi7kLjqoeZBXjrNt1PASOh4Zi3jp5yXT06Gt4ZeRETfYH9y5x3RQhFTpNxaA1300lzK1obiy6tcQ==}
@@ -18623,6 +18668,16 @@ packages:
       q: 1.5.1
     dev: false
 
+  /cloudinary@1.41.1:
+    resolution: {integrity: sha512-EBNEmhSNtES8d9dAd1tg9mKJk2jB5LvRxDcgNk7JiMDWNeHkSpwroJwnHZN4XdxKvjLnj9a9pbOgdPW90GkG1g==}
+    engines: {node: '>=0.6'}
+    dependencies:
+      cloudinary-core: 2.13.0(lodash@4.17.21)
+      core-js: 3.33.3
+      lodash: 4.17.21
+      q: 1.5.1
+    dev: false
+
   /clsx@1.2.1:
     resolution: {integrity: sha512-EcR6r5a8bj6pu3ycsa/E/cKVGuTgZJZdsyUYHOksG/UHIiKfjxzRxYJpyVBwYaQeOvghal9fcc4PidlgzugAQg==}
     engines: {node: '>=6'}
@@ -19571,6 +19626,7 @@ packages:
   /css-tree@2.2.1:
     resolution: {integrity: sha512-OA0mILzGc1kCOCSJerOeqDxDQ4HOh+G8NbOJFOTgOCzpw7fCBubk0fEyxp8AgOL/jvLgYA/uV0cMbe43ElF1JA==}
     engines: {node: ^10 || ^12.20.0 || ^14.13.0 || >=15.0.0, npm: '>=7.0.0'}
+    requiresBuild: true
     dependencies:
       mdn-data: 2.0.28
       source-map-js: 1.0.2
@@ -22046,7 +22102,7 @@ packages:
     peerDependencies:
       eslint: ^3 || ^4 || ^5 || ^6 || ^7 || ^8
     dependencies:
-      '@babel/runtime': 7.23.4
+      '@babel/runtime': 7.23.6
       aria-query: 5.3.0
       array-includes: 3.1.7
       array.prototype.flatmap: 1.3.2
@@ -27742,7 +27798,7 @@ packages:
   /media-query-parser@2.0.2:
     resolution: {integrity: sha512-1N4qp+jE0pL5Xv4uEcwVUhIkwdUO3S/9gML90nqKA7v7FcOS5vUtatfzok9S9U1EJU8dHWlcv95WLnKmmxZI9w==}
     dependencies:
-      '@babel/runtime': 7.23.4
+      '@babel/runtime': 7.23.6
     dev: true
 
   /media-typer@0.3.0:
@@ -28737,6 +28793,18 @@ packages:
       react: 18.2.0
     dev: false
 
+  /next-cloudinary@5.18.0(next@14.0.4)(react@18.2.0):
+    resolution: {integrity: sha512-QzqjyNs+ji+XCbkDQ+vfOoG37mgNI0gXnI8dPgKPnORIVOfZIjfIRh2hFDL3paEX2ph0CHj4mc4Pu2pSIDTkcw==}
+    peerDependencies:
+      next: ^12 || ^13 || ^14
+      react: ^17 || ^18
+    dependencies:
+      '@cloudinary-util/url-loader': 3.23.0
+      '@cloudinary-util/util': 2.3.0
+      next: 14.0.4(react-dom@18.2.0)(react@18.2.0)
+      react: 18.2.0
+    dev: false
+
   /next-tick@1.1.0:
     resolution: {integrity: sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==}
     dev: true
@@ -28746,7 +28814,7 @@ packages:
     peerDependencies:
       tinacms: 1.5.26
     dependencies:
-      cloudinary: 1.41.0
+      cloudinary: 1.41.1
       multer: 1.4.5-lts.1
       tinacms: 1.5.26(@babel/core@7.23.3)(@types/react@17.0.71)(react-dom@18.2.0)(react@18.2.0)
     dev: false
@@ -33494,7 +33562,7 @@ packages:
   /relay-runtime@12.0.0:
     resolution: {integrity: sha512-QU6JKr1tMsry22DXNy9Whsq5rmvwr3LSZiiWV/9+DFpuTWvp+WFhobWMc8TC4OjKFfNhEZy7mOiqUAn5atQtug==}
     dependencies:
-      '@babel/runtime': 7.23.4
+      '@babel/runtime': 7.23.6
       fbjs: 3.0.5
       invariant: 2.2.4
     transitivePeerDependencies:
@@ -35819,7 +35887,7 @@ packages:
       '@cloudinary-util/util': 2.1.0
       '@unpic/core': 0.0.24
       '@unpic/svelte': 0.0.25(svelte@4.2.7)
-      cloudinary: 1.41.0
+      cloudinary: 1.41.1
       svelte: 4.2.7
     dev: false
 
