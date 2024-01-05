@@ -35,12 +35,15 @@ export default function Home() {
         </CldUploadWidget>
 
         {result ? (
-          <CldImage
-            src={result.public_id}
-            width={result.width}
-            height={result.height}
-            alt={result.context.custom.alt}
-          />
+          <>
+            <CldImage
+              src={result.public_id}
+              width={result.width}
+              height={result.height}
+              alt={result.context.custom.alt}
+            />
+            <p>Alt: { result.context.custom.alt }</p>
+          </>
         ) : null}
       </section>
     </main>
