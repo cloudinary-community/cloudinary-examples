@@ -34,7 +34,7 @@ const CldVideoPlayer = ({ controls = true, id, src, width, height, source }: Cld
       }
 
       if ( source ) {
-        playerRef.current.source("docs/shoppable_demo", source)
+        playerRef.current.source(src, source)
       }
     })();
 
