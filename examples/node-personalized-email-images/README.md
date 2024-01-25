@@ -128,7 +128,7 @@ RECIPIENT_EMAIL=""
 - Run the script with
 
 ```bash
-node --env-file=.env index.js
+node start
 # or
 bun run index.js
 ```
