@@ -117,6 +117,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Node.js
 
 - [Eval on Upload](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-upload-eval)
+- [Personalized Email Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-personalized-email-images)
 - [Social Media Card](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-social-media-card)
 - [Transformations & Effects](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-transformations-effects)
 - [Uploading Images](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/node-image-upload)
