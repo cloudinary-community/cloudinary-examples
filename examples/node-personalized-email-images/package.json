@@ -1,0 +1,21 @@
+{
+  "name": "dynamic-images",
+  "version": "1.0.0",
+  "author": "",
+  "main": "index.js",
+  "engines": {
+    "node": "20.x"
+  },
+  "dependencies": {
+    "cloudinary": "^1.41.2",
+    "nodemailer": "^6.9.8"
+  },
+  "description": "",
+  "keywords": [],
+  "license": "ISC",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node --env-file=.env index.js"
+  },
+  "type": "module"
+}
