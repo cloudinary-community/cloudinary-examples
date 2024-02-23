@@ -1,38 +1,29 @@
-# create-svelte
+# SvelteKit Cloudinary Lazy Loading
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/main/packages/create-svelte).
+Demo: <>
 
-## Creating a project
+## 🚀 Get Started with This Example
 
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
+* Create an environment variable file `.env` in the root of the project and inside add:
+```
+PUBLIC_CLOUDINARY_CLOUD_NAME=
 ```
 
-## Developing
+* Install the project dependencies with:
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```
+yarn install
+# or
+npm install
+```
 
-```bash
+* Start the development server with:
+
+```
+yarn dev
+# or
 npm run dev
-
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
 ```
 
-## Building
+* Visit the project at <http://localhost:5173>!
 
-To create a production version of your app:
-
-```bash
-npm run build
-```
-
-You can preview the production build with `npm run preview`.
-
-> To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
