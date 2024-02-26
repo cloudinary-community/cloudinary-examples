@@ -7,7 +7,7 @@ const Nav = () => {
       <Container className="py-16">
         <p>
           <Link href="/" className="text-4xl font-bold text-slate-900 dark:text-white hover:text-slate-900 dark:hover:text-gray-100">
-            Cloudinary & Next.js Server Actions
+            Cloudinary Shoppable Video & Next.js
           </Link>
         </p>
       </Container>

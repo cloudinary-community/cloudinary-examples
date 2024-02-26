@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "next": "^13.0.0",
-    "next-cloudinary": "^4.18.0",
+    "next-cloudinary": "^6.0.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

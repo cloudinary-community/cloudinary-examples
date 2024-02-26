@@ -15,7 +15,7 @@ interface UploadedAssetData {
 
 export default function Home() {
   const [result, setResult] = useState<UploadedAssetData | null>(null);
-
+console.log('result', result)
   return (
     <main className="p-16 text-center">
       <h1 className="text-5xl font-medium py-8">Image Upload App</h1>
@@ -23,9 +23,9 @@ export default function Home() {
         <CldUploadWidget
           signatureEndpoint="/api/sign-image"
           options={{
-            detection: 'captioning',
-            on_success:
-              'current_asset.update({context: {alt: e.upload_info?.info?.detection?.captioning?.data?.caption}})',
+            // detection: 'captioning',
+            // on_success:
+            //   'current_asset.update({context: {alt: e.upload_info?.info?.detection?.captioning?.data?.caption}})',
           }}
           onSuccess={(result) => {
             setResult(result?.info as UploadedAssetData);
@@ -40,9 +40,9 @@ export default function Home() {
               src={result.public_id}
               width={result.width}
               height={result.height}
-              alt={result.context.custom.alt}
+              alt={''}
             />
-            <p>Alt: { result.context.custom.alt }</p>
+            {/* <p>Alt: { result.context.custom.alt }</p> */}
           </>
         ) : null}
       </section>

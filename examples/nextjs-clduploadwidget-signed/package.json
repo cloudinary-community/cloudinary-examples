@@ -11,7 +11,7 @@
   "dependencies": {
     "cloudinary": "^1.41.0",
     "next": "14.0.3",
-    "next-cloudinary": "^5.7.0",
+    "next-cloudinary": "^6.0.1",
     "react": "^18",
     "react-dom": "^18"
   },

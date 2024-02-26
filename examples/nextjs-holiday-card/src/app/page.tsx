@@ -131,7 +131,10 @@ export default function Home() {
           src="nextjs-holiday-card/roberto-nickson-5PQn41LFsQk-unsplash_lv9qtc"
           width={720}
           height={480}
-          crop="fill"
+          crop={{
+            type: 'fill',
+            source: true
+          }}
           gravity="north"
           alt="Holiday Card"
           overlays={[
@@ -145,11 +148,11 @@ export default function Home() {
                 text: 'Happy Holidays!',
                 color: 'rgb:1e611d',
                 fontFamily: 'Berkshire Swash',
-                fontSize: 80
+                fontSize: 160
               },
               position: {
                 gravity: 'south',
-                y: 45
+                y: 90
               }
             },
             {
@@ -157,11 +160,11 @@ export default function Home() {
                 text: 'Happy Holidays!',
                 color: 'white',
                 fontFamily: 'Berkshire Swash',
-                fontSize: 80
+                fontSize: 160
               },
               position: {
                 gravity: 'south',
-                y: 50
+                y: 100
               }
             },
 
@@ -169,8 +172,8 @@ export default function Home() {
               width: '0.27',
               publicId: 'nextjs-holiday-card/santa-hat_pua72w',
               position: {
-                y: -170,
-                x: 5
+                y: -420,
+                x: 10
               },
               flags: ['relative']
             },

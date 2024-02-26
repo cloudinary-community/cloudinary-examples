@@ -25,24 +25,24 @@ export default function Home() {
         overlays={[
           {
             position: {
-              y: -100
+              y: -50
             },
             text: {
               color: 'white',
               fontFamily: 'Source Sans Pro',
-              fontSize: 240,
+              fontSize: 120,
               fontWeight: 'bold',
               text: 'Jellyfish'
             }
           },
           {
             position: {
-              y: 100,
+              y: 50,
             },
             text: {
               color: 'white',
               fontFamily: 'Source Sans Pro',
-              fontSize: 120,
+              fontSize: 60,
               text: 'Swimming in the Darkness'
             }
           },
@@ -62,7 +62,13 @@ export default function Home() {
             {/* Values cut in half for smaller image file size */}
             <CldImage
               width="1200"
-              height="600"
+              height="630"
+              crop={{
+                width: 1200,
+                height: 630,
+                type: 'fill',
+                source: true
+              }}
               src="examples/jellyfish_qjeelr"
               alt="Jellyfish Swimming in the Darkness"
               overlays={[

@@ -90,7 +90,10 @@ export default function Home() {
                   <CldImage
                     width="600"
                     height="600"
-                    crop="fill"
+                    crop={{
+                      crop: 'fill',
+                      source: true
+                    }}
                     src={image.image}
                     alt={image.title}
                     tint="equalize:80:blue:blueviolet"
