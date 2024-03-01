@@ -20,11 +20,15 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        <div className={styles.container}>
-          <h1 className={styles.title}>
-            Next Cloudinary <code>{`<CldImage />`}</code> Component
+        <header className={styles.header}>
+          <h1>
+            <a href='https://next.cloudinary.dev' target='_blank'>
+              Next Cloudinary&apos;s
+            </a>
+            <br />
+            <code>{`<CldImage />`}</code> Component
           </h1>
-        </div>
+        </header>
 
         <div className={styles.container}>
           <h2 className={styles.subtitle}>Using Cloudinary Public IDs</h2>
