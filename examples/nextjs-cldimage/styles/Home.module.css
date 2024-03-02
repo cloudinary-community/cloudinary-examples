@@ -10,12 +10,6 @@
   margin: 2em 0;
 }
 
-.subtitle {
-  text-decoration: underline wavy;
-  text-decoration-color: #0f153b;
-  text-underline-offset: 0.5rem;
-}
-
 .images {
   list-style: none;
   padding: 0;
