@@ -33,7 +33,8 @@ async function Home() {
 
     await new Promise((resolve, reject) => {
       cloudinary.uploader.upload_stream({
-        tags: ['nextjs-server-actions-upload-sneakers']
+        tags: ['nextjs-server-actions-upload-sneakers'],
+        upload_preset: 'nextjs-server-actions-upload'
       }, function (error, result) {
         if (error) {
           reject(error);
