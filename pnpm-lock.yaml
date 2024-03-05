@@ -736,8 +736,8 @@ importers:
         specifier: 10.4.18
         version: 10.4.18(postcss@8.4.35)
       cloudinary:
-        specifier: ^2.0.2
-        version: 2.0.2
+        specifier: ^2.0.3
+        version: 2.0.3
       eslint:
         specifier: 8.57.0
         version: 8.57.0
@@ -21431,8 +21431,8 @@ packages:
       q: 1.5.1
     dev: false
 
-  /cloudinary@2.0.2:
-    resolution: {integrity: sha512-PQOaoM5W0jSrI1EIcnKAHenT3IMCCTbLkSWlXkXzQlkLBxsJIerinZVWebQqqpwz4etdhvlkfaXmsE9yhYc0Qw==}
+  /cloudinary@2.0.3:
+    resolution: {integrity: sha512-2JPxAUuV4iHwiW4ATSOZvii6+BhhKI9+9KscgUkxJPKa6V6wOnZJHlYyovBGrrIbIgEdmGSZgqEsLfD0wWBhBg==}
     engines: {node: '>=9'}
     dependencies:
       lodash: 4.17.21
