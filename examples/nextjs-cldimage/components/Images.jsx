@@ -3,8 +3,6 @@ import ImagesSection from './ImagesSection';
 
 import { Inter } from 'next/font/google';
 
-import images from '../images.json';
-
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
