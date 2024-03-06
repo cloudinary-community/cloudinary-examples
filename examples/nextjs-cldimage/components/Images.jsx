@@ -41,102 +41,90 @@ export default function Images() {
       </header>
 
       <div className='container mx-auto mb-5 max-w-screen-lg space-y-14 px-4 py-0'>
-        <ImagesSection title='Using Cloudinary Public IDs'>
-          {images.slice(0, 4).map((image) => {
-            return (
-              <li key={image.id}>
-                <CldImage
-                  width={image.width}
-                  height={image.height}
-                  src={image.image}
-                  alt={image.title}
-                  sizes='(max-width: 640px) 100vw,
+        <ImagesSection
+          title='Using Cloudinary Public IDs'
+          renderImage={(image) => (
+            <CldImage
+              width={image.width}
+              height={image.height}
+              src={image.image}
+              alt={image.title}
+              sizes='(max-width: 640px) 100vw,
                       (max-width: 768px) 80vw,
                       (max-width: 1024px) 60vw,
                       50vw'
-                />
-              </li>
-            );
-          })}
-        </ImagesSection>
+            />
+          )}
+        />
 
-        <ImagesSection title='Uniform Cropping'>
-          {images.slice(0, 4).map((image) => {
-            return (
-              <li key={image.id}>
-                <CldImage
-                  width='600'
-                  height='600'
-                  crop='fill'
-                  src={image.image}
-                  alt={image.title}
-                  sizes='(max-width: 640px) 100vw,
+        <ImagesSection
+          title='AI Generative Fill'
+          renderImage={(image) => (
+            <CldImage
+              width={image.height}
+              height={image.width}
+              crop='pad'
+              src={image.image}
+              alt={image.title}
+              fillBackground
+              sizes='(max-width: 640px) 100vw,
                       (max-width: 768px) 80vw,
                       (max-width: 1024px) 60vw,
                       50vw'
-                />
-              </li>
-            );
-          })}
-        </ImagesSection>
+            />
+          )}
+        />
 
-        <ImagesSection title='With Effects'>
-          {images.slice(0, 4).map((image) => {
-            return (
-              <li key={image.id}>
-                <CldImage
-                  width='600'
-                  height='600'
-                  crop={{
-                    crop: 'fill',
-                    source: true,
-                  }}
-                  src={image.image}
-                  alt={image.title}
-                  tint='equalize:80:blue:blueviolet'
-                  blur='1500'
-                  overlays={[
-                    {
-                      text: {
-                        color: 'white',
-                        fontFamily: 'Source Sans Pro',
-                        fontSize: 100,
-                        fontWeight: 'bold',
-                        letterSpacing: 14,
-                        text: image.title,
-                      },
-                    },
-                  ]}
-                  sizes='(max-width: 640px) 100vw,
+        <ImagesSection
+          title='Uniform Cropping'
+          renderImage={(image) => (
+            <CldImage
+              width='600'
+              height='600'
+              crop='fill'
+              src={image.image}
+              alt={image.title}
+              sizes='(max-width: 640px) 100vw,
                       (max-width: 768px) 80vw,
                       (max-width: 1024px) 60vw,
                       50vw'
-                />
-              </li>
-            );
-          })}
-        </ImagesSection>
+            />
+          )}
+        />
 
-        <ImagesSection title='AI Generative Fill'>
-          {images.slice(4, 8).map((image) => {
-            return (
-              <li key={image.id}>
-                <CldImage
-                  width={image.height}
-                  height={image.width}
-                  crop='pad'
-                  src={image.image}
-                  alt={image.title}
-                  fillBackground
-                  sizes='(max-width: 640px) 100vw,
+        <ImagesSection
+          title='With Effects'
+          renderImage={(image) => (
+            <CldImage
+              width='600'
+              height='600'
+              crop={{
+                crop: 'fill',
+                source: true,
+              }}
+              src={image.image}
+              alt={image.title}
+              tint='equalize:80:blue:blueviolet'
+              blur='1500'
+              overlays={[
+                {
+                  text: {
+                    color: 'white',
+                    fontFamily: 'Source Sans Pro',
+                    fontSize: 100,
+                    fontWeight: 'bold',
+                    letterSpacing: 14,
+                    text: image.title,
+                  },
+                },
+              ]}
+              sizes='(max-width: 640px) 100vw,
                       (max-width: 768px) 80vw,
                       (max-width: 1024px) 60vw,
                       50vw'
-                />
-              </li>
-            );
-          })}
-        </ImagesSection>
+            />
+          )}
+        />
 
         <div className='border-t pt-8'>
           <h2 className='mb-3 text-2xl font-bold'>Resources</h2>

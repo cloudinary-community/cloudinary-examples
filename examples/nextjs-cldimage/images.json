@@ -26,33 +26,5 @@
     "image": "samples/bike.jpg",
     "width": 2000,
     "height": 1333
-  },
-  {
-    "id": "car-interior",
-    "title": "Car Interior",
-    "image": "samples/ecommerce/car-interior-design",
-    "width": 2000,
-    "height": 2667
-  },
-  {
-    "id": "boy-snow-hoodie",
-    "title": "Boy",
-    "image": "samples/people/boy-snow-hoodie",
-    "width": 1777,
-    "height": 1332
-  },
-  {
-    "id": "bicycle",
-    "title": "Bicycle",
-    "image": "samples/people/bicycle",
-    "width": 2889,
-    "height": 1926
-  },
-  {
-    "id": "nature-mountains",
-    "title": "Nature Mounts",
-    "image": "samples/landscapes/nature-mountains",
-    "width": 3000,
-    "height": 2000
   }
 ]
