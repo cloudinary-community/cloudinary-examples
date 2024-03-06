@@ -6,11 +6,11 @@ export default function Home() {
   return (
     <>
       <main>
-        <header className='w-full mt-0 px-0 py-4 text-center bg-blue-950 text-white mb-12'>
+        <header className='mb-12 mt-0 w-full bg-blue-950 px-0 py-4 text-center text-white'>
           <h1 className='text-2xl font-semibold'>
             <a
               href='https://next.cloudinary.dev'
-              className='text-blue-200 hover:underline underline-offset-2'
+              className='text-blue-200 underline-offset-2 hover:underline'
               target='_blank'
             >
               Next Cloudinary&apos;s
@@ -20,9 +20,9 @@ export default function Home() {
           </h1>
         </header>
 
-        <div className='container max-w-screen-lg mb-5 py-0 px-4 mx-auto space-y-14'>
+        <div className='container mx-auto mb-5 max-w-screen-lg space-y-14 px-4 py-0'>
           <ImagesSection title='Using Cloudinary Public IDs'>
-            {images.slice(0, 4).map(image => {
+            {images.slice(0, 4).map((image) => {
               return (
                 <li key={image.id}>
                   <CldImage
@@ -41,7 +41,7 @@ export default function Home() {
           </ImagesSection>
 
           <ImagesSection title='Uniform Cropping'>
-            {images.slice(0, 4).map(image => {
+            {images.slice(0, 4).map((image) => {
               return (
                 <li key={image.id}>
                   <CldImage
@@ -61,7 +61,7 @@ export default function Home() {
           </ImagesSection>
 
           <ImagesSection title='With Effects'>
-            {images.slice(0, 4).map(image => {
+            {images.slice(0, 4).map((image) => {
               return (
                 <li key={image.id}>
                   <CldImage
@@ -98,7 +98,7 @@ export default function Home() {
           </ImagesSection>
 
           <ImagesSection title='AI Generative Fill'>
-            {images.slice(4, 8).map(image => {
+            {images.slice(4, 8).map((image) => {
               return (
                 <li key={image.id}>
                   <CldImage
@@ -119,10 +119,10 @@ export default function Home() {
           </ImagesSection>
 
           <div className='border-t'>
-            <h2 className='text-3xl font-bold mt-5'>Resources</h2>
+            <h2 className='mt-5 text-3xl font-bold'>Resources</h2>
             <a
               href='https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage'
-              className='hover:underline text-blue-800'
+              className='text-blue-800 hover:underline'
               target='_blank'
             >
               See the code on github.com.
@@ -131,7 +131,7 @@ export default function Home() {
               Next Cloudinary:{' '}
               <a
                 href='https://next.cloudinary.dev/'
-                className='hover:underline text-blue-800'
+                className='text-blue-800 hover:underline'
                 target='_blank'
               >
                 https://next.cloudinary.dev
@@ -147,8 +147,8 @@ export default function Home() {
 function ImagesSection({ title, children }) {
   return (
     <div>
-      <h2 className='text-2xl font-semibold mb-4 text-indigo-900'>{title}</h2>
-      <ul className='list-none grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12'>
+      <h2 className='mb-4 text-2xl font-semibold text-indigo-900'>{title}</h2>
+      <ul className='grid list-none grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4'>
         {children}
       </ul>
     </div>

@@ -20,7 +20,7 @@ Or [learn more on the docs](https://next-cloudinary.spacejelly.dev/components/cl
 
 ## 🚀 Get Started with This Example
 
-* Install the project dependencies with:
+- Install the project dependencies with:
 
 ```
 yarn install
@@ -28,13 +28,13 @@ yarn install
 npm install
 ```
 
-* Add your cloud name as an environment variable inside `.env.local`:
+- Add your cloud name as an environment variable inside `.env.local`:
 
 ```
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
 ```
 
-* Start the development server with:
+- Start the development server with:
 
 ```
 yarn dev
@@ -42,4 +42,4 @@ yarn dev
 npm run dev
 ```
 
-* Visit the project at <http://localhost:3000>!
+- Visit the project at <http://localhost:3000>!
