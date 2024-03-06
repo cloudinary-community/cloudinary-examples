@@ -1,22 +1,10 @@
-import Head from 'next/head';
 import CldImage from './_components/CldImage';
 
 import images from '../../images.json';
 
-const TITLE = 'Next Cloudinary CldImage Component';
-
 export default function Home() {
   return (
     <>
-      <Head>
-        <title>{TITLE}</title>
-        <meta
-          name='description'
-          content='Find more Cloudinary examples at github.com/colbyfayock/cloudinary-examples'
-        />
-        <link rel='icon' href='/favicon.ico' />
-      </Head>
-
       <main>
         <header className='w-full mt-0 px-0 py-4 text-center bg-blue-950 text-white mb-12'>
           <h1 className='text-2xl font-semibold'>
@@ -32,7 +20,7 @@ export default function Home() {
           </h1>
         </header>
 
-        <div className='container max-w-screen-lg mb-5 py-0 px-4 mx-auto space-y-10'>
+        <div className='container max-w-screen-lg mb-5 py-0 px-4 mx-auto space-y-14'>
           <ImagesSection title='Using Cloudinary Public IDs'>
             {images.slice(0, 4).map(image => {
               return (
@@ -130,8 +118,8 @@ export default function Home() {
             })}
           </ImagesSection>
 
-          <div className='border-t mt-5'>
-            <h2 className='text-3xl font-bold'>Resources</h2>
+          <div className='border-t'>
+            <h2 className='text-3xl font-bold mt-5'>Resources</h2>
             <a
               href='https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage'
               className='hover:underline text-blue-800'
@@ -159,7 +147,7 @@ export default function Home() {
 function ImagesSection({ title, children }) {
   return (
     <div>
-      <h2 className='text-2xl font-bold mb-2'>{title}</h2>
+      <h2 className='text-2xl font-semibold mb-4 text-indigo-900'>{title}</h2>
       <ul className='list-none grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12'>
         {children}
       </ul>
