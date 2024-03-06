@@ -1,6 +1,6 @@
 import '../../styles/globals.css';
 
-import { CldImage } from './_components/cld-image';
+import CldImage from './_components/CldImage';
 import images from '../../images.json';
 import styles from '../../styles/Home.module.css';
 

@@ -3,6 +3,6 @@
 import { CldImage as CldImageDefault } from 'next-cloudinary';
 
 /** @param {import('next-cloudinary').CldImageProps} props */
-export function CldImage(props) {
+export default function CldImage(props) {
   return <CldImageDefault {...props} />;
 }
