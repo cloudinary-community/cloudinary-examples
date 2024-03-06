@@ -1,26 +1,39 @@
-import '../../styles/globals.css';
-
+import Head from 'next/head';
 import CldImage from './_components/CldImage';
-import images from '../../images.json';
-import styles from '../../styles/Home.module.css';
 
-export default function HomePage() {
+import images from '../../images.json';
+
+const TITLE = 'Next Cloudinary CldImage Component';
+
+export default function Home() {
   return (
-    <div>
-      <main className={styles.main}>
-        <header className={styles.header}>
-          <h1>
-            <a href='https://next.cloudinary.dev' target='_blank'>
+    <>
+      <Head>
+        <title>{TITLE}</title>
+        <meta
+          name='description'
+          content='Find more Cloudinary examples at github.com/colbyfayock/cloudinary-examples'
+        />
+        <link rel='icon' href='/favicon.ico' />
+      </Head>
+
+      <main>
+        <header className='w-full mt-0 px-0 py-4 text-center bg-blue-950 text-white mb-12'>
+          <h1 className='text-2xl font-semibold'>
+            <a
+              href='https://next.cloudinary.dev'
+              className='text-blue-200 hover:underline underline-offset-2'
+              target='_blank'
+            >
               Next Cloudinary&apos;s
             </a>
             <br />
-            <code>{`<CldImage />`}</code> Component
+            <code className='font-mono'>{`<CldImage />`}</code> Component
           </h1>
         </header>
 
-        <div className={styles.container}>
-          <h2 className={styles.subtitle}>Using Cloudinary Public IDs</h2>
-          <ul className={styles.images}>
+        <div className='container max-w-screen-lg mb-5 py-0 px-4 mx-auto space-y-10'>
+          <ImagesSection title='Using Cloudinary Public IDs'>
             {images.slice(0, 4).map(image => {
               return (
                 <li key={image.id}>
@@ -37,36 +50,9 @@ export default function HomePage() {
                 </li>
               );
             })}
-          </ul>
-        </div>
+          </ImagesSection>
 
-        <div className={styles.container}>
-          <h2 className={styles.subtitle}>AI Generative Fill</h2>
-          <ul className={styles.images}>
-            {images.slice(4, 8).map(image => {
-              return (
-                <li key={image.id}>
-                  <CldImage
-                    width={image.height}
-                    height={image.width}
-                    crop='pad'
-                    src={image.image}
-                    alt={image.title}
-                    fillBackground
-                    sizes='(max-width: 640px) 100vw,
-                      (max-width: 768px) 80vw,
-                      (max-width: 1024px) 60vw,
-                      50vw'
-                  />
-                </li>
-              );
-            })}
-          </ul>
-        </div>
-
-        <div className={styles.container}>
-          <h2 className={styles.subtitle}>Uniform Cropping</h2>
-          <ul className={styles.images}>
+          <ImagesSection title='Uniform Cropping'>
             {images.slice(0, 4).map(image => {
               return (
                 <li key={image.id}>
@@ -84,12 +70,9 @@ export default function HomePage() {
                 </li>
               );
             })}
-          </ul>
-        </div>
+          </ImagesSection>
 
-        <div className={styles.container}>
-          <h2 className={styles.subtitle}>With Effects</h2>
-          <ul className={styles.images}>
+          <ImagesSection title='With Effects'>
             {images.slice(0, 4).map(image => {
               return (
                 <li key={image.id}>
@@ -124,26 +107,62 @@ export default function HomePage() {
                 </li>
               );
             })}
-          </ul>
-        </div>
+          </ImagesSection>
 
-        <div className={styles.container}>
-          <h2>Resources</h2>
-          <p>
-            <a href='https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage'>
+          <ImagesSection title='AI Generative Fill'>
+            {images.slice(4, 8).map(image => {
+              return (
+                <li key={image.id}>
+                  <CldImage
+                    width={image.height}
+                    height={image.width}
+                    crop='pad'
+                    src={image.image}
+                    alt={image.title}
+                    fillBackground
+                    sizes='(max-width: 640px) 100vw,
+                      (max-width: 768px) 80vw,
+                      (max-width: 1024px) 60vw,
+                      50vw'
+                  />
+                </li>
+              );
+            })}
+          </ImagesSection>
+
+          <div className='border-t mt-5'>
+            <h2 className='text-3xl font-bold'>Resources</h2>
+            <a
+              href='https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/nextjs-cldimage'
+              className='hover:underline text-blue-800'
+              target='_blank'
+            >
               See the code on github.com.
             </a>
-          </p>
-          <ul>
-            <li>
+            <p>
               Next Cloudinary:{' '}
-              <a href='https://next.cloudinary.dev/'>
+              <a
+                href='https://next.cloudinary.dev/'
+                className='hover:underline text-blue-800'
+                target='_blank'
+              >
                 https://next.cloudinary.dev
               </a>
-            </li>
-          </ul>
+            </p>
+          </div>
         </div>
       </main>
+    </>
+  );
+}
+
+function ImagesSection({ title, children }) {
+  return (
+    <div>
+      <h2 className='text-2xl font-bold mb-2'>{title}</h2>
+      <ul className='list-none grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-12'>
+        {children}
+      </ul>
     </div>
   );
 }
