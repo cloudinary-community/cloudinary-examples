@@ -46,7 +46,7 @@ import CldImage from 'components/CldImage';
 <CldImage width="100" height="100" src="<Your Public ID>" alt="My Image" />
 ```
 
-See the component in action at [app/app-demo/page.jsx](app/app-demo/page.jsx).
+See the component in action at [app/app/page.jsx](app/app/page.jsx).
 
 ### More
 
@@ -76,4 +76,4 @@ yarn dev
 npm run dev
 ```
 
-- Visit the Pages Router demo at <http://localhost:3000> or the App Router demo at <http://localhost:3000/app-demo>!
+- Visit the Pages Router demo at <http://localhost:3000> or the App Router demo at <http://localhost:3000/app>!
