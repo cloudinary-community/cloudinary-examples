@@ -6,6 +6,8 @@ View Demo: <https://cloudinary-nextjs-cldimage.netlify.app/>
 
 ## 🧰 Using CldImage in Next.js
 
+### Using the Pages Router
+
 Add an image from Cloudinary using the following:
 
 ```
@@ -14,9 +16,41 @@ import { CldImage } from 'next-cloudinary';
 <CldImage width="100" height="100" src="<Your Public ID>" alt="My Image" />
 ```
 
-See the component in action at [pages/index.js](pages/index.js).
+See the component in action at [pages/index.js](pages/index.jsx).
 
-Or [learn more on the docs](https://next-cloudinary.spacejelly.dev/components/cldimage/basic-usage).
+### Using the App Router
+
+CldImage is a Client component and at this time, doesn't automatically append the
+"use client" directive to the top of the component, meaning, you need to add the
+directive yourself, either in the component/page you're using CldImage, or by
+creating your own light component wrapper (recommended).
+
+Create a new file `components/CldImage.jsx` and inside add:
+
+```jsx
+'use client';
+
+import { CldImage as CldImageDefault } from 'next-cloudinary';
+
+/** @param {import('next-cloudinary').CldImageProps} props  */
+export default function CldImage(props) {
+  return <CldImageDefault {...props} />;
+}
+```
+
+Then you can import this component and use it as you normally would:
+
+```
+import CldImage from 'components/CldImage';
+
+<CldImage width="100" height="100" src="<Your Public ID>" alt="My Image" />
+```
+
+See the component in action at [app/app-demo/page.jsx](app/app-demo/page.jsx).
+
+### More
+
+Learn more on the [Next Cloudinary docs](https://next-cloudinary.spacejelly.dev/components/cldimage/basic-usage).
 
 ## 🚀 Get Started with This Example
 
@@ -42,4 +76,4 @@ yarn dev
 npm run dev
 ```
 
-- Visit the project at <http://localhost:3000>!
+- Visit the Pages Router demo at <http://localhost:3000> or the App Router demo at <http://localhost:3000/app-demo>!
