@@ -54,8 +54,8 @@ export default function Home() {
   return (
     <div className="container mx-auto mb-5 max-w-screen-lg space-y-5 px-4 py-0">
       <h2 className="text-lg font-semibold text-indigo-900">Card Preview</h2>
-      <blockquote class="relative border-s-4 ps-4 sm:ps-6 dark:border-gray-700">
-        <p class="text-gray-800">
+      <blockquote className="relative border-s-4 ps-4 sm:ps-6 dark:border-gray-700">
+        <p className="text-gray-800">
           <em>
             In Next.js App Router,{' '}
             <b>the metadata is set outside the component</b> unlike in pages
