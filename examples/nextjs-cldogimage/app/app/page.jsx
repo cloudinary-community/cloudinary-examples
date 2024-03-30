@@ -54,6 +54,27 @@ export default function Home() {
   return (
     <div className="container mx-auto mb-5 max-w-screen-lg space-y-5 px-4 py-0">
       <h2 className="text-lg font-semibold text-indigo-900">Card Preview</h2>
+      <blockquote class="relative border-s-4 ps-4 sm:ps-6 dark:border-gray-700">
+        <p class="text-gray-800">
+          <em>
+            In Next.js App Router,{' '}
+            <b>the metadata is set outside the component</b> unlike in pages
+            router where the {`<Head>`} component is used to set metadata.
+            Therefore, Instead of the {`<CldOgImage />`} component,{' '}
+            <b>
+              the {`getCldOgImageUrl`} function is used to generate the Open
+              Graph image URL.
+            </b>{' '}
+            <a
+              target="_blank"
+              href="https://next.cloudinary.dev/getcldogimageurl/basic-usage"
+              className="text-blue-800 hover:text-blue-700 hover:underline"
+            >
+              Docs
+            </a>
+          </em>
+        </p>
+      </blockquote>
       <div className="max-w-[600px]">
         {/* Values cut in half for smaller image file size */}
         <CldImage
