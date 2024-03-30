@@ -8,12 +8,6 @@ const inter = Inter({
   weight: ['400', '700'],
 });
 
-export const metadata = {
-  title: 'Next Cloudinary CldOgImage Component',
-  description:
-    'Find more Cloudinary examples at github.com/cloudinary-community/cloudinary-examples',
-};
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">

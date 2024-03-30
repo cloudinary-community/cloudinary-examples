@@ -36,6 +36,9 @@ const url = getCldOgImageUrl({
 
 /** @type {import('next').Metadata} */
 export const metadata = {
+  title: 'Next Cloudinary CldOgImage Component',
+  description:
+    'Find more Cloudinary examples at github.com/cloudinary-community/cloudinary-examples',
   openGraph: {
     images: [
       {
