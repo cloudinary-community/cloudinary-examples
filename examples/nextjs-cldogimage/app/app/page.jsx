@@ -1,5 +1,5 @@
-import CldImage from '../../components/CldImage';
-import Footer from '../../components/Footer';
+import CldImage from '@/components/CldImage';
+import Footer from '@/components/Footer';
 import { getCldOgImageUrl } from 'next-cloudinary';
 
 const url = getCldOgImageUrl({
@@ -87,7 +87,7 @@ export default function Home() {
             source: true,
           }}
           src="samples/animals/reindeer"
-          alt="Jellyfish Swimming in the Darkness"
+          alt="Reindeer roaming in snow"
           overlays={[
             {
               position: {

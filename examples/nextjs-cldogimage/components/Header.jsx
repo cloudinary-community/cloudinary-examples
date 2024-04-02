@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ isAppRouter }) {
   return (
     <header className="mb-12 mt-0 w-full bg-blue-950 py-4 text-center text-white">
       <div className="mx-auto flex max-w-screen-lg flex-col items-center justify-between px-4 sm:flex-row">
@@ -10,7 +10,9 @@ export default function Header() {
           >
             Next Cloudinary
           </a>
-          <code className="font-mono text-lg">{`<CldOgImage />`}</code>
+          <code className="font-mono text-lg">
+            {isAppRouter ? `getCldOgImageUrl` : `<CldOgImage />`}
+          </code>
         </h1>
         <ul>
           <li>

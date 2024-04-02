@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 import { CldImage, CldOgImage } from 'next-cloudinary';
 
-import Footer from '../components/Footer';
+import Footer from '@/components/Footer';
 
 const TITLE = 'Next Cloudinary CldOgImage Component';
 
