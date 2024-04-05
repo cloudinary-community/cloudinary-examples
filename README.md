@@ -34,6 +34,8 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Tina](#tina)
 - [Vue](#vue)
 
+**This is a community project supported by the Cloudinary Developer Experience team.**
+
 ## 🧰 Examples
 
 ### .NET
