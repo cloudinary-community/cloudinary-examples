@@ -14,18 +14,15 @@ export default function Header({ isAppRouter }) {
             {isAppRouter ? `getCldOgImageUrl` : `<CldOgImage />`}
           </code>
         </h1>
-        <ul>
-          <li>
-            <a
-              className="flex items-center gap-2 text-sm"
-              href="https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/nextjs-cldogimage"
-              target="_blank"
-            >
-              <GitHubIcon />
-              View on GitHub
-            </a>
-          </li>
-        </ul>
+
+        <a
+          className="flex items-center gap-2 text-sm"
+          href="https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/nextjs-cldogimage"
+          target="_blank"
+        >
+          <GitHubIcon />
+          View on GitHub
+        </a>
       </div>
     </header>
   );
