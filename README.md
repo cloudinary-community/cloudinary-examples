@@ -161,6 +161,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 - [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-product-gallery)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-upload-widget-preset)
+- [Video Preview](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-video-preview)
 
 ### Ruby
 
