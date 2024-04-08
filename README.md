@@ -1,9 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-
 [![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
-
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -181,7 +179,6 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/svelte-product-gallery)
 
 ### SvelteKit
-
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset)
 - [Svelte Cloudinary - CldImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-cldimage)
 - [Svelte Cloudinary - CldUploadWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-cldimage)
@@ -202,6 +199,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-product-gallery)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-upload-widget-preset)
 
+
 ## 🧐 Not seeing an example?
 
 [Create an issue](https://github.com/colbyfayock/cloudinary-examples/issues/new) detailing the project and how Cloudinary would integrate.
@@ -210,7 +208,7 @@ If the use case seems like it would be broadly helpful for others as well, I'll 
 
 ## 🛠️ Contributing
 
-Each project is independently maintained, though uses pnpm workspaces for dependency management.
+Each project is independently maintained, though uses pnpm workspaces for dependency management. 
 
 To create a new example, first check if an existing example is avaiable for the given framework. If so, it's recommended to copy the directory for your new example to maintain consistency between the examples.
 
@@ -269,6 +267,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://dillionmegida.com"><img src="https://avatars.githubusercontent.com/u/42855542?v=4?s=100" width="100px;" alt="Dillion Megida"/><br /><sub><b>Dillion Megida</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=dillionmegida" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/santoshyadavdev"><img src="https://avatars.githubusercontent.com/u/11923975?v=4?s=100" width="100px;" alt="Santosh Yadav"/><br /><sub><b>Santosh Yadav</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=santoshyadavdev" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://usmans.me"><img src="https://avatars.githubusercontent.com/u/51731966?v=4?s=100" width="100px;" alt="Usman S. (Max Programming)"/><br /><sub><b>Usman S. (Max Programming)</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=max-programming" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ahaywood"><img src="https://avatars.githubusercontent.com/u/212300?v=4?s=100" width="100px;" alt="Amy Dutton"/><br /><sub><b>Amy Dutton</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=ahaywood" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
