@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-34-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -267,7 +267,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="http://dillionmegida.com"><img src="https://avatars.githubusercontent.com/u/42855542?v=4?s=100" width="100px;" alt="Dillion Megida"/><br /><sub><b>Dillion Megida</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=dillionmegida" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://github.com/santoshyadavdev"><img src="https://avatars.githubusercontent.com/u/11923975?v=4?s=100" width="100px;" alt="Santosh Yadav"/><br /><sub><b>Santosh Yadav</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=santoshyadavdev" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://usmans.me"><img src="https://avatars.githubusercontent.com/u/51731966?v=4?s=100" width="100px;" alt="Usman S. (Max Programming)"/><br /><sub><b>Usman S. (Max Programming)</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=max-programming" title="Code">💻</a></td>
-      <td align="center" valign="top" width="14.28%"><a href="https://github.com/ahaywood"><img src="https://avatars.githubusercontent.com/u/212300?v=4?s=100" width="100px;" alt="Amy Dutton"/><br /><sub><b>Amy Dutton</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=ahaywood" title="Code">💻</a></td>
+      <td align="center" valign="top" width="14.28%"><a href="https://shlidor.me/"><img src="https://avatars.githubusercontent.com/u/346835?v=4?s=100" width="100px;" alt="Tsachi Shlidor"/><br /><sub><b>Tsachi Shlidor</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=tsi" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
