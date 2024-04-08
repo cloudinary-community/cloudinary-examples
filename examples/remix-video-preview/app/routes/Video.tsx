@@ -1,6 +1,13 @@
-import { AdvancedImage, AdvancedVideo, lazyload } from "@cloudinary/react";
-import { cld } from "~/lib/cloudinary";
-import { useRef } from "react";
+import { useRef } from 'react';
+import { Cloudinary } from '@cloudinary/url-gen';
+import { preview } from '@cloudinary/url-gen/actions/videoEdit';
+import { AdvancedImage, AdvancedVideo, lazyload } from '@cloudinary/react';
+
+const cld = new Cloudinary({
+  cloud: {
+    cloudName: 'ahha'
+  }
+});
 
 interface VideoProps {
   video: {
@@ -16,12 +23,10 @@ const Video = ({ video }: VideoProps) => {
   const playerRef = useRef<AdvancedVideo>(null);
 
   const onMouseOver = () => {
-    console.log("onMouseOver");
     playerRef?.current?.videoRef.current?.play();
   };
 
   const onMouseOut = () => {
-    console.log("onMouseOut");
     playerRef?.current?.videoRef.current?.pause();
   };
 
@@ -37,9 +42,9 @@ const Video = ({ video }: VideoProps) => {
         className="w-full h-auto z-20 relative group-hover:opacity-0 transition-opacity duration-300 rounded-md"
         cldImg={cld
           .image(video.id)
-          .setAssetType("video")
-          .delivery("q_auto")
-          .format("auto:image")}
+          .setAssetType('video')
+          .quality('auto')
+          .format('auto:image')}
       />
       <AdvancedVideo
         className="absolute inset-0 z-10 w-full h-auto rounded-md"
@@ -47,9 +52,9 @@ const Video = ({ video }: VideoProps) => {
         muted
         cldVid={cld
           .video(video.id)
-          .effect("e_preview:duration_4")
-          .delivery("q_auto")
-          .format("auto")}
+          .videoEdit(preview().duration(4))
+          .quality('auto')
+          .format('auto')}
         plugins={[lazyload()]}
       />
       <p className="text-left py-2">
