@@ -1,7 +1,9 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
+
 [![All Contributors](https://img.shields.io/badge/all_contributors-33-orange.svg?style=flat-square)](#contributors-)
+
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -161,6 +163,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 - [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-product-gallery)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-upload-widget-preset)
+- [Video Preview](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/remix-video-preview)
 
 ### Ruby
 
@@ -178,6 +181,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/svelte-product-gallery)
 
 ### SvelteKit
+
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-upload-widget-preset)
 - [Svelte Cloudinary - CldImage](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-cldimage)
 - [Svelte Cloudinary - CldUploadWidget](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/sveltekit-cldimage)
@@ -198,7 +202,6 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Cloudinary Product Gallery](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-product-gallery)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/vue-upload-widget-preset)
 
-
 ## 🧐 Not seeing an example?
 
 [Create an issue](https://github.com/colbyfayock/cloudinary-examples/issues/new) detailing the project and how Cloudinary would integrate.
@@ -207,7 +210,7 @@ If the use case seems like it would be broadly helpful for others as well, I'll 
 
 ## 🛠️ Contributing
 
-Each project is independently maintained, though uses pnpm workspaces for dependency management. 
+Each project is independently maintained, though uses pnpm workspaces for dependency management.
 
 To create a new example, first check if an existing example is avaiable for the given framework. If so, it's recommended to copy the directory for your new example to maintain consistency between the examples.
 
