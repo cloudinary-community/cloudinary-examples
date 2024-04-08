@@ -5,7 +5,7 @@ import { AdvancedImage, AdvancedVideo, lazyload } from '@cloudinary/react';
 
 const cld = new Cloudinary({
   cloud: {
-    cloudName: 'ahha'
+    cloudName: 'cloudinary-examples'
   }
 });
 
