@@ -1,5 +1,6 @@
 import Header from '@/components/Header';
 import { Inter } from 'next/font/google';
+import { Toaster } from 'sonner';
 import '../styles/globals.css';
 
 const inter = Inter({
@@ -12,6 +13,7 @@ function MyApp({ Component, pageProps }) {
   return (
     <main className={inter.className}>
       <Header />
+      <Toaster richColors position="top-right" />
       <Component {...pageProps} />
     </main>
   );

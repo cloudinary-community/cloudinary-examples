@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import { CldUploadButton } from 'next-cloudinary';
 import { CloudUpload } from 'lucide-react';
+import { toast } from 'sonner';
 
 import Footer from '@/components/Footer';
 
@@ -12,6 +13,7 @@ export default function Home() {
   const [error, setError] = useState();
 
   function handleSuccess(result, widget) {
+    toast.success('Media successfully uploaded');
     setInfo(result?.info);
     widget.close({
       quiet: true,
@@ -19,6 +21,7 @@ export default function Home() {
   }
 
   function handleError(error, _widget) {
+    toast.error(error.statusText);
     setError(error);
   }
 
@@ -56,7 +59,7 @@ export default function Home() {
           Upload
         </CldUploadButton>
 
-        {error && <p>{error.status}</p>}
+        {error && <p>{error.statusText}</p>}
 
         {info && (
           <>
