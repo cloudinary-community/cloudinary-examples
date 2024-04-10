@@ -30,17 +30,6 @@ export default function Footer() {
           https://next.cloudinary.dev
         </a>
       </p>
-      <p>
-        Preview the working card at{' '}
-        <a
-          href="https://www.opengraph.xyz/url/https%3A%2F%2Fcloudinary-nextjs-cldogimage.netlify.app%2F"
-          className="text-blue-800 hover:underline"
-          target="_blank"
-          rel="noreferrer"
-        >
-          https://opengraph.xyz
-        </a>
-      </p>
     </div>
   );
 }
