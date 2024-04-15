@@ -11,6 +11,7 @@ export default function Uploader() {
   function handleSuccess(result, widget) {
     toast.success('Media successfully uploaded');
     setInfo(result?.info);
+    setError(null);
     widget.close({
       quiet: true,
     });
@@ -18,6 +19,7 @@ export default function Uploader() {
 
   function handleError(error, _widget) {
     toast.error(error.statusText);
+    setInfo(null);
     setError(error);
   }
 
