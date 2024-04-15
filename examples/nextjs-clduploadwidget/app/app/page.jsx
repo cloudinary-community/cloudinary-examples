@@ -3,7 +3,7 @@ import Uploader from '@/components/Uploader';
 
 /** @type {import('next').Metadata} */
 export const metadata = {
-  title: 'Next Cloudinary CldUploadButton Component',
+  title: 'Next Cloudinary CldUploadWidget Component',
   description:
     'Find more Cloudinary examples at github.com/cloudinary-community/cloudinary-examples',
 };
