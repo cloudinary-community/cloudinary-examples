@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <div className="border-t pt-8">
+    <div className="pt-8">
       <h2 className="mb-3 text-2xl font-bold">Resources</h2>
       <p className="mb-2">
         <a
