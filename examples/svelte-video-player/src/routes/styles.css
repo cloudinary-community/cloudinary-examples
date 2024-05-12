@@ -1,0 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 100px;
+  background-color: #333;
+  font-family: Poppins;
+}
+
+.container {
+  max-width: 1000px;
+  padding: 20px;
+  margin: 0 auto;
+}
