@@ -1,0 +1,49 @@
+---
+import Layout from "../layouts/Layout.astro";
+import { Image } from "astro:assets";
+import phoneImage from "../images/phone-4.jpg";
+import { products, people } from "../demo";
+import CldImage from "../components/CldImage.astro";
+---
+
+<Layout title="Welcome to Astro.">
+	<main>
+		<!-- <Image
+      height={300}
+			width={300}
+			src="https://res.cloudinary.com/dillionmegida/image/upload/v1706175059/astro/phone-4.jpg"
+			alt="A hand holding a flip phone"
+		/> -->
+		<div class="products container">
+			{
+        products.map((product) => (
+          <CldImage
+            height={500}
+            width={400}
+            alt={product.alt}
+            public_id={product.public_id}
+          />
+        ))
+      }
+			<!-- {
+			people.map((product) => (
+				<CldImage
+					height={500}
+					width={400}
+					alt={product.alt}
+					public_id={product.public_id}
+				/>
+			))
+		} -->
+		</div>
+	</main>
+</Layout>
+
+<style>
+	.products {
+		display: grid;
+		gap: 40px;
+		/* grid-template-columns: repeat(3, minmax(0, 1fr)); */
+		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+</style>

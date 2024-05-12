@@ -1,0 +1,67 @@
+---
+import { Image } from "astro:assets";
+import { Cloudinary, Transformation } from "@cloudinary/url-gen";
+import { source } from "@cloudinary/url-gen/actions/overlay";
+import { text } from "@cloudinary/url-gen/qualifiers/source";
+import { TextStyle } from "@cloudinary/url-gen/qualifiers/textStyle";
+import { Position } from "@cloudinary/url-gen/qualifiers";
+import { compass, focusOn } from "@cloudinary/url-gen/qualifiers/gravity";
+import { byAngle } from "@cloudinary/url-gen/actions/rotate";
+import { fill } from "@cloudinary/url-gen/actions/resize";
+import { FocusOn } from "@cloudinary/url-gen/qualifiers/focusOn";
+import { pixelate, blur } from "@cloudinary/url-gen/actions/effect";
+
+const cld = new Cloudinary({
+	cloud: {
+		cloudName: import.meta.env.cloudName,
+	},
+	url: {
+		secure: true,
+	},
+});
+
+interface Props {
+	public_id: string;
+	alt: string;
+	height: number;
+	width: number;
+}
+
+const { public_id, alt, height, width } = Astro.props;
+
+const myImage = cld.image(public_id);
+
+// auto format and quality
+myImage.format("auto").quality("auto");
+
+// transformation for products
+// myImage.resize(fill().width(1000).height(1000)).overlay(
+// 	source(
+// 		text(
+// 			"SOLD",
+// 			new TextStyle("Poppins", 150).fontWeight("bold").letterSpacing(-4)
+// 		)
+// 			.textColor("#fff")
+// 			.transformation(new Transformation().rotate(byAngle(-20)))
+// 	).position(new Position().gravity(compass("center")))
+// );
+
+// transformation for people
+myImage.resize(fill().width(1000).height(1000).gravity(focusOn(FocusOn.face())));
+
+// effects and filters
+myImage.effect(pixelate()).effect(blur(2000));
+
+const imgSrc = myImage.toURL();
+---
+
+<div>
+	<Image alt={alt} src={imgSrc} width={width} height={height} />
+</div>
+
+<style>
+	img {
+		object-fit: cover;
+		width: 100%;
+	}
+</style>
