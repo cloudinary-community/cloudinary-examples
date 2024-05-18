@@ -1,7 +1,6 @@
 import Head from 'next/head';
 import { useState } from 'react';
 import { CldUploadWidget, CldImage, CldVideoPlayer } from 'next-cloudinary';
-import { toast } from 'sonner';
 
 import Footer from '@/components/Footer';
 
@@ -12,7 +11,6 @@ export default function Home() {
   const [error, setError] = useState();
 
   function handleSuccess(result, widget) {
-    toast.success('Media successfully uploaded');
     setInfo(result?.info);
     setError(null);
     widget.close({
@@ -21,7 +19,6 @@ export default function Home() {
   }
 
   function handleError(error, _widget) {
-    toast.error(error.statusText);
     setInfo(null);
     setError(error);
   }

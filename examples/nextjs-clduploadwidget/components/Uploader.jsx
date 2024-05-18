@@ -2,14 +2,12 @@
 
 import { CldUploadWidget, CldImage, CldVideoPlayer } from 'next-cloudinary';
 import { useState } from 'react';
-import { toast } from 'sonner';
 
 export default function Uploader() {
   const [info, setInfo] = useState();
   const [error, setError] = useState();
 
   function handleSuccess(result, widget) {
-    toast.success('Media successfully uploaded');
     setInfo(result?.info);
     setError(null);
     widget.close({
@@ -18,7 +16,6 @@ export default function Uploader() {
   }
 
   function handleError(error, _widget) {
-    toast.error(error.statusText);
     setInfo(null);
     setError(error);
   }
