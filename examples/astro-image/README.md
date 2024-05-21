@@ -6,7 +6,7 @@ To run this example, first you have to upload the images in [demo.js](./src/demo
 
 ```bash
 # .env
-CLOUDNAME=...
+CLOUDINARY_CLOUD_NAME=...
 ```
 
 Then you can run `npm run dev`.

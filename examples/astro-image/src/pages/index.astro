@@ -4,6 +4,27 @@ import { Image } from "astro:assets";
 import phoneImage from "../images/phone-4.jpg";
 import { products, people } from "../demo";
 import CldImage from "../components/CldImage.astro";
+
+// @TODO organize images using only default samples provided in Cloudinary accounts
+
+const images = [
+	{
+		public_id: "samples/balloons",
+		alt: "Hot air baloon"
+	},
+	{
+		public_id: "samples/breakfast",
+		alt: "Breakfast food"
+	},
+	{
+		public_id: "samples/chair-and-coffee-table",
+		alt: "Chair with coffee table and plant"
+	},
+	{
+		public_id: "samples/coffee",
+		alt: "Coffee equipment on a table"
+	},
+]
 ---
 
 <Layout title="Welcome to Astro.">
@@ -16,7 +37,7 @@ import CldImage from "../components/CldImage.astro";
 		/> -->
 		<div class="products container">
 			{
-        products.map((product) => (
+        images.map((product) => (
           <CldImage
             height={500}
             width={400}

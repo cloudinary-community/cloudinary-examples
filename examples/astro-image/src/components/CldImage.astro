@@ -13,7 +13,7 @@ import { pixelate, blur } from "@cloudinary/url-gen/actions/effect";
 
 const cld = new Cloudinary({
 	cloud: {
-		cloudName: import.meta.env.cloudName,
+		cloudName: import.meta.env.CLOUDINARY_CLOUD_NAME,
 	},
 	url: {
 		secure: true,
@@ -35,22 +35,22 @@ const myImage = cld.image(public_id);
 myImage.format("auto").quality("auto");
 
 // transformation for products
-// myImage.resize(fill().width(1000).height(1000)).overlay(
-// 	source(
-// 		text(
-// 			"SOLD",
-// 			new TextStyle("Poppins", 150).fontWeight("bold").letterSpacing(-4)
-// 		)
-// 			.textColor("#fff")
-// 			.transformation(new Transformation().rotate(byAngle(-20)))
-// 	).position(new Position().gravity(compass("center")))
-// );
+myImage.resize(fill().width(1000).height(1000)).overlay(
+	source(
+		text(
+			"EXAMPLE",
+			new TextStyle("Poppins", 150).fontWeight("bold").letterSpacing(-4)
+		)
+			.textColor("#fff")
+			.transformation(new Transformation().rotate(byAngle(-20)))
+	).position(new Position().gravity(compass("center")))
+);
 
 // transformation for people
-myImage.resize(fill().width(1000).height(1000).gravity(focusOn(FocusOn.face())));
+// myImage.resize(fill().width(1000).height(1000).gravity(focusOn(FocusOn.face())));
 
 // effects and filters
-myImage.effect(pixelate()).effect(blur(2000));
+// myImage.effect(pixelate()).effect(blur(2000));
 
 const imgSrc = myImage.toURL();
 ---
