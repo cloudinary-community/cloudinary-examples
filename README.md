@@ -1,7 +1,7 @@
 # Cloudinary Examples
 
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-35-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-36-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
@@ -269,6 +269,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
       <td align="center" valign="top" width="14.28%"><a href="https://usmans.me"><img src="https://avatars.githubusercontent.com/u/51731966?v=4?s=100" width="100px;" alt="Usman S. (Max Programming)"/><br /><sub><b>Usman S. (Max Programming)</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=max-programming" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="https://shlidor.me/"><img src="https://avatars.githubusercontent.com/u/346835?v=4?s=100" width="100px;" alt="Tsachi Shlidor"/><br /><sub><b>Tsachi Shlidor</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=tsi" title="Code">💻</a></td>
       <td align="center" valign="top" width="14.28%"><a href="http://selfteach.me"><img src="https://avatars.githubusercontent.com/u/212300?v=4?s=100" width="100px;" alt="Amy Haywood Dutton"/><br /><sub><b>Amy Haywood Dutton</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=ahaywood" title="Code">💻</a></td>
+    </tr>
+    <tr>
+      <td align="center" valign="top" width="14.28%"><a href="https://bradgarropy.com"><img src="https://avatars.githubusercontent.com/u/11336745?v=4?s=100" width="100px;" alt="Brad Garropy"/><br /><sub><b>Brad Garropy</b></sub></a><br /><a href="https://github.com/cloudinary-community/cloudinary-examples/commits?author=bradgarropy" title="Code">💻</a></td>
     </tr>
   </tbody>
 </table>
