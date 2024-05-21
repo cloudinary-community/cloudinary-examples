@@ -22,7 +22,7 @@
   height={1080}
   src="samples/cld-sample-video"
   transformation={{
-    overlay: "samples:svelte-logo",
+    overlay: "samples:cloudinary-icon",
     width: 200,
     gravity: "south_east",
     x: 150,
