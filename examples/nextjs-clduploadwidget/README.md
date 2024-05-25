@@ -28,7 +28,7 @@ See the component in action at [pages/index.jsx](pages/index.jsx).
 
 ### Using the App Router
 
-> Make sure to put `"use client"` directive at the top of the component when you use `<CldUploadButton />`
+> Make sure to put `"use client"` directive at the top of the component when you use `<CldUploadWidget />`
 
 ```jsx
 "use client"
