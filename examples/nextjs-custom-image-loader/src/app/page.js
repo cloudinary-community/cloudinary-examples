@@ -19,14 +19,33 @@ export default function Home() {
         priority
       />
 
-      {/* Next.js Image with Cloudinary loader */}
+      {/* Next.js Image with loader prop */}
       <NextImage
         width={640}
         height={360}
-        src="bridge"
+        src="bridge.jpg"
         alt="a photo of a bridge"
         priority
+        loader={({ src, width, quality }) => {
+          const params = [
+            "f_auto",
+            "c_limit",
+            `w_${width}`,
+            `q_${quality || "auto"}`,
+          ];
+          return `https://res.cloudinary.com/${process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME}/image/upload/${params.join(",")}/${src}`;
+        }}
       />
+
+      {/* Next.js Image with Cloudinary loader */}
+      {/* Uncomment the images property in next.jconfig.mjs for this component to work. */}
+      {/* <NextImage
+         width={640}
+         height={360}
+         src="bridge"
+         alt="a photo of a bridge"
+         priority
+      /> */}
 
       {/* Basic CldImage component usage */}
       <CldImage
