@@ -5,6 +5,7 @@ import { generativeFill } from '@cloudinary/url-gen/qualifiers/background';
 import './App.css';
 
 import images from './images.json';
+import { getPage } from '@cloudinary/url-gen/actions/extract';
 
 const cld = new Cloudinary({
   cloud: {
@@ -239,12 +240,31 @@ function App() {
       </div>
 
       <div className="container">
+        <h2>Motion Removal</h2>
+        <p>Using <code>pg_1</code> to grab the first frame.</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['working-penguin'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .extract(getPage().byNumber(1))
+                              .quality('auto')
+                              .format('auto')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div className="container">
         <h2>Resources</h2>
         <p>
           <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-transformations-effects">See the code on github.com.</a>
         </p>
         <ul>
-          {images.slice(0, 4).map(image => {
+          {images.map(image => {
             return (
               <li key={image.id}>
                 { image.title }: <a href={image.link} rel="noreferrer">{image.link}</a>
