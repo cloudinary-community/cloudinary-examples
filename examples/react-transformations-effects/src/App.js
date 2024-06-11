@@ -1,10 +1,15 @@
 import { Cloudinary } from '@cloudinary/url-gen';
 import { pad } from '@cloudinary/url-gen/actions/resize';
 import { generativeFill } from '@cloudinary/url-gen/qualifiers/background';
+import {TextStyle} from "@cloudinary/url-gen/qualifiers/textStyle"
 
 import './App.css';
 
 import images from './images.json';
+import { source } from '@cloudinary/url-gen/actions/overlay';
+import { text } from '@cloudinary/url-gen/qualifiers/source';
+import { Position } from '@cloudinary/url-gen/qualifiers';
+import { compass } from '@cloudinary/url-gen/qualifiers/gravity';
 
 const cld = new Cloudinary({
   cloud: {
@@ -239,12 +244,66 @@ function App() {
       </div>
 
       <div className="container">
+        <h2>Text Overlay</h2>
+        <p>Overlay text with styles (<code>co_white,l_text:Verdana_75_bold</code>).</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['guitar-player', 'model', 'earth'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .quality('auto')
+                              .format('auto')
+                              .overlay(
+                                source(
+                                    text(
+                                        image.title,
+                                        new TextStyle("Verdana", 75).fontWeight("bold"),
+                                    ).textColor("white"),
+                                ),
+                              )
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+        <p>With position (<code>g_south,y_20</code>).</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['guitar-player', 'model', 'earth'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .quality('auto')
+                              .format('auto')
+                              .overlay(
+                                source(
+                                    text(
+                                        image.title,
+                                        new TextStyle("Verdana", 75).fontWeight("bold"),
+                                    ).textColor("white"),
+                                ).position(
+                                  new Position()
+                                      .gravity(compass("south"))
+                                      .offsetY(20),
+                                ),
+                              )
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div className="container">
         <h2>Resources</h2>
         <p>
           <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-transformations-effects">See the code on github.com.</a>
         </p>
         <ul>
-          {images.slice(0, 4).map(image => {
+          {images.map(image => {
             return (
               <li key={image.id}>
                 { image.title }: <a href={image.link} rel="noreferrer">{image.link}</a>
