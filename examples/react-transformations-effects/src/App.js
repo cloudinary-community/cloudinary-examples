@@ -241,6 +241,20 @@ function App() {
 
       <div className="container">
         <h2>Motion Removal</h2>
+        <p>Original</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['working-penguin'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .quality('auto')
+                              .format('auto')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
         <p>Using <code>pg_1</code> to grab the first frame.</p>
         <ul className="images">
           {images.filter(({ id }) => ['working-penguin'].includes(id)).map(image => {
