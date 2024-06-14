@@ -1,12 +1,12 @@
 import {Cloudinary} from "@cloudinary/url-gen"
 import type { LinksFunction, MetaFunction } from "@remix-run/node";
 import images from '../images.json';
-import baseStyles from "../base.css?url"
-import appStyles from "../app.css?url"
+import baseStyles from "../styles/base.css?url"
+import appStyles from "../styles/app.css?url"
 
 const cld = new Cloudinary({
   cloud: {
-    cloudName: "bradgarropy"
+    cloudName: "cloudinary-example"
   }
 });
 
