@@ -19,7 +19,7 @@ export default function HomePage() {
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <div className="container mx-auto mb-5 max-w-screen-lg space-y-5 px-4 py-0">
+      <div className="container mx-auto mb-5 max-w-screen-lg space-y-8 px-4 py-0">
         <h2 className="text-center text-lg font-semibold">
           Below is the demo to generate caption of an image using the{' '}
           <a
@@ -56,7 +56,7 @@ export default function HomePage() {
 
           {result ? (
             <>
-              <blockquote className="relative border-s-4 border-indigo-700 ps-4 sm:ps-6">
+              <blockquote className="relative border-s-4 border-indigo-700 ps-4 sm:ps-6 my-12">
                 <p className="text-neutral-800 sm:text-lg">
                   Caption:{' '}
                   <em className="font-bold text-indigo-800">

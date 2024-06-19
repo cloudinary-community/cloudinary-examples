@@ -37,12 +37,10 @@ export default function Uploader() {
 
       {result ? (
         <>
-          <blockquote className="relative border-s-4 border-indigo-700 ps-4 sm:ps-6">
-            <p className="text-neutral-800 sm:text-lg">
-              Caption:{' '}
-              <em className="font-bold text-indigo-800">
-                {result.context.custom.alt}
-              </em>
+          <blockquote className="relative border-s-4 border-indigo-700 ps-4 sm:ps-6 my-12">
+            <p className="flex gap-2 text-neutral-800 sm:text-lg">
+              <span>Caption:</span>
+              <em>{result.context.custom.alt}</em>
             </p>
           </blockquote>
           <CldImage
