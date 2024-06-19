@@ -251,6 +251,16 @@ importers:
         specifier: ^3.3.2
         version: 3.6.5
 
+  examples/javascript-image-upload-fetch:
+    dependencies:
+      '@cloudinary/url-gen':
+        specifier: ^1.19.0
+        version: 1.19.0
+    devDependencies:
+      vite:
+        specifier: ^5.2.0
+        version: 5.2.11
+
   examples/laravel-image-upload:
     devDependencies:
       axios:
