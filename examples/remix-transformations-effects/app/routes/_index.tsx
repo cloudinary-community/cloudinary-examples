@@ -6,7 +6,7 @@ import appStyles from "../styles/app.css?url"
 
 const cld = new Cloudinary({
   cloud: {
-    cloudName: "cloudinary-example"
+    cloudName: "<Your Cloud Name>"
   }
 });
 
