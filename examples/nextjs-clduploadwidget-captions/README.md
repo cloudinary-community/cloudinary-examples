@@ -1,12 +1,14 @@
 # CldUploadWidget (captions) for Cloudinary Images in Next.js
 
-Add captions automatically to your images with the power of AI using the CldUploadWidget component.
+Easily add AI-generated captions to your Cloudinary images using the `CldUploadWidget` component in Next.js and Cloudinary's AI Content Analysis feature.
+
+> Make sure to enable **Cloudinary AI Content Analysis** Add-on in your Cloudinary account to use this feature.
 
 ## 🧰 Using CldUploadWidget in Next.js to enable captions
 
-If using captions via the API you would need to add the options prop with an object of `{detection: 'captioning'}` to the CldUploadWidget component:
+If using captions via the API you would need to add the options prop with an object of `{ detection: 'captioning' }` to the CldUploadWidget component:
 
-```jsx
+```tsx
 import { CldUploadWidget } from 'next-cloudinary';
 
 <CldUploadWidget
@@ -15,7 +17,7 @@ import { CldUploadWidget } from 'next-cloudinary';
   }}
 >
   {({ open }) => <button onClick={() => open()}>Upload an Image</button>}
-</CldUploadWidget>;
+</CldUploadWidget>
 ```
 
 Using captioning via the API requires a signature using the signatureEndpoint prop with a POST request to the Cloudinary API. You can look at the code for the route param in the Next Cloudinary documentation [https://next.cloudinary.dev/clduploadwidget/signed-uploads#api-endpoint-to-sign-requests](https://next.cloudinary.dev/clduploadwidget/signed-uploads#api-endpoint-to-sign-requests).
@@ -30,7 +32,7 @@ import { CldUploadWidget } from 'next-cloudinary';
   }}
 >
   {({ open }) => <button onClick={() => open()}>Upload an Image</button>}
-</CldUploadWidget>;
+</CldUploadWidget>
 ```
 
 You could also add the on_success parameter to the options object with the following code to add the caption text to the image in your Cloudinary Media Library:
@@ -46,14 +48,16 @@ import { CldUploadWidget } from 'next-cloudinary';
   }}
 >
   {({ open }) => <button onClick={() => open()}>Upload an Image</button>}
-</CldUploadWidget>;
+</CldUploadWidget>
 ```
 
-See the component in action at [app/page.tsx](app/page.tsx).
+See the component in action at [app/app/page.tsx](app/app/page.tsx) and [pages/index.tsx](pages/index.tsx).
 
 Or [learn more on the docs](https://next.cloudinary.dev/clduploadwidget/basic-usage).
 
-## 🚀 Get Started with This Example
+[Learn more about AI Content Analysis](https://cloudinary.com/documentation/cloudinary_ai_content_analysis_addon).
+
+## 🚀 Get Started with this example
 
 - Install the project dependencies with:
 
@@ -69,7 +73,7 @@ bun install
 
 - Add your cloud name as an environment variable inside `.env.local`:
 
-```
+```py
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
 NEXT_PUBLIC_CLOUDINARY_API_KEY="<Your API Key>"
 CLOUDINARY_API_SECRET="<Your API Secret>"
