@@ -24,7 +24,7 @@ function App() {
         </h1>
       </div>
 
-      <div className="container">
+      <div id="optimization" className="container">
         <h2>Optimization</h2>
         <p>Format of auto (<code>f_auto</code>) and quality of auto (<code>q_auto</code>).</p>
         <ul className="images">
@@ -42,7 +42,7 @@ function App() {
         </ul>
       </div>
 
-      <div className="container">
+      <div id="ai-generative-fill" className="container">
         <h2>AI Generative Fill</h2>
         <p>Original</p>
         <ul className="images">
@@ -80,7 +80,7 @@ function App() {
         </ul>
       </div>
 
-      <div className="container">
+      <div id="background-removal" className="container">
         <h2>Background Removal</h2>
         <p>On-the-fly background removal (<code>e_background_removal</code>).</p>
         <ul className="images">
@@ -134,7 +134,7 @@ function App() {
         </ul>
       </div>
 
-      <div className="container">
+      <div id="pan-zoom" className="container">
         <h2>Pan &amp; Zoom</h2>
         <p>Zoom into the center of an image (<code>e_panzoom</code>).</p>
         <ul className="images">
@@ -205,7 +205,7 @@ function App() {
         </ul>
       </div>
 
-      <div className="container">
+      <div id="gravity" className="container">
         <h2>Gravity</h2>
         <p>Using <code>g_auto</code> to automatically center to the subject.</p>
         <ul className="images">
@@ -239,7 +239,7 @@ function App() {
         </ul>
       </div>
 
-      <div className="container">
+      <div id="motion-removal" className="container">
         <h2>Motion Removal</h2>
         <p>Original</p>
         <ul className="images">
