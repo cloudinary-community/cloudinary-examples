@@ -11,11 +11,11 @@ const uploadFile = async (file: File) => {
     const formData = new FormData()
 
     formData.append("file", file)
-    formData.append("upload_preset", "unsignedDemo")
-    // formData.append("upload_preset", "signedDemo")
+    formData.append("upload_preset", "<Your Unsigned Upload Preset>")
+    // formData.append("upload_preset", "<Your Signed Upload Preset>")
 
     const response = await fetch(
-        "https://api.cloudinary.com/v1_1/bradgarropy/upload",
+        "https://api.cloudinary.com/v1_1/<Your Cloud Name>/upload",
         {
             method: "post",
             body: formData,
