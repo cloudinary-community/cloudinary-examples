@@ -30,12 +30,14 @@ export default function Uploader() {
         )}
       </CldUploadWidget>
       {result ? (
-        <CldImage
-          src={result.public_id}
-          width={result.width}
-          height={result.height}
-          alt="Uploaded Image"
-        />
+        <div className="mt-8">
+          <CldImage
+            src={result.public_id}
+            width={result.width}
+            height={result.height}
+            alt="Uploaded Image"
+          />
+        </div>
       ) : null}
     </section>
   );
