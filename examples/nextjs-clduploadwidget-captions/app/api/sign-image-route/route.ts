@@ -20,7 +20,5 @@ export async function POST(request: Request) {
     process.env.CLOUDINARY_API_SECRET as string,
   );
 
-  console.log(signature);
-
   return Response.json({ signature });
 }

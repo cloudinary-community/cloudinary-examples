@@ -27,7 +27,5 @@ export default async function handler(
     process.env.CLOUDINARY_API_SECRET as string,
   );
 
-  console.log(signature);
-
   return res.status(200).json({ signature });
 }
