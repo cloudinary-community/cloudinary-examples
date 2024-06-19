@@ -1,11 +1,16 @@
 import { Cloudinary } from '@cloudinary/url-gen';
 import { pad } from '@cloudinary/url-gen/actions/resize';
 import { generativeFill } from '@cloudinary/url-gen/qualifiers/background';
+import { TextStyle } from "@cloudinary/url-gen/qualifiers/textStyle"
+import { source } from '@cloudinary/url-gen/actions/overlay';
+import { text } from '@cloudinary/url-gen/qualifiers/source';
+import { Position } from '@cloudinary/url-gen/qualifiers';
+import { compass } from '@cloudinary/url-gen/qualifiers/gravity';
+import { getPage } from '@cloudinary/url-gen/actions/extract';
 
 import './App.css';
 
 import images from './images.json';
-import { getPage } from '@cloudinary/url-gen/actions/extract';
 
 const cld = new Cloudinary({
   cloud: {
@@ -262,6 +267,60 @@ function App() {
                               .extract(getPage().byNumber(1))
                               .quality('auto')
                               .format('auto')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div className="container">
+        <h2>Text Overlay</h2>
+        <p>Overlay text with styles (<code>co_white,l_text:Verdana_75_bold</code>).</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['guitar-player', 'model', 'earth'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .quality('auto')
+                              .format('auto')
+                              .overlay(
+                                source(
+                                    text(
+                                        image.title,
+                                        new TextStyle("Verdana", 75).fontWeight("bold"),
+                                    ).textColor("white"),
+                                ),
+                              )
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+        <p>With position (<code>g_south,y_20</code>).</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['guitar-player', 'model', 'earth'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .quality('auto')
+                              .format('auto')
+                              .overlay(
+                                source(
+                                    text(
+                                        image.title,
+                                        new TextStyle("Verdana", 75).fontWeight("bold"),
+                                    ).textColor("white"),
+                                ).position(
+                                  new Position()
+                                      .gravity(compass("south"))
+                                      .offsetY(20),
+                                ),
+                              )
                               .toURL();
             return (
               <li key={image.id}>
