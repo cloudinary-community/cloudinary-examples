@@ -1,0 +1,43 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cloudinary Upload Demo</title>
+    </head>
+
+    <body>
+        <div class="layout">
+            <form
+                class="area"
+                id="upload"
+                method="post"
+                enctype="multipart/form-data"
+            >
+                <label for="images">Choose images to upload</label>
+
+                <input
+                    type="file"
+                    id="images"
+                    name="images"
+                    accept=".jpg, .jpeg, .png"
+                    multiple
+                />
+
+                <button id="submit" type="submit">Upload</button>
+            </form>
+
+            <div id="imagesToUpload" class="area">
+                <span>No images selected yet.</span>
+            </div>
+
+            <div id="uploadedImages" class="area">
+                <span>No images uploaded yet.</span>
+            </div>
+        </div>
+
+        <script type="module" src="/src/main.ts"></script>
+    </body>
+</html>
