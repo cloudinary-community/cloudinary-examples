@@ -7,13 +7,13 @@ import {
 } from 'next-cloudinary';
 import { useState } from 'react';
 
-export default function Uploader() {
+export default function Uploader(props: { signatureEndpoint: string }) {
   const [result, setResult] = useState<CloudinaryUploadWidgetInfo>();
 
   return (
     <section className="flex flex-col items-center justify-between">
       <CldUploadWidget
-        signatureEndpoint="/api/sign-image-route"
+        signatureEndpoint={props.signatureEndpoint}
         options={{
           detection: 'captioning',
           on_success:
@@ -37,7 +37,7 @@ export default function Uploader() {
 
       {result ? (
         <>
-          <blockquote className="relative border-s-4 border-indigo-700 ps-4 sm:ps-6 my-12">
+          <blockquote className="relative my-12 border-s-4 border-indigo-700 ps-4 sm:ps-6">
             <p className="flex gap-2 text-neutral-800 sm:text-lg">
               <span>Caption:</span>
               <em>{result.context.custom.alt}</em>

@@ -1,11 +1,8 @@
 import Footer from '@/components/Footer';
 import Uploader from '@/components/Uploader';
 import Head from 'next/head';
-import { useState } from 'react';
-import type { CloudinaryUploadWidgetInfo } from 'next-cloudinary';
 
 export default function HomePage() {
-  const [result, setResult] = useState<CloudinaryUploadWidgetInfo>();
   return (
     <>
       <Head>
@@ -27,7 +24,7 @@ export default function HomePage() {
             AI Content Analysis
           </a>
         </h2>
-        <Uploader />
+        <Uploader signatureEndpoint="/api/sign-image" />
         <Footer />
       </div>
     </>

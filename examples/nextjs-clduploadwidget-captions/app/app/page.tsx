@@ -14,7 +14,7 @@ export default function Home() {
           AI Content Analysis
         </a>
       </h2>
-      <Uploader />
+      <Uploader signatureEndpoint="/api/sign-image-route" />
       <Footer />
     </div>
   );
