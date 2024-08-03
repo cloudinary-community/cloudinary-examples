@@ -50,6 +50,12 @@ Or [learn more on the docs](https://next.cloudinary.dev/cldvideoplayer/basic-usa
 
 ## 🚀 Get Started with This Example
 
+- Clone this project with `degit`
+
+```bash
+npx degit cloudinary-community/cloudinary-examples/examples/nextjs-cldvideoplayer nextjs-cldvideoplayer
+```
+
 - Install the project dependencies with:
 
 ```
