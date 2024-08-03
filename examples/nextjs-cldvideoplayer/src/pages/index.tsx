@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Next Cloudinary CldVideoPlayer Example</title>
+        <title>Next Cloudinary CldVideoPlayer</title>
         <meta
           name="description"
           content="Find more Cloudinary examples at github.com/cloudinary-community/cloudinary-examples"

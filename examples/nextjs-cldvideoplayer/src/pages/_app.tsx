@@ -1,6 +1,7 @@
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import type { AppProps } from "next/app";
+
 import "next-cloudinary/dist/cld-video-player.css";
 import "@/styles/globals.css";
 
