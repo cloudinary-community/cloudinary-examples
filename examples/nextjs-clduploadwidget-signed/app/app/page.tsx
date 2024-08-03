@@ -8,7 +8,7 @@ export default function Home() {
         Below is the demo of <u>signed</u> upload using the{' '}
         <code className="font-bold">{`<CldUploadWidget>`}</code> component
       </h2>
-      <Uploader />
+      <Uploader signatureEndpoint="/api/sign-image-route" />
       <Footer />
     </div>
   );

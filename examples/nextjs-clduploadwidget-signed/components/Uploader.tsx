@@ -7,13 +7,13 @@ import {
 } from 'next-cloudinary';
 import { useState } from 'react';
 
-export default function Uploader() {
+export default function Uploader(props: { signatureEndpoint: string }) {
   const [result, setResult] = useState<CloudinaryUploadWidgetInfo>();
 
   return (
     <section className="flex flex-col items-center justify-between">
       <CldUploadWidget
-        signatureEndpoint="/api/sign-image-route"
+        signatureEndpoint={props.signatureEndpoint}
         onSuccess={(result) => {
           if (typeof result.info === 'string') return;
           setResult(result.info);
