@@ -1,0 +1,5 @@
+certifi==2024.6.2
+cloudinary==1.40.0
+python-dotenv==1.0.1
+six==1.16.0
+urllib3==2.2.2

@@ -1,0 +1,149 @@
+.container {
+  max-width: 800px;
+  width: 100%;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.webcam {
+  width: 100%;
+  position: relative;
+  aspect-ratio: 1920 / 1080;
+}
+
+.preview {
+  position: relative;
+  flex: 1.2;
+  width: 100%;
+  aspect-ratio: 1920 / 1080;
+}
+
+video {
+  width: 100%;
+  height: 100%;
+  border-radius: 3px;
+  border: 4px solid #594459;
+}
+
+button {
+  cursor: pointer;
+  padding: 7px 12px;
+  border-radius: 3px;
+  border: none;
+}
+
+img {
+  width: 100%;
+  border: 4px solid #594459;
+  border-radius: 3px;
+  display: block;
+}
+
+.preview.no-capture img {
+  filter: grayscale(1);
+}
+
+.capture-btn {
+  position: absolute;
+  bottom: 20px;
+  left: 15px;
+  font-size: 0.7em;
+  transition: 300ms;
+}
+
+.capture-btn {
+  background-color: rgb(101, 123, 175);
+  color: white;
+}
+
+.capture-btn:hover {
+  background-color: rgb(69, 87, 131);
+}
+
+.actions {
+  position: absolute;
+  display: flex;
+  gap: 5px;
+  align-items: center;
+  bottom: 20px;
+  left: 15px;
+  font-size: 0.7em;
+}
+
+.upload-btn {
+  background-color: rgb(220, 220, 101);
+}
+
+.upload-btn:not(:disabled):hover {
+  background-color: rgb(173, 173, 79);
+}
+
+.retake-btn {
+  background-color: rgb(220, 113, 101);
+  color: white;
+}
+
+.retake-btn:hover {
+  background-color: rgb(173, 79, 79);
+}
+
+button {
+  transition: 300ms;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.uploading-text,
+.uploaded-text {
+  display: block;
+  color: rgb(220, 220, 101);
+  display: block;
+  font-size: 1em;
+  margin: 10px 0;
+}
+
+.uploading-text {
+  position: absolute;
+}
+
+.main-image {
+  margin: 20px 0;
+  aspect-ratio: 1920 / 1080;
+  width: 100%;
+  display: block;
+}
+
+.effects {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  padding: 20px 0;
+}
+
+.effect-preview {
+  cursor: pointer;
+  transition: 300ms;
+  border: 2px solid transparent;
+}
+
+.effect-preview:hover,
+.effect-preview.active {
+  border-color: rgb(220, 220, 101);
+}
+
+.effects img,
+.effects .no-effect {
+  border: 2px solid #594459;
+  aspect-ratio: 1960 / 1080;
+  width: 100%;
+}
+
+.effect-name {
+  background-color: #594459;
+  padding: 0 5px;
+  color: white;
+  display: block;
+  width: 100%;
+}
