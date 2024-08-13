@@ -1,6 +1,5 @@
 import { Inter } from "next/font/google";
 import Header from "@/components/Header";
-import type { AppProps } from "next/app";
 
 import "next-cloudinary/dist/cld-video-player.css";
 import "@/styles/globals.css";
@@ -11,11 +10,17 @@ const inter = Inter({
   weight: ["400", "700"],
 });
 
-export default function App({ Component, pageProps }: AppProps) {
+export default function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   return (
-    <main className={inter.className}>
-      <Header />
-      <Component {...pageProps} />
-    </main>
+    <html lang="en">
+      <body className={inter.className}>
+        <Header />
+        {children}
+      </body>
+    </html>
   );
 }
