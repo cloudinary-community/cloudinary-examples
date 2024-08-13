@@ -4,33 +4,54 @@ Use the CldUploadWidget component to create a new instance of the [Cloudinary Up
 
 ## 🧰 Using CldUploadWidget in Next.js
 
+To set up a signed upload, you'll need to install the Cloudinary Node SDK, then set up a Route Handler or API Route in Next.js to create a signature for the upload widget.
+
+### Using the Pages Router
+
+API Route: [pages/api/sign-image.ts](pages/api/sign-image.ts)
+
 Add a basic (unsigned) upload widget using the following:
 
-```jsx
+```tsx
 import { CldUploadWidget } from 'next-cloudinary';
 
-<CldUploadWidget uploadPreset="<Your Upload Preset>">
-  {({ open }) => <button onClick={() => open()}>Upload an Image</button>}
-</CldUploadWidget>;
+<CldUploadWidget 
+  uploadPreset="<Your Upload Preset>" 
+  signatureEndpoint="/api/sign-image" {/* This prop allows you to sign the upload */}
+>
+  {({ open }) => (
+    <button onClick={() => open()}>Upload an Image</button>
+  )}
+</CldUploadWidget>
 ```
 
-To set up a signed upload, you'll need to install the Cloudinary Node SDK, then set up a route parameter in Next.js to create a signature for the upload widget.
+See the component in action at [pages/index.tsx](pages/index.tsx).
 
-You can look at the code for the route param in this project under [app/api/sign-image/route.ts](app/api/sign-image/route.ts)
+### Using the App Router
 
-Then all you have to do is add the signatureEndpoint prop to the CldUploadWidget component with the route parameter:
+API Route: [app/api/sign-image-route.ts](app/api/sign-image-route.ts)
 
-```jsx
+Add a basic (unsigned) upload widget using the following:
+> Make sure to put `"use client"` directive at the top of the component when you use `<CldUploadWidget />`
+
+```tsx
+"use client"
+
 import { CldUploadWidget } from 'next-cloudinary';
 
-<CldUploadWidget uploadPreset="<Your Upload Preset>" signatureEndpoint="/api/sign-image">
-  {({ open }) => <button onClick={() => open()}>Upload an Image</button>}
-</CldUploadWidget>;
+<CldUploadWidget 
+  uploadPreset="<Your Upload Preset>" 
+  signatureEndpoint="/api/sign-image-route" {/* This prop allows you to sign the upload */}
+>
+  {({ open }) => (
+    <button onClick={() => open()}>Upload an Image</button>
+  )}
+</CldUploadWidget>
 ```
 
-See the component in action at [app/page.tsx](app/page.tsx).
+See the component in action at [components/Uploader.tsx](components/Uploader.tsx).
 
-Or [learn more on the docs](https://next.cloudinary.dev/clduploadwidget/basic-usage).
+Or [learn more on the docs](https://next.cloudinary.dev/clduploadwidget/signed-uploads).
 
 ## 🚀 Get Started with This Example
 
