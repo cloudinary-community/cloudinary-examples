@@ -11,6 +11,7 @@ import { getPage } from '@cloudinary/url-gen/actions/extract';
 import './App.css';
 
 import images from './images.json';
+import { defaultImage } from '@cloudinary/url-gen/actions/delivery';
 
 const cld = new Cloudinary({
   cloud: {
@@ -38,6 +39,29 @@ function App() {
                               .quality('auto')
                               .format('auto')
                               .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div id="fallback" className="container">
+        <h2>Fallback Image</h2>
+        <p>Shows <a href="https://unsplash.com/photos/m4m5jqdX74U">Mario</a> even though we asked for Luigi.</p>
+
+        <ul className="images">
+          {images.filter(image => image.id === "mario").map(image => {
+            const fallbackUrl = image.image.slice(1).replaceAll('/', ':');
+
+            const imgSrc = cld.image('examples/luigi')
+                              .quality('auto')
+                              .format('auto')
+                              .delivery(defaultImage(fallbackUrl))
+                              .toURL();
+
             return (
               <li key={image.id}>
                 <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
