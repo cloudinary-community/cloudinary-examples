@@ -19,7 +19,7 @@ const nextConfig = {
 
 See the file in action at [next.config.js](next.config.js).
 
-> Note: If using a custom domain with Cloudinary, be sure add the appropriate host in the domains array.
+> Note: If using a custom domain with Cloudinary, be sure to use the appropriate domain in the `remotePatterns` array.
 
 ## 🚀 Get Started with This Example
 
