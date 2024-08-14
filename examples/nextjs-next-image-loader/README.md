@@ -30,11 +30,13 @@ export function cloudinaryLoader({ src, width }) {
 <Image ... loader={cloudinaryLoader} />
 ```
 
+When using the new Next.js App Router, the `loader` prop must be specified in a client component. To solve this, create a wrapper client component like [components/Image.jsx](components/Image.jsx) to use in the App Router
+
 > Tip: As of Next.js 13.0.0, you can not globally specify a Loader.
 
-See the file in action at [pages/index.jsx](pages/index.jsx).
+See the file in action at [pages/index.jsx](pages/index.jsx) & [app/app/page.jsx](app/app/page.jsx).
 
-> Note: If using a custom domain with Cloudinary, be sure add the appropriate the domain instead of `res.cloudinary.com`.
+> Note: If using a custom domain with Cloudinary, be sure use the appropriate the domain instead of `res.cloudinary.com`.
 
 Once configured, you can now specify images relative to where they're stored in your media library.
 
