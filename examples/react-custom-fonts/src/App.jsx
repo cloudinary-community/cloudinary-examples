@@ -16,7 +16,7 @@ const cloudinary = new Cloudinary({
 })
 
 const cldImage = cloudinary
-    .image("examples/sneakers_cuuqb1.jpg")
+    .image("cld-sample-5")
     .quality("auto")
     .format("auto")
     .resize(scale().width(600))
@@ -34,7 +34,8 @@ const cldImage = cloudinary
             ).textColor("white"),
         ).position(
           new Position()
-              .gravity(compass("south"))
+              .gravity(compass("south_east"))
+              .offsetX(20)
               .offsetY(20),
         ),
     )
