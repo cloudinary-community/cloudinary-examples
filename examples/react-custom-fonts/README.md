@@ -1,8 +1,19 @@
-# React + Vite
+# React Custom Font Overlays
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This example shows how to use custom fonts with text overlays in [React][react].
 
-Currently, two official plugins are available:
+## Get Started
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Create a `.env` file by using `.env.example` as a reference.
+- Fill in the environment variables.
+- Install the dependencies.
+- Run the development server.
+- View the project at http://localhost:5173.
+
+```zsh
+cp .env.example .env
+npm install
+npm run dev
+```
+
+[react]: https://react.dev
