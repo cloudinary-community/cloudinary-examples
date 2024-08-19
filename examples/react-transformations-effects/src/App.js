@@ -54,12 +54,14 @@ function App() {
 
         <ul className="images">
           {images.filter(image => image.id === "mario").map(image => {
-            const fallbackUrl = image.image.slice(1).replaceAll('/', ':');
+            const fallbackPublicId = image.image.slice(1).replaceAll('/', ':');
 
             const imgSrc = cld.image('examples/luigi')
                               .quality('auto')
                               .format('auto')
-                              .delivery(defaultImage(fallbackUrl))
+                              // examples:mario_hkgavf.jpg
+                              // Note: file extension is required for default images
+                              .delivery(defaultImage(fallbackPublicId))
                               .toURL();
 
             return (
