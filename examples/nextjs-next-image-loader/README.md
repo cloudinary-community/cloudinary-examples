@@ -43,10 +43,11 @@ For instance, if you have an image available at `myimages/image.jpg`, you can us
 <Image width="..." height="..." src="myimages/image.jpg" alt="..." />
 ```
 
-To add optimization options like `q_auto`, `f_auto`, etc., add them to the src URL before the public ID.
+To add optimize the quality of the image, add the `quality` prop in the Next.js Image Component.
+> Caution: The `quality` prop only accepts number, so qualities like `auto:good`, `auto:best`, etc. are not supported via the Image Component. Use the [`CldImage`](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/nextjs-cldimage) component for more advanced features.
 
 ```jsx
-<Image width="..." height="..." src="q_auto,f_auto/myimages/image.jpg" alt="..." />
+<Image width="..." height="..." quality={70} src="myimages/image.jpg" alt="..." />
 ```
 
 As of now, you can configure the `width` and `src` props.
