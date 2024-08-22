@@ -32,7 +32,7 @@ export function cloudinaryLoader({ src, width }) {
 
 When using the new Next.js App Router, the `loader` prop must be specified in a client component. To solve this, create a wrapper client component like [components/Image.jsx](components/Image.jsx) to use in the App Router
 
-> Tip: As of Next.js 13.0.0, you can not globally specify a Loader.
+> If you want to specify a loader globally and not use the `loader` prop every time, check out [this example](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/nextjs-custom-image-loader)
 
 See the file in action at [pages/index.jsx](pages/index.jsx) & [app/app/page.jsx](app/app/page.jsx).
 
