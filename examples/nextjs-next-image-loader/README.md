@@ -11,20 +11,17 @@ View Demo: <https://cloudinary-nextjs-next-image-loader.netlify.app>
 To use Cloudinary as a Loader with the Image component, you must specify a `loader` prop for each instance of an Image.
 
 ```js
-function normalizeSrc(src, width) {
-  // Optimization options cannot be taken as arguments in the loader function.
-  // To add optimization options like `q_auto`, `f_auto`, etc., add them to the src URL before the public ID.
-  return `w_${width}/` + src.replace(/^\//, "");
-}
+const normalizeSrc = src => src.replace(/^\//, "");
 
-export function cloudinaryLoader({ src, width }) {
+export default function cloudinaryLoader({ src, width, quality }) {
   const cloudName = process.env.NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME;
   if (!cloudName) {
     throw new Error(
       "NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME is required in the environment"
     );
   }
-  return `https://res.cloudinary.com/${cloudName}/image/upload/${normalizeSrc(src, width)}`;
+  const params = ["f_auto", "c_limit", `w_${width}`, `q_${quality || "auto"}`];
+  return `https://res.cloudinary.com/${cloudName}/image/upload/${params.join(",")}/${normalizeSrc(src)}`;
 }
 
 <Image ... loader={cloudinaryLoader} />

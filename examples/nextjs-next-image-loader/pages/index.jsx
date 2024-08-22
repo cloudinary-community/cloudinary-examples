@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import images from "../images.json";
 
-import { cloudinaryLoader } from "../utils/cloudinaryLoader";
+import cloudinaryLoader from "../utils/cloudinaryLoader";
 import ImagesGrid from "../components/ImagesGrid";
 import Footer from "../components/Footer";
 
@@ -21,7 +21,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <div className="container mx-auto mb-5 max-w-screen-lg space-y-5 px-4 py-0">
+      <div className="container max-w-screen-lg px-4 py-0 mx-auto mb-5 space-y-5">
         <h2 className="text-2xl font-semibold text-indigo-900">Example</h2>
         <blockquote className="relative border-s-4 ps-4 sm:ps-6 dark:border-gray-700">
           ⚠️ Note: This is not the recommended approach. Use the CldImage
@@ -45,6 +45,7 @@ export default function Home() {
                   height={image.height}
                   src={image.image}
                   alt={image.title}
+                  quality={image.quality}
                   loader={cloudinaryLoader}
                 />
               </li>
