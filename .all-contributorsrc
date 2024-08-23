@@ -267,6 +267,78 @@
       "contributions": [
         "code"
       ]
+    },
+    {
+      "login": "RichardBray",
+      "name": "Richard Oliver Bray",
+      "avatar_url": "https://avatars.githubusercontent.com/u/1377253?v=4",
+      "profile": "https://robray.dev/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "dillionmegida",
+      "name": "Dillion Megida",
+      "avatar_url": "https://avatars.githubusercontent.com/u/42855542?v=4",
+      "profile": "http://dillionmegida.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "santoshyadavdev",
+      "name": "Santosh Yadav",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11923975?v=4",
+      "profile": "https://github.com/santoshyadavdev",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "max-programming",
+      "name": "Usman S. (Max Programming)",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51731966?v=4",
+      "profile": "https://usmans.me",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "tsi",
+      "name": "Tsachi Shlidor",
+      "avatar_url": "https://avatars.githubusercontent.com/u/346835?v=4",
+      "profile": "https://shlidor.me/",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "ahaywood",
+      "name": "Amy Haywood Dutton",
+      "avatar_url": "https://avatars.githubusercontent.com/u/212300?v=4",
+      "profile": "http://selfteach.me",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "bradgarropy",
+      "name": "Brad Garropy",
+      "avatar_url": "https://avatars.githubusercontent.com/u/11336745?v=4",
+      "profile": "https://bradgarropy.com",
+      "contributions": [
+        "code"
+      ]
+    },
+    {
+      "login": "sharon-yelenik",
+      "name": "sharon-yelenik",
+      "avatar_url": "https://avatars.githubusercontent.com/u/86607280?v=4",
+      "profile": "https://github.com/sharon-yelenik",
+      "contributions": [
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,

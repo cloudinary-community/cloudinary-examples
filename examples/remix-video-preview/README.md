@@ -1,0 +1,29 @@
+# Remix Video Preview
+
+Demo: https://cloudinary-video-preview.vercel.app/
+
+## 🚀 Get Started with This Example
+
+- Create an environment variable file `.env` in the root of the project and inside add:
+
+```
+CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
+```
+
+- Install the project dependencies with:
+
+```
+yarn install
+# or
+npm install
+```
+
+- Start the development server with:
+
+```
+yarn dev
+# or
+npm run dev
+```
+
+- Visit the project at <http://localhost:3000>!

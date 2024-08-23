@@ -6,17 +6,47 @@ View Demo: <https://cloudinary-nextjs-cldogimage.netlify.app/>
 
 ## 🧰 Using CldOgImage in Next.js
 
+### Using the Pages Router
+
 To create a new social media card, add the following outside of the Head component, in any page:
 
-```
+```jsx
 import { CldOgImage } from 'next-cloudinary';
 
 <CldOgImage src="<Your Public ID>" />
 ```
 
-See the component in action at [pages/index.js](pages/index.js).
+See the component in action at [pages/index.jsx](pages/index.jsx).
 
-Or [learn more on the docs](https://next-cloudinary.spacejelly.dev/components/cldogimage/basic-usage).
+Or [learn more on the docs](https://next.cloudinary.dev/components/cldogimage/basic-usage).
+
+### Using the App Router
+
+In Next.js App Router, **the metadata is set outside the component** unlike in pages router where the `<Head>` component is used to set metadata. Therefore, Instead of the `<CldOgImage />` component, **the `getCldOgImageUrl` function is used to generate the Open Graph image URL.**
+
+```jsx
+import { getCldOgImageUrl } from 'next-cloudinary';
+
+const url = getCldOgImageUrl({
+  src: "<Your Public ID>",
+})
+
+export const metadata = {
+  openGraph: {
+    images: [
+      {
+        width: 1200,
+        height: 630,
+        url,
+      },
+    ],
+  },
+};
+```
+
+See the component in action at [app/app/page.jsx](app/app/page.jsx).
+
+[Learn more on the docs](https://next.cloudinary.dev/getcldogimageurl/basic-usage).
 
 ## 🚀 Get Started with This Example
 

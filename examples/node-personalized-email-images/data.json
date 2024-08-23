@@ -1,0 +1,30 @@
+[
+  {
+    "uuid": "1a2b3c4d",
+    "firstName": "Ravi",
+    "lastName": "Kapoor",
+    "email": "ravi.kapoor@example.com",
+    "interest": "hiking"
+  },
+  {
+    "uuid": "5e6f7g8h",
+    "firstName": "Sakura",
+    "lastName": "Tanaka",
+    "email": "sakura.tanaka@example.com",
+    "interest": "painting"
+  },
+  {
+    "uuid": "9i0j1k2l",
+    "firstName": "Pablo",
+    "lastName": "Garcia",
+    "email": "pablo.garcia@example.com",
+    "interest": "cooking"
+  },
+  {
+    "uuid": "3m4n5o6p",
+    "firstName": "Anna",
+    "lastName": "Kowalski",
+    "email": "anna.kowalski@example.com",
+    "interest": "photography"
+  }
+]

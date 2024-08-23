@@ -29,10 +29,12 @@ async function Home() {
     'use server'
     const file = formData.get('image') as File;
     const arrayBuffer = await file.arrayBuffer();
-    const buffer = new Uint8Array(arrayBuffer);
+    const buffer = Buffer.from(arrayBuffer);
+
     await new Promise((resolve, reject) => {
       cloudinary.uploader.upload_stream({
-        tags: ['nextjs-server-actions-upload-sneakers']
+        tags: ['nextjs-server-actions-upload-sneakers'],
+        upload_preset: 'nextjs-server-actions-upload'
       }, function (error, result) {
         if (error) {
           reject(error);
@@ -42,6 +44,7 @@ async function Home() {
       })
       .end(buffer);
     });
+
     revalidatePath('/')
   }
   return (

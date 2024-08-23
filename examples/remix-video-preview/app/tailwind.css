@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-black text-white p-10;
+  }
+
+  video {
+    /* @apply absolute inset-0 z-0 w-full h-auto opacity-0 group-hover:z-20 group-hover:opacity-100; */
+  }
+}
+
+@layer components {
+
+}
+
+@layer utilities {
+  .center {
+    @apply flex items-center justify-center;
+  }
+}

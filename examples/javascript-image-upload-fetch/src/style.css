@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+img {
+    max-width: 100%;
+}
+
+#upload {
+    display: grid;
+    align-content: start;
+    grid-column: 1 / span 2;
+}
+
+#upload label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+#upload input {
+    margin-bottom: 3rem;
+}
+
+#upload button {
+    padding: 1rem 3rem;
+    border-radius: 0.5rem;
+    background-color: powderblue;
+    font-size: 1.2rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+#upload button:hover {
+    background-color: lightblue;
+}
+
+#imagesToUpload ul {
+    margin: 0;
+}
+
+.layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto 1fr;
+    gap: 3rem;
+    padding: 5rem;
+    box-sizing: border-box;
+    height: 100dvh;
+    max-width: 120rem;
+    margin: 0 auto;
+}
+
+.area {
+    border: 0.25rem solid black;
+    border-radius: 1rem;
+    padding: 4rem;
+}
+
+.area:has(img) {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2rem;
+    align-content: start;
+    align-items: center;
+}

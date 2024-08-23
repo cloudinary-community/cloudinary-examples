@@ -1,10 +1,17 @@
 import { Cloudinary } from '@cloudinary/url-gen';
 import { pad } from '@cloudinary/url-gen/actions/resize';
 import { generativeFill } from '@cloudinary/url-gen/qualifiers/background';
+import { TextStyle } from "@cloudinary/url-gen/qualifiers/textStyle"
+import { source } from '@cloudinary/url-gen/actions/overlay';
+import { text } from '@cloudinary/url-gen/qualifiers/source';
+import { Position } from '@cloudinary/url-gen/qualifiers';
+import { compass } from '@cloudinary/url-gen/qualifiers/gravity';
+import { getPage } from '@cloudinary/url-gen/actions/extract';
 
 import './App.css';
 
 import images from './images.json';
+import { defaultImage } from '@cloudinary/url-gen/actions/delivery';
 
 const cld = new Cloudinary({
   cloud: {
@@ -23,7 +30,7 @@ function App() {
         </h1>
       </div>
 
-      <div className="container">
+      <div id="optimization" className="container">
         <h2>Optimization</h2>
         <p>Format of auto (<code>f_auto</code>) and quality of auto (<code>q_auto</code>).</p>
         <ul className="images">
@@ -41,7 +48,32 @@ function App() {
         </ul>
       </div>
 
-      <div className="container">
+      <div id="fallback" className="container">
+        <h2>Fallback Image</h2>
+        <p>Shows <a href="https://unsplash.com/photos/m4m5jqdX74U">Mario</a> even though we asked for Luigi.</p>
+
+        <ul className="images">
+          {images.filter(image => image.id === "mario").map(image => {
+            const fallbackPublicId = image.image.slice(1).replaceAll('/', ':');
+
+            const imgSrc = cld.image('examples/luigi')
+                              .quality('auto')
+                              .format('auto')
+                              // examples:mario_hkgavf.jpg
+                              // Note: file extension is required for default images
+                              .delivery(defaultImage(fallbackPublicId))
+                              .toURL();
+
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div id="ai-generative-fill" className="container">
         <h2>AI Generative Fill</h2>
         <p>Original</p>
         <ul className="images">
@@ -79,7 +111,7 @@ function App() {
         </ul>
       </div>
 
-      <div className="container">
+      <div id="background-removal" className="container">
         <h2>Background Removal</h2>
         <p>On-the-fly background removal (<code>e_background_removal</code>).</p>
         <ul className="images">
@@ -133,7 +165,7 @@ function App() {
         </ul>
       </div>
 
-      <div className="container">
+      <div id="pan-zoom" className="container">
         <h2>Pan &amp; Zoom</h2>
         <p>Zoom into the center of an image (<code>e_panzoom</code>).</p>
         <ul className="images">
@@ -204,7 +236,7 @@ function App() {
         </ul>
       </div>
 
-      <div className="container">
+      <div id="gravity" className="container">
         <h2>Gravity</h2>
         <p>Using <code>g_auto</code> to automatically center to the subject.</p>
         <ul className="images">
@@ -238,13 +270,100 @@ function App() {
         </ul>
       </div>
 
+      <div id="motion-removal" className="container">
+        <h2>Motion Removal</h2>
+        <p>Original</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['working-penguin'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .quality('auto')
+                              .format('auto')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+        <p>Using <code>pg_1</code> to grab the first frame.</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['working-penguin'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .extract(getPage().byNumber(1))
+                              .quality('auto')
+                              .format('auto')
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
+      <div className="container">
+        <h2>Text Overlay</h2>
+        <p>Overlay text with styles (<code>co_white,l_text:Verdana_75_bold</code>).</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['guitar-player', 'model', 'earth'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .quality('auto')
+                              .format('auto')
+                              .overlay(
+                                source(
+                                    text(
+                                        image.title,
+                                        new TextStyle("Verdana", 75).fontWeight("bold"),
+                                    ).textColor("white"),
+                                ),
+                              )
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+        <p>With position (<code>g_south,y_20</code>).</p>
+        <ul className="images">
+          {images.filter(({ id }) => ['guitar-player', 'model', 'earth'].includes(id)).map(image => {
+            const imgSrc = cld.image(image.image)
+                              .resize(`w_${image.width},h_${image.height}`)
+                              .quality('auto')
+                              .format('auto')
+                              .overlay(
+                                source(
+                                    text(
+                                        image.title,
+                                        new TextStyle("Verdana", 75).fontWeight("bold"),
+                                    ).textColor("white"),
+                                ).position(
+                                  new Position()
+                                      .gravity(compass("south"))
+                                      .offsetY(20),
+                                ),
+                              )
+                              .toURL();
+            return (
+              <li key={image.id}>
+                <img width={image.width} height={image.height} src={imgSrc} alt={image.title} loading="lazy" />
+              </li>
+            )
+          })}
+        </ul>
+      </div>
+
       <div className="container">
         <h2>Resources</h2>
         <p>
           <a href="https://github.com/colbyfayock/cloudinary-examples/tree/main/examples/react-transformations-effects">See the code on github.com.</a>
         </p>
         <ul>
-          {images.slice(0, 4).map(image => {
+          {images.map(image => {
             return (
               <li key={image.id}>
                 { image.title }: <a href={image.link} rel="noreferrer">{image.link}</a>

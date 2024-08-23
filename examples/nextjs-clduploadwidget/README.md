@@ -6,19 +6,17 @@ View Demo: <https://cloudinary-nextjs-clduploadwidget.netlify.app/>
 
 ## 🧰 Using CldUploadWidget in Next.js
 
+### Using the Pages Router
+
 To add an upload widget instance, use the following:
 
-```
+```jsx
 import { CldUploadWidget } from 'next-cloudinary';
 
 <CldUploadWidget uploadPreset="<Your Upload Preset>">
   {({ open }) => {
-    function handleOnClick(e) {
-      e.preventDefault();
-      open();
-    }
     return (
-      <button onClick={handleOnClick}>
+      <button onClick={open}>
         Upload an Image
       </button>
     );
@@ -26,9 +24,31 @@ import { CldUploadWidget } from 'next-cloudinary';
 </CldUploadWidget>
 ```
 
-See the component in action at [pages/index.js](pages/index.js).
+See the component in action at [pages/index.jsx](pages/index.jsx).
 
-Or [learn more on the docs](https://next-cloudinary.spacejelly.dev/components/clduploadwidget/basic-usage).
+### Using the App Router
+
+> Make sure to put `"use client"` directive at the top of the component when you use `<CldUploadWidget />`
+
+```jsx
+"use client"
+
+import { CldUploadWidget } from 'next-cloudinary';
+
+<CldUploadWidget uploadPreset="<Your Upload Preset>">
+  {({ open }) => {
+    return (
+      <button onClick={open}>
+        Upload an Image
+      </button>
+    );
+  }}
+</CldUploadWidget>
+```
+
+See the component in action at [components/Uploader.jsx](components/Uploader.jsx).
+
+Or [learn more on the docs](https://next.cloudinary.dev/components/clduploadwidget/basic-usage).
 
 ## 🚀 Get Started with This Example
 
