@@ -11,6 +11,7 @@ export default function Home() {
   const [fileUrl, setFileUrl] = useState<string | null>(null);
 
   function handleFileChange(e: React.ChangeEvent<HTMLInputElement>) {
+    if (!e.target.files) return;
     setFile(e.target.files[0]);
   }
 
@@ -18,7 +19,7 @@ export default function Home() {
     e.preventDefault();
     try {
       if (!file) throw new Error("No file selected");
-      const result = await uploadFile(file);
+      const result = await uploadFile(file, "/api/sign");
       if (!result) throw new Error("Failed to upload file");
       setFileUrl(result.secure_url);
     } catch (error) {
@@ -32,7 +33,7 @@ export default function Home() {
         <title>{TITLE}</title>
         <meta
           name="description"
-          content="Find more Cloudinary examples at github.com/colbyfayock/cloudinary-examples"
+          content="Find more Cloudinary examples at github.com/cloudinary-community/cloudinary-examples"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

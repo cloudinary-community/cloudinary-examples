@@ -1,6 +1,6 @@
 import type { SignApiOptions, UploadApiResponse } from "cloudinary";
 
-export async function uploadFile(file: File) {
+export async function uploadFile(file: File, signApiUrl: string) {
   const timestamp = Date.now();
   const formData = new FormData();
   const parameters: SignApiOptions = {};
@@ -22,7 +22,7 @@ export async function uploadFile(file: File) {
       formData.append(key, String(parameters[key]));
     });
 
-  const { signature } = await fetch("/api/sign", {
+  const { signature } = await fetch(signApiUrl, {
     method: "POST",
     body: JSON.stringify({
       ...parameters,
