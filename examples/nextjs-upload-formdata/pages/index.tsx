@@ -2,6 +2,7 @@ import { useState } from "react";
 import Head from "next/head";
 
 import { uploadFile } from "@/utils/uploadFile";
+import Footer from "@/components/Footer";
 
 const TITLE = "FormData File Uploads with Next.js & Cloudinary Node SDK";
 
@@ -36,7 +37,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className="text-center">
+      <main className="container mx-auto mb-5 text-center max-w-screen-lg space-y-5 px-4 py-0">
         <h1 className="text-3xl font-semibold py-5">{TITLE}</h1>
 
         <section className="flex flex-col items-center justify-between">
@@ -61,6 +62,7 @@ export default function Home() {
             </div>
           )}
         </section>
+        <Footer />
       </main>
     </>
   );
