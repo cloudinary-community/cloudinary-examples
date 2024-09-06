@@ -1,34 +1,34 @@
 [
   {
-    "id": "beach",
-    "title": "Beach",
-    "link": "https://unsplash.com/photos/8qH4GSYBiSA",
-    "image": "/examples/beach_udmhbt.jpg",
-    "width": 2376,
-    "height": 1574
+    "id": "sheep",
+    "title": "Sheep",
+    "image": "samples/sheep.jpg",
+    "quality": "auto",
+    "width": 1600,
+    "height": 1067
   },
   {
-    "id": "city",
-    "title": "City",
-    "link": "https://unsplash.com/photos/4u2U8EO9OzY",
-    "image": "/examples/city_julte6.jpg",
-    "width": 1364,
-    "height": 1705
+    "id": "nature-mountains",
+    "title": "Nature",
+    "image": "samples/landscapes/nature-mountains.jpg",
+    "quality": 70,
+    "width": 3000,
+    "height": 2000
   },
   {
-    "id": "earth",
-    "title": "Earth",
-    "link": "https://unsplash.com/photos/yZygONrUBe8",
-    "image": "/examples/earth_xzlgge.jpg",
-    "width": 2344,
-    "height": 1560
+    "id": "leather-bag-gray",
+    "title": "Bag",
+    "image": "samples/ecommerce/leather-bag-gray.jpg",
+    "quality": 80,
+    "width": 2385,
+    "height": 1590
   },
   {
-    "id": "galaxy",
-    "title": "Galaxy",
-    "link": "https://unsplash.com/photos/0o_GEzyargo",
-    "image": "/examples/galaxy_qtrsjt.jpg",
-    "width": 2340,
-    "height": 1560
+    "id": "bike",
+    "title": "Bike",
+    "image": "samples/bike.jpg",
+    "quality": 50,
+    "width": 2000,
+    "height": 1333
   }
 ]
