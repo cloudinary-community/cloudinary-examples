@@ -8,7 +8,16 @@ View Demo: https://cloudinary-nextjs-cldvideoplayer.netlify.app/
 
 To embed a video using the `CldVideoPlayer` component, use the following:
 
+Include the stylesheet globally in `_app.tsx` or `layout.tsx`
+
+```tsx
+// In _app.tsx or layout.tsx
+import "next-cloudinary/dist/cld-video-player.css";
 ```
+
+### Pages router
+
+```tsx
 import { CldVideoPlayer } from 'next-cloudinary';
 
 <CldVideoPlayer
@@ -19,11 +28,33 @@ import { CldVideoPlayer } from 'next-cloudinary';
 />
 ```
 
-See the component in action at [src/pages/index.tsx](src/pages/index.tsx).
+### App Router
 
-Or [learn more on the docs](https://next-cloudinary.spacejelly.dev/components/cldvideoplayer/basic-usage).
+Create a wrapper client component with `"use client"` directive. 
+
+Refer to the [CldVideoPlayer.tsx](src/components/CldVideoPlayer.tsx) file
+
+```tsx
+"use client";
+
+import { CldVideoPlayer as VideoPlayer } from 'next-cloudinary';
+
+export default function CldVideoPlayer(props) {
+    return <VideoPlayer {...props} />
+}
+```
+
+See the component in action at [index.tsx](src/pages/index.tsx) & [page.tsx](src/app/app/page.tsx).
+
+Or [learn more on the docs](https://next.cloudinary.dev/cldvideoplayer/basic-usage).
 
 ## 🚀 Get Started with This Example
+
+- Clone this project with `degit`
+
+```bash
+npx degit cloudinary-community/cloudinary-examples/examples/nextjs-cldvideoplayer nextjs-cldvideoplayer
+```
 
 - Install the project dependencies with:
 
@@ -33,13 +64,14 @@ yarn install
 npm install
 ```
 
+> Note: The **upload preset** must be updated to one available in your account
+
 - Add your cloud name as an environment variable inside `.env.local`:
 
 ```
 NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
 ```
 
-> Note: the upload preset must be updated to one available in your account
 
 - Start the development server with:
 

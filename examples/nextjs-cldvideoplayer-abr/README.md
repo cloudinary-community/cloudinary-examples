@@ -6,7 +6,7 @@ Improve Video Streaming Next.js app with Adaptive Bitrate Streaming (ABR) and th
 
 Add Adaptive Bitrate Streaming to a video using the `CldVideoPlayer` component, use the following code:
 
-```jsx
+```tsx
 import { CldVideoPlayer } from 'next-cloudinary';
 import 'next-cloudinary/dist/cld-video-player.css';
 
@@ -19,7 +19,23 @@ import 'next-cloudinary/dist/cld-video-player.css';
     // <-- Add transformation prop
     streaming_profile: 'hd', // <-- Add streaming profile
   }}
-/>;
+/>
+```
+
+## App Router
+
+When using the app router, create a wrapper client component for the video player.
+
+Refer to the [CldVideoPlayer.tsx](components/CldVideoPlayer.tsx) file
+
+```tsx
+"use client";
+
+import { CldVideoPlayer as VideoPlayer } from 'next-cloudinary';
+
+export default function CldVideoPlayer(props) {
+    return <VideoPlayer {...props} />
+}
 ```
 
 See the component in action at [app/page.tsx](app/page.tsx).
@@ -27,6 +43,12 @@ See the component in action at [app/page.tsx](app/page.tsx).
 Or [learn more on the docs](https://next.cloudinary.dev/cldvideoplayer/examples#adaptive-streaming).
 
 ## 🚀 Get Started with This Example
+
+- Clone this project with `degit`
+
+```bash
+npx degit cloudinary-community/cloudinary-examples/examples/nextjs-cldvideoplayer-abr nextjs-cldvideoplayer-abr
+```
 
 - Install the project dependencies with:
 
@@ -53,9 +75,9 @@ npm run dev
 # or
 yarn dev
 # or
-pnpm run dev
+pnpm dev
 # or
-bun dev
+bun run dev
 ```
 
 - Visit the project at <http://localhost:3000>!
