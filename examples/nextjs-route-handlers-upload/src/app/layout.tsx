@@ -1,29 +1,20 @@
-import './globals.css'
-import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Inter } from 'next/font/google';
+import Header from '@/components/Header';
+import '@/styles/globals.css';
 
-import Nav from '@/components/Nav';
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  weight: ['400', '700'],
+});
 
-const inter = Inter({ subsets: ['latin'] })
-
-export const metadata: Metadata = {
-  title: 'Cloudinary & Next.js Route Handlers',
-  description: 'Learn how to upload files from a form to Cloudinary using Next.js Route Handlers',
-}
-
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: React.PropsWithChildren) {
   return (
-    <html lang="en">
+    <html lang='en'>
       <body className={inter.className}>
-        <div className="grid grid-rows-[auto_1fr] h-screen">
-          <Nav />
-          <main>{ children }</main>
-        </div>
+        <Header />
+        {children}
       </body>
     </html>
-  )
+  );
 }
