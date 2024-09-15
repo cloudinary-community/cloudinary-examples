@@ -3,6 +3,7 @@ import type { UploadApiResponse } from 'cloudinary';
 
 export async function POST(request: Request) {
   try {
+    const uploadsFolder = process.env.CLOUDINARY_UPLOADS_FOLDER;
     const formData = await request.formData();
     const file = formData.get('file') as File;
 
@@ -13,10 +14,13 @@ export async function POST(request: Request) {
     const fileBuffer = await file.arrayBuffer();
     const result = await new Promise<UploadApiResponse>((resolve, reject) => {
       cloudinary.uploader
-        .upload_stream({ resource_type: 'auto' }, (error, result) => {
-          if (error || !result) reject(error);
-          else resolve(result);
-        })
+        .upload_stream(
+          { resource_type: 'auto', folder: uploadsFolder },
+          (error, result) => {
+            if (error || !result) reject(error);
+            else resolve(result);
+          },
+        )
         .end(Buffer.from(fileBuffer));
     });
 

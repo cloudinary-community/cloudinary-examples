@@ -18,6 +18,7 @@ export default async function handler(
   }
 
   try {
+    const uploadsFolder = process.env.CLOUDINARY_UPLOADS_FOLDER;
     const form = new IncomingForm();
     form.parse(req, async (err, fields, files) => {
       if (err) {
@@ -31,7 +32,7 @@ export default async function handler(
       const result = await new Promise<UploadApiResponse>((resolve, reject) => {
         cloudinary.uploader.upload(
           file.filepath,
-          { resource_type: 'auto' },
+          { resource_type: 'auto', folder: uploadsFolder },
           (error, result) => {
             if (error || !result) reject(error);
             else resolve(result);
