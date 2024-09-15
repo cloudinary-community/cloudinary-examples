@@ -1,3 +1,4 @@
+import type { AppProps } from "next/app";
 import Header from "@/components/Header";
 import { Inter } from "next/font/google";
 import "@/styles/globals.css";
@@ -8,7 +9,7 @@ const inter = Inter({
   weight: ["400", "700"],
 });
 
-function MyApp({ Component, pageProps }) {
+function MyApp({ Component, pageProps }: AppProps) {
   return (
     <div className={inter.className}>
       <Header />
