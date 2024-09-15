@@ -4,7 +4,7 @@ import Head from 'next/head';
 
 import Footer from '@/components/Footer';
 
-const TITLE = 'FormData File Uploads with Next.js & Cloudinary Node SDK';
+const TITLE = 'Cloudinary & Next.js Route Handlers';
 
 export default function Home() {
   const [file, setFile] = useState<File | null>(null);
@@ -43,7 +43,7 @@ export default function Home() {
         <title>{TITLE}</title>
         <meta
           name='description'
-          content='Find more Cloudinary examples at github.com/cloudinary-community/cloudinary-examples'
+          content='Learn how to upload files from a form to Cloudinary using Next.js Route Handlers'
         />
         <link rel='icon' href='/favicon.ico' />
       </Head>
