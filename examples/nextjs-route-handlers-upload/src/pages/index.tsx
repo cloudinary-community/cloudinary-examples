@@ -1,4 +1,3 @@
-import type { UploadApiResponse } from 'cloudinary';
 import { useState } from 'react';
 import Head from 'next/head';
 
@@ -27,7 +26,7 @@ export default function Home() {
         method: 'POST',
         body: formData,
       });
-      const result: UploadApiResponse = await response.json();
+      const result: { secure_url: string } = await response.json();
       if (!result) throw new Error('Failed to upload file');
       setFileUrl(result.secure_url);
     } catch (error) {

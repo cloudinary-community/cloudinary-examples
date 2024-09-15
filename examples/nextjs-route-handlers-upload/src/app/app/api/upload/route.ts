@@ -20,7 +20,7 @@ export async function POST(request: Request) {
         .end(Buffer.from(fileBuffer));
     });
 
-    return Response.json(result);
+    return Response.json({ secure_url: result.secure_url });
   } catch (error) {
     console.error('Error uploading file:', error);
     return Response.json({ error: 'Error uploading file' }, { status: 500 });

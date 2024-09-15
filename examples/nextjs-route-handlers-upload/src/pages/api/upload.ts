@@ -38,7 +38,7 @@ export default async function handler(
           },
         );
       });
-      res.status(200).json(result);
+      res.status(200).json({ secure_url: result.secure_url });
     });
   } catch (error) {
     console.error('Error uploading file:', error);
