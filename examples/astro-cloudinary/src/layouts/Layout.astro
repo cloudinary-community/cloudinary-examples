@@ -1,0 +1,77 @@
+---
+import { getCldOgImageUrl } from 'astro-cloudinary/helpers';
+
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+
+/**
+ * Find more templates: https://astro.cloudinary.dev/templates/social-media-cards
+ */
+
+const publicId = 'samples/balloons';
+
+const ogImageUrl = getCldOgImageUrl({
+  src: publicId,
+	effects: [
+    {
+      background: 'rgb:010A44'
+    },
+    {
+      color: 'rgb:2A005F',
+      colorize: '100'
+    },
+    {
+      gradientFade: 'symmetric'
+    }
+  ],
+  overlays: [
+    {
+      publicId,
+      width: 1200,
+      height: 630,
+      crop: 'fill',
+      effects: [{
+        opacity: 20
+      }]
+    },
+    {
+      width: 700,
+      crop: 'fit',
+      text: {
+        alignment: 'center',
+        color: 'white',
+        fontFamily: 'Source Sans Pro',
+        fontSize: 80,
+        fontWeight: 'bold',
+        text: title,
+				lineSpacing: -20
+      },
+    },
+  ]
+})
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro Cloudinary Examples" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<meta property="og:image" content={ogImageUrl} />
+		<meta property="og:image:secure_url" content={ogImageUrl} />
+		<meta property="og:image:width" content="1200" />
+		<meta property="og:image:height" content="630" />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:image" content={ogImageUrl} />
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
