@@ -27,14 +27,16 @@ form.parse(req, async (err, fields, files) => {
 From the client side, you can use the `fetch` API to send a POST request to the API Route with the file in the request body as shown in [index.tsx](src/pages/index.tsx).
 
 ```tsx
-// handleSubmit
-const formData = new FormData();
-formData.append('file', file);
-const response = await fetch('/api/upload', {
-  method: 'POST',
-  body: formData,
-});
-const result = await response.json();
+async function handleSubmit(e: React.FormEvent) {
+  e.preventDefault();
+  const formData = new FormData();
+  formData.append('file', file);
+  const response = await fetch('/api/upload', {
+    method: 'POST',
+    body: formData,
+  });
+  const result = await response.json();
+}
 
 // jsx
 return (
