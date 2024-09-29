@@ -1,0 +1,52 @@
+---
+import { getCollection } from "astro:content";
+import { CldImage } from "astro-cloudinary"
+import { Icon } from 'astro-icon/components'
+
+import MainLayout from "../layouts/main.astro";
+
+const photos = await getCollection('photos')
+const videos = await getCollection('videos')
+
+const assets = [...photos, ...videos].sort(() => Math.random() - 0.5)
+---
+
+<MainLayout title="Lazar Nikolov | Toronto-based Cinematographer">
+  <section class="mt-20 grid grid-rows-2 justify-items-center gap-y-12">
+    <CldImage
+      src="lazar"
+      class="rounded-full max-w-[260px] w-full row-span-2"
+      width={260}
+      height={260}
+      alt="A portrait photo of Lazar Nikolov"
+    />
+    <div class="grid gap-4 justify-items-center max-w-4xl">
+      <h1 class="font-bold text-4xl">Lazar Nikolov</h1>
+      <h2 class="text-center leading-loose">A Toronto-based Cinematographer and Photographer. Specializes in documentaries, capturing powerful stories with their exclusive use of Sony cameras. Known for naturalistic visuals, Lazar's work reflects the beauty of real-world environments, whether filming in urban Toronto or remote locations.</h2>
+    </div>
+  </section>
+  <section class="w-full mt-12 grid gap-2 grid-cols-1 md:grid-cols-[repeat(3,250px)] lg:grid-cols-[repeat(4,250px)] md:grid-rows-[repeat(7,250px)] lg:grid-rows-[repeat(6,250px)]">
+    {assets.map((asset: any) => (
+      <a href={`/${asset.data.resource_type}/${asset.data.asset_id}`} class="overflow-hidden relative">
+        <CldImage
+          class="w-full h-full hover:scale-110 transition-transform duration-300 ease-out"
+          assetType={asset.data.resource_type}
+          src={asset.data.public_id}
+          width={asset.data.width}
+          height={asset.data.height}
+          crop={{
+            width: 500,
+            height: 500,
+            type: 'fill',
+            source: true,
+          }}
+        />
+        {asset.data.resource_type === 'video' && (
+          <div class="absolute bottom-2 right-2">
+            <Icon name="mdi:play-circle" class="w-6 h-6 text-white/80" />
+          </div>
+        )}
+      </a>
+    ))}
+  </section>
+</MainLayout>

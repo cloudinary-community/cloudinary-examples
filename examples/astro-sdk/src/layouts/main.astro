@@ -1,0 +1,21 @@
+---
+import '@fontsource/libre-baskerville'
+
+const { title } = Astro.props
+---
+
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{title}</title>
+  </head>
+  <body class="min-h-screen overflow-x-hidden p-4 font-serif">
+    <main class="w-full max-w-5xl mx-auto flex flex-col items-center">
+      <nav class="w-full flex justify-center gap-4">
+        <a class="hover:underline" href="/">Home</a>
+      </nav>
+      <slot />
+    </main>
+  </body>
+</html>
