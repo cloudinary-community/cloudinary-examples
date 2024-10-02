@@ -14,6 +14,8 @@ export async function getStaticPaths() {
 }
 
 const {video} = Astro.props
+
+const context : any = video.data.context?.custom
 ---
 
 <MainLayout title={`Video`}>
@@ -26,26 +28,23 @@ const {video} = Astro.props
     <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
       <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
         <p class="font-bold text-black/70">Camera</p>
-        <p class="md:text-xl">Sony FX30</p>
+        <p class="md:text-xl">{context.camera}</p>
       </div>
       <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
         <p class="font-bold text-black/70">Lens</p>
-        <p class="md:text-xl">Sigma 18-50mm f2.8</p>
+        <p class="md:text-xl">{context.lens}</p>
       </div>
       <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
         <p class="font-bold text-black/70">ISO</p>
-        <p class="md:text-xl">800 Base (Cine EI)</p>
+        <p class="md:text-xl">{context.iso}</p>
       </div>
       <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
         <p class="font-bold text-black/70">Shutter Speed</p>
-        <p class="md:text-xl">1/48</p>
+        <p class="md:text-xl">{context.shutterspeed}</p>
       </div>
     </div>
   </section>
   <section class="mt-6">
-    <p class="leading-loose">
-      The video captures the essence of a serene morning, where the first light of dawn gently caresses the landscape, casting a golden hue over the rolling hills. Each frame is meticulously composed, showcasing the delicate interplay between light and shadow, creating a mesmerizing dance that evokes a sense of tranquility and wonder.
-      In another scene, the camera pans across a bustling cityscape at twilight, where the vibrant colors of the setting sun blend seamlessly with the artificial lights of the urban jungle. The juxtaposition of natural and man-made elements creates a dynamic and captivating visual narrative, highlighting the beauty and complexity of modern life.
-    </p>
+    <p class="leading-loose">{context.description}</p>
   </section>
 </MainLayout>
