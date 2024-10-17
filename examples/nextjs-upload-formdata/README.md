@@ -1,131 +1,100 @@
-# Next.js Uploading Files from FormData Using the Cloudinary Node.js SDK
+# Uploading Files to Cloudinary directly in Next.js with FormData
 
-<!-- View Demo: demo-link-needed -->
+This example shows how to upload files to directly Cloudinary using Next.js FormData & generate a signature using API Routes/Route Handlers.
 
-## 🧰 Using the Cloudinary Node.js SDK in Next.js with FormData
+## Getting Started
 
-Start off by getting your file from the form input.
+### Using the pages router
 
-For example, given a form with a submit and change handler:
+Create an API Route as shown in [sign.ts](pages/api/sign.ts) to generate a signature for the upload. The signature is generated using the `cloudinary.v2.uploader.sign` method. 
 
-```
-<form onSubmit={handleSubmit}>
-  <input type='file' name='file' onChange={handleFileChange} />
-  <button type='submit'>Submit</button>
-</form>
-```
-
-And the associated form handling logic:
-
-```
-const [file, setFile] = useState(null);
-const [fileUrl, setFileUrl] = useState(null);
-
-const handleFileChange = e => {
-  setFile(e.target.files[0]);
-};
-
-const handleSubmit = async e => {
-  try {
-    e.preventDefault();
-    const formData = new FormData();
-    formData.append('file', file);
-
-    const res = await fetch('/api/upload', {
-      method: 'POST',
-      body: formData,
-    });
-    const { fileUrl } = await res.json();
-    setFileUrl(fileUrl);
-  } catch (error) {
-    console.error(error);
+```ts
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
+  if (req.method !== "POST") {
+    return res.status(405).json({ message: "Method Not Allowed" });
   }
-};
+
+  const body: SignApiOptions = req.body;
+  const signature = cloudinary.utils.api_sign_request(
+    body,
+    String(process.env.CLOUDINARY_API_SECRET)
+  );
+
+  res.json({ signature });
+}
+
+
 ```
 
-Where here, we're doing a couple of things:
+From the client side, you can create an `uploadFile` function that calls the API Route, and passes the signature along with the file to Cloudinary API endpoint as shown in [uploadFile.ts](utils/uploadFile.ts). Then call the `uploadFile` function on form submit as shown in [index.tsx](pages/index.tsx). 
 
-1. We set our file state every time we change the file we input.
-2. We use the FormData API to pass the file over to our API route where we'll handle the file upload and return the secure url from Cloudinary.
-
-To handle the upload, we can create a new API endpoint at `pages/api/upload.js` with the following:
-
-```
-import formidable from 'formidable';
-import { v2 as cloudinary } from 'cloudinary';
-
-cloudinary.config({
-  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
-  secure: true,
-  api_key: process.env.CLOUDINARY_API_KEY,
-  api_secret: process.env.CLOUDINARY_API_SECRET,
-});
-
-export const config = {
-  api: {
-    bodyParser: false,
-  },
-};
-
-export default async function handler(req, res) {
+```tsx
+async function handleSubmit(e: React.FormEvent) {
+  e.preventDefault();
   try {
-    const file = await new Promise((resolve, reject) => {
-      const form = formidable();
-      form.parse(req, (err, fields, files) => {
-        if (err) return reject(err);
-      });
-      form.on('file', (formName, file) => {
-        resolve(file);
-      });
-    });
-
-    const data = await cloudinary.uploader.unsigned_upload(
-      file.filepath,
-      process.env.CLOUDINARY_UPLOAD_PRESET
-    );
-
-    res.status(200).json({ fileUrl: data.secure_url });
+    if (!file) throw new Error("No file selected");
+    const result = await uploadFile(file, "/api/sign");
+    if (!result) throw new Error("Failed to upload file");
+    setFileUrl(result.secure_url);
   } catch (error) {
     console.error(error);
-    res.status(500).json({ message: 'Server upload error' });
   }
 }
 
+// jsx
+return (
+  <form onSubmit={handleSubmit}>
+    <input type='file' name='file' onChange={handleFileChange} />
+    <button type='submit'>Upload</button>
+  </form>
+)
 ```
 
-Here's what is happening above:
+### Using the app router
 
-1. We configure the Cloudinary Node.js SDK with our environment variables. We do this to keep our values secure.
-2. We define and export the new config so we can allow the request to be parsed by Formidable.
-3. With access to the file via Formidable, we upload it to Cloudinary using the file path and the name of our preset.
-4. Cloudinary returns data, containing our secure file url, which we pass back within JSON to the frontend for further usage.
+Create a Route Handler as shown in [route.ts](app/app/api/sign/route.ts) similar to the API Route in pages router.
 
-Finally, to allow the above to make "unsigned uploads", be sure to create a new Upload Preset that allows unsigned uploads and configure the name with the environment variable `CLOUDINARY_UPLOAD_PRESET`.
+```ts
+export async function POST(req: Request) {
+  const body: SignApiOptions = await req.json();
+  const signature = cloudinary.utils.api_sign_request(
+    body,
+    String(process.env.CLOUDINARY_API_SECRET)
+  );
 
-> Alternatively, you can use the Node.js SDK to sign your uploads!
+  return Response.json({ signature });
+}
+```
 
-## 🚀 Get Started with This Example
+On the client side, you can use the `uploadFile` function to call the Route Handler, and pass the signature along with the file to Cloudinary API endpoint as shown in [uploadFile.ts](utils/uploadFile.ts). Then call the `uploadFile` function on form submit in a client component as shown in [Uploader.tsx](components/Uploader.tsx).
+
+Same as the pages router.
+
+## Running this example
 
 - Install the project dependencies with:
-
-```
+```sh
 yarn install
 # or
 npm install
 ```
 
-- Add your environment variables to `.env.local`:
+- Add environment variables to a `.env.local` file:
+```sh
+NEXT_PUBLIC_CLOUDINARY_CLOUD_NAME=""
+NEXT_PUBLIC_CLOUDINARY_API_KEY=""
+NEXT_PUBLIC_CLOUDINARY_UPLOADS_FOLDER=""
 
+CLOUDINARY_API_SECRET=""
 ```
-CLOUDINARY_CLOUD_NAME="<Your Cloud Name>"
-CLOUDINARY_API_KEY="<Your Cloud API Key>"
-CLOUDINARY_API_SECRET="<Your API Secret>"
-CLOUDINARY_UPLOAD_PRESET="<Your Upload Preset>"
-```
+
+> Note: the upload preset must be updated to one available in your account
 
 - Start the development server with:
-
-```
+```sh
 yarn dev
 # or
 npm run dev
