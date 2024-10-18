@@ -1,7 +1,5 @@
 # Transformations & Effects in React with Cloudinary URL Gen SDK
 
-View Demo: https://cloudinary-react-transform-effects.netlify.app/
-
 ## 🧰 Using the URL Gen SDK in a React project
 
 To use the URL Gen SDK in a React app, first import library:
