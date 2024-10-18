@@ -2,8 +2,6 @@
 
 Easily authenticate Cloudinary requests using [Netlify Graph Authentication](https://docs.netlify.com/netlify-labs/experimental-features/netlify-graph/authentication/)
 
-View Demo: <https://cloudinary-netlify-graph-authentication-function.netlify.app/.netlify/functions/resources>
-
 ## 🧰 Using Cloudinary in a Serverless Function with Netlify Graph Authentication 
 
 To begin working with authenticated Cloudinary sessions inside of Netlify Functions, you first need to enable and authenticate a Cloudinary oAuth session inside of your Netlify site by navigating to the Graph tab.
