@@ -2,8 +2,6 @@
 
 The AdvancedVideo component from the Cloudinary React SDK extends the default video-loading capabilities and allows developers to use advanced plugins to help build performance apps.
 
-View Demo: <https://cloudinary-react-advanced-video.netlify.app/>
-
 ## 🧰 Using AdvancedVideo in a React project
 
 To use AdvancedVideo in a React app, first import the component from the React SDK.
