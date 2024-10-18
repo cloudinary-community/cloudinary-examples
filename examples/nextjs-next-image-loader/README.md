@@ -2,8 +2,6 @@
 
 You can configure Next.js to use Cloudinary when loading images and transforming them for your application.
 
-View Demo: <https://cloudinary-nextjs-next-image-loader.netlify.app>
-
 ## 🧰 Using the Cloudinary Loader with the Next.js Image Component
 
 > ⚠️ Note: This is not the recommended approach. Use the CldImage component with [Next Cloudinary](https://next.cloudinary.dev) for first-class support of Cloudinary with the Next.js Image component.
