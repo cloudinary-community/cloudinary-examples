@@ -2,8 +2,6 @@
 
 Use the drop-in Cloudinary widget in a Next.js project.
 
-View Demo: <https://cloudinary-nextjs-upload-widget-preset.netlify.app/>
-
 ## 🧰 Using the Cloudinary Upload Widget in Next.js for Unsigned Uploads with an Upload Preset
 
 > ⚠️ Note: This is not the  recommended approach. Use the CldUploadWidget component with [Next Cloudinary](https://next-cloudinary.spacejelly.dev) for first-class Next.js support of the Cloudinary Upload Widget.
