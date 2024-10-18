@@ -2,8 +2,6 @@
 
 Add a button for uploading media and other files to Cloudinary in Next.js.
 
-View Demo: <https://cloudinary-nextjs-clduploadbutton.netlify.app/>
-
 ## 🧰 Using CldUploadButton in Next.js
 
 ### Using the Pages Router
