@@ -2,8 +2,6 @@
 
 The AdvancedImage component from the Cloudinary React SDK extends the default image-loading capabilities and allows developers to use advanced plugins to help build performance apps.
 
-View Demo: <https://cloudinary-react-advanced-image.netlify.app/>
-
 ## 🧰 Using AdvancedImage in a React project
 
 To use AdvancedImage in a React app, first import the component from the React SDK.
