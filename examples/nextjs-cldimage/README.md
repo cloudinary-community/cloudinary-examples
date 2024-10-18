@@ -2,8 +2,6 @@
 
 Use the CldImage component for automatically optimized images with the power of Cloudinary.
 
-View Demo: <https://cloudinary-nextjs-cldimage.netlify.app/>
-
 ## 🧰 Using CldImage in Next.js
 
 ### Using the Pages Router
