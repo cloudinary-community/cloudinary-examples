@@ -2,8 +2,6 @@
 
 Generate social media cards for your site in Next.js with the CldOgImage component.
 
-View Demo: <https://cloudinary-nextjs-cldogimage.netlify.app/>
-
 ## 🧰 Using CldOgImage in Next.js
 
 ### Using the Pages Router
