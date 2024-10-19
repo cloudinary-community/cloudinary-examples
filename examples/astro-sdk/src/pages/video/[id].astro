@@ -1,0 +1,50 @@
+---
+import { getCollection } from "astro:content";
+import { CldVideoPlayer } from 'astro-cloudinary'
+
+import MainLayout from "../../layouts/main.astro";
+
+export async function getStaticPaths() {
+  const videos = await getCollection('videos')
+
+  return videos.map(video => ({
+    params: { id: video.data.asset_id },
+    props: { video }
+  }))
+}
+
+const {video} = Astro.props
+
+const context : any = video.data.context?.custom
+---
+
+<MainLayout title={`Video`}>
+  <section class="mt-4 w-full flex flex-col">
+    <CldVideoPlayer
+      src={video.id}
+      width={video.data.width}
+      height={video.data.height}
+    />
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
+        <p class="font-bold text-black/70">Camera</p>
+        <p class="md:text-xl">{context.camera}</p>
+      </div>
+      <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
+        <p class="font-bold text-black/70">Lens</p>
+        <p class="md:text-xl">{context.lens}</p>
+      </div>
+      <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
+        <p class="font-bold text-black/70">ISO</p>
+        <p class="md:text-xl">{context.iso}</p>
+      </div>
+      <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
+        <p class="font-bold text-black/70">Shutter Speed</p>
+        <p class="md:text-xl">{context.shutterspeed}</p>
+      </div>
+    </div>
+  </section>
+  <section class="mt-6">
+    <p class="leading-loose">{context.description}</p>
+  </section>
+</MainLayout>
