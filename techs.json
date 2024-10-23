@@ -27,5 +27,6 @@
   "streamlit": "Streamlit",
   "tina": "Tina",
   "vue": "Vue",
-  "vercel": "Vercel"
+  "vercel": "Vercel",
+  "other": "Other"
 }
