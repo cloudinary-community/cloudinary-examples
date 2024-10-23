@@ -6,6 +6,7 @@
 
 Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your projects with real examples.
 
+<!-- EXAMPLES_START -->
 - [.NET](#net)
 - [Android](#android)
 - [JavaScript](#javascript)
@@ -225,7 +226,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 - [Countdown Timer](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/vercel-countdown-timer)
 - [Custom Function Remote](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/vercel-custom-function-remote)
-
+<!-- EXAMPLES_END -->
 
 ## 🧐 Not seeing an example?
 
