@@ -1,7 +1,5 @@
 # SolidJS Cloudinary Upload Widget
 
-Demo: <https://cloudinary-solid-upload-widget-preset.netlify.app>
-
 ## 🚀 Get Started with This Example
 
 * Create an environment variable file `.env.local` in the root of the project and inside add:

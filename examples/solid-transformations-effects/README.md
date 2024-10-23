@@ -1,7 +1,5 @@
 # Transformations & Effects in SolidJS with Cloudinary URL Gen SDK
 
-View Demo: https://cloudinary-solid-transform-effects.netlify.app/
-
 ## 🧰 Using the URL Gen SDK in a Solid project
 
 To use the URL Gen SDK in a solid app, first import library:

@@ -2,8 +2,6 @@
 
 Add media and file uploading to Cloudinary in Next.js.
 
-View Demo: <https://cloudinary-nextjs-clduploadwidget.netlify.app/>
-
 ## 🧰 Using CldUploadWidget in Next.js
 
 ### Using the Pages Router

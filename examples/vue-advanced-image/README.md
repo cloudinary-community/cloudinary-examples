@@ -2,8 +2,6 @@
 
 The AdvancedImage component from the Cloudinary Vue SDK extends the default image-loading capabilities and allows developers to use advanced plugins to help build performance apps.
 
-View Demo: <https://cloudinary-vue-advanced-image.netlify.app/>
-
 ## 🧰 Using AdvancedImage in a Vue project
 
 To use AdvancedImage in a Vue app, first import the component from the Vue SDK.

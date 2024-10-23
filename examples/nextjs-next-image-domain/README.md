@@ -2,8 +2,6 @@
 
 You can use Cloudinary URLs right inside of your Next.js project with the Next.js Image component just like any other remote source.
 
-View Demo: <https://cloudinary-nextjs-next-image-domain.netlify.app/>
-
 ## 🧰 Using Cloudinary URLs with the Next.js Image Component
 
 To allow Cloudinary URLs to load with the Image component, simply update your `next.config.js` file with the following configuration:

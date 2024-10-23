@@ -2,8 +2,6 @@
 
 Programmatically create an open graph social media card with dynamic text in a Next.js app using Next Cloudinary.
 
-View Demo: <https://cloudinary-nextjs-social-media-card.netlify.app>
-
 ## 🧰 Creating a social media card with the Next Cloudinary CldOgImage component
 
 Using Cloudinary's ability to generate an image on the fly, we can create a social media card that embeds dynamically supplied text from an application.

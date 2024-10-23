@@ -2,8 +2,6 @@
 
 Load Cloudinary images in a Nuxt app with the Nuxt Image component.
 
-View Demo: <https://cloudinary-nuxt-nuxt-image-provider.netlify.app/>
-
 ## 🧰 Using Cloudinary with the Nuxt Image Component
 
 To allow Cloudinary to load with the Image component, simply update your `nuxt.config.ts` file with the following configuration:
