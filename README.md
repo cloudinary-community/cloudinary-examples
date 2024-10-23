@@ -36,6 +36,7 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Tina](#tina)
 - [Vue](#vue)
 - [Vercel](#vercel)
+- [Other](#other)
 
 **This is a community project supported by the Cloudinary Developer Experience team.**
 
@@ -48,16 +49,16 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 
 ### Android
 
-- [Image SDK](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/angular-imagesdk)
 - [ImageView](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/android-imageview)
-- [Video Player](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/angular-video-player)
 
 ### JavaScript
 - [Image Upload with Fetch](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/javascript-image-upload-fetch)
 
 ### Angular
 
+- [Image SDK](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/angular-imagesdk)
 - [Cloudinary Upload Widget with an Upload Preset (Unsigned)](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/angular-upload-widget)
+- [Video Player](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/angular-video-player)
 
 ### Astro
 
