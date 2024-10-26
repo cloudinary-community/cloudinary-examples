@@ -1,5 +1,5 @@
 import fs from "node:fs/promises";
-import path from "path";
+import path from "node:path";
 
 type TechMapping = Record<string, string>;
 type ExampleMapping = Record<string, Example[]>;
