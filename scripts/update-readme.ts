@@ -1,13 +1,12 @@
-import { promises as fs } from "fs";
+import fs from "node:fs/promises";
 import path from "path";
 
-interface TechMapping {
-  [key: string]: string;
-}
-
+type TechMapping = Record<string, string>;
+type ExampleMapping = Record<string, Example[]>;
+type ExampleConfig = Omit<Example, "url">;
 interface Example {
-  tech: string;
   name: string;
+  tech: string;
   url: string;
 }
 
@@ -15,25 +14,22 @@ const repoUrl =
   "https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/";
 
 async function loadTechs(): Promise<TechMapping> {
-  const techsData = await fs.readFile("techs.json", "utf-8");
-  return JSON.parse(techsData);
+  const techsData: TechMapping = await Bun.file("techs.json").json();
+  return techsData;
 }
 
-async function getExamples(
-  techs: TechMapping
-): Promise<Record<string, Example[]>> {
-  const examplesByTech: Record<string, Example[]> = {};
+async function getExamples(techs: TechMapping): Promise<ExampleMapping> {
+  const examplesByTech: ExampleMapping = {};
 
   const folders = await fs.readdir("examples");
   for (const folder of folders) {
     const configPath = path.join("examples", folder, "config.json");
     try {
-      const configData = await fs.readFile(configPath, "utf-8");
-      const config = JSON.parse(configData);
+      const config: ExampleConfig = await Bun.file(configPath).json();
 
       if (!techs[config.tech]) {
-        const errorMsg = `Tech '${config.tech}' not found in techs.json. Please add it in the format: "yourtech": "YourTech"`;
-        await fs.writeFile("error.log", errorMsg, "utf-8");
+        const errorMsg = `Tech '${config.tech}' not found in techs.json. Please add it in the JSON format: "yourtech": "YourTech"`;
+        await Bun.write("error.log", errorMsg);
         throw new Error(errorMsg);
       }
 
@@ -81,17 +77,17 @@ async function updateReadme() {
   let readmeContent = await fs.readFile("README.md", "utf-8");
 
   readmeContent = readmeContent.replace(
-    /[\s\S]*?/,
-    `
+    /<!-- EXAMPLES_START -->[\s\S]*?<!-- EXAMPLES_END -->/,
+    `<!-- EXAMPLES_START -->
 ${techList}
 
 ## 🧰 Examples
 
 ${exampleSections}
-`
+<!-- EXAMPLES_END -->`
   );
 
-  await fs.writeFile("README.md", readmeContent.trim(), "utf-8");
+  await Bun.write("README.md", readmeContent.trim());
 }
 
 updateReadme()
