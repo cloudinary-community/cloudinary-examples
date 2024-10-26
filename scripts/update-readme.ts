@@ -31,8 +31,13 @@ async function getExamples(
       const configData = await fs.readFile(configPath, "utf-8");
       const config = JSON.parse(configData);
 
-      // If tech exists in mapping, use mapped name, otherwise use "Other"
-      const tech = techs[config.tech] || techs["other"];
+      if (!techs[config.tech]) {
+        const errorMsg = `Tech '${config.tech}' not found in techs.json. Please add it in the format: "yourtech": "YourTech"`;
+        await fs.writeFile("error.log", errorMsg, "utf-8");
+        throw new Error(errorMsg);
+      }
+
+      const tech = techs[config.tech];
 
       if (!examplesByTech[tech]) {
         examplesByTech[tech] = [];
@@ -45,6 +50,7 @@ async function getExamples(
       });
     } catch (error) {
       console.error(`Error reading ${configPath}:`, error);
+      throw error;
     }
   }
 
@@ -59,7 +65,7 @@ async function updateReadme() {
     .map(key => `- [${techs[key]}](#${key})`)
     .join("\n");
 
-  let exampleSections = Object.keys(techs)
+  const exampleSections = Object.keys(techs)
     .map(key => {
       const tech = techs[key];
       if (examplesByTech[tech] && examplesByTech[tech].length > 0) {
@@ -75,14 +81,14 @@ async function updateReadme() {
   let readmeContent = await fs.readFile("README.md", "utf-8");
 
   readmeContent = readmeContent.replace(
-    /<!-- EXAMPLES_START -->[\s\S]*?<!-- EXAMPLES_END -->/,
-    `<!-- EXAMPLES_START -->
+    /[\s\S]*?/,
+    `
 ${techList}
 
 ## 🧰 Examples
 
 ${exampleSections}
-<!-- EXAMPLES_END -->`
+`
   );
 
   await fs.writeFile("README.md", readmeContent.trim(), "utf-8");
@@ -90,4 +96,7 @@ ${exampleSections}
 
 updateReadme()
   .then(() => console.log("README updated successfully."))
-  .catch(error => console.error("Error updating README:", error));
+  .catch(error => {
+    console.error("Error updating README:", error);
+    process.exit(1);
+  });

@@ -24,14 +24,35 @@ jobs:
           bun-version: latest
 
       - name: Update README
-        run: bun run scripts/update-readme.ts
+        id: update-readme
+        run: |
+          bun run scripts/update-readme.ts || (echo "README update failed" > error.log && exit 1)
 
       - name: Commit changes
+        if: success()
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "Update README.md with updated examples and technologies" || echo "No changes to commit"
+          git commit -m "Update README.md with new examples and technologies" || echo "No changes to commit"
 
       - name: Push changes
+        if: success()
         run: git push origin ${{ github.head_ref }}
+
+      - name: Comment on Pull Request if README Update Fails
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tech_error=$(cat error.log)
+          response=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
+          -X POST \
+          -d '{"body": "🚨 **README Update Failed**\n\nA tech stack was found without an entry in `techs.json`. Please add the missing tech in `techs.json` in the following format:\n\n```json\n\"tech-id\": \"Tech Display Name\"\n```\n\nFor example:\n\n```json\n\"nextjs\": \"Next.js\"\n```\n\nError Details:\n\n```\n'"$tech_error"'\n```"}' \
+          "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments")
+
+          if [ "$response" -eq 201 ]; then
+            echo "Comment posted successfully."
+          else
+            echo "Failed to post comment. HTTP status: $response"
+          fi

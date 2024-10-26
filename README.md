@@ -36,7 +36,6 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 - [Tina](#tina)
 - [Vue](#vue)
 - [Vercel](#vercel)
-- [Other](#other)
 
 **This is a community project supported by the Cloudinary Developer Experience team.**
 
