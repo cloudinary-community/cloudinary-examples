@@ -26,7 +26,11 @@ jobs:
       - name: Update README
         id: update-readme
         run: |
-          bun run scripts/update-readme.ts || (echo "README update failed" > error.log && exit 1)
+          if ! bun run scripts/update-readme.ts; then
+            echo "README update failed. See details below:"
+            cat error.log
+            exit 1
+          fi
 
       - name: Commit changes
         if: success()
@@ -48,7 +52,7 @@ jobs:
           tech_error=$(cat error.log)
           response=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
           -X POST \
-          -d '{"body": "🚨 **README Update Failed**\n\nA tech stack was found without an entry in `techs.json`. Please add the missing tech in `techs.json` in the following format:\n\n```json\n\"tech-id\": \"Tech Display Name\"\n```\n\nFor example:\n\n```json\n\"nextjs\": \"Next.js\"\n```\n\nError Details:\n\n```\n'"$tech_error"'\n```"}' \
+          -d '{"body": "🚨 **README Update Failed**\n\nThe following tech stack(s) were found in examples but do not have entries in `techs.json`. Please add each missing tech in `techs.json` with the following format:\n\n```json\n\"tech-id\": \"Tech Display Name\"\n```\n\nFor example:\n\n```json\n\"nextjs\": \"Next.js\"\n```\n\nMissing Tech(s):\n\n```\n'"$tech_error"'\n```"}' \
           "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments")
 
           if [ "$response" -eq 201 ]; then

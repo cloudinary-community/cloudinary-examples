@@ -20,6 +20,7 @@ async function loadTechs(): Promise<TechMapping> {
 
 async function getExamples(techs: TechMapping): Promise<ExampleMapping> {
   const examplesByTech: ExampleMapping = {};
+  const missingTechs = new Set<string>();
 
   const folders = await fs.readdir("examples");
   for (const folder of folders) {
@@ -28,16 +29,12 @@ async function getExamples(techs: TechMapping): Promise<ExampleMapping> {
       const config: ExampleConfig = await Bun.file(configPath).json();
 
       if (!techs[config.tech]) {
-        const errorMsg = `Tech '${config.tech}' not found in techs.json. Please add it in the JSON format: "yourtech": "YourTech"`;
-        await Bun.write("error.log", errorMsg);
-        throw new Error(errorMsg);
+        missingTechs.add(config.tech);
+        continue;
       }
 
       const tech = techs[config.tech];
-
-      if (!examplesByTech[tech]) {
-        examplesByTech[tech] = [];
-      }
+      if (!examplesByTech[tech]) examplesByTech[tech] = [];
 
       examplesByTech[tech].push({
         tech,
@@ -48,6 +45,12 @@ async function getExamples(techs: TechMapping): Promise<ExampleMapping> {
       console.error(`Error reading ${configPath}:`, error);
       throw error;
     }
+  }
+
+  if (missingTechs.size > 0) {
+    const missingTechsMsg = [...missingTechs].join(", ");
+    await Bun.write("error.log", missingTechsMsg);
+    throw new Error(missingTechsMsg);
   }
 
   return examplesByTech;
