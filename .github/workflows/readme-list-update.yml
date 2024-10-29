@@ -1,0 +1,62 @@
+name: Update Examples List in README
+
+on:
+  pull_request:
+    branches:
+      - main
+    paths:
+      - "examples/**"
+      - "techs.json"
+
+jobs:
+  update-readme:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          ref: ${{ github.head_ref }}
+
+      - name: Set up Bun
+        uses: oven-sh/setup-bun@v2
+        with:
+          bun-version: latest
+
+      - name: Update README
+        id: update-readme
+        run: |
+          if ! bun run scripts/update-readme.ts; then
+            echo "README update failed. See details below:"
+            cat error.log
+            exit 1
+          fi
+
+      - name: Commit changes
+        if: success()
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add README.md
+          git commit -m "Update README.md with new examples and technologies" || echo "No changes to commit"
+
+      - name: Push changes
+        if: success()
+        run: git push origin ${{ github.head_ref }}
+
+      - name: Comment on Pull Request if README Update Fails
+        if: failure()
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          tech_error=$(cat error.log)
+          response=$(curl -s -o /dev/null -w "%{http_code}" -H "Authorization: token $GITHUB_TOKEN" \
+          -X POST \
+          -d '{"body": "🚨 **README Update Failed**\n\nThe following tech stack(s) were found in examples but do not have entries in `techs.json`. Please add each missing tech in `techs.json` with the following format:\n\n```json\n\"tech-id\": \"Tech Display Name\"\n```\n\nFor example:\n\n```json\n\"nextjs\": \"Next.js\"\n```\n\nMissing Tech(s):\n\n```\n'"$tech_error"'\n```"}' \
+          "https://api.github.com/repos/${{ github.repository }}/issues/${{ github.event.pull_request.number }}/comments")
+
+          if [ "$response" -eq 201 ]; then
+            echo "Comment posted successfully."
+          else
+            echo "Failed to post comment. HTTP status: $response"
+          fi
