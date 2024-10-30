@@ -1,0 +1,64 @@
+---
+import { getCollection } from "astro:content";
+import { CldImage } from 'astro-cloudinary'
+
+import MainLayout from "../../layouts/main.astro";
+
+export async function getStaticPaths() {
+  const photos = await getCollection('photos')
+
+  return photos.map(photo => ({
+    params: { id: photo.data.asset_id },
+    props: { photo }
+  }))
+}
+
+const { photo } = Astro.props
+
+const context : any = photo.data.context?.custom
+---
+
+<MainLayout title={`Video`}>
+  <section class="mt-4 w-full flex flex-col">
+    <CldImage
+      src={photo.id}
+      width={photo.data.width}
+      height={photo.data.height}
+      overlays={[{
+        position: {
+          x: 40,
+          y: 40,
+          gravity: 'south_west',
+        },
+        text: {
+          color: 'white',
+          fontFamily: 'Libre Baskerville',
+          fontSize: 80,
+          fontWeight: 'bold',
+          text: 'Lazar Nikolov Photography'
+        }
+      }]}
+    />
+    <div class="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
+      <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
+        <p class="font-bold text-black/70">Camera</p>
+        <p class="md:text-xl">{context.camera}</p>
+      </div>
+      <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
+        <p class="font-bold text-black/70">Lens</p>
+        <p class="md:text-xl">{context.lens}</p>
+      </div>
+      <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
+        <p class="font-bold text-black/70">ISO</p>
+        <p class="md:text-xl">{context.iso}</p>
+      </div>
+      <div class="flex flex-col p-3 gap-2 bg-neutral-500/10">
+        <p class="font-bold text-black/70">Shutter Speed</p>
+        <p class="md:text-xl">{context.shutterspeed}</p>
+      </div>
+    </div>
+  </section>
+  <section class="mt-6">
+    <p class="leading-loose">{context.description}</p>
+  </section>
+</MainLayout>
