@@ -34,8 +34,8 @@ $imgtag = (new ImageTag('cld-sample'))
     );
 
 echo $imgtag;
-// The code above generates the following HTML image tag (for the demo account):
-//  <img src="https://res.cloudinary.com/demo/image/upload/b_auto:predominant,c_pad,h_400,w_400/flower_sample">
+// The code above generates the following HTML image tag:
+//  <img src="https://res.cloudinary.com/new-shop/image/upload/cld-sample">
 
 echo '<br>';
 echo '<br>';
