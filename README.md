@@ -225,7 +225,6 @@ Learn how to easily integrate [Cloudinary](https://cloudinary.com/) into your pr
 ### Vercel
 
 - [Countdown Timer](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/vercel-countdown-timer)
-- [Custom Function Remote](https://github.com/cloudinary-community/cloudinary-examples/tree/main/examples/vercel-custom-function-remote)
 <!-- EXAMPLES_END -->
 
 ## 🧐 Not seeing an example?
