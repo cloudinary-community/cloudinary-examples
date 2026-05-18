@@ -1,7 +1,5 @@
 # Remix Video Preview
 
-Demo: https://cloudinary-video-preview.vercel.app/
-
 ## 🚀 Get Started with This Example
 
 - Create an environment variable file `.env` in the root of the project and inside add:
