@@ -1,0 +1,15 @@
+{
+  "name": "node-pdf-upload",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cloudinary": "^2.5.1"
+  },
+  "devDependencies": {
+    "dotenv": "^16.4.7"
+  }
+}
