@@ -1,0 +1,15 @@
+{
+    "name": "sharon-yelenik/php_credentials_test",
+    "description": "My first PHP project",
+    "type": "project",
+    "require": {
+        "cloudinary/cloudinary_php": "^2"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "sharon-yelenik",
+            "email": "sharon.yelenik@cloudinary.com"
+        }
+    ]
+}
